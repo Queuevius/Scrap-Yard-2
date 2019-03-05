@@ -13,4 +13,15 @@ module PostsHelper
 			"<span class='label label-info'>#{tag_name}</span>".html_safe
 		end
 	end
+
+	def bg_color type
+		case type
+		when 'Problem'
+			"#faebd7"
+		when 'Idea'
+			"#a2ee90"
+		else
+			"#f0f7ff"
+		end
+	end
 end

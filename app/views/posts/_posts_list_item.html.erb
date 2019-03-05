@@ -1,13 +1,11 @@
-<div class="well">
+<div class="well" style="background-color: <%= bg_color(post.post_type) %>">
       <div class="media">
         <a class="pull-left" href="#">
         <img class="media-object" src="http://placekitten.com/150/150">
       </a>
       <div class="media-body">
         <h4 class="media-heading"><%= link_to post.title, post_path(id: post.id) %>
-          <% post.all_tags.split(", ").each do |tag_name| %>
-            <%= area_label(post.post_type, tag_name) %>
-          <% end %>
+          
           <% if post.post_type == 'Problem'%>
             <%= link_to posts_path(post_type: 'Idea', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
             <span class="badge badge-success"><%= post.ideas.count %> Ideas</span>
