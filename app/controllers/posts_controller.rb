@@ -36,6 +36,7 @@ class PostsController < ApplicationController
 				@tags_count = Tag.where(name: @area).map{|_|  [_.name, _.posts.type(params[:post_type]).count] }
 				@posts = Post.type(params[:post_type]).with_tags([params[:tags_filter]])
 			end
+			@all_tags = Tag.all.map { |_| [ _.name ] }
 			@area = params[:tags_filter].strip.split(',').first
 		end
 	end
