@@ -10,7 +10,9 @@ class Post < ApplicationRecord
 	has_many :ideas, -> { where(post_type: 'Idea')} , class_name: "Post", foreign_key: "parent_post_id"
 	has_many :proposals, -> { where(post_type: 'Proposal')}, class_name: "Post", foreign_key: "parent_post_id"
 	has_many :problems, -> { where(post_type: 'Problem')} , class_name: "Post", foreign_key: "parent_post_id"
-	
+	has_many :layers
+
+
 	# Scopes	
 	scope :type, ->(post_type){ where(post_type: post_type )}
 	scope :with_tags, -> (tags) { joins(:tags).where("tags.name IN (?)",tags) }

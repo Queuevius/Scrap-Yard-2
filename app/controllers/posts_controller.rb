@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 	
 	before_action :authenticate_user!
+	before_action :authorize_post, only: [:new, :create, :show]
 
 	def index
 		policy_scope(Post)
@@ -47,7 +48,6 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
-		authorize @post
 		@post.post_type = params[:post_type]
 		@post.all_tags=params[:area] if params[:area]
 		@post.parent_post_id = params[:parent_post_id].to_i if params[:parent_post_id]
@@ -56,7 +56,6 @@ class PostsController < ApplicationController
 
 	def create 
 		@post = Post.new(post_params)
-		authorize @post
 		@post.creator_id = @current_user.id  
 		if @post.save
 			redirect_to post_path @post
@@ -67,23 +66,22 @@ class PostsController < ApplicationController
 
 	def show
 		@post  = Post.friendly.find(params[:id])
-		authorize @post
+		@layers = @post.layers
+		if params[:layer]
+			@current_layer = @post.layers.find(id: params[:layer]) 
+		else
+			@current_layer = nil
+		end
 	end
-
-	# def search
-	# 	term = params[:term]
-	# 	@posts_array = Tag.where("name ILIKE ?","%#{term}%").includes(:posts).map {|t| [t.name, t.posts_count, t.posts] unless t.posts.empty?}.compact
-	# 	# [ tag_name, total_posts, posts_array ]
-
-	# 	byebug 
-	# end
-
-
 
 
 private
 def post_params
   params.require(:post).permit(:title, :body, :all_tags,:post_type, :parent_post_id)
+end
+
+def authorize_post
+	authorize Post
 end
 
 

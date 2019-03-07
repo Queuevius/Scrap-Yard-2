@@ -8,11 +8,23 @@
       <div class="media-body">
 
         <h1 class="media-heading"><%= link_to @post.title, post_path(id: @post.id) %>
-          
+          <h2>
           <% @post.all_tags.split(", ").each do |tag_name| %>
-            <h2>Area: </h2>  <%= area_label(@post.post_type, tag_name) %>
+            Area:  <%= area_label(@post.post_type, tag_name) %>
           <% end %>
-          
+           </h2>
+                Layer: 
+                <select name="post[person_id]">
+                  <% if @current_layer.nil? %> 
+                    <option value="" selected="selected">Primary</option>
+                  <% end %>
+                  <% @post.layers.each do |l| %>
+                    <option value="<%= post_path(id: @post.id, layer: l.id) %>" >
+                      <%=  l.name %>
+                    </option>
+                  <% end %>
+                </select>
+            
           <% if @post.post_type == 'Problem'%>
             <%= link_to posts_path(post_type: 'Idea', tags_filter: @post.all_tags.split(", ")[0], parent_id: @post.id) do %>
             <span class="badge badge-success"><%= @post.ideas.count %> Ideas</span>
