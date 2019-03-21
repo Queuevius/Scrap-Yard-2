@@ -45,30 +45,40 @@
               <span><i class="fa fa-google-plus-square"></i></span>
             </li>
       </ul>
+      
+      
+      <!-- TODO:: move these post actions to a partial -->
       <ul class="list-inline list-unstyled">
         <% if post.post_type == 'Problem'%> 
           <li>
             <%= link_to new_post_path(post_type: "Idea",area: post.area, parent_post_id: post.id), class: "btn btn-primary" do %>
-              <span class="glyphicon glyphicon-plus"></span>
+              <span class="glyphicon glyphicon-bell"></span>
                 Give an Idea
             <% end %>
           </li>
         <% end %>
-        <% if post.post_type == 'Idea'%> 
+        <% if post.post_type == 'Idea' and  post.parent_post_id != nil %> 
           <li>
             <%= link_to post_path(id: post.parent_post_id), class: "btn btn-primary" do %>
-              <span class="glyphicon glyphicon-plus"></span>
+              <span class="glyphicon glyphicon-zoom-in"></span>
                 See the Problem
             <% end %>
           </li>
         <% end %>
         <li>
           <%= link_to new_post_path(post_type: "Proposal", area: post.area, parent_post_id: post.id), class: "btn btn-primary" do %>
-            <span class="glyphicon glyphicon-plus"></span>
+            <span class="glyphicon glyphicon-wrench"></span>
               Give a Proposal
           <% end %>
         </li>
+        <li>
+          <%= link_to new_post_path(post_type: "Proposal", area: post.area, parent_post_id: post.id), class: "btn btn-primary" do %>
+            <span class="glyphicon glyphicon-duplicate"></span>
+              Add a Layer
+          <% end %>
+        </li>
       </ul>
+
        </div>
     </div>
   </div>

@@ -65,13 +65,21 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@post  = Post.friendly.find(params[:id])
+		@post  = Post.includes(:layers).friendly.find(params[:id])
 		@layers = @post.layers
 		if params[:layer]
 			@current_layer = @post.layers.find(id: params[:layer]) 
 		else
 			@current_layer = nil
 		end
+	end
+
+	def new_layer 
+		@post = Post.friendly.find(params[:id])
+		@layer = Layers.new(post_id: @post.id)
+	end
+
+	def create_layer
 	end
 
 

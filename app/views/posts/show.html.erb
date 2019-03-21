@@ -9,20 +9,26 @@
 
         <h1 class="media-heading"><%= link_to @post.title, post_path(id: @post.id) %>
           <h2>
-          <% @post.all_tags.split(", ").each do |tag_name| %>
-            Area:  <%= area_label(@post.post_type, tag_name) %>
-          <% end %>
+            Area:  <%= area_label(@post.post_type, @post.area) %>
            </h2>
                 Layer: 
                 <select name="post[person_id]">
                   <% if @current_layer.nil? %> 
                     <option value="" selected="selected">Primary</option>
+                    <% @post.layers.each do |l| %>
+                      <option value="<%= post_path(id: @post.id, layer: l.id) %>" >
+                        <%=  l.name %>
+                      </option>
+                    <% end %>
+                  <% else %>
+                    <option value="">Primary</option>
+                    <% @post.layers.each do |l| %>
+                      <option value="<%= post_path(id: @post.id, layer: l.id) %>" selected="<%= 'selected' if l == @current_layer %>">
+                        <%=  l.name %>
+                      </option>
+                    <% end %>
                   <% end %>
-                  <% @post.layers.each do |l| %>
-                    <option value="<%= post_path(id: @post.id, layer: l.id) %>" >
-                      <%=  l.name %>
-                    </option>
-                  <% end %>
+                  
                 </select>
             
           <% if @post.post_type == 'Problem'%>
@@ -64,7 +70,7 @@
         <% if @post.post_type == 'Problem'%> 
           <li>
             <%= link_to new_post_path(post_type: "Idea",area: @post.area, parent_post_id: @post.id), class: "btn btn-primary" do %>
-              <span class="glyphicon glyphicon-plus"></span>
+              <span class="glyphicon glyphicon-bell"></span>
                 Give an Idea
             <% end %>
           </li>
@@ -79,8 +85,14 @@
         <% end %>
         <li>
           <%= link_to new_post_path(post_type: "Proposal", area: @post.area, parent_post_id: @post.id), class: "btn btn-primary" do %>
-            <span class="glyphicon glyphicon-plus"></span>
+            <span class="glyphicon glyphicon-wrench"></span>
               Give a Proposal
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_post_path(post_type: "Proposal", area: @post.area, parent_post_id: @post.id), class: "btn btn-primary" do %>
+            <span class="glyphicon glyphicon-duplicate"></span>
+              Add a Layer
           <% end %>
         </li>
       </ul>
