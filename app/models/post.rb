@@ -11,6 +11,7 @@ class Post < ApplicationRecord
 	has_many :proposals, -> { where(post_type: 'Proposal')}, class_name: "Post", foreign_key: "parent_post_id"
 	has_many :problems, -> { where(post_type: 'Problem')} , class_name: "Post", foreign_key: "parent_post_id"
 	has_many :layers
+	has_many :tokens	
 
 
 	# Scopes	

@@ -24,10 +24,14 @@ class User < ApplicationRecord
   after_initialize :set_default_role, if: :new_record?
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :timeoutable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable
          # :omniauthable
 
   has_many :posts
+  has_one :profile 
+  has_many :wants
+  has_many :haves
+
   
 
   # Allow a single Ransack search field to search the virtual attr 'full_name'

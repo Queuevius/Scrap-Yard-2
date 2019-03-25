@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	
 	before_action :authenticate_user!
-	before_action :authorize_post, only: [:new, :create, :show]
+	before_action :authorize_post, only: [:new, :create, :show, :new_layer, :create_layer]
 
 	def index
 		policy_scope(Post)
@@ -65,10 +65,10 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@post  = Post.includes(:layers).friendly.find(params[:id])
+		@post  = Post.friendly.find(params[:id])
 		@layers = @post.layers
 		if params[:layer]
-			@current_layer = @post.layers.find(id: params[:layer]) 
+			@current_layer = @post.layers.find_by_name(params[:layer]) 
 		else
 			@current_layer = nil
 		end
@@ -76,16 +76,33 @@ class PostsController < ApplicationController
 
 	def new_layer 
 		@post = Post.friendly.find(params[:id])
-		@layer = Layers.new(post_id: @post.id)
+		@layer = Layer.new
 	end
 
 	def create_layer
+		@post = Post.friendly.find(params[:id])
+		@layer = Post.friendly.find(params[:id]).layers.build(layer_params)
+		@layer.creator_id = current_user.id
+		if @layer.save
+			redirect_to post_path @post
+		else 
+			render :new_layer
+		end
+	end
+
+
+	def add_token 
+		byebug
 	end
 
 
 private
 def post_params
   params.require(:post).permit(:title, :body, :all_tags,:post_type, :parent_post_id)
+end
+
+def layer_params
+	params.require(:layer).permit(:name, :body)
 end
 
 def authorize_post

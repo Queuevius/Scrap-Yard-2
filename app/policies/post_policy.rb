@@ -20,4 +20,12 @@ class PostPolicy < ApplicationPolicy
     true
   end
 
+  def new_layer?
+    true
+  end
+
+  def create_layer?
+    true 
+  end
+
 end

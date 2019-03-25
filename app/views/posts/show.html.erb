@@ -7,23 +7,23 @@
       </a>
       <div class="media-body">
 
-        <h1 class="media-heading"><%= link_to @post.title, post_path(id: @post.id) %>
+        <h1 class="media-heading"><%= link_to @post.title, post_path(id: @post.slug) %>
           <h2>
             Area:  <%= area_label(@post.post_type, @post.area) %>
            </h2>
                 Layer: 
-                <select name="post[person_id]">
+                <select name="layer_sel" id="layer_sel">
                   <% if @current_layer.nil? %> 
-                    <option value="" selected="selected">Primary</option>
+                    <option value="/posts/<%= @post.slug %>" selected="selected">Primary</option>
                     <% @post.layers.each do |l| %>
-                      <option value="<%= post_path(id: @post.id, layer: l.id) %>" >
+                      <option value="/posts/<%= @post.slug %>?layer=<%= l.name %>">
                         <%=  l.name %>
                       </option>
                     <% end %>
                   <% else %>
-                    <option value="">Primary</option>
+                    <option value="/posts/<%= @post.slug %>">Primary</option>
                     <% @post.layers.each do |l| %>
-                      <option value="<%= post_path(id: @post.id, layer: l.id) %>" selected="<%= 'selected' if l == @current_layer %>">
+                      <option value="/posts/<%= @post.slug %>?layer=<%= l.name %>" selected="<%= 'selected' if l.name == @current_layer.name %>">
                         <%=  l.name %>
                       </option>
                     <% end %>
@@ -42,10 +42,19 @@
 
 
           <p class="text-right">By <%= @post.user.full_name %></p>
+          
+
           <div class="post-body">          
-           <%= @post.body.html_safe %> 
+           <% if @current_layer.nil?%>
+            <%= @post.body.html_safe %>
+            <% else %>
+            <%= @current_layer.body.html_safe %>
+            <% end %> 
           </div>
-          <ul class="list-inline list-unstyled">
+      
+
+
+      <ul class="list-inline list-unstyled">
         <li><span><i class="glyphicon glyphicon-calendar"></i> <%= @post.created_at %> </span></li>
             <li>|</li>
             <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
@@ -90,7 +99,7 @@
           <% end %>
         </li>
         <li>
-          <%= link_to new_post_path(post_type: "Proposal", area: @post.area, parent_post_id: @post.id), class: "btn btn-primary" do %>
+          <%= link_to new_layer_post_path(@post), class: "btn btn-primary" do %>
             <span class="glyphicon glyphicon-duplicate"></span>
               Add a Layer
           <% end %>
@@ -102,3 +111,13 @@
   </div>
   </div>
 </div>
+
+
+<% unless @current_layer.nil? %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    // select the current layer
+    $('#layer_sel option:contains("<%= @current_layer.name %>")').prop("selected","selected");
+  })
+</script>
+<% end %>

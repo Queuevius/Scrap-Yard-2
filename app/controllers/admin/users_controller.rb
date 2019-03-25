@@ -91,7 +91,7 @@ module Admin
     # Strong parameters
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation,
-                                   :role, :first_name, :last_name)
+                                   :role, :first_name, :last_name, :summary, :description)
     end
   end
 end

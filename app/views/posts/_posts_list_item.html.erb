@@ -4,7 +4,7 @@
         <img class="media-object" src="http://placekitten.com/150/150">
       </a>
       <div class="media-body">
-        <h4 class="media-heading"><%= link_to post.title, post_path(id: post.id) %>
+        <h4 class="media-heading"><%= link_to post.title, post_path(id: post.slug) %>
           
           <% if post.post_type == 'Problem'%>
             <%= link_to posts_path(post_type: 'Idea', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>

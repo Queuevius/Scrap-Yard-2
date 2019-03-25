@@ -5,16 +5,16 @@
 
 <div class="panel panel-default devise-bs">
   <div class="panel-heading">
-      <h4>Create a New Layer on <%= @layer.post.title %></h4>
+      <h4>Create a New Layer on <%= @post.title %></h4>
   </div>
   <div class="panel-body">
     <%= form_for(@layer,
-                 url: posts_path,
+                 url: create_layer_post_path,
                  html: { method: :post }) do |f| %>
 
       <div class="form-group required">
-        <%= f.label :title %>
-        <%= f.text_field :title, autofocus: true, class: "form-control" %>
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Please specify a name to the Layer you are adding." %>
       </div>
     
       <div class="form-group">
