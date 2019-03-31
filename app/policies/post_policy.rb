@@ -28,4 +28,16 @@ class PostPolicy < ApplicationPolicy
     true 
   end
 
+  def create_token?
+    true
+  end
+
+  def all_tokens?
+    true
+  end
+
+  def show_token?
+    true
+  end
+
 end

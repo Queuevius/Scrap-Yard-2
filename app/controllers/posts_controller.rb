@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	
 	before_action :authenticate_user!
-	before_action :authorize_post, only: [:new, :create, :show, :new_layer, :create_layer]
+	before_action :authorize_post, only: [:new, :create, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token]
 
 	def index
 		policy_scope(Post)
@@ -84,15 +84,47 @@ class PostsController < ApplicationController
 		@layer = Post.friendly.find(params[:id]).layers.build(layer_params)
 		@layer.creator_id = current_user.id
 		if @layer.save
-			redirect_to post_path @post
+			redirect_to "#{post_path(@post)}?layer=#{@layer.name}"
 		else 
 			render :new_layer
 		end
 	end
 
 
-	def add_token 
-		byebug
+	def create_token
+		@post = Post.friendly.find(params[:id])
+		@token = @post.tokens.build
+		@token.token_type = params[:tkntype]
+		@token.creator_id = current_user.id 
+		@token.body = params[:body]
+		@token.span_id = params[:span_id]
+		unless params[:layer_id].blank?
+			@token.layer_id = params[:layer_id].to_i 
+		end
+		if @token.save(validate: false) 
+			token_path = "/posts/#{@post.slug}/show_token?token_id=#{@token.id}"
+			render json: { add_token: true , token_path: token_path ,span_id: @token.span_id , type: @token.token_type }.to_json
+		else
+			render json: { add_token: false }.to_json
+		end
+	end
+
+	def area_index 
+	end
+
+	def all_tokens
+		@post = Post.friendly.find(params[:id])
+		if params[:layer].blank?
+			@tokens = @post.tokens.where(layer_id: nil)
+		else
+			@tokens = @post.tokens.where(layer_id: params[:layer])
+		end
+		render json: @tokens.to_json
+	end
+
+	def show_token
+		@token = Token.find(params[:token_id])
+		@comment = @token.comments.build 
 	end
 
 

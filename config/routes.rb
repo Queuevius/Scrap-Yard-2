@@ -3,7 +3,12 @@ Rails.application.routes.draw do
     member do 
       get :new_layer
       post :create_layer
-      get :add_token
+      post :create_token
+      get :all_tokens
+      get :show_token
+      resources :tokens do 
+        resources :comments
+      end
     end
   end 
   root to: 'home#index'

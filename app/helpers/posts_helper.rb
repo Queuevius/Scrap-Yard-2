@@ -24,4 +24,8 @@ module PostsHelper
 			"#f0f7ff"
 		end
 	end
+
+	def add_token( type = "N" )
+		"<span class='tkn-n'><strong>#{type}</strong></span>".html_safe
+	end
 end
