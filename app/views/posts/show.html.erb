@@ -158,30 +158,27 @@
 
 
 <script type="text/javascript">
+
+function fetch_and_add_token(){
+  $.get("<%= all_tokens_post_path %>?layer=<%= @current_layer.nil? ? nil : @current_layer.id %>", function(data, status){
+    data.map(function(obj){
+      $('#'+obj.span_id).after("<span class='tkn-n'><a href='<%= show_token_post_path %>?token_id="+ obj.id+"'><strong>"+obj.token_type[0]+"</strong></a></span>");
+    })
+});
+}
+
 $(document).ready(function(){    
-
-  function fetch_and_add_token(){
-    $.get("<%= all_tokens_post_path %>?layer=<%= @current_layer.nil? ? nil : @current_layer.id %>", function(data, status){
-      data.map(function(obj){
-        $('#'+obj.span_id).after("<span class='tkn-n'><a href='<%= show_token_post_path %>?token_id="+ obj.id+"'><strong>"+obj.token_type[0]+"</strong></a></span>");
-      })
-    });
-  }
-
-
   fetch_and_add_token();
 });
 
+$(document).on('turbolinks:load',function(){
 
+  <% unless @current_layer.nil? %>
+  // select the current layer
+  $('#layer_sel option:contains("<%= @current_layer.name %>")').prop("selected","selected");
+  $('#layer_id').val("<%= @current_layer.id %>");
 
+  <% end %>
 
-  $(document).on('turbolinks:load',function(){
-    <% unless @current_layer.nil? %>
-    // select the current layer
-    $('#layer_sel option:contains("<%= @current_layer.name %>")').prop("selected","selected");
-    $('#layer_id').val("<%= @current_layer.id %>");
-
-    <% end %>
-
-  })
+})
 </script>
