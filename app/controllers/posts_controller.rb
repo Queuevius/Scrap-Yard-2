@@ -57,7 +57,6 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 		@post.creator_id = @current_user.id  
-		byebug
 		if @post.save
 			redirect_to post_path @post
 		else 
