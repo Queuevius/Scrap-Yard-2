@@ -46,7 +46,7 @@
            <% if @current_layer.nil?%>
             <%= @post.post_body.html_safe %>
             <% else %>
-            <%= @current_layer.body.html_safe %>
+            <%= @current_layer.layer_body.html_safe %>
             <% end %> 
           </div>
       
