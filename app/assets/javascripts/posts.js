@@ -60,7 +60,7 @@ $(document).on('turbolinks:load', function(){
 
 
 	tokenize_body();
-
+	
 	$('.tokenable').on('dblclick', function(e) {
         elem = e.currentTarget
 				//console.log(elem)
@@ -69,6 +69,11 @@ $(document).on('turbolinks:load', function(){
 				$('#span_id').val($(elem).attr("id"))
 				
 	})
+	
+	// $("#tkn_form_btn").on('click', function(){
+	// 	$("#token_form").submit();
+	// 	alert("okay")
+	// });
 
 
 

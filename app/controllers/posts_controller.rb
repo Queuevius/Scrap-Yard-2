@@ -54,9 +54,10 @@ class PostsController < ApplicationController
 	end
 
 
-	def create 
+	def create
 		@post = Post.new(post_params)
 		@post.creator_id = @current_user.id  
+		byebug
 		if @post.save
 			redirect_to post_path @post
 		else 
@@ -96,7 +97,7 @@ class PostsController < ApplicationController
 		@token = @post.tokens.build
 		@token.token_type = params[:tkntype]
 		@token.creator_id = current_user.id 
-		@token.body = params[:body]
+		@token.token_body = params[:token_body]
 		@token.span_id = params[:span_id]
 		unless params[:layer_id].blank?
 			@token.layer_id = params[:layer_id].to_i 
@@ -130,11 +131,11 @@ class PostsController < ApplicationController
 
 private
 def post_params
-  params.require(:post).permit(:title, :body, :all_tags,:post_type, :parent_post_id)
+  params.require(:post).permit(:title, :post_body, :all_tags,:post_type, :parent_post_id)
 end
 
 def layer_params
-	params.require(:layer).permit(:name, :body)
+	params.require(:layer).permit(:name, :layer_body)
 end
 
 def authorize_post

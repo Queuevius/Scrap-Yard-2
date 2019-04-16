@@ -28,4 +28,31 @@ module PostsHelper
 	def add_token( type = "N" )
 		"<span class='tkn-n'><strong>#{type}</strong></span>".html_safe
 	end
+
+
+	def add_comment_on_token_form_heading token 
+		case token.token_type 
+			when "Note"
+				"Add a Comment to this Note"
+			when "Debate"
+				"Add an Arguement"
+			when "Question"
+				"Give an Answer"
+			end
+	end
+
+	def add_comment_form_actions token
+		case token.token_type 
+			when "Note"
+				"<button type='submit' class='btn btn-success'>Add Comment</button>".html_safe
+			when "Debate"
+				"<button type='submit' class='btn btn-success'>I Aggree</button>
+				<button type='submit' class='btn btn-danger'>I Disagree</button>
+				".html_safe
+
+			when "Question"
+				"<button type='submit' class='btn btn-success'>Submit Answer</button>".html_safe
+			end
+
+	end
 end

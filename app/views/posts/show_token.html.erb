@@ -13,7 +13,7 @@
 <p class="text-right">By <%= @token.user_name %></p>
 
 <div class="post-body">
-	<%= @token.body.html_safe unless @token.body.nil? %>
+	<%= @token.token_body.html_safe unless @token.token_body.nil? %>
 </div>
 
 </div>
@@ -24,8 +24,7 @@
 	<div class="media">
 		<div class="media-body">
 			<h1 class="media-heading">
-				 Add an Answer / Argument
-				
+				 <%= add_comment_on_token_form_heading @token  %>				
 			</h1>
 
 			<div class="post-body">
@@ -35,7 +34,8 @@
 				      <%= tinymce %>
 				      <%= hidden_field_tag(:polarity) %>
 				      
-				      <button type="submit" class="btn btn-success">Add Comment</button>
+				      <%= add_comment_form_actions @token %>
+
 				      <% end %>
 					</div>
 

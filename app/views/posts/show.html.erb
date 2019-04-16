@@ -44,7 +44,7 @@
 
           <div class="post-body">          
            <% if @current_layer.nil?%>
-            <%= @post.body.html_safe %>
+            <%= @post.post_body.html_safe %>
             <% else %>
             <%= @current_layer.body.html_safe %>
             <% end %> 
@@ -131,21 +131,16 @@
               <p id="tkn-info">
                 Give the details of the Note token.
               </p>
-              <%= text_area_tag "body","",name: 'post_body', class: "tinymce", rows: 40 , cols: 120 %>
+              <%= text_area_tag "token_body","",name: 'token_body', class: "tinymce", rows: 40 , cols: 120 %>
               <%= tinymce %>
               <%= hidden_field_tag(:span_id) %>
               <%= hidden_field_tag(:tkntype) %>
               <%= hidden_field_tag(:layer_id) %>
-              </div>
-          
-            
+              <button type="submit" id="tkn_form_btn" class="btn btn-success">Add Token</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>          
           </div>
 
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-success">Add Token</button>
-          </div>
           <% end %>
         </div>
       </div>
@@ -179,6 +174,5 @@ $(document).on('turbolinks:load',function(){
   $('#layer_id').val("<%= @current_layer.id %>");
 
   <% end %>
-
 })
 </script>
