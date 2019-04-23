@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  get 'area/new'
+  post 'area/create'
+
   resources :posts do 
     member do 
       get :new_layer

@@ -1,11 +1,20 @@
 <div class="row">
   <% if @area.nil? %>
     <div class="page-header">
+      
+
+    <% if @ptype.blank? %>
+      <%= link_to area_new_path , class: "btn btn-primary" do %>
+        <span class="glyphicon glyphicon-plus"></span>
+          Create a new Area
+      <% end %>
+    <% else %>
       <%= link_to new_post_path(post_type: @ptype), class: "btn btn-primary" do %>
         <span class="glyphicon glyphicon-plus"></span>
           Create a new <%= @ptype %>
       <% end %>
-      <h1>All <%= @ptype.pluralize.capitalize %></h1>
+    <% end %>
+      <h1>All <%= header_title(@ptype) %></h1>
     </div>
   <% else %>
     

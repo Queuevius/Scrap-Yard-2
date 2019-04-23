@@ -8,6 +8,7 @@ class PostsController < ApplicationController
 		@ptype = params[:post_type] 			
 		case params[:tags_filter]
 		when nil
+				#@ptype = "Area"
 				@posts = []
 				@all_tags = Tag.all.map do |_| 
 				[ _.name, 

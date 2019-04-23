@@ -55,4 +55,8 @@ module PostsHelper
 			end
 
 	end
+
+	def header_title(ptype)
+		ptype.try(:pluralize).try(:capitalize).blank? ? "Areas" : ptype.pluralize.capitalize
+	end
 end
