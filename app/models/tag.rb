@@ -11,5 +11,4 @@ def posts_count
  end
 end
 
-
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190423093149) do
+ActiveRecord::Schema.define(version: 20190427151417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,15 @@ ActiveRecord::Schema.define(version: 20190423093149) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "ratings", force: :cascade do |t|
+    t.integer "score"
+    t.integer "rateable_id"
+    t.string "rateable_type"
+    t.integer "creator_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "taggings", force: :cascade do |t|
     t.bigint "post_id"
     t.bigint "tag_id"
@@ -88,6 +97,7 @@ ActiveRecord::Schema.define(version: 20190423093149) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "tag_body"
+    t.integer "creator_id"
   end
 
   create_table "tokens", force: :cascade do |t|

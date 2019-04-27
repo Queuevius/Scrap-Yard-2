@@ -7,7 +7,7 @@
 
 <h1 class="media-heading">A <%= @token.token_type %> Token on "<%= link_to @token.post.title,post_path(@token.post) %>"
   <h2>
-    Area:  <%= @token.post.area %>
+    Area:  <a href="/area/<%= @token.post.area.id %>"><%= @token.post.area.name %></a>
    </h2>
 </h1>
 <p class="text-right">By <%= @token.user_name %></p>

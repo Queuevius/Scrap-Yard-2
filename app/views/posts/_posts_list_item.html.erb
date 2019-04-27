@@ -30,12 +30,14 @@
             <li>|</li>
             <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
             <li>|</li>
-            <li>
-               <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
+            <li class="rating">
+            <% 1.upto(5) do |star_index| %>
+              <% if star_index <= post.avg_rating %>
+                <span class="glyphicon glyphicon-star"></span>
+              <% else %>
+              <span class="glyphicon glyphicon-star-empty"></span>
+              <% end %>
+            <% end %>
             </li>
             <li>|</li>
             <li>

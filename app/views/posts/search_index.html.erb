@@ -5,6 +5,10 @@
 			<h2>
 				There are no Areas having "<%= @area %>" in their name.
 			</h2>
+			<%= link_to area_new_path , class: "btn btn-primary" do %>
+	        	<span class="glyphicon glyphicon-plus"></span>
+	          	Create a new Area
+	      	<% end %>
 			<%= link_to new_post_path(post_type: 'Problem', area: @area), class: "btn btn-danger" do %>
 		      <span class="glyphicon glyphicon-plus"></span>
 		        Create a new Problem in "<%= @area %>"

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   get 'area/new'
   post 'area/create'
+  get 'area/:id' => 'area#show'
 
   resources :posts do 
     member do 
@@ -13,9 +14,10 @@ Rails.application.routes.draw do
       resources :tokens do 
         resources :comments
       end
+      get :add_rating
     end
   end 
-  root to: 'home#index'
+  root to: 'posts#index'
 
   devise_for :users, controllers: {
     # Override the following Devise controllers with our custom versions

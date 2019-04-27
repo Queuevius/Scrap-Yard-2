@@ -3,7 +3,11 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :authorize_post, only: [:new, :create, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token]
 
+	after_action :set_tag_creator, only: [:create]
+	
+
 	def index
+		@show_search = true 
 		policy_scope(Post)
 		@ptype = params[:post_type] 			
 		case params[:tags_filter]
@@ -14,7 +18,8 @@ class PostsController < ApplicationController
 				[ _.name, 
 					_.posts.type('Problem').count,
 					_.posts.type('Idea').count,
-					_.posts.type('Proposal').count
+					_.posts.type('Proposal').count,
+					_.id
 				]
 			end
 		when 'search'
@@ -28,6 +33,7 @@ class PostsController < ApplicationController
 			end 
 			render :search_index
 		else
+			@show_search = false
 			if params[:parent_id]
 				@parent_id = params[:parent_id].to_i
 				@parent_post = Post.find_by_id @parent_id
@@ -40,6 +46,8 @@ class PostsController < ApplicationController
 			end
 			@all_tags = Tag.all.map { |_| [ _.name ] }
 			@area = params[:tags_filter].strip.split(',').first
+			@area = Tag.find_by_name(params[:tags_filter].strip.split(',').first)
+			
 		end
 	end
 
@@ -130,6 +138,12 @@ class PostsController < ApplicationController
 
 
 private
+
+def set_tag_creator
+	@post.area.creator_id = current_user.id 
+	@post.area.save
+end
+
 def post_params
   params.require(:post).permit(:title, :post_body, :all_tags,:post_type, :parent_post_id)
 end

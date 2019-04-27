@@ -1,3 +1,32 @@
+
+
+<% if @show_search %>
+<div class="container" style="margin-top: 8%;">
+<div class="col-md-6 col-md-offset-3">     
+<div class="row">
+<div id="logo" class="text-center">
+<h1>NeedPedia</h1><p>A Solutions Hub for all the Problems..</p>
+</div>
+<form role="form" id="form-buscar" action=<%= posts_path %> >
+<div class="form-group">
+<div class="input-group">
+<input id="1" class="form-control" type="text" name="term" placeholder="Type in the name of any area or concept." required/>
+<input id="1" class="form-control" type="hidden" name="tags_filter" value="search" />
+<input id="1" class="form-control" type="hidden" name="post_type" value="Problem" />
+<span class="input-group-btn">
+<button class="btn btn-success" type="submit">
+<i class="glyphicon glyphicon-search" aria-hidden="true"></i> Search
+</button>
+</span>
+</div>
+</div>
+</form>
+</div>            
+</div>
+</div>
+<% end %>
+
+
 <div class="row">
   <% if @area.nil? %>
     <div class="page-header">
@@ -21,12 +50,12 @@
 
   <% unless @has_parent %>
     <div class="page-header">
-    <%= link_to new_post_path(post_type: @ptype, area: @area), class: "btn btn-primary" do %>
+    <%= link_to new_post_path(post_type: @ptype, area: @area.name), class: "btn btn-primary" do %>
       <span class="glyphicon glyphicon-plus"></span>
-        Create a new <%= @ptype %> in <%= @area %>
+        Create a new <%= @ptype %> in <%= @area.name %>
     <% end %>
     <h1>All <%= @ptype.pluralize.capitalize %></h1> 
-    <h1>Area: <strong><%= @area %></strong></h1>
+    <h1>Area: <strong><a href="/area/<%= @area.id %>"><%= @area.name %></a></strong></h1>
    </div>
    <% end %>
   <% end %>
@@ -52,7 +81,7 @@
   <% if @area.nil? %>
     <ul class="list-group">
         <% @all_tags.each do |tag| %>
-        <li class="list-group-item"><strong><%= tag[0] %></strong> has
+        <li class="list-group-item"><strong><a href="/area/<%= tag[4] %>"><%= tag[0] %></a></strong> has
           <%= link_to raw("<label class='label label-danger'><span class='badge'>#{tag[1]}</span>Problems</label>"), "/posts?post_type=Problem&tags_filter=#{tag[0]}" %>
           <%= link_to raw("<label class='label label-success'><span class='badge'>#{tag[2]}</span>Ideas</label>"), "/posts?post_type=Idea&tags_filter=#{tag[0]}" %>
           and

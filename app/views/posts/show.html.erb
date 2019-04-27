@@ -9,7 +9,7 @@
 
         <h1 class="media-heading"><%= link_to @post.title, post_path(id: @post.slug) %>
           <h2>
-            Area:  <%= area_label(@post.post_type, @post.area) %>
+            Area:  <%= area_label(@post.post_type, @post.area.name) %>
            </h2>
                 Layer: 
                 <select name="layer_sel" id="layer_sel">
@@ -58,11 +58,13 @@
             <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
             <li>|</li>
             <li>
-               <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star-empty"></span>
+            <% 1.upto(5) do |star_index| %>
+              <% if star_index <= @post.avg_rating %>
+                <span class="glyphicon glyphicon-star rating" data-sindex="<%= star_index %>"></span>
+              <% else %>
+              <span class="glyphicon glyphicon-star-empty rating" data-sindex="<%= star_index %>"></span>
+              <% end %>
+            <% end %>
             </li>
             <li>|</li>
             <li>
@@ -162,17 +164,19 @@ function fetch_and_add_token(){
 });
 }
 
-$(document).ready(function(){    
-  fetch_and_add_token();
-});
+$('.rating').on('click',function(e){
+  console.log($(e.currentTarget).data("sindex")   );
+})
+
+ 
+fetch_and_add_token();
+
 
 $(document).on('turbolinks:load',function(){
-
   <% unless @current_layer.nil? %>
   // select the current layer
   $('#layer_sel option:contains("<%= @current_layer.name %>")').prop("selected","selected");
   $('#layer_id').val("<%= @current_layer.id %>");
-
   <% end %>
 })
 </script>

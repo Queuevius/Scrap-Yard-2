@@ -12,6 +12,7 @@ class Post < ApplicationRecord
 	has_many :problems, -> { where(post_type: 'Problem')} , class_name: "Post", foreign_key: "parent_post_id"
 	has_many :layers
 	has_many :tokens	
+	has_many :ratings, as: :rateable
 
 
 	# Scopes	
@@ -33,7 +34,11 @@ class Post < ApplicationRecord
 	end
 
 	def area
-		self.tags.map(&:name).first
+		self.tags.first
+	end
+
+	def avg_rating 
+		( self.ratings.map(&:score).sum / ( self.ratings.empty? ? 1 : self.ratings.count  ) )
 	end
 
 end

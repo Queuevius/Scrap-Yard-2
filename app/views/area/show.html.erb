@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="well">
+      <div class="media">
+        <a class="pull-left" href="#">
+        <img class="media-object" >
+      </a>
+      <div class="media-body">
+
+        <h1 class="media-heading"><%= @area_stats[0] %>
+        </h1>
+          <h2>
+           <%= @area.tag_body.try(:html_safe) %>
+          <p class="text-right">By <%= User.find(@area_stats[4]).full_name %></p>
+          
+
+          <ul class="list-group">
+          
+          <li class="list-group-item">
+            <%= link_to raw("<label class='label label-danger'><span class='badge'>#{@area_stats[1]}</span>Problems</label>"), "/posts?post_type=Problem&tags_filter=#{@area_stats[0]}" %>
+            <%= link_to raw("<label class='label label-success'><span class='badge'>#{@area_stats[2]}</span>Ideas</label>"), "/posts?post_type=Idea&tags_filter=#{@area_stats[0]}" %>
+            and
+            <%= link_to raw("<label class='label label-info'><span class='badge'>#{@area_stats[3]}</span>Proposals</label>"), "/posts?post_type=Proposal&tags_filter=#{@area_stats[0]}" %>     
+            <span class="badge badge-error">
+            <%= link_to new_post_path(post_type: 'Problem', area: @area_stats[0]) do %>
+              <span class="glyphicon glyphicon-plus"></span>
+                new Problem in "<%= @area_stats[0] %>"
+            <% end %>
+            </span>  
+            <span class="badge badge-info">
+            <%= link_to new_post_path(post_type: 'Proposal', area: @area_stats[0]) do %>
+              <span class="glyphicon glyphicon-plus"></span>
+                new Proposal in "<%= @area_stats[0] %>"
+            <% end %>
+            </span>
+            </li>
+           
+        </ul> 
+
+
+          </h2>
+
+       </div>
+    </div>
+
+
+  </div>
+  </div>
+</div>
