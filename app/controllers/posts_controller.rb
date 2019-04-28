@@ -91,7 +91,7 @@ class PostsController < ApplicationController
 
 	def create_layer
 		@post = Post.friendly.find(params[:id])
-		@layer = Post.friendly.find(params[:id]).layers.build(layer_params)
+		@layer = @post.layers.build(layer_params)
 		@layer.creator_id = current_user.id
 		if @layer.save
 			redirect_to "#{post_path(@post)}?layer=#{@layer.name}"

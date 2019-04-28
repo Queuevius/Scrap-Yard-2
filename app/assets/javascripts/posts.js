@@ -5,7 +5,13 @@ $(document).on('turbolinks:load', function(){
 
 
 	$('#layer_sel').on("change",function(e){ 
+
+		
+
 		window.location = $(e.currentTarget).val()
+	
+
+
 	})
 
   $('#token_type').on("change",function(e){ 
