@@ -159,7 +159,6 @@ class PostsController < ApplicationController
 			end
 			@comments = a
 		end
-		#@comment = @token.comments.build
 	end
 
 
