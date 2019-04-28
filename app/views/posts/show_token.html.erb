@@ -20,6 +20,28 @@
 </div>
 </div>
 
+
+
+	<% if @token.token_type == 'Debate' and !(@comments.blank?) %>
+		<%= render partial: "debate_token_comments" %>
+	<% else %>
+		<% @comments.each do |c| %>
+		<div class="well" style="background-color: <%= bg_color(@token.post.post_type) %>">
+			<div class="media">
+			<div class="row media-body">
+				<%= raw c.com_body %>
+			<p class="text-right">By <%= @token.user_name %></p>
+			</div>
+			</div>	
+		</div>
+		<% end %>
+	<% end %>
+
+
+
+
+
+
 <div class="well">
 	<div class="media">
 		<div class="media-body">
@@ -29,7 +51,7 @@
 
 			<div class="post-body">
 				   <div class="form-group required">
-				   <%= form_tag(create_token_post_path, method: :post, remote: true, id: :token_form  ) do %>
+				   <%= form_tag( token_comments_path(token_id: @token.id) , method: :post, remote: true, id: :token_form  ) do %>
 				      <%= text_area_tag "body","", class: "tinymce", rows: 10 , cols: 120 %>
 				      <%= tinymce %>
 				      <%= hidden_field_tag(:polarity) %>

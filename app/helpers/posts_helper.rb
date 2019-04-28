@@ -46,8 +46,9 @@ module PostsHelper
 			when "Note"
 				"<button type='submit' class='btn btn-success'>Add Comment</button>".html_safe
 			when "Debate"
-				"<button type='submit' class='btn btn-success'>I Aggree</button>
-				<button type='submit' class='btn btn-danger'>I Disagree</button>
+				"<button type='submit' class='btn btn-success' onclick='$(\"#polarity\").val(\"yes\");'>I Aggree</button>
+				<button type='submit' class='btn btn-danger' onclick='$(\"#polarity\").val(\"no\");' >I Disagree</button>
+				<button type='submit' class='btn btn-primary'>I think Otherwise</button>
 				".html_safe
 
 			when "Question"

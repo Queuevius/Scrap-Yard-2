@@ -143,8 +143,23 @@ class PostsController < ApplicationController
 	end
 
 	def show_token
-		@token = Token.find(params[:token_id])
-		@comment = @token.comments.build 
+		@token = Token.find(params[:token_id]) 
+		@comments = @token.comments
+		if @token.token_type == 'Debate' && !(@comments.blank?)
+			a = [[], [], []]
+			@comments.inject(a) do |a,_|
+		  	if _.polarity == 'yes'
+		    	a[0].push(_)
+		  	elsif _.polarity == 'no'
+		    	a[1].push(_)
+		  	else
+		  		a[2].push(_)
+		  	end  
+		  	a
+			end
+			@comments = a
+		end
+		#@comment = @token.comments.build
 	end
 
 
@@ -169,3 +184,10 @@ end
 
 
 end
+
+
+
+
+
+
+
