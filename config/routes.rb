@@ -11,10 +11,10 @@ Rails.application.routes.draw do
       post :create_token
       get :all_tokens
       get :show_token
+      post :add_rating
       resources :tokens do 
         resources :comments
       end
-      get :add_rating
     end
   end 
   root to: 'posts#index'

@@ -40,4 +40,8 @@ class PostPolicy < ApplicationPolicy
     true
   end
 
+  def add_rating?
+    true
+  end
+
 end

@@ -68,10 +68,11 @@
             </li>
             <li>|</li>
             <li>
-            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-              <span><i class="fa fa-facebook-square"></i></span>
-              <span><i class="fa fa-twitter-square"></i></span>
-              <span><i class="fa fa-google-plus-square"></i></span>
+              <% unless @rated.nil? %>
+                <span id="rated"><i>You Rated <strong class="rate_count"> <%= @rated.score %></strong> Stars.</i></span>
+              <% else %>
+                <span id="rated" style="display: none;"><i>You Rated <strong class="rate_count"></strong> Stars.</i></span>
+              <% end %>
             </li>
       </ul>
 
@@ -114,7 +115,6 @@
     <div class="modal" id="add-token">
       <div class="modal-dialog">
         <div class="modal-content">
-
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Add a 
@@ -152,6 +152,40 @@
   </div>
 </div>
 
+    <!-- Rate Post Modal -->
+    <div class="modal" id="rate-post">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">
+            Do you want to rate this <%= @post.post_type %> <strong class="rate_count"></strong> stars ?
+            </h4>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <%= form_tag(add_rating_post_path, method: :post, remote: true, id: :rating_form  ) do %>
+
+              <div class="form-group required">
+              <div id="stars_form">
+                
+              </div>
+              <%= hidden_field_tag(:score) %>
+              <button type="submit" id="tkn_form_btn" class="btn btn-success">Yes</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Don't Rate</button>
+              </div>          
+          </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</div>
+
 
 
 <script type="text/javascript">
@@ -165,10 +199,24 @@ function fetch_and_add_token(){
 }
 
 $('.rating').on('click',function(e){
-  console.log($(e.currentTarget).data("sindex")   );
+  scount = $(e.currentTarget).data("sindex")
+  $(".rate_count").text(scount)
+  $("#score").val(scount)
+  $("#rate-post").modal("show")
 })
 
- 
+$('#rating_form').on("submit", function(){
+  $('#rate-post').html("<div class='checkmark'><svg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 161.2 161.2' enable-background='new 0 0 161.2 161.2' xml:space='preserve'><path class='path' fill='none' stroke='#7DB0D5' stroke-miterlimit='10' d='M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4 c-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5 c0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z'/><circle class='path' fill='none' stroke='#7DB0D5' stroke-width='4' stroke-miterlimit='10' cx='80.6' cy='80.6' r='62.1'/><polyline class='path' fill='none' stroke='green' stroke-width='6' stroke-linecap='round' stroke-miterlimit='10' points='113,52.8  74.1,108.4 48.2,86.4 '/><circle class='spin' fill='none' stroke='#7DB0D5' stroke-width='4' stroke-miterlimit='10' stroke-dasharray='12.2175,12.2175' cx='80.6' cy='80.6' r='73.9'/></svg><p style='background-color:#7DB0D5'>Thanks!</p></div>");
+  //$("#rate-post").modal("hide");
+  setTimeout(function(){
+    $("#rate-post").modal("hide");
+    $("#rated").show();
+    $('span').removeClass("rating");
+  }, 1000)
+
+})
+
+$('.rating').css('cursor','pointer')
 fetch_and_add_token();
 
 
@@ -180,3 +228,11 @@ $(document).on('turbolinks:load',function(){
   <% end %>
 })
 </script>
+
+
+
+
+
+
+
+

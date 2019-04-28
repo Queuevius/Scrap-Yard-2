@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	
 	before_action :authenticate_user!
-	before_action :authorize_post, only: [:new, :create, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token]
+	before_action :authorize_post, only: [:new, :create, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating]
 
 	after_action :set_tag_creator, only: [:create]
 	
@@ -75,6 +75,7 @@ class PostsController < ApplicationController
 
 	def show
 		@post  = Post.friendly.find(params[:id])
+		@rated = Rating.where({rateable_id: @post.id, rateable_type: @post.class.to_s, creator_id: current_user.id}).first
 		@layers = @post.layers
 		if params[:layer]
 			@current_layer = @post.layers.find_by_name(params[:layer]) 
@@ -116,6 +117,16 @@ class PostsController < ApplicationController
 		else
 			render json: { add_token: false }.to_json
 		end
+	end
+
+
+	def add_rating
+		@post = Post.friendly.find(params[:id])
+		score = params[:score].to_i
+		rating = Rating.where({rateable_id: @post.id, rateable_type: @post.class.to_s, creator_id: current_user.id}).first_or_create
+		rating.score = score
+		rating.save
+		render :show
 	end
 
 	def area_index 
