@@ -126,7 +126,7 @@ class PostsController < ApplicationController
 		rating = Rating.where({rateable_id: @post.id, rateable_type: @post.class.to_s, creator_id: current_user.id}).first_or_create
 		rating.score = score
 		rating.save
-		render :show
+		redirect_to "/posts/#{@post.slug}"
 	end
 
 	def area_index 
