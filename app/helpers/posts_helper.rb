@@ -61,3 +61,5 @@ module PostsHelper
 		ptype.try(:pluralize).try(:capitalize).blank? ? "Areas" : ptype.pluralize.capitalize
 	end
 end
+
+

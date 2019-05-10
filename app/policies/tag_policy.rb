@@ -15,4 +15,12 @@ class TagPolicy < ApplicationPolicy
   end
 
 
+  def new_layer?
+    true 
+  end
+
+  def create_layer?
+    true 
+  end
+
 end

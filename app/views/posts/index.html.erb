@@ -55,7 +55,7 @@
         Create a new <%= @ptype %> in <%= @area.name %>
     <% end %>
     <h1>All <%= @ptype.pluralize.capitalize %></h1> 
-    <h1>Area: <strong><a href="/area/<%= @area.id %>"><%= @area.name %></a></strong></h1>
+    <h1>Area: <strong><a href="/area/<%= @area.name %>"><%= @area.name %></a></strong></h1>
    </div>
    <% end %>
   <% end %>
@@ -81,7 +81,7 @@
   <% if @area.nil? %>
     <ul class="list-group">
         <% @all_tags.each do |tag| %>
-        <li class="list-group-item"><strong><a href="/area/<%= tag[4] %>"><%= tag[0] %></a></strong> has
+        <li class="list-group-item"><strong><a href="/area/<%= tag[0] %>"><%= tag[0] %></a></strong> has
           <%= link_to raw("<label class='label label-danger'><span class='badge'>#{tag[1]}</span>Problems</label>"), "/posts?post_type=Problem&tags_filter=#{tag[0]}" %>
           <%= link_to raw("<label class='label label-success'><span class='badge'>#{tag[2]}</span>Ideas</label>"), "/posts?post_type=Idea&tags_filter=#{tag[0]}" %>
           and

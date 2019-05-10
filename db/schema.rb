@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190427151417) do
+ActiveRecord::Schema.define(version: 20190510150403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,11 +46,12 @@ ActiveRecord::Schema.define(version: 20190427151417) do
 
   create_table "layers", force: :cascade do |t|
     t.string "name"
-    t.integer "post_id"
+    t.integer "layerable_id"
     t.integer "creator_id"
     t.text "layer_body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "layerable_type"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(version: 20190427151417) do
     t.bigint "tag_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "layer_id"
     t.index ["post_id"], name: "index_taggings_on_post_id"
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
   end
@@ -98,6 +100,8 @@ ActiveRecord::Schema.define(version: 20190427151417) do
     t.datetime "updated_at", null: false
     t.text "tag_body"
     t.integer "creator_id"
+    t.string "slug"
+    t.index ["slug"], name: "index_tags_on_slug", unique: true
   end
 
   create_table "tokens", force: :cascade do |t|

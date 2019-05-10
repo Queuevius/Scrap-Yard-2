@@ -1,6 +1,9 @@
 # Authorization policy for Admin::UsersController. *Not* used by Devise's
 # controllers.
 class PostPolicy < ApplicationPolicy
+
+  attr_reader :user, :post
+
   # Used by Pundit's #policy_scope
   class Scope < Scope
     def resolve
@@ -18,6 +21,14 @@ class PostPolicy < ApplicationPolicy
 
   def show?
     true
+  end
+
+  def edit?
+    true 
+  end
+
+  def update?
+    true 
   end
 
   def new_layer?

@@ -8,6 +8,11 @@
       <div class="media-body">
 
         <h1 class="media-heading"><%= link_to @post.title, post_path(id: @post.slug) %>
+          
+        <% if can_edit? @post %>
+        <a href="<%= edit_post_path @post %>?layer_id=<%= @current_layer.nil? ? '' : @current_layer.id %>"><button style="border-radius: 10px"><span><i class="glyphicon glyphicon-pencil"></i></span></button>
+        </a>
+        <% end %>
           <h2>
             Area:  <%= area_label(@post.post_type, @post.area.name) %>
            </h2>
