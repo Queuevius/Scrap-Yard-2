@@ -1,3 +1,11 @@
+<% content_for :token_purse do %>
+  <ul class="navbar-right tkn-purse" style="background-color: lavenderblush;border: 4px solid black;margin: 5px 0px 0px 0px;border-radius: 17px;padding: 5px">
+    <span class='tkn-n token' data-type='Note'>N</span>
+    <span class='tkn-n token' data-type='Debate'>D</span>
+    <span class='tkn-n token' data-type='Question'>Q</span>
+  </ul>
+  <% end %>
+
 <div class="container">
   <div class="row">
     <div class="well" style="background-color: <%= bg_color(@post.post_type) %>">
@@ -14,7 +22,7 @@
         </a>
         <% end %>
           <h2>
-            Area:  <%= area_label(@post.post_type, @post.area.name) %>
+            Area:  <%= area_label(@post , @post.area.name) %>
            </h2>
                 Layer: 
                 <select name="layer_sel" id="layer_sel">
@@ -195,9 +203,33 @@
 
 <script type="text/javascript">
 
+
+function tokenize_body(){
+  $('.post-body > p').each( 
+    function(i,e){ 
+      // add tag index
+      $(e).attr('tag-index',i)
+      // add sentense index
+      e.innerHTML = e.innerHTML.split(' ').map(function(x,ii){ return( 
+        "<span id='"+i+"-"+ii+"' class='tokenable'>"+x+"</span>"
+        )  }).join(' ')
+    })
+}
+
+tokenize_body();
+
+// $('.tokenable').on('dblclick', function(e) {
+//       elem = e.currentTarget
+//       //console.log(elem)
+//       $('#add-token').modal('show');
+//       $('#tkntype').val($('#token_type').val())
+//       $('#span_id').val($(elem).attr("id"))        
+// })
+
 function fetch_and_add_token(){
   $.get("<%= all_tokens_post_path %>?layer=<%= @current_layer.nil? ? nil : @current_layer.id %>", function(data, status){
     data.map(function(obj){
+      //console.log(obj)
       $('#'+obj.span_id).after("<span class='tkn-n'><a href='<%= show_token_post_path %>?token_id="+ obj.id+"'><strong>"+obj.token_type[0]+"</strong></a></span>");
     })
 });
@@ -213,7 +245,27 @@ $('.rating').css('cursor','pointer')
 fetch_and_add_token();
 
 
-$(document).on('turbolinks:load',function(){
+$( ".token" ).draggable({
+  helper: "clone"
+})
+
+$( ".tokenable" ).droppable({
+  accept: ".token",
+  drop: function( event, ui ) {
+      draged = $(ui.draggable[0]);
+      drop_target = $(event.target);
+      console.log("Dragged: ", draged);
+      console.log("Drop target: ", drop_target);
+
+      $('#token_type').val(draged.data('type')).change();
+      $('#add-token').modal('show');
+      $('#tkntype').val(draged.data('type'))
+      $('#span_id').val(drop_target.attr("id"))
+
+    }
+});
+
+//$(document).on('turbolinks:load',function(){
   <% unless @current_layer.nil? %>
   // select the current layer
   $('#layer_sel option:contains("<%= @current_layer.name %>")').prop("selected","selected");
@@ -221,7 +273,7 @@ $(document).on('turbolinks:load',function(){
   <% else %>
     $('#layer_sel option:contains("Primary")').prop("selected","selected");
   <% end %>
-})
+//})
 </script>
 
 

@@ -49,38 +49,6 @@ $(document).on('turbolinks:load', function(){
 		}).on('ajax:error', '#token_form', function(e, data, status, xhr){
 		  console.log('Great failure');
 	});
-
-	function tokenize_body(){
-
-		$('.post-body > p').each( 
-			function(i,e){ 
-				// add tag index
-				$(e).attr('tag-index',i)
-				// add sentense index
-				e.innerHTML = e.innerHTML.split(' ').map(function(x,ii){ return( 
-					"<span id='"+i+"-"+ii+"' class='tokenable'>"+x+"</span>"
-					)  }).join(' ')
-
-			})
-	}
-
-
-	tokenize_body();
-	
-	$('.tokenable').on('dblclick', function(e) {
-        elem = e.currentTarget
-				//console.log(elem)
-				$('#add-token').modal('show');
-				$('#tkntype').val($('#token_type').val())
-				$('#span_id').val($(elem).attr("id"))
-				
-	})
-	
-	// $("#tkn_form_btn").on('click', function(){
-	// 	$("#token_form").submit();
-	// 	alert("okay")
-	// });
-
-
+		
 
 })

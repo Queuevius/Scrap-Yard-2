@@ -21,7 +21,9 @@ class AreaController < ApplicationController
   def show
   	unless params[:layer].blank?
 			@clayer = @area.layers.find_by_name(params[:layer]) 
+			@posts = Post.joins(:taggings).where(taggings: { layer_id: @clayer.id }).type('Problem').with_tags(@area.name)
 		else
+			@posts = Post.joins(:taggings).where(taggings: { layer_id: nil }).type('Problem').with_tags(@area.name)
 			@clayer = nil
 		end
 		area_stats = @area.posts_count(@clayer.try(:id))
@@ -32,6 +34,7 @@ class AreaController < ApplicationController
 					@area.creator_id
 				]				
 		@layers = @area.layers - [@clayer]
+
   end
 
   def new_layer

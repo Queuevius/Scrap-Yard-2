@@ -3,14 +3,16 @@ module PostsHelper
 		current_user.id == post.creator_id || current_user.admin?
 	end
 
-	def area_label label_for, tag_name 
+	def area_label post , tag_name 
+		label_for = post.post_type 
+		area = post.area
 		case label_for
 		when 'Problem'
-			"<span class='label label-danger'>#{tag_name}</span>".html_safe
+			"<a href='/area/#{area.name}'><span class='label label-danger'>#{tag_name}</span></a>".html_safe
 		when 'Idea'
-			"<span class='label label-success'>#{tag_name}</span>".html_safe
+			"<a href='/area/#{area.name}'><span class='label label-success'>#{tag_name}</span></a>".html_safe
 		else
-			"<span class='label label-info'>#{tag_name}</span>".html_safe
+			"<a href='/area/#{area.name}'><span class='label label-info'>#{tag_name}</span></a>".html_safe
 		end
 	end
 

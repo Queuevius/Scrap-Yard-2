@@ -40,13 +40,10 @@ controller and action allows the implementation of page-specific CSS and JS %>
             <li><%= link_to t('navigation.contact'), contact_path %></li>
           </ul>
 
+           
           <ul class="nav navbar-nav navbar-right">
-            <%# Devise %>
             <% if user_signed_in? %>
-                
-
                 <%= yield :area_dd %>
-
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b><%= current_user.full_name %></b> <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -63,6 +60,7 @@ controller and action allows the implementation of page-specific CSS and JS %>
                 <li><%= link_to t('navigation.sign-in'), new_user_session_path %></li>
             <% end %>
           </ul>
+          <%= yield :token_purse %>
 
         </div><!-- navbar-collapse -->
       </div><!-- container-fluid -->

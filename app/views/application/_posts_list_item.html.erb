@@ -1,0 +1,81 @@
+<div class="well" style="background-color: <%= bg_color(post.post_type) %>">
+      <div class="media">
+        <a class="pull-left" href="#">
+        <img class="media-object" src="https://placekitten.com/150/150">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading"><%= link_to post.title, post_path(id: post.slug) %>
+          
+          <% if post.post_type == 'Problem'%>
+            <%= link_to posts_path(post_type: 'Idea', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
+            <span class="badge badge-success"><%= post.ideas.count %> Ideas</span>
+            <% end %>
+            <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
+            <span class="badge badge-info"><%= post.proposals.count %> Proposals</span>
+            <% end %>
+          <% end %>
+          <% if post.post_type == 'Idea'%>
+            <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
+            <span class="badge badge-info"><%= post.proposals.count %> Proposals</span>
+            <% end %>
+          <% end %>
+
+        </h4>
+          <p class="text-right">By <%= post.user.full_name %></p>
+          <div class="post-body">          
+           <%= post.post_body.truncate(200).html_safe %> 
+          </div>
+          <ul class="list-inline list-unstyled">
+        <li><span><i class="glyphicon glyphicon-calendar"></i> <%= post.created_at %> </span></li>
+            <li>|</li>
+            <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+            <li>|</li>
+            <li class="rating">
+            <% 1.upto(5) do |star_index| %>
+              <% if star_index <= post.avg_rating %>
+                <span class="glyphicon glyphicon-star"></span>
+              <% else %>
+              <span class="glyphicon glyphicon-star-empty"></span>
+              <% end %>
+            <% end %>
+            </li>
+            <li>|</li>
+            <li>
+            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+              <span><i class="fa fa-facebook-square"></i></span>
+              <span><i class="fa fa-twitter-square"></i></span>
+              <span><i class="fa fa-google-plus-square"></i></span>
+            </li>
+      </ul>
+      
+      
+      <!-- TODO:: move these post actions to a partial -->
+      <ul class="list-inline list-unstyled">
+        <% if post.post_type == 'Problem'%> 
+          <li>
+            <%= link_to new_post_path(post_type: "Idea",area: post.area, parent_post_id: post.id), class: "btn btn-primary" do %>
+              <span class="glyphicon glyphicon-bell"></span>
+                Give an Idea
+            <% end %>
+          </li>
+        <% end %>
+        <% if post.post_type == 'Idea' and  post.parent_post_id != nil %> 
+          <li>
+            <%= link_to post_path(id: post.parent_post_id), class: "btn btn-primary" do %>
+              <span class="glyphicon glyphicon-zoom-in"></span>
+                See the Problem
+            <% end %>
+          </li>
+        <% end %>
+        <li>
+          <%= link_to new_post_path(post_type: "Proposal", area: post.area, parent_post_id: post.id), class: "btn btn-primary" do %>
+            <span class="glyphicon glyphicon-wrench"></span>
+              Give a Proposal
+          <% end %>
+        </li>
+        
+      </ul>
+
+       </div>
+    </div>
+  </div>

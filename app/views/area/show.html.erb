@@ -7,6 +7,9 @@
       </a>
       <div class="media-body">
 
+       
+
+
         <h1 class="media-heading"><%= @area_stats[0] %></h1>
         <br />
         <p>Layer: <%= @clayer.nil? ? "Public" : @clayer.name %></p>
@@ -46,6 +49,8 @@
             and
             <%= link_to raw("<label class='label label-info'><span class='badge'>#{@area_stats[3]}</span>Proposals</label>"), "/posts?post_type=Proposal&tags_filter=#{@area_stats[0]}&area_layer=#{@clayer.try(:name) }" %>     
            
+            
+            <div class="float-right">
             <%= link_to new_post_path(post_type: 'Problem', area: @area_stats[0], area_layer: @clayer.try(:name)), class: "btn btn-primary" do %>
               <span class="glyphicon glyphicon-plus"></span>
                 new Problem in "<%= @area_stats[0] %>"
@@ -56,7 +61,7 @@
               <span class="glyphicon glyphicon-plus"></span>
                 new Proposal in "<%= @area_stats[0] %>"
             <% end %>
-         
+            </div>
             </li>
 
            
@@ -66,7 +71,18 @@
 
 
        </div>
+
+
+        <div class="container">
+        <h1>All Problems  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small></h1>
+          <% @posts.each do |post| %>
+            <%= render partial: "posts_list_item", locals: { post: post} %>
+          <% end %>
+        </div>
+
     </div>
+
+   
 
 
   </div>
