@@ -4,14 +4,9 @@ $(document).on('turbolinks:load', function(){
 	setTimeout(function(){$('div.tox-statusbar').hide();},500);	
 
 
+
 	$('#layer_sel').on("change",function(e){ 
-
-		
-
 		window.location = $(e.currentTarget).val()
-	
-
-
 	})
 
   $('#token_type').on("change",function(e){ 
@@ -50,5 +45,85 @@ $(document).on('turbolinks:load', function(){
 		  console.log('Great failure');
 	});
 		
+
+
+
+// js for the show page.
+
+function tokenize_body(){
+  $('.post-body > p').each( 
+    function(i,e){ 
+      // add tag index
+      $(e).attr('tag-index',i)
+      // add sentense index
+      e.innerHTML = e.innerHTML.split(' ').map(function(x,ii){ return( 
+        "<span id='"+i+"-"+ii+"' class='tokenable'>"+x+"</span>"
+        )  }).join(' ')
+    })
+}
+
+tokenize_body();
+
+// $('.tokenable').on('dblclick', function(e) {
+//       elem = e.currentTarget
+//       //console.log(elem)
+//       $('#add-token').modal('show');
+//       $('#tkntype').val($('#token_type').val())
+//       $('#span_id').val($(elem).attr("id"))        
+// })
+
+
+
+$('.rating').on('click',function(e){
+  scount = $(e.currentTarget).data("sindex")
+  $(".rate_count").text(scount)
+  $("#score").val(scount)
+  $("#rate-post").modal("show")
+})
+$('.rating').css('cursor','pointer')
+
+
+$( ".token" ).draggable({
+  helper: "clone"
+})
+
+$( ".tokenable" ).droppable({
+  accept: ".token",
+  drop: function( event, ui ) {
+      draged = $(ui.draggable[0]);
+      drop_target = $(event.target);
+      console.log("Dragged: ", draged);
+      console.log("Drop target: ", drop_target);
+
+      $('#token_type').val(draged.data('type')).change();
+      $('#add-token').modal('show');
+      $('#tkntype').val(draged.data('type'))
+      $('#span_id').val(drop_target.attr("id"))
+
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })

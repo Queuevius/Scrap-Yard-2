@@ -4,7 +4,7 @@
         <img class="media-object" src="https://placekitten.com/150/150">
       </a>
       <div class="media-body">
-        <h4 class="media-heading"><%= link_to post.title, post_path(id: post.slug) %>
+        <h4 class="media-heading"><%= link_to post.title, post_path(id: post.slug), data: { 'turbolinks': false } %>
           
           <% if post.post_type == 'Problem'%>
             <%= link_to posts_path(post_type: 'Idea', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
@@ -61,7 +61,7 @@
         <% end %>
         <% if post.post_type == 'Idea' and  post.parent_post_id != nil %> 
           <li>
-            <%= link_to post_path(id: post.parent_post_id), class: "btn btn-primary" do %>
+            <%= link_to post_path(id: post.parent_post_id), data: { 'turbolinks': false }, class: "btn btn-primary" do %>
               <span class="glyphicon glyphicon-zoom-in"></span>
                 See the Problem
             <% end %>

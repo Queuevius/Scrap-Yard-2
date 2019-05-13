@@ -5,7 +5,7 @@
 </a>
 <div class="media-body">
 
-<h1 class="media-heading">A <%= @token.token_type %> Token on "<%= link_to @token.post.title,post_path(@token.post) %>"
+<h1 class="media-heading">A <%= @token.token_type %> Token on "<%= link_to @token.post.title,post_path(@token.post), data: { 'turbolinks': false } %>"
   <h2>
     Area:  <a href="/area/<%= @token.post.area.name %>"><%= @token.post.area.name %></a>
    </h2>
