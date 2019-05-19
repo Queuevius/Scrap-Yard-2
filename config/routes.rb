@@ -16,7 +16,9 @@ Rails.application.routes.draw do
       get :show_token
       post :add_rating
       resources :tokens do 
-        resources :comments
+        resources :comments do 
+          get 'add_vote', on: :collection
+        end
       end
     end
   end 

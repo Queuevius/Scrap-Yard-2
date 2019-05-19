@@ -1,57 +1,56 @@
 <div class="row">
 	<div class="col-md-4"> 
 		
-	<h1>Comments in Favour</h1>
+	<h1 style="text-align: center;">Comments in Favour</h1>
+	<% unless @comments[0].nil? %>
 		<% @comments[0].each do |c| %>
-
 		<div class="well" style="background-color: #7fec7f">
 			<div class="media">
 			<div class="row media-body">
 				<%= raw c.com_body %>
 			<p class="text-right">By <%= User.find_by_id(c.creator_id).full_name %></p>
 			</div>
+			 <%= render partial: 'comments_voting', locals: { c: c} %>
 			</div>	
 		</div>
-
 		<% end %>
-
+		<% end %>
 	</div>
 
 	<div class="col-md-4"> 
-	<h1>Comments in Opposition</h1>
+	<h1 style="text-align: center;">Comments in Opposition</h1>
+	<% unless @comments[1].nil? %>
+	
 		<% @comments[1].each do |c| %>
-
 		<div class="well" style="background-color: #faebd7">
 			<div class="media">
 			<div class="row media-body">
 				<%= raw c.com_body %>
 			<p class="text-right">By <%=  User.find_by_id(c.creator_id).full_name %></p>
 			</div>
+			 <%= render partial: 'comments_voting', locals: { c: c} %>
 			</div>	
 		</div>
-
 		<% end %>
 	
-
+		<% end %>
 	</div>
 
 	<div class="col-md-4"> 
-
-	<h1>Otherwise</h1>
+	<h1 style="text-align: center;">Otherwise</h1>
+	<% unless @comments[2].nil? %>
 		<% @comments[2].each do |c| %>
-
 		<div class="well" style="background-color: #f0f7ff %>">
 			<div class="media">
 			<div class="row media-body">
 				<%= raw c.com_body %>
 			<p class="text-right">By <%=  User.find_by_id(c.creator_id).full_name %></p>
 			</div>
+			 <%= render partial: 'comments_voting', locals: { c: c} %>
 			</div>	
 		</div>
-
-		<% end %>
-
-	
+	<% end %>	
+	<% end %>
 
 	</div>
 	 

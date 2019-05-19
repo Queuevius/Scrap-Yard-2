@@ -107,6 +107,7 @@ class PostsController < ApplicationController
 	def show
 		@post  = Post.friendly.find(params[:id])
 		@rated = Rating.where({rateable_id: @post.id, rateable_type: @post.class.to_s, creator_id: current_user.id}).first
+		@tokens_count = current_user.remaining_token_limit
 		@layers = @post.layers
 		if params[:layer]
 			@current_layer = @post.layers.find_by_name(params[:layer]) 
@@ -138,7 +139,7 @@ class PostsController < ApplicationController
 		@token.token_type = params[:tkntype]
 		@token.creator_id = current_user.id 
 		@token.token_body = params[:token_body]
-		@token.span_id = params[:span_id]
+		@token.span_id = params[:span_id]	
 		unless params[:layer_id].blank?
 			@token.layer_id = params[:layer_id].to_i 
 		end

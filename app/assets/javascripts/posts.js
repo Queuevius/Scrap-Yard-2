@@ -40,6 +40,16 @@ $(document).on('turbolinks:load', function(){
 		  if( data.add_token ){
 		  	add_token( data.type[0] , data.span_id , data.token_path )  	
 		  	$('#add-token').modal('hide');
+
+		  	if( data.type == 'Note'){
+		  		$('#n_rem_count').text($('#n_rem_count').text().trim() - 1)
+		  	}
+		  	else if( data.type == 'Debate'){
+		  		$('#d_rem_count').text($('#d_rem_count').text().trim() - 1)		
+		  	}
+		  	else{
+		  		$('#q_rem_count').text($('#q_rem_count').text().trim() - 1)
+		  	}
 		  }
 		}).on('ajax:error', '#token_form', function(e, data, status, xhr){
 		  console.log('Great failure');
@@ -84,7 +94,13 @@ $('.rating').css('cursor','pointer')
 
 
 $( ".token" ).draggable({
-  helper: "clone"
+  helper: "clone",
+  start: function( event, ui ) {
+  	if ( $(event.currentTarget).next('span').text().trim() == 0){
+  		$(event.currentTarget).css('cursor' , 'not-allowed')
+  		return false;
+  	}
+  }
 })
 
 $( ".tokenable" ).droppable({
@@ -92,9 +108,6 @@ $( ".tokenable" ).droppable({
   drop: function( event, ui ) {
       draged = $(ui.draggable[0]);
       drop_target = $(event.target);
-      console.log("Dragged: ", draged);
-      console.log("Drop target: ", drop_target);
-
       $('#token_type').val(draged.data('type')).change();
       $('#add-token').modal('show');
       $('#tkntype').val(draged.data('type'))
@@ -104,26 +117,13 @@ $( ".tokenable" ).droppable({
 });
 
 
+$(".vote").on("click",function(e) {
+    e.preventDefault(); // cancel the link itself
+    $(e.currentTarget).addClass('hover')
+    $.get(this.href);
+  });
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
+});

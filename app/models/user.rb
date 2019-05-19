@@ -4,6 +4,8 @@ class User < ApplicationRecord
   include FriendlyId
   friendly_id :full_name, use: :slugged
 
+  acts_as_voter
+  
   # Roles used by the authorization setup
   enum role: { user: 0, admin: 1 }
   attr_accessor :summary, :description
@@ -54,6 +56,13 @@ class User < ApplicationRecord
     [first_name, last_name].join(' ')
   end
 
+  def remaining_token_limit
+    note = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Note').count
+    debate = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Debate').count
+    question = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Question').count
+    [ note > 0 ? note : 0 , debate > 0 ? debate : 0 ,  question > 0 ? question : 0]
+  end  
+
   private
 
   def set_default_role
@@ -61,6 +70,7 @@ class User < ApplicationRecord
     # the default value if the controller passes "nil" as a value for the enum.
     self.role = :user if role.blank?
   end
+
 
   # TODO: extract this to a validator class
   def password_strength

@@ -15,4 +15,8 @@ class CommentPolicy < ApplicationPolicy
   end
 
 
+  def add_vote?
+    true 
+  end
+
 end

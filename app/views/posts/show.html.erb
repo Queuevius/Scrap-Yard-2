@@ -1,8 +1,8 @@
 <% content_for :token_purse do %>
   <ul class="navbar-right tkn-purse" style="background-color: lavenderblush;border: 4px solid black;margin: 5px 0px 0px 0px;border-radius: 17px;padding: 5px">
-    <span class='tkn-n token' data-type='Note'>N</span>
-    <span class='tkn-n token' data-type='Debate'>D</span>
-    <span class='tkn-n token' data-type='Question'>Q</span>
+    <span class='tkn-n token' data-type='Note'>N</span><span id="n_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[0] %></span>
+    <span class='tkn-n token' data-type='Debate'>D</span><span id="d_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[1] %></span>
+    <span class='tkn-n token' data-type='Question'>Q</span><span id="q_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[2] %></span>
   </ul>
   <% end %>
 
@@ -224,6 +224,7 @@
 });
 } 
 fetch_and_add_token();
+
 
 <% unless @current_layer.nil? %>
   // select the current layer
