@@ -176,7 +176,7 @@ class PostsController < ApplicationController
 
 	def show_token
 		@token = Token.find(params[:token_id]) 
-		@comments = @token.comments
+		@comments = @token.comments.order(cached_votes_total: :desc)
 		if @token.token_type == 'Debate' && !(@comments.blank?)
 			a = [[], [], []]
 			@comments.inject(a) do |a,_|
@@ -189,7 +189,7 @@ class PostsController < ApplicationController
 		  	end  
 		  	a
 			end
-			@comments = a
+			@comments = a.map!{|_| _.sort_by{ |p| [ p.cached_votes_total ] }.reverse!   }
 		end
 	end
 
