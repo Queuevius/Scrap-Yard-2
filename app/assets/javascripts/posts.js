@@ -74,16 +74,6 @@ function tokenize_body(){
 
 tokenize_body();
 
-// $('.tokenable').on('dblclick', function(e) {
-//       elem = e.currentTarget
-//       //console.log(elem)
-//       $('#add-token').modal('show');
-//       $('#tkntype').val($('#token_type').val())
-//       $('#span_id').val($(elem).attr("id"))        
-// })
-
-
-
 $('.rating').on('click',function(e){
   scount = $(e.currentTarget).data("sindex")
   $(".rate_count").text(scount)
@@ -120,7 +110,9 @@ $( ".tokenable" ).droppable({
 $(".vote").on("click",function(e) {
     e.preventDefault(); // cancel the link itself
     $(e.currentTarget).addClass('hover')
-    $.get(this.href);
+    $.get(this.href, function(data){
+    	window.location.reload();
+    });
   });
 
 
