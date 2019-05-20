@@ -33,12 +33,7 @@
 			<p class="text-right">By <%= @token.user_name %></p>
 			</div>
 			</div>
-			<div class="vote">
-				<a class="upvote">Upvote</a>
-				<span class="count"><%= c.get_upvotes.size %></span>
-				<a class="downvote">DownVote</a>
-				<span class="count"><%= c.get_downvotes.size%></span>
-			</div>
+			<%= render partial: 'comments_voting', locals: { c: c} %>
 			</div>
 		<% end %>
 	<% end %>

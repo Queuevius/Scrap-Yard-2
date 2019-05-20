@@ -12,24 +12,32 @@
 
         <h1 class="media-heading"><%= @area_stats[0] %></h1>
         <br />
-        <p>Layer: <%= @clayer.nil? ? "Public" : @clayer.name %></p>
-
-        <p><small>All Layers:</small>
         
-        <% unless  @clayer.nil? %>  
-        <strong><a href="/area/<%= @area.name %>">Public</a></strong>
-        <% end %>
 
-        <% @layers.each do |l|%>
-          <strong><a href="/area/<%= @area.name %>?layer=<%= l.name %>"><%= l.name %></a></strong>
-          <% end %>
 
-          <%= link_to "#{@area.name}/new_layer", class: "btn btn-primary" do %>
-          <span class="glyphicon glyphicon-duplicate"></span>
-            Add a Layer
-          <% end %>
-        </p>
-        
+
+        Layer: 
+                <select name="layer_sel" id="layer_sel">
+                  <% if @clayer.nil? %> 
+                    <option value="/area/<%= @area.name %>" selected="selected">Public</option>
+                    <% @layers.each do |l| %>
+                      <option value="/area/<%= @area.name %>?layer=<%= l.name %>">
+                        <%=  l.name %>
+                      </option>
+                    <% end %>
+                  <% else %>
+                    <option value="/area/<%= @area.name %>">Public</option>
+                    <% @layers.each do |l| %>
+                      <option value="/area/<%= @area.name %>?layer=<%= l.name %>" selected="<%= 'selected' if l.name == @clayer.name %>">
+                        <%=  l.name %>
+                      </option>
+                    <% end %>
+                  <option value="/area/<%= @area.name %>/new_layer">Add a new Layer.</option>
+
+                  <% end %>
+                  
+                </select>
+
 
           <% if @clayer.nil? %> 
             <%= @area.tag_body.try(:html_safe) %>

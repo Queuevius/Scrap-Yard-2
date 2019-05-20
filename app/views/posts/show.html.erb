@@ -34,14 +34,14 @@
                       </option>
                     <% end %>
                   <% else %>
-                    <option value="/posts/<%= @post.slug %>">Primary</option>
+                    <option value="/posts/<%= @post.slug %>">Public</option>
                     <% @post.layers.each do |l| %>
                       <option value="/posts/<%= @post.slug %>?layer=<%= l.name %>" selected="<%= 'selected' if l.name == @current_layer.name %>">
                         <%=  l.name %>
                       </option>
                     <% end %>
                   <% end %>
-                  
+                  <option value="<%= new_layer_post_path(@post) %>">Add a new Layer.</option>
                 </select>
             
           <% if @post.post_type == 'Problem'%>
