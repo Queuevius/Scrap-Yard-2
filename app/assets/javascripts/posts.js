@@ -51,9 +51,6 @@ $(document).on('turbolinks:load', function(){
 		  		$('#q_rem_count').text($('#q_rem_count').text().trim() - 1)
 		  	}
 		  }
-		  else{
-		  	alert("Please specify a Central Argument for the debate.")
-		  }
 		}).on('ajax:error', '#token_form', function(e, data, status, xhr){
 		  console.log('Great failure');
 	});
@@ -112,9 +109,9 @@ $( ".tokenable" ).droppable({
 
 $(".vote").on("click",function(e) {
     e.preventDefault(); // cancel the link itself
-    $(e.currentTarget).addClass('hover')
-    $.get(this.href, function(data){
-    	window.location.reload();
+    $.get(this.href , function(){
+    	console.log("added....")
+    	window.location.reload()
     });
   });
 

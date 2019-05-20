@@ -11,7 +11,6 @@ class CommentsController < ApplicationController
 
 	def add_vote
 		@com = Comment.find_by_id params[:comment_id]
-			
 		case current_user.voted_as_when_voted_for(@com)
 			when nil
 				@com.vote_by :voter => current_user, :vote => params[:vote]
@@ -19,10 +18,8 @@ class CommentsController < ApplicationController
 				@com.unliked_by current_user
 			else
 				@com.undisliked_by current_user
-
 			end
 	end
-
 
 	private 
   
