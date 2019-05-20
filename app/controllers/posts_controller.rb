@@ -143,7 +143,7 @@ class PostsController < ApplicationController
 		unless params[:layer_id].blank?
 			@token.layer_id = params[:layer_id].to_i 
 		end
-		if @token.save(validate: false) 
+		if @token.save 
 			token_path = "/posts/#{@post.slug}/show_token?token_id=#{@token.id}"
 			render json: { add_token: true , token_path: token_path ,span_id: @token.span_id , type: @token.token_type }.to_json
 		else

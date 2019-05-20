@@ -1,12 +1,15 @@
 class Token < ApplicationRecord
 	
+	
+	validates :token_body, presence: true
+
 	TYPES = {
 		note: "Note",
 		debate: "Debate",
 		question: "Question"
 	}
 	belongs_to :post 
-	belongs_to :layer
+	belongs_to :layer, optional: true
 	has_many :comments
 
 
