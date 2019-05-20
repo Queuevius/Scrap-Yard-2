@@ -38,7 +38,8 @@
                   <option value="/area/<%= @area.name %>/new_layer">Add a new Layer.</option>
                 </select>
 
-
+          <br />
+          
           <% if @clayer.nil? %> 
             <%= @area.tag_body.try(:html_safe) %>
           <% else %>

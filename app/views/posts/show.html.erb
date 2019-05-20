@@ -27,7 +27,7 @@
                 Layer: 
                 <select name="layer_sel" id="layer_sel">
                   <% if @current_layer.nil? %> 
-                    <option value="/posts/<%= @post.slug %>" selected="selected">Primary</option>
+                    <option value="/posts/<%= @post.slug %>" selected="selected">Public</option>
                     <% @post.layers.each do |l| %>
                       <option value="/posts/<%= @post.slug %>?layer=<%= l.name %>">
                         <%=  l.name %>
