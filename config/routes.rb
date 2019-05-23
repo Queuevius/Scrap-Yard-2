@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   get 'area/new'
   post 'area/create'
   get 'area/:id' => 'area#show'
@@ -31,6 +30,13 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users
+  end
+
+  resources :users do 
+    member do 
+      get :profile, to: 'profiles#show' 
+      post :profile_update, to: 'profiles#update'
+    end
   end
 
   # form_for is easier to use with a resourceful route
