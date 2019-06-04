@@ -89,6 +89,37 @@ controller and action allows the implementation of page-specific CSS and JS %>
       </div><!-- flash-messages -->
 
       <%# Main content %>
+
+      <div class="navbar navbar-default navbar-fixed-left">
+        <ul class="nav navbar-nav">
+         <li><a href="#">About <%= @profile.full_name %></a></li>
+         
+
+         <li><a href="#">Local Chapters</a></li>
+         
+         
+         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Events<span class="caret"></span></a>
+           <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Newcomers</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Members</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Organizers</a></li>
+           </ul>
+         </li>
+
+         <li><a href="#">Pictures</a></li>
+         <li><a href="#">Videos</a></li>   
+         <li><a href="#">Ratings</a></li>
+         <li><a href="#">Notes</a></li>
+         <li><a href="#">Specific Addresses</a></li>
+         <li><a href="#">Tracking</a></li>
+         <li><a href="<%= items_path(id: @user.slug , item_type: 'have')%>">Have</a></li>
+         <li><a href="<%= items_path(id: @user.slug , item_type: 'want')%>">Want</a></li>
+
+        </ul>
+      </div>
+
       <%= content_for?(:main_contents) ? yield(:main_contents) : yield %>
     </div><!-- container-fluid -->
   </main>

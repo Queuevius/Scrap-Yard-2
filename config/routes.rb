@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'items/index'
+
+  get 'items/new'
+
+  get 'items/create'
+
+  get 'items/show'
+
+  get 'items/update'
+
   get 'area/new'
   post 'area/create'
   get 'area/:id' => 'area#show'
@@ -34,8 +44,12 @@ Rails.application.routes.draw do
 
   resources :users do 
     member do 
-      get :profile, to: 'profiles#show' 
+      get :profile, to: 'profiles#show'
+      resources :items do 
+          get :items, on: :member
+      end
       post :profile_update, to: 'profiles#update'
+      get :profile_edit, to: 'profiles#edit'
     end
   end
 

@@ -1,0 +1,42 @@
+
+<%= display_validation_errors(@profile) %>
+
+<div class="panel panel-default devise-bs">
+      <h4>Edit Profile
+      </h4>
+    
+    
+  </div>
+  <div class="panel-body">
+    <%= form_for(@profile,
+                 url: profile,
+                 html: { method: :profile }) do |f| %>
+
+      <div class="form-group required">
+        <%= f.label :title %>
+        <%= f.text_field :title, autofocus: true, class: "form-control" %>
+      </div>
+       <%= f.hidden_field :profile, value: @profile.profile %>
+       <%= f.hidden_field :profile, value: @profile.profile %>
+       <%= f.hidden_field :area_layer, value: @area_layer %>
+
+             
+      
+      <div class="form-group">
+        <%= label_tag "Area" %>
+        <%= f.text_field :all_tags, placeholder: "Areas separated with comma", data: {role: "tagsinput"} %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.label :body %> 
+        <%= f.text_area :profile, class: "tinymce", rows: 40 , cols: 120  %>
+        <%= tinymce %>
+      </div>
+      
+
+
+      <%= f.submit "Create profile", class: "btn btn-primary" %>
+    <% end %>
+      
+  </div>
+</div>

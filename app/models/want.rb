@@ -1,2 +1,0 @@
-class Want < ApplicationRecord
-end
