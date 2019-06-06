@@ -120,7 +120,14 @@ controller and action allows the implementation of page-specific CSS and JS %>
         </ul>
       </div>
 
-      <%= content_for?(:main_contents) ? yield(:main_contents) : yield %>
+
+      <div class="container">
+        
+          <%= content_for?(:main_contents) ? yield(:main_contents) : yield %>
+       
+      </div>
+
+
     </div><!-- container-fluid -->
   </main>
 

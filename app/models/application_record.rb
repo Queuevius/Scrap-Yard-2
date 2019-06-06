@@ -61,4 +61,8 @@ class ApplicationRecord < ActiveRecord::Base
     value_if_translation_missing = enum_key.to_s.humanize
     I18n.t(i18n_key, default: value_if_translation_missing)
   end
+
+  def fancy_date 
+  end
+  
 end

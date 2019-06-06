@@ -15,7 +15,9 @@
 }
 
 .navbar-fixed-left + .container {
-  padding-left: 160px;
+	padding-left: 60px;
+	padding-right: 0px;
+	margin-right: 0;
 }
 
 /* On using dropdown menu (To right shift popuped) */

@@ -1,14 +1,4 @@
 Rails.application.routes.draw do
-  get 'items/index'
-
-  get 'items/new'
-
-  get 'items/create'
-
-  get 'items/show'
-
-  get 'items/update'
-
   get 'area/new'
   post 'area/create'
   get 'area/:id' => 'area#show'
