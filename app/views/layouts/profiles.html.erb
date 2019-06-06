@@ -37,7 +37,8 @@ controller and action allows the implementation of page-specific CSS and JS %>
             <%# The "Home" and "Contact" menu items are here (and not in a
             partial) because of their order. We want "Home" to be the first
             item of the navbar and "Contact" to be the last %>
-            <%= yield(:navigation_menu) %>
+            <%= render 'layouts/base_menu_items' %>
+
             <li><%= link_to t('navigation.contact'), contact_path %></li>
           </ul>
 
