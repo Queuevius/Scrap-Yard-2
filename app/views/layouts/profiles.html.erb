@@ -92,7 +92,7 @@ controller and action allows the implementation of page-specific CSS and JS %>
 
       <div class="navbar navbar-default navbar-fixed-left">
         <ul class="nav navbar-nav">
-         <li><a href="#">About <%= @profile.full_name %></a></li>
+         <li><a href="<%= profile_user_path(id: current_user.slug) %>">About <%= @profile.full_name %></a></li>
          
 
          <li><a href="#">Local Chapters</a></li>
