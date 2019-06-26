@@ -1,9 +1,19 @@
 <div class="well" style="background-color: <%= bg_color(post.post_type) %>">
+      
+
+<div class="card">
       <div class="media">
         <a class="pull-left" href="#">
         <img class="media-object" src="https://placekitten.com/150/150">
       </a>
       <div class="media-body">
+        
+
+
+
+
+  <div class="card-header">
+
         <h4 class="media-heading"><%= link_to post.title, post_path(id: post.slug), data: { 'turbolinks': false } %>
           
           <% if post.post_type == 'Problem'%>
@@ -22,10 +32,16 @@
 
         </h4>
           <p class="text-right">By <%= post.user.full_name %></p>
+          
+</div>
+<div class="card-body">
           <div class="post-body">          
            <%= post.post_body.truncate(200).html_safe %> 
           </div>
-          <ul class="list-inline list-unstyled">
+          
+</div>
+ <div class="card-footer">
+        <ul class="list-inline list-unstyled">
         <li><span><i class="glyphicon glyphicon-calendar"></i> <%= post.created_at %> </span></li>
             <li>|</li>
             <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
@@ -67,15 +83,33 @@
             <% end %>
           </li>
         <% end %>
+
+        <% if post.post_type == 'Proposal' and  post.parent_post_id != nil %> 
+          <li>
+            <%= link_to post_path(id: post.parent_slug), data: { 'turbolinks': false }, class: "btn btn-primary" do %>
+              <span class="glyphicon glyphicon-zoom-in"></span>
+                See the Idea
+            <% end %>
+          </li>
+        <% end %>
+
+        <% if !(post.post_type == 'Problem') and post.post_type == 'Idea' %> 
         <li>
           <%= link_to new_post_path(post_type: "Proposal", area: post.area, parent_post_id: post.id), class: "btn btn-primary" do %>
             <span class="glyphicon glyphicon-wrench"></span>
               Give a Proposal
           <% end %>
         </li>
+        <% end %>
         
       </ul>
-
+</div>
        </div>
     </div>
   </div>
+  </div>
+
+
+
+
+   

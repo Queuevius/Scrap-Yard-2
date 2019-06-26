@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'area/:id/new_layer' => 'area#new_layer'
   post 'area/:id/create_layer' => 'area#create_layer'
 
+  get 'posts/new_des' => 'posts#new_design'
+
   resources :posts do 
     member do 
       get :new_layer

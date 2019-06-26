@@ -105,18 +105,31 @@
         <% end %>
         <% if @post.post_type == 'Idea' and  @post.parent_post_id != nil %> 
           <li>
-            <%= link_to post_path(id: @post.parent_post_id), data: { 'turbolinks': false }, class: "btn btn-primary" do %>
+            <%= link_to post_path(id: @post.parent_slug), data: { 'turbolinks': false }, class: "btn btn-primary" do %>
               <span class="glyphicon glyphicon-zoom-in"></span>
                 See the Problem
             <% end %>
           </li>
         <% end %>
+
+        <% if @post.post_type == 'Proposal' and  @post.parent_post_id != nil %> 
+          <li>
+            <%= link_to post_path(id: @post.parent_slug), data: { 'turbolinks': false }, class: "btn btn-primary" do %>
+              <span class="glyphicon glyphicon-zoom-in"></span>
+                See the Idea
+            <% end %>
+          </li>
+        <% end %>
+
+
+        <% unless @post.post_type == 'Proposal' %>
         <li>
           <%= link_to new_post_path(post_type: "Proposal", area: @post.area, parent_post_id: @post.id), class: "btn btn-primary" do %>
             <span class="glyphicon glyphicon-wrench"></span>
               Give a Proposal
           <% end %>
         </li>
+        <% end %>
         <li>
           <%= link_to new_layer_post_path(@post), class: "btn btn-primary" do %>
             <span class="glyphicon glyphicon-duplicate"></span>

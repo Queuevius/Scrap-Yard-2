@@ -19,6 +19,11 @@ class PostPolicy < ApplicationPolicy
     end
   end
 
+
+  def new_design?
+    true 
+  end
+
   def show?
     true
   end

@@ -1,9 +1,13 @@
 class PostsController < ApplicationController
 	
 	before_action :authenticate_user!
-	before_action :authorize_post, only: [:new, :create, :edit, :update, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating]
+	before_action :authorize_post, only: [:new_design, :new, :create, :edit, :update, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating]
 	after_action :set_tag_creator, :set_area_layer_assoc, only: [:create]
 	
+
+	def new_design
+		_layout = nil
+	end
 
 	def index
 		@show_search = true 

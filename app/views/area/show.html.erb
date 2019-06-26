@@ -36,11 +36,7 @@
             <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: @clayer.creator.slug) %></p>
           <% end %>
           <ul class="list-group">
-          <li class="list-group-item">
-            <%= link_to raw("<label class='label label-danger'><span class='badge'>#{@area_stats[1]}</span>Problems</label>"), "/posts?post_type=Problem&tags_filter=#{@area_stats[0]}&area_layer=#{@clayer.try(:name) }  " %>
-            <%= link_to raw("<label class='label label-success'><span class='badge'>#{@area_stats[2]}</span>Ideas</label>"), "/posts?post_type=Idea&tags_filter=#{@area_stats[0]}&area_layer=#{@clayer.try(:name) }" %>
-            and
-            <%= link_to raw("<label class='label label-info'><span class='badge'>#{@area_stats[3]}</span>Proposals</label>"), "/posts?post_type=Proposal&tags_filter=#{@area_stats[0]}&area_layer=#{@clayer.try(:name) }" %>     
+          <li class="list-group-item">    
             <div class="float-right">
             <%= link_to new_post_path(post_type: 'Problem', area: @area_stats[0], area_layer: @clayer.try(:name)), class: "btn btn-primary" do %>
               <span class="glyphicon glyphicon-plus"></span>
@@ -55,7 +51,7 @@
         </ul> 
        </div>
         <div class="container">
-        <h1>All Problems  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small></h1>
+        <h1><%= @area_stats[1]%> Problems  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small></h1>
           <% @posts.each do |post| %>
             <%= render partial: "posts_list_item", locals: { post: post} %>
           <% end %>
