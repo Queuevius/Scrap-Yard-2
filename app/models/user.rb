@@ -35,6 +35,15 @@ class User < ApplicationRecord
 
   
 
+  after_create do 
+    p = Profile.new 
+    p.user_id = self.id 
+    p.title = self.full_name
+    p.description = self.full_name + " Profile description."
+    p.save
+  end
+
+
   # Allow a single Ransack search field to search the virtual attr 'full_name'
   # If first_name is 'John' and last_name is 'Doe', this will enable us to
   # search for 'John', 'Doe' or 'John Doe' using the 'cont' predicate.
