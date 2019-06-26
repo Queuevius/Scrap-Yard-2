@@ -20,7 +20,7 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-
+  config.assets.js_compressor = Uglifier.new(harmony: true)
   # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
   # Requires an encryption key in `ENV["RAILS_MASTER_KEY"]` or
   # `config/secrets.yml.key`.
@@ -39,7 +39,7 @@ Rails.application.configure do
   end
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  #config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
