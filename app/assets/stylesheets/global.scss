@@ -877,3 +877,15 @@ img {
   transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
   color: #999;
 }
+
+.progress {
+  max-width: 600px;
+  margin:    0.2em 0 0.2em 0;
+}
+
+.progress .bar {
+  height:  1.2em;
+  padding-left: 0.2em;
+  color:   white;
+  display: none;
+}

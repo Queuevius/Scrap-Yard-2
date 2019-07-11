@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'posts/new_des' => 'posts#new_design'
 
+  post 'profiles/update_pic' => 'profiles#update_pic'
+
   resources :posts do 
     member do 
       get :new_layer
