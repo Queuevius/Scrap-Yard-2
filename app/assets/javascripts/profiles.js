@@ -23,6 +23,7 @@ $(document).on('turbolinks:load', function(){
         progressBar.css('width', progress + '%')
       },
       start: function (e , data) {
+        console.log("started....")
         submitButton.prop('disabled', true);
         progressBar.
           css('background', 'green').
