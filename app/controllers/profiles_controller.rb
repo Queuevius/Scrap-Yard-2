@@ -17,7 +17,7 @@ class ProfilesController < ApplicationController
   end
 
   def update_pic
-    avatar_url = "https://needpediasbucket.s3-us-west-2.amazonaws.com/users_display_pictures/#{params[:avatar_url]}" 
+    avatar_url = "https://needpediasbucket.s3-us-west-2.amazonaws.com/users_display_pictures/#{current_user.id}/#{params[:avatar_url]}" 
     current_user.profile.update_attribute :avatar_url ,  avatar_url
     @user = current_user
     @profile = @user.profile
@@ -39,7 +39,7 @@ class ProfilesController < ApplicationController
   end
 
   def set_s3_direct_post
-    @s3_direct_post = S3_BUCKET.presigned_post(key: "users_display_pictures/${filename}", success_action_status: '200', acl: 'public-read')
+    @s3_direct_post = S3_BUCKET.presigned_post(key: "users_display_pictures/#{current_user.id}/${filename}", success_action_status: '200', acl: 'public-read')
   end
 
 end

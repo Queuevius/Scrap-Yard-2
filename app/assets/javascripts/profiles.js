@@ -7,8 +7,6 @@ $(document).on('turbolinks:load', function(){
     var submitButton = form.find('input[type="submit"]');
     var progressBar  = $("<div class='bar'></div>");
     var barContainer = $("<div class='progress'></div>").append(progressBar);
-    
-
     fileInput.after(barContainer);
     fileInput.fileupload({
       fileInput:       fileInput,
