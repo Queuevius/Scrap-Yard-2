@@ -1,6 +1,5 @@
 Aws.config.update({
-  region: 'us-east-1',
-  credentials: Aws::Credentials.new('XXXX', 'XXXX'),
+  region: ENV['AWS_REGION'],
+  credentials: Aws::Credentials.new(ENV['AWS_ID'], ENV['AWS_KEY']),
 })
-
-S3_BUCKET = Aws::S3::Resource.new.bucket("XXXX")
+S3_BUCKET = Aws::S3::Resource.new.bucket(ENV['AWS_BUK'])

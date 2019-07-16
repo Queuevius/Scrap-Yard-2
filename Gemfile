@@ -10,7 +10,7 @@ gem 'pg', '~> 0.21.0'
 # gem 'mysql2', '~> 0.4.9'
 
 gem 'aws-sdk', '~> 2'
-
+gem "jquery-fileupload-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use Puma as the app server

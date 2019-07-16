@@ -17,4 +17,8 @@ class ProfilePolicy < ApplicationPolicy
     true 
   end
 
+  def update_pic?
+    true 
+  end
+
 end

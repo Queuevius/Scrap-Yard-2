@@ -22,4 +22,5 @@
 //= require select2
 //= require tinymce
 //= require jquery-ui
+//= require jquery-fileupload/basic
 //= require_tree .
