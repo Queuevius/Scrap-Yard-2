@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     end
   end 
   
-  root to: 'posts#index'
+  #root to: 'posts#index'
 
   devise_for :users, controllers: {
     # Override the following Devise controllers with our custom versions
