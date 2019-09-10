@@ -15,9 +15,7 @@
 			<div class="container">
 				<h1 class="banner-title-main" style="font-family: initial;color: black;">NEEDPEDIA</h1>
 
-				
-
-
+			
 				<h1 style="color: black;font-size: 24px;" >A <span class="banner-title-bold">wiki</span> for all solutions, to all problems</h1>
 				
 				<br/>
@@ -41,18 +39,24 @@
 			<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
 			<div class="col-sm-3 col-md-3 col-lg-3"></div>
 			<div class="col-sm-6 col-md-6 col-lg-6">
-				<div class="input-group" style="margin-top: 37px;">
-                                                    <input type="text" class="form-control" placeholder="Where do you want to go?" style="height: 45px;border: 2px solid;border-color: black;">
-                                                    <span class="input-group-btn">
-                                                        <button class="btn red" style="color: white;background-color:black;height: 45px;font-size: 26px;"  type="button">Go!</button>
-                                                    </span>
-                                                </div>
+				                                                
 
+				<form role="form" action="/posts" >
+				<div class="form-group">
+				        <input type="text" name="term" class="form-control" placeholder="Where do you want to go?" style="height: 45px;border: 2px solid;border-color: black;">
+				        <input id="1" class="form-control" type="hidden" name="tags_filter" value="search" />
+				<input id="1" class="form-control" type="hidden" name="post_type" value="Problem" />
+				        <span class="input-group-btn" style="position: absolute;top: 0;right: 76px;">
+				            <button class="btn red" style="color: white;background-color:black;height: 45px;font-size: 26px;"  type="submit">Go!</button>
+				        </span>
 
-			</div>
-			<div class="col-sm-3 col-md-3 col-lg-3"></div>
-			</div>
-                     
+				    </div>
+				    </form>
+
+							
+							
+							</div>
+            <div class="col-sm-3 col-md-3 col-lg-3"></div>         
 
 
 
