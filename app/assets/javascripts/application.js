@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 // As of Rails 5.1, jquery_ujs was replaced by rails-ujs, which does not
 // depend on jQuery but can be used with applications that use jQuery. This
 // application uses jQuery and we've chosen to use jquery_ujs instead of
@@ -21,6 +22,6 @@
 //= require bootstrap-sprockets
 //= require select2
 //= require tinymce
-//= require jquery-ui
+//= require bootstrap
 //= require jquery-fileupload/basic
 //= require_tree .
