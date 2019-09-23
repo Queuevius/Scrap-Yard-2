@@ -57,6 +57,7 @@ gem 'tinymce-rails'
 gem 'jquery-ui-rails'
 # adding voting functionality for posts and users
 gem 'acts_as_votable', '~> 0.12.0'
+gem 'omniauth-facebook'
 
 # Locale data for Rails. Rails already comes with i18n capabilities (e.g.,
 # translate model attributes, possibility to place all of the app's strings in

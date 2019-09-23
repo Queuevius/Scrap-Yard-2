@@ -30,7 +30,8 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: {
     # Override the following Devise controllers with our custom versions
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks'
   }
 
   namespace :admin do

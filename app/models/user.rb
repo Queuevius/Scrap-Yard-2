@@ -27,7 +27,8 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         # :omniauthable
+         
+  devise :omniauthable, omniauth_providers: [:facebook]
 
   has_many :posts
   has_one :profile 
@@ -70,6 +71,31 @@ class User < ApplicationRecord
     question = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Question').count
     [ note > 0 ? note : 0 , debate > 0 ? debate : 0 ,  question > 0 ? question : 0]
   end  
+
+
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+        user.email = data["email"] if user.email.blank?
+      end
+    end
+  end
+
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0,20]
+      user.name = auth.info.name 
+      user.first_name = auth.info.name.split(' ').first 
+      user.last_name = auth.info.name.split(' ').last 
+      user.image = auth.info.image # assuming the user model has an image
+    end
+  end
+
+  # def display_pic
+  #   if self.image.blank?
+  #     self.profile
+  # end
 
   private
 
