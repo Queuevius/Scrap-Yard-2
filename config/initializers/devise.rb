@@ -10,7 +10,7 @@ Devise.setup do |config|
   #   '4bd39220369ada263eb9a77747eab8d6007aecea4bbb83f4bcdad3b322cd5b862d3b' \
   #   '1b28ec872b'
 
-  config.omniauth :facebook, "1478336832435383", "47dcd5d2e6780d4e8f3a5f0c899bd7fe", callback_url: "https://needpedia1.herokuapp.com/users/auth/facebook/callback"
+  config.omniauth :facebook, "2416294238490526", "14f6ff08366b2d7fcce1a1879c0a1c13", callback_url: "https://needpedia1.herokuapp.com/users/auth/facebook/callback"
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
