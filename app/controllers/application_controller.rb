@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   # authorization policies are enforced everywhere.
   after_action :verify_authorized,
                except: :index,
-               unless: :devise_controller?
+               unless: :devise_controller? 
   after_action :verify_policy_scoped,
                only: :index,
                unless: :devise_controller?
@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   # Require authentication for all requests. Add
   # skip_before_action :authenticate_user! to controllers that should not
   # require authentication.
-  before_action :authenticate_user!, unless: :devise_controller?
+  before_action :authenticate_user!, unless: :devise_controller? 
 
   # Display user-friendly errors for the following exceptions
   rescue_from Pundit::NotAuthorizedError,

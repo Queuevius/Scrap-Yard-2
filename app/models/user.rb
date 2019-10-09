@@ -28,7 +28,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  devise :omniauthable, omniauth_providers: [:facebook]
+  devise :omniauthable, omniauth_providers: [:facebook , :google_oauth2]
 
   has_many :posts
   has_one :profile 
@@ -83,12 +83,20 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
-      user.name = auth.info.name 
-      user.first_name = auth.info.name.split(' ').first 
-      user.last_name = auth.info.name.split(' ').last 
-      user.image = auth.info.image # assuming the user model has an image
+      
+      if auth.provider == :facebook
+        user.email = auth.info.email
+        user.password = Devise.friendly_token[0,20]
+        user.name = auth.info.name 
+        user.first_name = auth.info.name.split(' ').first 
+        user.last_name = auth.info.name.split(' ').last 
+        user.image = auth.info.image # assuming the user model has an image
+      elsif auth.provider == :google_oauth2
+        user.token = auth.credentials.token
+        user.expires = auth.credentials.expires
+        user.expires_at = auth.credentials.expires_at
+        user.refresh_token = auth.credentials.refresh_token
+      end
     end
   end
 

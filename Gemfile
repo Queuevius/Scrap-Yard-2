@@ -58,6 +58,7 @@ gem 'jquery-ui-rails'
 # adding voting functionality for posts and users
 gem 'acts_as_votable', '~> 0.12.0'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2', '~> 0.2.2'
 
 # Locale data for Rails. Rails already comes with i18n capabilities (e.g.,
 # translate model attributes, possibility to place all of the app's strings in

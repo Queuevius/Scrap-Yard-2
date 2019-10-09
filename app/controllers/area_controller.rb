@@ -7,6 +7,8 @@ class AreaController < ApplicationController
 
 	after_action :authorize_tag, only: [:new, :create, :show, :new_layer, :create_layer]
 
+  skip_before_action :authenticate_user!, only: [:show]
+
   def new
   	@tag = Tag.new 
   end
