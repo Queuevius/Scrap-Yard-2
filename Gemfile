@@ -61,7 +61,6 @@ gem 'jquery-ui-rails'
 gem 'acts_as_votable', '~> 0.12.0'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2', '~> 0.2.2'
-gem 'bootstrap_form'
 
 # Locale data for Rails. Rails already comes with i18n capabilities (e.g.,
 # translate model attributes, possibility to place all of the app's strings in

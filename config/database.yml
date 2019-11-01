@@ -8,8 +8,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   # The following username and password are used for both development and test
   # environments.
+<<<<<<< HEAD
   username: postgres
   password: Monkey!
+=======
+  username: maviz
+  password: maviz
+>>>>>>> 008608ce3598e9ba3d7d8e4a486d7fa5ac33a62b
 
 development:
   <<: *default

@@ -156,6 +156,11 @@ ActiveRecord::Schema.define(version: 20191009190852) do
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
+=======
+    t.text "summary"
+    t.text "description"
+>>>>>>> 008608ce3598e9ba3d7d8e4a486d7fa5ac33a62b
     t.string "provider"
     t.string "uid"
     t.string "name"
