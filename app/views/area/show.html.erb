@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="well">
+      <div class="media">
+        <a class="pull-left" href="#">
+        <img class="media-object" >
+      </a>
+      <div class="media-body">
+        <h1 class="media-heading"><%= @area_stats[0] %></h1>
+        <br />
+        Layer: 
+                <select name="layer_sel" id="layer_sel">
+                  <% if @clayer.nil? %> 
+                    <option value="/area/<%= @area.name %>" selected="selected">Public</option>
+                    <% @layers.each do |l| %>
+                      <option value="/area/<%= @area.name %>?layer=<%= l.name %>">
+                        <%=  l.name %>
+                      </option>
+                    <% end %>
+                  <% else %>
+                    <option value="/area/<%= @area.name %>">Public</option>
+                    <% @layers.each do |l| %>
+                      <option value="/area/<%= @area.name %>?layer=<%= l.name %>" selected="<%= 'selected' if l.name == @clayer.name %>">
+                        <%=  l.name %>
+                      </option>
+                    <% end %>
+                  <% end %>
+                  <option value="/area/<%= @area.name %>/new_layer">Add a new Layer.</option>
+                </select>
+          <br />
+          <% if @clayer.nil? %> 
+            <%= @area.tag_body.try(:html_safe) %>
+          <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: User.find(@area_stats[4]).slug) %></p>    
+          <% else %>
+            <%= @clayer.layer_body.try(:html_safe) %>
+            <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: @clayer.creator.slug) %></p>
+          <% end %>
+          <ul class="list-group">
+          <li class="list-group-item">    
+            <div class="float-right">
+            <%= link_to new_post_path(post_type: 'Problem', area: @area_stats[0], area_layer: @clayer.try(:name)), class: "btn btn-primary" do %>
+              <span class="glyphicon glyphicon-plus"></span>
+                new Problem in "<%= @area_stats[0] %>"
+            <% end %>
+            <%= link_to new_post_path(post_type: 'Proposal', area: @area_stats[0] , area_layer: @clayer.try(:name)), class: "btn btn-primary" do %>
+              <span class="glyphicon glyphicon-plus"></span>
+                new Proposal in "<%= @area_stats[0] %>"
+            <% end %>
+            </div>
+            </li>
+        </ul> 
+       </div>
+        <div class="container">
+        <h1><%= @area_stats[1]%> Problems  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small></h1>
+          <% @posts.each do |post| %>
+            <%= render partial: "posts_list_item", locals: { post: post} %>
+          <% end %>
+        </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+<% unless @clayer.nil? %>
+  // select the current layer
+   $('#layer_sel option:contains("<%= @clayer.name %>")').prop("selected","selected");
+   $('#layer_id').val("<%= @clayer.id %>");
+  <% else %>
+   $('#layer_sel option:contains("Public")').prop("selected","selected");
+<% end %>
+</script>
+
+

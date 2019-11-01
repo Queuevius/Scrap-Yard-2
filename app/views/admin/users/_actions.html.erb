@@ -1,0 +1,17 @@
+<%# Show the 'show' action icon in the index view but not on the show view %>
+<% if action_name == 'index' %>
+    <%= link_to admin_user_path(user), title: t('actions.show'),
+                'data-toggle' => 'tooltip' do %>
+        <span class="action-icon glyphicon glyphicon-search"></span>
+    <% end %>
+<% end %>
+<%= link_to edit_admin_user_path(user), title: t('actions.edit'),
+            'data-toggle' => 'tooltip' do %>
+    <span class="action-icon glyphicon glyphicon-pencil"></span>
+<% end %>
+<%= link_to admin_user_path(user), method: :delete,
+            data: { confirm: t('are_you_sure') },
+            title: t('actions.delete'),
+            'data-toggle' => 'tooltip' do %>
+    <span class="action-icon glyphicon glyphicon-remove"></span>
+<% end %>

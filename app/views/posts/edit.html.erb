@@ -1,0 +1,51 @@
+<script src="javascripts/tag-it.js" type="text/javascript" charset="utf-8"></script>
+<link href="stylesheets/jquery.tagit.css" rel="stylesheet" type="text/css">
+
+<%= display_validation_errors(@ep) %>
+
+<div class="panel panel-default devise-bs">
+  <div class="panel-body">
+    <%= form_for(@ep,
+                 url: post_path(@ep) + "?layer_id=" + ( @current_layer.nil? ? '' : @current_layer.id).to_s ,
+                 html: { method: :put }) do |f| %>
+
+      <div class="form-group required">
+        <%= f.label :title %>
+        <%= f.text_field :title, autofocus: true, class: "form-control" %>
+      </div>
+       <%= f.hidden_field :post_type, value: @ep.post_type %>
+       <%= f.hidden_field :parent_post_id, value: @ep.parent_post_id %>
+      
+      
+      
+      <div class="form-group">
+        <%= label_tag "Area" %>
+        <%= f.text_field :all_tags, placeholder: "Areas separated with comma", data: {role: "tagsinput"} %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.label :body %> 
+        <%= f.text_area :post_body, class: "tinymce", rows: 40 , cols: 120  %>
+        <%= tinymce %>
+      </div>
+      
+
+
+      <%= f.submit "Save", class: "btn btn-success" %>
+      <a href="<%= post_path @ep %>" data-turbolinks='false' }><button class="btn btn-danger">Cancel</button></a>
+
+
+    <% end %>
+      
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+        $("#post_all_tags").tagit({
+          availableTags: ["Needpedia"],
+          tagLimit: 3
+        });
+    });
+</script>

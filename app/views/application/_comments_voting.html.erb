@@ -1,0 +1,17 @@
+<div class="vote-sec">
+	<a href=<%= add_vote_token_comments_path(token_id: c.token.id, comment_id: c.id , vote: 'like') %> class="btn btn-success btn-sm vote" data-vote='like'>
+    	<span class='label label-success'> <%= c.get_upvotes.size %></span>
+      <span class="glyphicon glyphicon-thumbs-up"></span> Likes
+
+    </a>
+    <a href=<%= add_vote_token_comments_path(token_id: c.token.id, comment_id: c.id, vote: 'bad' ) %> class="btn btn-danger btn-sm vote" data-vote='bad'>
+      <span class='label label-danger'> <%= c.get_downvotes.size %></span>
+      <span class="glyphicon glyphicon-thumbs-down"></span> Dis-Likes
+    </a>
+
+	<% if current_user.voted_as_when_voted_for(c) == true %>
+    	<p>You liked this comment.</p>
+    <% elsif  current_user.voted_as_when_voted_for(c) == false %>
+    	<p>You Dis-Liked this comment.</p>
+    <% end %>
+</div>

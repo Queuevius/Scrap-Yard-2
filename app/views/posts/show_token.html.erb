@@ -1,0 +1,70 @@
+<div class="well" style="background-color: <%= bg_color(@token.post.post_type) %>">
+<div class="media">
+<a class="pull-left" href="#">
+<img class="media-object" >
+</a>
+<div class="media-body">
+
+<h1 class="media-heading">A <%= @token.token_type %> Token on "<%= link_to @token.post.title,post_path(@token.post), data: { 'turbolinks': false } %>"
+  <h2>
+    Area:  <a href="/area/<%= @token.post.area.name %>"><%= @token.post.area.name %></a>
+   </h2>
+</h1>
+<p class="text-right">By <%= @token.user_name %></p>
+
+<div class="post-body">
+	<%= @token.token_body.html_safe unless @token.token_body.nil? %>
+</div>
+
+</div>
+</div>
+</div>
+
+
+	<div class="well">
+	<% if @token.token_type == 'Debate' %>
+		<%= render partial: "debate_token_comments" %>
+	<% else %>
+		<% @comments.each do |c| %>
+		<div class="well" style="background-color: <%= bg_color(@token.post.post_type) %>">
+			<div class="media">
+			<div class="row media-body">
+				<%= raw c.com_body %>
+			<p class="text-right">By <%= @token.user_name %></p>
+			</div>
+			</div>
+			<%= render partial: 'comments_voting', locals: { c: c} %>
+			</div>
+		<% end %>
+	<% end %>
+	</div>
+
+
+
+
+
+<div class="well">
+	<div class="media">
+		<div class="media-body">
+			<h1 class="media-heading">
+				 <%= add_comment_on_token_form_heading @token  %>				
+			</h1>
+
+			<div class="post-body">
+				   <div class="form-group required">
+				   <%= form_tag( token_comments_path(token_id: @token.id) , method: :post, remote: true, id: :token_form  ) do %>
+				      <%= text_area_tag "body","", class: "tinymce", rows: 10 , cols: 120 %>
+				      <%= tinymce %>
+				      <%= hidden_field_tag(:polarity) %>
+				      
+				      <%= add_comment_form_actions @token %>
+
+				      <% end %>
+					</div>
+
+				</div>
+
+		</div>
+	</div>
+
+</div>

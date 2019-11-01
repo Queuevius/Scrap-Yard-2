@@ -1,0 +1,7 @@
+<%# Menu items that that should appear in the navbar of all logged-in users,
+regardless of their roles %>
+
+<li><%= link_to "Areas", posts_path %></li>
+<li><%= link_to "Problems", posts_path(post_type: "Problem") %></li>
+<li><%= link_to "Proposals", posts_path(post_type: "Proposal") %></li>
+

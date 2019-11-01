@@ -1,0 +1,27 @@
+<div class="row">
+<div class="col-sm-2">
+	 <div class="circle">
+       <!-- User Profile Image -->
+       <img class="profile-pic" src="<%= @profile.display_pic.nil? ? 'https://via.placeholder.com/150?text=Needpedia' : @profile.display_pic %>">
+       <!-- Default Image -->
+       <!-- <i class="fa fa-user fa-5x"></i> -->
+     </div>
+     <div class="p-image">
+       <i class="glyphicon glyphicon-camera upload-button"></i>
+        <!-- <input class="file-upload" type="file" style='display:none;' accept="image/*"/> -->
+
+        <%= form_tag('/profiles/update_pic', remote: true,  class: 'directUpload', data: { 'form-data' => (@s3_direct_post.fields), 'url' => @s3_direct_post.url, 'host' => URI.parse(@s3_direct_post.url).host }) do %>
+          <%= csrf_meta_tag %>
+          <div class="field">
+            <%= label_tag :avatar_url %><br>
+            <%= file_field_tag :avatar_url , class: 'file-upload' %>
+          </div>
+        <% end %>
+     </div>
+</div>
+<div class="col-sm-10">
+	<h2><%= @profile.full_name %></h2>
+   	<p><%= @profile.description %></p>
+</div>
+</div>
+	  

@@ -1,0 +1,30 @@
+<script src="javascripts/tag-it.js" type="text/javascript" charset="utf-8"></script>
+<link href="stylesheets/jquery.tagit.css" rel="stylesheet" type="text/css">
+
+<%= display_validation_errors(@layer) %>
+
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading">
+      <h4>Create a New Layer on <%= @post.title %></h4>
+  </div>
+  <div class="panel-body">
+    <%= form_for(@layer,
+                 url: create_layer_post_path,
+                 html: { method: :post }) do |f| %>
+
+      <div class="form-group required">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Please specify a name to the Layer you are adding." %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.label :layer_body %> 
+        <%= f.text_area :layer_body, class: "tinymce", rows: 40 , cols: 120  %>
+        <%= tinymce %>
+      </div>
+
+      <%= f.submit "Add Layer", class: "btn btn-primary" %>
+    <% end %>
+      
+  </div>
+</div>
