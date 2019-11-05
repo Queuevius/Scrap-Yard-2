@@ -4,6 +4,7 @@
     <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -138,11 +139,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="das://8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94/database/d4b1rq7okppq32/schema/public/table/users">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -243,6 +253,7 @@
         <option value="$PROJECT_DIR$/app/controllers/trackings_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/trackings/index.html.erb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -358,6 +369,12 @@
               <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
               <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="environments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
@@ -496,12 +513,12 @@
       <workItem from="1572634046941" duration="4002000" />
       <workItem from="1572817222212" duration="3425000" />
       <workItem from="1572891706898" duration="6322000" />
-      <workItem from="1572981317154" duration="13587000" />
+      <workItem from="1572981317154" duration="13944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27336000" />
+    <option name="totallyTimeSpent" value="27693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -559,9 +576,6 @@
     <SUITE FILE_PATH="coverage/Needpedia_profile@Development__Needpedia_profile.rcov" NAME="Development: Needpedia-profile Coverage Results" MODIFIED="1572990768010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Needpedia-profile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190325072246_create_haves.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/layer.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -856,6 +870,13 @@
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="das://ec80eef9-7750-4549-ac2f-b9258f368a07/database/needp_development/schema/public/table/posts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94/database/d4b1rq7okppq32/schema/public/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -863,10 +884,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://ec80eef9-7750-4549-ac2f-b9258f368a07/database/needp_development/schema/public/table/posts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
         </state>
       </provider>
     </entry>
