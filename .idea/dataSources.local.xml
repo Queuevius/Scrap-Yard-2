@@ -13,5 +13,13 @@
       <user-name>postgres</user-name>
       <introspection-schemas>@:@</introspection-schemas>
     </data-source>
+    <data-source name="Rails Needpedia-profile: production" uuid="8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94">
+      <database-info product="PostgreSQL" version="11.5 (Ubuntu 11.5-3.pgdg16.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.5" exact-driver-version="42.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>wszjrbgqjkoojj</user-name>
+      <introspection-schemas>@:@</introspection-schemas>
+    </data-source>
   </component>
 </project>
