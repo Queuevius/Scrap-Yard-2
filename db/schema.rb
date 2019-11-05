@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191009190852) do
+ActiveRecord::Schema.define(version: 20191105212608) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -132,6 +132,13 @@ ActiveRecord::Schema.define(version: 20191009190852) do
     t.string "span_id"
   end
 
+  create_table "trackings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -156,11 +163,6 @@ ActiveRecord::Schema.define(version: 20191009190852) do
     t.string "slug"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-=======
-    t.text "summary"
-    t.text "description"
->>>>>>> 008608ce3598e9ba3d7d8e4a486d7fa5ac33a62b
     t.string "provider"
     t.string "uid"
     t.string "name"

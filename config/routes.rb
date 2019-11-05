@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :trackings
   get 'area/new'
   post 'area/create'
   get 'area/:id' => 'area#show'
@@ -9,6 +10,15 @@ Rails.application.routes.draw do
   get 'posts/new_des' => 'posts#new_design'
 
   post 'profiles/update_pic' => 'profiles#update_pic'
+
+  get '/profile_posts' => 'profiles#profile_posts'
+  get '/profile_haves' => 'profiles#profile_haves'
+  get '/profile_wants' => 'profiles#profile_wants'
+  get '/profile_tags' => 'profiles#profile_tag'
+
+  resources :haves
+
+  resources :wants
 
   resources :posts do 
     member do 
@@ -26,7 +36,7 @@ Rails.application.routes.draw do
     end
   end 
   
-  root to: 'posts#index'
+  root to: 'profiles#index'
 
   devise_for :users, controllers: {
     # Override the following Devise controllers with our custom versions
@@ -51,7 +61,7 @@ Rails.application.routes.draw do
 
   # form_for is easier to use with a resourceful route
   resources :contact_forms, only: [:create]
-  resources :profiles, only: [:edit]
+  resources :profiles
   get 'contact' => 'contact_forms#new', as: 'contact'
   post '/users/edit' => 'users/registrations#update'
  # post '/update_user' => 'users/registrations#update'

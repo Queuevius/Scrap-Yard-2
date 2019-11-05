@@ -1,0 +1,17 @@
+<%= form_for @want, class: "form-horizonatl" do |f| %>
+
+  <div class="form-group">
+    <%= f.label :title, class: "title1 col-sm-2 control-label" %>
+    <%= f.text_field :title, class: "text-title" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, class: "title1 col-sm-2 control-label" %>
+    <%= f.text_area :description, required: true %>
+  </div>
+
+  <br>
+
+  <%= f.submit 'Submit', class: 'b4' %>
+
+<%end%>

@@ -111,6 +111,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+		@track = Tracking.new
 		@post  = Post.friendly.find(params[:id])
 		@rated = Rating.where({rateable_id: @post.id, rateable_type: @post.class.to_s, creator_id: current_user.id}).first
 		@tokens_count = current_user.remaining_token_limit

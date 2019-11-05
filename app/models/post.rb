@@ -13,6 +13,7 @@ class Post < ApplicationRecord
 	has_many :layers, as: :layerable
 	has_many :tokens	
 	has_many :ratings, as: :rateable
+	has_many :trackings
 
 
 	# Scopes	

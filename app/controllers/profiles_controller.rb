@@ -1,19 +1,31 @@
 class ProfilesController < ApplicationController
-
   layout 'profiles'
-
 	before_action :authenticate_user!
-
-	after_action :authorize_profile, only: [ :show, :update, :edit, :update_pic]
-
+	after_action :authorize_profile, only: [ :show, :update, :edit, :update_pic, :profile_posts, :profile_haves, :profile_wants]
   before_action :set_s3_direct_post, only: [:show , :update_pic]
-
   skip_before_action :verify_authenticity_token, only: [:update_pic]
 
+  def index
+    policy_scope(Profile) if current_user
+  end
+
+  def profile_posts
+    policy_scope(Profile) if current_user
+
+    @note = Post.where(creator_id: current_user.id, post_type: "Note")
+  end
+
+  def profile_haves
+    @have = Have.where(user_id: current_user.id)
+  end
+
+  def profile_wants
+    @have = Want.where(user_id: current_user.id)
+  end
 
   def show
   	@user = User.friendly.find(params[:id])
-    @profile = @user.profile
+
   end
 
   def update_pic
@@ -27,10 +39,6 @@ class ProfilesController < ApplicationController
   def edit
   	@profile = current_user.profile
   end
-
-
-
-
 
   private 
   

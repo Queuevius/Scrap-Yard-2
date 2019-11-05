@@ -11,6 +11,10 @@ class ApplicationPolicy
     false
   end
 
+  def profile_posts?
+    update?
+  end
+
   def create?
     false
   end

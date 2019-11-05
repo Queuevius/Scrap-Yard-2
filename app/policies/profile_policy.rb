@@ -7,6 +7,13 @@ class ProfilePolicy < ApplicationPolicy
     end
   end
 
+  def profile_haves?
+    update?
+  end
+
+  def profile_wants?
+    true
+  end
   
   def show?
     true 

@@ -1,0 +1,44 @@
+<div class="container-flex">
+  <div class="row text-center">
+    <% if user_signed_in? %>
+      <h3 class="side-links">
+        <%= link_to image_tag("profile-placeholder.png", {:style => "width:175px;", :class => "profile-pic"}), profile_path(current_user) %>
+      </h3>
+    <% else %>
+      <%= image_tag("profile-placeholder.png", {:style => "width:175px;", :class => "profile-pic"}) %>
+    <% end %>
+  </div>
+  <div class="row side-link-box">
+    <h3 class="side-links">
+      <%= link_to "About", root_path, :class => "b1" %>
+    </h3>
+    <h3 class="side-links">
+      <%= link_to "Home", root_path, :class => "b1" %>
+    </h3>
+
+    <h3 class="side-links">
+      <%= link_to "Pictures", root_path, :class => "b1" %>
+    </h3>
+    <h3 class="side-links">
+      <%= link_to "Videos", root_path, :class => "b1" %>
+    </h3>
+    <h3 class="side-links">
+      <%= link_to "Have", profile_haves_path, :class => "b1" %>
+    </h3>
+    <h3 class="side-links">
+      <%= link_to "Want", profile_wants_path, :class => "b1" %>
+    </h3>
+    <h3 class="side-links">
+      <%= link_to "Votes", root_path, :class => "b1" %>
+    </h3>
+    <h3 class="side-links">
+      <%= link_to "Notes", profile_posts_path, :class => "b1" %>
+    </h3>
+    <h3 class="side-links">
+      <%= link_to "Tracking", trackings_path, :class => "b1" %>
+    </h3>
+    <h3 class="side-links">
+      <%= link_to "Perspectives", root_path, :class => "b1" %>
+    </h3>
+  </div>
+</div>

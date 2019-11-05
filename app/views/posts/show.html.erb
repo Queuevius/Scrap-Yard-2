@@ -136,7 +136,14 @@
               Add a Layer
           <% end %>
         </li>
+        <%= form_for @track, class: "form-horizonatl" do |f| %>
+          <%= hidden_field_tag(:post_id, @post.id) %>
+
+          <%= f.submit 'Submit', class: 'btn btn-primary' %>
+
+        <%end%>
       </ul>
+
 
        </div>
     </div>
