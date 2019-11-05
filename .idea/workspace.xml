@@ -1,52 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/profile-placeholder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/haves_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/wants_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/have.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/want.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/policies/have_policy.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/policies/tracking_policy.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/policies/want_policy.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/haves/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/haves/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/haves/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/haves/partials/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/haves/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/profiles/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/profiles/profile_haves.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/profiles/profile_posts.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/profiles/profile_wants.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shared/_header.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/trackings/_track.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/trackings/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/wants/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/wants/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/wants/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/wants/partials/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/wants/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Needpedia-profile.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Needpedia-profile.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/profiles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/profiles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/application_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/application_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/profile_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/profile_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/profiles.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/profiles.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/_debate_token_comments.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/_debate_token_comments.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-    </list>
+    <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -523,18 +478,17 @@
       <workItem from="1572634046941" duration="4002000" />
       <workItem from="1572817222212" duration="3425000" />
       <workItem from="1572891706898" duration="6322000" />
-      <workItem from="1572981317154" duration="12053000" />
+      <workItem from="1572981317154" duration="12374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25802000" />
+    <option name="totallyTimeSpent" value="26123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -547,7 +501,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49840087" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.3651386" side_tool="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32936078" />

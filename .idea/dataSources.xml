@@ -17,5 +17,13 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/needp_development</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Rails Needpedia-profile: production" uuid="8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-23-21-87-183.compute-1.amazonaws.com:5432/d4b1rq7okppq32</jdbc-url>
+    </data-source>
   </component>
 </project>

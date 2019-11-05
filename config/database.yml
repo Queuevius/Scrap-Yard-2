@@ -19,8 +19,6 @@ test:
   <<: *default
   database: needp_test
 
-production:
-  <<: *default
   # HEROKU
   # Heroku uses the DATABASE_URL environment variable to configure the DB
   # connection. You should *NOT* set adapter, database, username, password, host
@@ -54,12 +52,11 @@ production:
 #  <<: *default
 #  database: needp_test
 #
-#production:
-#  <<: *default
-#  # Default config for Amazon Beanstalk + RDS. These environment variables
-#  # are  available in Beanstalk environments which are linked to RDS instances.
-#  database: <%= ENV['RDS_DB_NAME'] %>
-#  username: <%= ENV['RDS_USERNAME'] %>
-#  password: <%= ENV['RDS_PASSWORD'] %>
-#  host: <%= ENV['RDS_HOSTNAME'] %>
-#  port: <%= ENV['RDS_PORT'] %>
+production:
+  <<: *default
+  encoding: utf8
+  database: d4b1rq7okppq32
+  username: wszjrbgqjkoojj
+  password: de80df30d8bf3cc5003cba6f484c5e161b72822f2da73c2c332df91ebfb6a585
+  host: ec2-23-21-87-183.compute-1.amazonaws.com
+  port: 5432
