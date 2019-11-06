@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="branch">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94/storage_v2/_src_/database/d4b1rq7okppq32.-7gaWA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94/storage_v2/_src_/database/d4b1rq7okppq32.-7gaWA/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-ui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery-ui.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/wants/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/wants/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-1ec9291439932a1cffacdbbe3cdb72bb7fdcffd3843e0e8d3a0bbd7bd44f8d42.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/application-1ec9291439932a1cffacdbbe3cdb72bb7fdcffd3843e0e8d3a0bbd7bd44f8d42.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-66f0827a31f529657c4fcc85dcb20445f69f1b78a643c609fd8ee71c2ea6331e.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/application-66f0827a31f529657c4fcc85dcb20445f69f1b78a643c609fd8ee71c2ea6331e.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/codesample/plugin-09e88c7096f499a00ffa42e761c36ac886f029f173dfd467f55073216963851b.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/codesample/plugin-09e88c7096f499a00ffa42e761c36ac886f029f173dfd467f55073216963851b.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/searchreplace/plugin-a7da6c2e9d795b10dd0002f2fa3d54655eb2e2167f02a9886afb5a44dbf66d2e.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/searchreplace/plugin-a7da6c2e9d795b10dd0002f2fa3d54655eb2e2167f02a9886afb5a44dbf66d2e.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/spellchecker/plugin-823146d0fb6ffb3961778100bba6fb49ea71a8a433c812300de6d82f05aedb38.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/spellchecker/plugin-823146d0fb6ffb3961778100bba6fb49ea71a8a433c812300de6d82f05aedb38.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/table/plugin-0b0286cb3b1fa730ea8bb4ffa01cf03e53a0a850fc840ebd9ddbc27252a174a0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/table/plugin-0b0286cb3b1fa730ea8bb4ffa01cf03e53a0a850fc840ebd9ddbc27252a174a0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/mobile/theme-7b07c5ab40e4a09e7072b91cfac64f8c5f415b62793d52d15c2f81d551ec10f2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/themes/mobile/theme-7b07c5ab40e4a09e7072b91cfac64f8c5f415b62793d52d15c2f81d551ec10f2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/silver/theme-2e4a6c3e07240fccd3fd165aa909d8818ecfa3fe84b8fbfdf6151269002b5998.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/themes/silver/theme-2e4a6c3e07240fccd3fd165aa909d8818ecfa3fe84b8fbfdf6151269002b5998.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="branch" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -117,20 +92,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
+            <state relative-caret-position="413">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_nav.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="27" column="93" selection-start-line="27" selection-start-column="93" selection-end-line="27" selection-end-column="93" />
+            <state relative-caret-position="340">
+              <caret line="31" column="86" lean-forward="true" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
             </state>
           </provider>
         </entry>
@@ -216,8 +191,8 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/wants/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global.scss" />
         <option value="$PROJECT_DIR$/app/views/shared/_nav.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/global.scss" />
       </list>
     </option>
   </component>
@@ -444,23 +419,22 @@
       <workItem from="1572997199971" duration="75000" />
       <workItem from="1573051713292" duration="674000" />
       <workItem from="1573052405242" duration="18000" />
-      <workItem from="1573052449453" duration="13380000" />
+      <workItem from="1573052449453" duration="13758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15924000" />
+    <option name="totallyTimeSpent" value="16302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33152762" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33152762" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -468,14 +442,14 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.12526652" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.12526652" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -705,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://ec80eef9-7750-4549-ac2f-b9258f368a07/database/needp_development/schema/public/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -724,8 +691,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_nav.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="93" selection-start-line="27" selection-start-column="93" selection-end-line="27" selection-end-column="93" />
+        <state relative-caret-position="340">
+          <caret line="31" column="86" lean-forward="true" selection-start-line="31" selection-start-column="86" selection-end-line="31" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
