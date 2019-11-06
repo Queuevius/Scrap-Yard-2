@@ -55,8 +55,8 @@ test:
 production:
   <<: *default
   encoding: utf8
-  database: d4b1rq7okppq32
-  username: wszjrbgqjkoojj
-  password: de80df30d8bf3cc5003cba6f484c5e161b72822f2da73c2c332df91ebfb6a585
-  host: ec2-23-21-87-183.compute-1.amazonaws.com
+  database: dd5mdefm1m0pgi
+  username: miavioghvxfnok
+  password: 571fabb6ee3dfa6bf7fed86de00b1c837870ba5959b05bf57a9a683cfe9f918b
+  host: ec2-107-22-160-102.compute-1.amazonaws.com
   port: 5432

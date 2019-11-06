@@ -16,9 +16,6 @@ Rails.application.routes.draw do
   get '/profile_wants' => 'profiles#profile_wants'
   get '/profile_tags' => 'profiles#profile_tag'
 
-  get '/tag_search' => 'posts#tag_search'
-  get 'tags/:tag', to: 'posts#tag_search', as: "tag"
-
   resources :haves
 
   resources :wants

@@ -23,28 +23,18 @@
         <li class = "glyph-link glyphicon glyphicon-envelope">
         <li class = "glyph-link glyphicon glyphicon-user">
         <li class = "glyph-link glyphicon glyphicon-globe">
-        <li class="dropdown">
-          <a id="drop4" role="button" data-toggle="dropdown" href="#" class="navbar-icons">
-            <%= current_user.first_name %> <%= current_user.last_name %>
-            <b class="caret"></b></a>
-          <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-            <li role="presentation">
-              <a role="menuitem" tabindex="-1" href="#">
-            <li><%= link_to('My Account', edit_user_registration_path) %></li>
-            </a>
-            </li>
-            <li role="presentation">
-              <a role="menuitem" tabindex="-1" href="#">
-            <li><%= link_to('My Store', edit_user_registration_path) %></li>
-            </a>
-            </li>
-            <li role="presentation">
-              <a role="menuitem" tabindex="-1" href="#">
-            <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-            </a>
-            </li>
-          </ul>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn"><%= current_user.first_name %> <%= current_user.last_name %></button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+            </div>
+          </div>
         </li>
+
+        <li></li>
       <% else %>
 
         <li class="nav-link">
@@ -53,8 +43,7 @@
         <li class="nav-link">
           <%= link_to 'Sign up', new_user_registration_path %>
         </li>
-        <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-        </li>
+
       <% end %>
       </ul>
     </li>
