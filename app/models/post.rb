@@ -33,6 +33,10 @@ class Post < ApplicationRecord
 	def all_tags
 	  self.tags.map(&:name).join(", ")
 	end
+	
+	def selftagged_with(name)
+		Tag.find_by_name!(name).posts
+	end
 
 	def parent_slug
 		Post.find(self.parent_post_id).slug 

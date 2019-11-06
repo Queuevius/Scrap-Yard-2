@@ -60,6 +60,7 @@ class PostsController < ApplicationController
 	end
 
 
+
 	def search_index
 	end
 

@@ -7,12 +7,27 @@
 
 .nav-link {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .nav-link:hover {
   text-decoration: none;
   color: lightgrey;
+}
+
+.navbar {
+  background-color: white;
+  color: black !important;
+}
+
+.glyph-link {
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.search-pad {
+  padding-left: 30px;
+  padding-top: 10px;
 }
 
 //sidebar
@@ -74,6 +89,7 @@
   border-radius: 8px;
   background-color: black;
   color: white;
+  padding-top: 100px;
 }
 
 .header-head {
