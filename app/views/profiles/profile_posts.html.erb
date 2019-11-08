@@ -9,7 +9,7 @@
       <% @note.each do |f| %>
         <div class="row note-box">
           <h3 class="note-title">
-            <%= link_to f.title, root_path, :class => "title-link" %>
+            <%= link_to f.title, post_path(f), :class => "title-link" %>
           </h3>
           <div class="note-body">
             <%= truncate(f.post_body, length: 450) %> <%= link_to "read more", root_path(f) %>

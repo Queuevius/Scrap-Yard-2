@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pics
+  resources :friendships
   resources :trackings
   get 'area/new'
   post 'area/create'
@@ -19,6 +21,13 @@ Rails.application.routes.draw do
   resources :haves
 
   resources :wants
+
+  resources :conversations, only: [:create] do
+    member do
+      post :close
+      resources :messages, only: [:create]
+    end
+  end
 
   resources :posts do 
     member do 

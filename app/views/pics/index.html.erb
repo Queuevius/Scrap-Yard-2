@@ -1,0 +1,26 @@
+
+
+<%= link_to "new picture", new_pic_path, class: "b3" %>
+
+  <% @pic.in_groups_of(4, false).each do |group| %>
+    <div class='row'>
+      <% group.each do |p| %>
+        <div class='col-md-3'>
+          <h3 class="text-center">
+            <%= link_to p.name, pics_path(p) %>
+          </h3>
+          <p>
+            <%= image_tag(p.image, {:style => "width:175px;", :class => "profile-pic text-center"}) %>
+          </p>
+          <p class="text-center">
+            <%= p.description %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+
+</div>
+
+

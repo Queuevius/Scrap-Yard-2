@@ -10,14 +10,18 @@
   </div>
   <div class="row side-link-box">
     <h3 class="side-links">
-      <%= link_to "About", root_path, :class => "b1" %>
+      <% if user_signed_in? %>
+        <%= link_to "About", profile_path(current_user), :class => "b1" %>
+      <% else %>
+        <%= link_to "About", root_path, :class => "b1" %>
+      <% end %>
     </h3>
     <h3 class="side-links">
       <%= link_to "Home", root_path, :class => "b1" %>
     </h3>
 
     <h3 class="side-links">
-      <%= link_to "Pictures", root_path, :class => "b1" %>
+      <%= link_to "Pictures", pics_path, :class => "b1" %>
     </h3>
     <h3 class="side-links">
       <%= link_to "Videos", root_path, :class => "b1" %>

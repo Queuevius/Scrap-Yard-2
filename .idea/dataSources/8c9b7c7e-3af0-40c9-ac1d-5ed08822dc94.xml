@@ -10246,9 +10246,7 @@
       <IntrospectionStateNumber>9706437</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|4150762|4150764|1
-sequence|table|4150782|4150784|1
-sequence|table|4150797|4150799|1
+      <Relations>sequence|table|4150797|4150799|1
 sequence|table|4150809|4150811|1
 sequence|table|4150820|4150822|1
 sequence|table|4150840|4150842|1
@@ -10261,6 +10259,8 @@ sequence|table|4150908|4150910|1
 sequence|table|4150919|4150921|1
 sequence|table|4150938|4150940|1
 sequence|table|4150949|4150951|1
+sequence|table|4150762|4150764|1
+sequence|table|4150782|4150784|1
 </Relations>
     </database>
     <database id="2050" parent="1" name="dd5mfngj779vu8">

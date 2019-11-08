@@ -1,34 +1,50 @@
+<div class="container-flex">
+  <div class="col-md-12">
+    <div class="show-header">
+      <h1>
+        Profile
+      </h1>
+    </div>
+    <div class="row">
+      <% if current_user.id /= @user.id %>
+        <%= link_to "Add friend", friendships_path(:friend_id => @user.id), :method => :post %>
+      <% end %>
+    </div>
+    <div class="row profile">
+      <h4><b>Name: </b><%= @user.first_name %> <%= @user.last_name %></h4>
+      <h4><b>Email: </b><%= @user.email %></h4>
+    </div>
+    <div class="row profile">
+      <div class="col-md-3">
+        <h4 class="profile-link">
+          <%= link_to "Edit Profile", edit_user_registration_path(@user), :class => "b4" %>
+        </h4>
+      </div>
+    </div>
+    <div class="row profile">
+      <h4><b>Notes:</b></h4>
+      <h4><b>Debates:</b></h4>
+      <h4><b>Haves:</b></h4>
+      <h4><b>Wants:</b></h4>
+      <h4><b>Perspectives:</b></h4>
+      <h4><b>Comments:</b></h4>
+    </div>
+    <h2>Friends</h2>
+    <ul>
+      <% for friendship in @user.friendships %>
+        <li>
+          <%=h friendship.friend.first_name %> <%= friendship.friend.last_name %>
+          (<%= link_to "remove", friendship, :method => :delete %>)
+        </li>
+      <% end %>
+    </ul>
 
-	 	<ul class="nav nav-tabs">
-	      <li class="active"><a href="#about" data-toggle="tab">About</a></li>
-	      <li><a href="#wall" data-toggle="tab">Wall</a></li>
-	      <li><a href="#notif" data-toggle="tab">Notifications</a></li>
-	      <li><a href="#follow" data-toggle="tab">Follow</a></li>
-	      <li><a href="#msg" data-toggle="tab">Message</a></li>
-	    </ul>
-		
+    <h2>Friended by Users</h2>
+    <ul>
+      <% for user in @user.inverse_friends %>
+        <li><%=h user.id %></li>
+      <% end %>
+    </ul>
 
-		<div id="tab1" class="tab-content">
-	      	<div class="tab-pane active in" id="about">	      							  
-	      	<%= render partial: 'about_tab_content'%>
-	      	</div>
-	      	
-
-
-	      	<div class="tab-pane fade" id="wall">	      		
-					   <h2>WALL</h2>
-	      	</div>
-
-	      	<div class="tab-pane fade" id="notif">	      		
-					   <h2>NOTIFICATIONS page</h2>
-	      	</div>
-
-	      	<div class="tab-pane fade" id="follow">	      		
-					   <h2>Follow page</h2>
-	      	</div>
-
-	      	<div class="tab-pane fade" id="msg">	      		
-					   <h2>Message page</h2>
-	      	</div>
-
-	    </div>
+  </div>
+</div>

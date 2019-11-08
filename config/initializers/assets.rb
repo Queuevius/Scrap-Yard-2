@@ -12,3 +12,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 Rails.application.config.assets.precompile += %w( bootstrap-switch.min.css login-2.min.css plugins.min.css font-awesome.min.css simple-line-icons.min.css bootstrap.min.css uniform.default.css bootstrap-switch.css select2.min.css select2-bootstrap.min.css components-rounded.css )
+
+Rails.application.config.assets.precompile += %w( lightbox/* )

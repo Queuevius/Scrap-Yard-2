@@ -1,0 +1,16 @@
+<%= form_for @pic, html: { multipart: true } do |f| %> <% if @pic.errors.any? %> <div id="error_explanation"> <h2><%= pluralize(@pic.errors.count, “error”) %> prohibited this pet from being saved:</h2>
+
+  <ul>
+    <% @ppic.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>   <% end %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.submit %>
+<% end %>

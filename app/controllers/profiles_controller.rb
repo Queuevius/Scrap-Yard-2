@@ -7,6 +7,12 @@ class ProfilesController < ApplicationController
 
   def index
     policy_scope(Profile) if current_user
+
+    session[:conversations] ||= []
+
+    @users = User.all.where.not(id: current_user)
+    @conversations = Conversation.includes(:recipient, :messages)
+                         .find(session[:conversations])
   end
 
   def profile_posts
@@ -25,7 +31,6 @@ class ProfilesController < ApplicationController
 
   def show
   	@user = User.friendly.find(params[:id])
-
   end
 
   def update_pic
