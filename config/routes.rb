@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'posts/new_des' => 'posts#new_design'
 
+  get 'posts/homepage' => 'posts#homepage'
+
   post 'profiles/update_pic' => 'profiles#update_pic'
 
   get '/profile_posts' => 'profiles#profile_posts'
@@ -45,7 +47,7 @@ Rails.application.routes.draw do
     end
   end 
   
-  root to: 'profiles#index'
+  root to: 'posts#homepage'
 
   devise_for :users, controllers: {
     # Override the following Devise controllers with our custom versions

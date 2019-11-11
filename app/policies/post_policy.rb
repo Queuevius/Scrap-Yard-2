@@ -19,6 +19,9 @@ class PostPolicy < ApplicationPolicy
     end
   end
 
+  def homepage?
+    true
+  end
 
   def new_design?
     true 
