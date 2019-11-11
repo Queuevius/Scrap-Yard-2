@@ -1,8 +1,19 @@
 class ConversationsController < ApplicationController
+  after_action :authorize_conversation, only: [:create]
+
   def create
     @conversation = Conversation.get(current_user.id, params[:user_id])
 
     add_to_conversations unless conversated?
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def close
+    @conversation = Conversation.find(params[:id])
+    session[:conversations].delete(@conversation.id)
 
     respond_to do |format|
       format.js
@@ -17,16 +28,11 @@ class ConversationsController < ApplicationController
   end
 
   def conversated?
+
     session[:conversations].include?(@conversation.id)
   end
 
-  def close
-    @conversation = Conversation.find(params[:id])
-
-    session[:conversations].delete(@conversation.id)
-
-    respond_to do |format|
-      format.js
-    end
+  def authorize_conversation
+    authorize Conversation
   end
 end

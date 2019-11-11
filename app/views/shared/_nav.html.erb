@@ -16,6 +16,17 @@
         </button>
       </form>
     </ul>
+    <ul class="nav navbar-nav">
+      <li class="nav-link">
+        <% if user_signed_in? %>
+          <%= link_to "About", profile_path(current_user), :class => "b1" %>
+        <% else %>
+          <%= link_to 'Sign in', new_user_session_path %>
+        <% end %>
+      </li>
+    </ul>
+
+
 
 
     <ul class="nav navbar-nav pull-right nav-links">
@@ -27,7 +38,7 @@
           <div class="dropdown">
             <button class="dropbtn"><%= current_user.first_name %> <%= current_user.last_name %></button>
             <div class="dropdown-content">
-              <a href="#">Link 1</a>
+              <%= link_to "About", profile_path(current_user), :class => "b1" %>
               <a href="#">Link 2</a>
               <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
             </div>
