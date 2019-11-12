@@ -20,11 +20,14 @@ class WantsController < ApplicationController
   end
 
   def create
-    @want = Want.new(params.required(:want).permit(:user_id, :title, :description, :price, wants_attachments_attributes: [:id, :have_id, :image]))
+    @want = Want.new(params.required(:want).permit(:user_id, :title, :description, :price, wants_attachments_attributes: [:id, :want_id, :image]))
 
     @want.user_id = current_user.id
 
     if @want.save
+      params[:wants_attachments]['image'].each do |a|
+        @wants_attachment = @want.wants_attachments.create!(:image => a)
+      end
       redirect_to profile_wants_path
     else
       render :new
@@ -37,7 +40,7 @@ class WantsController < ApplicationController
 
   def update
     if @want.update(params.required(:have).permit(:user_if, :title, :description))
-      redirect_to profile_wants_path
+      redirect_to wants_path
     else
       render :edit
     end
