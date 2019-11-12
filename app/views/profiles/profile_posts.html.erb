@@ -12,7 +12,7 @@
             <%= link_to f.title, post_path(f), :class => "title-link" %>
           </h3>
           <div class="note-body">
-            <%= truncate(f.post_body, length: 450) %> <%= link_to "read more", root_path(f) %>
+            <%= truncate(f.post_body, length: 450) %> <%= link_to "read more", post_path(f) %>
           </div>
           <div class="row box-link-row text-center">
             <div class="box-links col-md-offset-5 col-md-2">

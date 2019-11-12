@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :wants_attachments
+  resources :have_attachments
   resources :pics
   resources :friendships
   resources :trackings

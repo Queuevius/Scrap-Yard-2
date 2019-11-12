@@ -1,21 +1,26 @@
 class WantsController < ApplicationController
   layout 'profiles'
-  after_action :authorize_want, only: [ :show, :update, :edit, :new]
+  after_action :authorize_want, only: [ :index, :show, :update, :edit, :new, :create]
 
   def index
+    policy_scope(Have) if current_user
 
+    @want = Want.where(user_id: current_user.id)
   end
 
   def show
+    @want = Want.find(params[:id])
 
+    @wants_attachment = @want.wants_attachments.all
   end
 
   def new
     @want = Want.new
+    @wants_attachment = @want.wants_attachments.build
   end
 
   def create
-    @want = Want.new(params.required(:want).permit(:user_id, :title, :description))
+    @want = Want.new(params.required(:want).permit(:user_id, :title, :description, :price, wants_attachments_attributes: [:id, :have_id, :image]))
 
     @want.user_id = current_user.id
 

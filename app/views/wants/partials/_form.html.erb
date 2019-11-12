@@ -10,6 +10,22 @@
     <%= f.text_area :description, required: true %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :price, class: "title1 col-ms-2 control-label" %>
+    <%= f.text_field :price, required: true %>
+  </div>
+
+  <%= f.fields_for :wants_attachments do |p| %>
+    <div class="field">
+      <%= p.label :image %><br>
+      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+    </div>
+  <% end %>
+
   <br>
 
   <%= f.submit 'Submit', class: 'b4' %>

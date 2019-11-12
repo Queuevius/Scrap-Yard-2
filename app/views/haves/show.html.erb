@@ -1,1 +1,28 @@
-this is the show page
+<div class="container-flex">
+  <div class="col-md-12 notes-box">
+    <div class="row show-header text-center">
+      <h1>
+        <%= @have.title %>
+      </h1>
+    </div>
+    <div class="row show-author">
+      <div class="col-md-3">
+        <p><b><%= @have.user.first_name %> <%= @have.user.last_name %></b></p>
+      </div>
+      <div class="col-md-3 col-md-offset-6">
+        <p class="text-right show-date"><b><%= @have.price %></b></p>
+      </div>
+    </div>
+    <div class="row show-box">
+      <%= @have.description %>
+    </div>
+    <div class="row show-box">
+      <% @have.have_attachments.each do |f| %>
+        <%= image_tag(f.image, {:style => "max-width: 40%", :class => "profile-pic text-center"}) %>
+      <% end %>
+    </div>
+    <div class="row show-author">
+      <p class="text-right show-date"><b><%= @have.created_at.strftime("%d/%m/%Y") %></b></p>
+    </div>
+  </div>
+</div>

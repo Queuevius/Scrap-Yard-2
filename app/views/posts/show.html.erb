@@ -151,11 +151,9 @@
             </h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-
           <!-- Modal body -->
           <div class="modal-body">
             <%= form_tag(create_token_post_path, method: :post, remote: true, id: :token_form  ) do %>
-
               <div class="form-group required">
               <p id="tkn-info">
                 Give the details of the Note token.
@@ -169,9 +167,7 @@
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               </div>          
           </div>
-
           <% end %>
-        
       </div>
     </div>
 

@@ -31,9 +31,18 @@
 
     <ul class="nav navbar-nav pull-right nav-links">
     <% if user_signed_in? %>
-        <li class = "glyph-link glyphicon glyphicon-envelope">
-        <li class = "glyph-link glyphicon glyphicon-user">
         <li class = "glyph-link glyphicon glyphicon-globe">
+        <li>
+          <div class="dropdown">
+            <button class="glyph-drop glyphicon glyphicon-user"></button>
+            <div class="dropdown-content">
+              <% for friendship in current_user.friendships %>
+            <%=h friendship.friend.first_name %> <%= friendship.friend.last_name %>
+        <% end %>
+            </div>
+          </div>
+        </li>
+
         <li>
           <div class="dropdown">
             <button class="dropbtn"><%= current_user.first_name %> <%= current_user.last_name %></button>

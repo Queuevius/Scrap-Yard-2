@@ -18,7 +18,7 @@ class ProfilesController < ApplicationController
   def profile_posts
     policy_scope(Profile) if current_user
 
-    @note = Post.where(creator_id: current_user.id, post_type: "Note")
+    @note = Post.where(creator_id: current_user.id, post_type: "")
   end
 
   def profile_haves

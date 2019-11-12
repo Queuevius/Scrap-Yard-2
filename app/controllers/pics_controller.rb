@@ -9,7 +9,7 @@ class PicsController < ApplicationController
   end
 
   def show
-
+    @pic = Pic.find(params[:id])
   end
 
   def new

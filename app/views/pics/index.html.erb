@@ -1,24 +1,38 @@
+<div class="container-flex">
+  <div class="col-md-12 notes-box">
+    <div class="row post-header">
+      <div class="col-md-10">
+        <h1>
+          My Pictures
+        </h1>
+      </div>
+      <div class="col-md-2">
+        <%= link_to "new picture", new_pic_path, class: "b7" %>
+      </div>
+    </div>
+    <div>
+      <% @pic.in_groups_of(3, false).each do |group| %>
+        <div class='row'>
+          <% group.each do |p| %>
+            <div class='col-md-3 note-box'>
+              <h3 class="text-center">
+                <%= link_to p.name, pic_path(p), class: "pic-link" %>
+              </h3>
+              <p class="text-center">
+                <%= truncate(p.description, length: 50) %>
+              </p>
+              <p class="text-center">
+                <%= image_tag(p.image, {:style => "width:175px;", :class => "profile-pic text-center"}) %>
+              </p>
 
-
-<%= link_to "new picture", new_pic_path, class: "b3" %>
-
-  <% @pic.in_groups_of(4, false).each do |group| %>
-    <div class='row'>
-      <% group.each do |p| %>
-        <div class='col-md-3'>
-          <h3 class="text-center">
-            <%= link_to p.name, pics_path(p) %>
-          </h3>
-          <p>
-            <%= image_tag(p.image, {:style => "width:175px;", :class => "profile-pic text-center"}) %>
-          </p>
-          <p class="text-center">
-            <%= p.description %>
-          </p>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>
-  <% end %>
+  </div>
+
+
 
 
 </div>

@@ -1,0 +1,2 @@
+class WantsAttachmentsController < ApplicationController
+end

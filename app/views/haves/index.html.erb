@@ -1,1 +1,36 @@
-this is the index page
+<div class="container-flex">
+  <div class="row show-header">
+    <h1>
+      Have
+    </h1>
+  </div>
+  <div class="col-md-12">
+    <div class="row table col-md-12">
+      <table data-toggle="table">
+        <thead class="table-header">
+        <tr>
+          <th class="col-md-3 text-center table-head-label">Skill</th>
+          <th class="col-md-6 text-center table-head-label">Description</th>
+          <th class="col-md-2 text-center table-head-label">Price</th>
+          <th class="col-md-2 text-center table-head-label">Full Info</th>
+        </tr>
+        </thead>
+        <% @have.each do |f| %>
+          <tbody>
+          <tr class="text-center">
+            <td class="table-body-box"><%= f.title %></td>
+            <td class="table-body-box"><%= truncate(f.description, length: 150) %></td>
+            <td class="table-body-box"><%= f.price %></td>
+            <td class="table-body-box"><%= link_to "Info", hafe_path(f), :class => "b3" %></td>
+          </tr><% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row have-link-box col-md-offset-1">
+    <h3 class="have-links">
+      <%= link_to "Add New", new_hafe_path, :class => "b5" %>
+    </h3>
+  </div>
+</div>
+</div>
