@@ -74,6 +74,7 @@ class PostsController < ApplicationController
 		@post.all_tags=params[:area] if params[:area]
 		@post.parent_post_id = params[:parent_post_id].to_i if params[:parent_post_id]
 		@area_layer = params[:area_layer]
+		@feed = @post.feeds.build
 	end
 
 
@@ -109,6 +110,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 		@post.creator_id = @current_user.id  
 		if @post.save
+			@feed = @post.feeds.create!(:post_id => "Post", :post_type => "Post")
 			redirect_to post_path @post
 		else 
 			render :new
@@ -223,7 +225,7 @@ def set_area_layer_assoc
 end
 
 def post_params
-  params.require(:post).permit(:title, :post_body, :all_tags,:post_type, :parent_post_id)
+  params.require(:post).permit(:title, :post_body, :all_tags,:post_type, :parent_post_id, feed_attributes: [:post_id, :post_type])
 end
 
 def layer_params

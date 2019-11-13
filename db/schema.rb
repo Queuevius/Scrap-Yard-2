@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191112213008) do
+ActiveRecord::Schema.define(version: 20191113212315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 20191112213008) do
     t.datetime "updated_at", null: false
     t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
     t.index ["sender_id"], name: "index_conversations_on_sender_id"
+  end
+
+  create_table "feeds", force: :cascade do |t|
+    t.integer "post_id"
+    t.string "post_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "have_id"
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|

@@ -1,24 +1,22 @@
-<div class="row">
-  <div class="col-md-9">
-    <ul id="conversations-list">
-      <% @conversations.each do |conversation| %>
-        <%= render 'conversations/conversation', conversation: conversation, user: current_user %>
-      <% end %>
-    </ul>
-  </div>
+<div class="container-flex">
+  <div class="col-md-12 notes-box">
+    <div class="row post-header">
+      <h1>
+        My Notes
+      </h1>
+    </div>
+    <div class="row">
+      <% @feed.each do |f| %>
+        <div class="row note-box">
+          <%= f.inspect %>
 
-  <div class="col-md-3">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">User list</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-          <% @users.each do |user| %>
-            <li><%= link_to user.email, conversations_path(user_id: user), remote: true, method: :post %></li>
-        <% end %>
-        </ul>
-      </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="row link-box">
+      <h3 class="note-links">
+        <%= link_to "new post", new_post_path, :class => "b3" %>
+      </h3>
     </div>
   </div>
 </div>

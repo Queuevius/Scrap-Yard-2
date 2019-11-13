@@ -18,6 +18,7 @@ class HavesController < ApplicationController
   def new
     @have = Have.new
     @have_attachment = @have.have_attachments.build
+
   end
 
   def create
@@ -28,6 +29,7 @@ class HavesController < ApplicationController
     if @have.save
       params[:have_attachments]['image'].each do |a|
         @have_attachment = @have.have_attachments.create!(:image => a)
+
       end
       redirect_to haves_path
     else
@@ -40,7 +42,7 @@ class HavesController < ApplicationController
   end
 
   def update
-    if @have.update(params.required(:have).permit(:user_if, :title, :description))
+    if @have.update(params.required(:have).permit(:user_if, :title, :description, :price, have_attachments_attributes: [:id, :have_id, :image]))
       redirect_to @store
     else
       render :edit

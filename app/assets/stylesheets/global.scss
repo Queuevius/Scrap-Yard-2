@@ -20,6 +20,18 @@
   color: black !important;
 }
 
+.bnav {
+  text-size: 46px;
+  text-decoration: none;
+  color: black;
+  padding: 8px 8px 8px 8px;
+}
+
+.bnav:hover {
+  text-decoration: none !important;
+  color: black;
+}
+
 .glyph-link {
   padding-right: 20px;
   padding-top: 20px;
@@ -122,6 +134,10 @@
 }
 
 //main body
+
+.page-spacing {
+  padding-top: 100px;
+}
 
 .background {
   background-color: #f2f2f2;
@@ -351,6 +367,18 @@
   background-color: #404040;
   color: white;
   padding: 8px 8px 8px 8px;
+}
+
+.profile-btn {
+  margin-bottom: 30px;
+}
+
+.friend-box {
+  margin-top: 50px;
+}
+
+.friend-header {
+  border-bottom: 2px black solid;
 }
 
 //form

@@ -8,6 +8,10 @@ class ProfilesController < ApplicationController
   def index
     policy_scope(Profile) if current_user
 
+    @feed = [Post.all, Pic.all]
+  end
+
+  def chat
     session[:conversations] ||= []
 
     @users = User.all.where.not(id: current_user)

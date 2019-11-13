@@ -1,31 +1,34 @@
 <%= form_for @want, class: "form-horizonatl" do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :title, class: "title1 col-sm-2 control-label" %>
+        <%= f.text_field :title, class: "text-title" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :title, class: "title1 col-sm-2 control-label" %>
-    <%= f.text_field :title, class: "text-title" %>
-  </div>
+      <div class="form-group">
+        <%= f.label :price, class: "title1 col-sm-2 control-label" %>
+        <%= f.text_field :price, required: true, class: "text-title" %>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :description, class: "title1 col-sm-2 control-label" %>
-    <%= f.text_area :description, required: true %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :price, class: "title1 col-ms-2 control-label" %>
-    <%= f.text_field :price, required: true %>
-  </div>
-
-  <%= f.fields_for :wants_attachments do |p| %>
-    <div class="field">
-      <%= p.label :image %><br>
-      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
-      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
-      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
-      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
-      <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+      <div class="form-group">
+        <%= f.label :description, class: "title1 col-sm-2 control-label" %>
+        <%= f.text_area :description, required: true %>
+      </div>
     </div>
-  <% end %>
-
+    <div class="col-md-6">
+      <%= f.fields_for :wants_attachments do |p| %>
+        <div class="field">
+          <%= p.label :image %><br>
+          <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+          <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+          <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+          <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+          <%= p.file_field :image, :multiple => true, name: "wants_attachments[image][]" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
   <br>
 
   <%= f.submit 'Submit', class: 'b4' %>

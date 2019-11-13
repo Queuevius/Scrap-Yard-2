@@ -14,6 +14,8 @@ class Post < ApplicationRecord
 	has_many :tokens	
 	has_many :ratings, as: :rateable
 	has_many :trackings
+	has_many :feeds
+	accepts_nested_attributes_for :feeds
 
 
 	# Scopes	

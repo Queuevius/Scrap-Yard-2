@@ -1,0 +1,38 @@
+<div class="container-flex">
+  <div class="col-md-12 notes-box">
+    <div class="row post-header">
+      <h1>
+        Recent Activity
+      </h1>
+    </div>
+    <div class="row">
+      <% @feed.each do |f| %>
+        <div class="row note-box">
+          <h3 class="note-title">
+            <%= link_to f.post.title, post_path(f), :class => "title-link" %>
+          </h3>
+          <div class="note-body">
+            <%= truncate(f.post.post_body, length: 450) %> <%= link_to "read more", post_path(f) %>
+          </div>
+          <div class="row box-link-row text-center">
+            <div class="box-links col-md-offset-5 col-md-2">
+              <b><%= link_to "Comments", root_path, :class => "b6" %></b>
+            </div>
+            <div class="box-links col-md-2">
+              <b><%= link_to "Ideas", root_path, :class=> 'b6' %></b>
+            </div>
+            <div class="box-links col-md-2">
+              <b><%= link_to "Proposals", root_path, :class => "b6"%></b>
+            </div>
+          </div>
+
+        </div>
+      <% end %>
+    </div>
+    <div class="row link-box">
+      <h3 class="note-links">
+        <%= link_to "new post", new_post_path, :class => "b3" %>
+      </h3>
+    </div>
+  </div>
+</div>

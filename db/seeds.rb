@@ -12,22 +12,32 @@ User.create!([
                  # Admin
                  # E-mail doesn't have to be valid as no e-mails are sent
                  # in the development environment (we're using Letter Opener)
-                 email: 'admin@test.com',
-                 password: 'testpass',
-                 password_confirmation: 'testpass',
-                 role: :admin,
-                 first_name: 'Admin',
-                 last_name: 'User',
-                 # Required when using Devise's Confirmable module
-                 confirmed_at: Time.zone.today,
-               }, {
+
                  # Ordinary user (non-admin)
-                 email: 'user@test.com',
+                 email: 'user4@test.com',
                  password: "testpass",
                  password_confirmation: "testpass",
                  role: :user,
-                 first_name: 'Ordinary',
+                 first_name: 'Katie',
                  last_name: 'User',
                  confirmed_at: Time.zone.today,
+               }, {
+                   # Ordinary user (non-admin)
+                   email: 'user5@test.com',
+                   password: "testpass",
+                   password_confirmation: "testpass",
+                   role: :user,
+                   first_name: 'Bob',
+                   last_name: 'User',
+                   confirmed_at: Time.zone.today,
+               }, {
+                   # Ordinary user (non-admin)
+                   email: 'user6@test.com',
+                   password: "testpass",
+                   password_confirmation: "testpass",
+                   role: :user,
+                   first_name: 'Larry',
+                   last_name: 'User',
+                   confirmed_at: Time.zone.today,
                }
-             ])
+               ])
