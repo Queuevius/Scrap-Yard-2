@@ -7,16 +7,54 @@
     </div>
     <div class="row">
       <% @feed.each do |f| %>
-        <div class="row note-box">
-          <%= f.inspect %>
-
-        </div>
-      <% end %>
-    </div>
-    <div class="row link-box">
-      <h3 class="note-links">
-        <%= link_to "new post", new_post_path, :class => "b3" %>
-      </h3>
+        <% if f.is_a? Post %>
+          <div class="row note-box">
+            <h3 class="note-title">
+              <%= link_to f.title, post_path(f), :class => "title-link" %>
+            </h3>
+            <div class="note-body">
+              <%= truncate(f.post_body, length: 450) %> <%= link_to "read more", post_path(f) %>
+            </div>
+            <div class="row box-link-row text-center">
+              <div class="box-links col-md-offset-5 col-md-2">
+                <b><%= link_to "Comments", root_path, :class => "b6" %></b>
+              </div>
+              <div class="box-links col-md-2">
+                <b><%= link_to "Ideas", root_path, :class=> 'b6' %></b>
+              </div>
+              <div class="box-links col-md-2">
+                <b><%= link_to "Proposals", root_path, :class => "b6"%></b>
+              </div>
+            </div>
+          </div>
+        <% elsif f.is_a? Pic %>
+          <div class='note-box'>
+            <h3 class="note-title">
+              <%= link_to f.name, pic_path(f), class: "pic-link" %>
+            </h3>
+            <p class="note-body">
+              <%= truncate(f.description, length: 50) %>
+            </p>
+            <p class="text-center">
+              <%= image_tag(f.image, {:style => "width:70%;", :class => "profile-pic text-center"}) %>
+            </p>
+          </div>
+        <% else %>
+          <div class="row note-box">
+            <h3 class="note-title">
+              <%= link_to f.title, post_path(f), :class => "title-link" %>
+            </h3>
+            <div class="note-body">
+              <%= truncate(f.description, length: 450) %> <%= link_to "read more", post_path(f) %>
+            </div>
+            <div class="row box-link-row text-right">
+              <div class="want-box-links">
+                <b><%= f.price %></b>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
     </div>
   </div>
 </div>

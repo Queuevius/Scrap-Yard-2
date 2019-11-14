@@ -8,7 +8,12 @@ class ProfilesController < ApplicationController
   def index
     policy_scope(Profile) if current_user
 
-    @feed = [Post.all, Pic.all]
+    @posts = Post.all
+    @wants = Want.all
+    @haves = Have.all
+    @pics = Pic.all
+
+    @feed = (@posts + @wants + @haves + @pics).sort_by{|e| e[:created_at]}
   end
 
   def chat

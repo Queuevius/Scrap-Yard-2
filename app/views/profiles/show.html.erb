@@ -40,25 +40,27 @@
       </div>
     </div>
     <div class="col-md-5 friend-box">
-      <div class="row note-box">
-        <h2 class="friend-header">Following</h2>
-        <ul>
-          <% for friendship in @user.friendships %>
-            <li>
-              <%=h friendship.friend.first_name %> <%= friendship.friend.last_name %>
-              (<%= link_to "remove", friendship, :method => :delete %>)
-            </li>
-          <% end %>
-        </ul>
-      </div>
-      <div class="row note-box">
-        <h2 class="friend-header">Followed By</h2>
-        <ul>
-          <% for user in @user.inverse_friends %>
-            <li><%=h user.first_name %><%= user.last_name %></li>
-          <% end %>
-        </ul>
-      </div>
+      <% if current_user.id == @user.id %>
+        <div class="row note-box">
+          <h2 class="friend-header">Following</h2>
+          <ul>
+            <% for friendship in @user.friendships %>
+              <li>
+                <%=h friendship.friend.first_name %> <%= friendship.friend.last_name %>
+                (<%= link_to "remove", friendship, :method => :delete %>)
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="row note-box">
+          <h2 class="friend-header">Followed By</h2>
+          <ul>
+            <% for user in @user.inverse_friends %>
+              <li><%=h user.first_name %><%= user.last_name %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
     </div>
   </div>
 </div>

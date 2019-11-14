@@ -32,6 +32,11 @@
   color: black;
 }
 
+.glyphicon {
+  font-size: 20px;
+  text-decoration: none;
+}
+
 .glyph-link {
   padding-right: 20px;
   padding-top: 20px;
@@ -52,14 +57,14 @@
 }
 
 .dropbtn {
-  margin-top: 5px;
   margin-right: 15px;
   background-color: black;
   color: white;
-  padding: 10px;
+  padding: 7px;
   font-size: 16px;
   border: none;
   border-radius: 4px;
+  margin-bottom: 5px;
 }
 
 .dropdown {
@@ -192,6 +197,13 @@
   padding-bottom: 100px;
   border-radius: 5px;
   margin-top: 50px;
+}
+
+.want-box-links {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  padding-right: 150px;
 }
 
 //notes
