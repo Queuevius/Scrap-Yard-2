@@ -12,8 +12,9 @@ class ProfilesController < ApplicationController
     @wants = Want.all
     @haves = Have.all
     @pics = Pic.all
+    @video = Video.all
 
-    @feed = (@posts + @wants + @haves + @pics).sort_by{|e| e[:created_at]}
+    @feed = (@posts + @wants + @haves + @pics + @video).sort_by{|e| e[:created_at]}
   end
 
   def chat

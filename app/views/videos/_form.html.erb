@@ -1,0 +1,23 @@
+<%= form_for @video, class: "form-horizonatl" do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :title, class: "title1 col-sm-2 control-label" %>
+        <p>Enter only the video id that comes after the v= in the url</p>
+        <p> https://www.youtube.com/watch?v=<%= f.text_field :title, class: "text-title" %></p>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :video, class: "title1 col-sm-2 control-label" %>
+        <%= f.text_field :video, required: true, class: "text-title" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description, class: "title1 col-sm-2 control-label" %>
+        <%= f.text_area :description, required: true %>
+      </div>
+    </div>
+    <%= f.submit 'Submit', class: 'b4' %>
+    <% end %>
+  </div>
+  <br>

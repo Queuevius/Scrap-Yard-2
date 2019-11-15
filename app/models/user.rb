@@ -34,6 +34,7 @@ class User < ApplicationRecord
   has_one :profile 
   has_many :items
   has_many :pics
+  has_many :videos
 
   has_many :friendships
   has_many :friends, :through => :friendships

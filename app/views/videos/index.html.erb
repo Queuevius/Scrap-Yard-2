@@ -7,22 +7,24 @@
         </h1>
       </div>
       <div class="col-md-2">
-        <%= link_to "new picture", new_pic_path, class: "b7" %>
+        <%= link_to "new video", new_video_path, class: "b7" %>
       </div>
     </div>
     <div>
-      <% @pic.in_groups_of(3, false).each do |group| %>
+      <% @video.in_groups_of(2, false).each do |group| %>
         <div class='row'>
           <% group.each do |p| %>
-            <div class='col-md-3 note-box'>
+            <div class='col-md-5 note-box'>
               <h3 class="text-center">
-                <%= link_to p.name, pic_path(p), class: "pic-link" %>
+                <%= link_to p.title, video_path(p), class: "pic-link" %>
               </h3>
               <p class="text-center">
                 <%= truncate(p.description, length: 50) %>
               </p>
               <p class="text-center">
-                <%= image_tag(p.image, {:style => "width:175px;", :class => "profile-pic text-center"}) %>
+                <iframe width="420" height="315"
+                 src="https://www.youtube.com/embed/<%= p.video %>">
+                </iframe>
               </p>
             </div>
           <% end %>
@@ -30,10 +32,4 @@
       <% end %>
     </div>
   </div>
-
-
-
-
 </div>
-
-
