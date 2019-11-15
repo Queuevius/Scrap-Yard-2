@@ -3,42 +3,50 @@
 
 <%= display_validation_errors(@post) %>
 
-<div class="panel panel-default devise-bs page-spacing">
-  <div class="col-md-8 col-md-offset-2">
-    <div class="panel-heading">
-      <% if @post.all_tags.blank? %>
-        <h4>Create a New <%= @post.post_type %></h4>
-      <% else %>
-        <h4>Create a New <%= @post.post_type %>
-          <% @post.all_tags.split(", ").each do |tag_name| %>
+<div class="panel panel-default devise-bs">
+  <div class="panel-heading">
+    <% if @post.all_tags.blank? %>
+      <h4>Create a New <%= @post.post_type %></h4>
+    <% else %>
+      <h4>Create a New <%= @post.post_type %> 
+        <% @post.all_tags.split(", ").each do |tag_name| %>
             <span class="label label-primary"><%= tag_name %></span>
           <% end %>
-        </h4>
-      <% end %>
-    </div>
-
+      </h4>
+    <% end %> 
+    
   </div>
   <div class="panel-body">
-    <%= bootstrap_form_for(@post,
+    <%= form_for(@post,
                  url: posts_path,
                  html: { method: :post }) do |f| %>
-      <div class="col-md-8 col-md-offset-2">
-        <div class="row">
-          <%= f.text_field :title, autofocus: true, class: "form-control" %>
-          <%= f.text_field :all_tags, placeholder: "Areas separated with comma", data: {role: "tagsinput"} %>
-          <%= f.text_area :post_body  %>
 
-          <%= f.hidden_field :post_type, value: @post.post_type %>
-          <%= f.hidden_field :parent_post_id, value: @post.parent_post_id %>
-          <%= f.hidden_field :area_layer, value: @area_layer %>
-          <%= f.hidden_field :post_id, value: "Post" %>
-        </div>
-        <div class="row">
-          <%= f.submit "Create Post", class: "btn btn-primary" %>
-        </div>
+      <div class="form-group required">
+        <%= f.label :title %>
+        <%= f.text_field :title, autofocus: true, class: "form-control" %>
       </div>
-    <% end %>
+       <%= f.hidden_field :post_type, value: @post.post_type %>
+       <%= f.hidden_field :parent_post_id, value: @post.parent_post_id %>
+       <%= f.hidden_field :area_layer, value: @area_layer %>
 
+             
+      
+      <div class="form-group">
+        <%= label_tag "Area" %>
+        <%= f.text_field :all_tags, placeholder: "Areas separated with comma", data: {role: "tagsinput"} %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.label :body %> 
+        <%= f.text_area :post_body  %>
+        <%= tinymce %>
+      </div>
+      
+
+
+      <%= f.submit "Create Post", class: "btn btn-primary" %>
+    <% end %>
+      
   </div>
 </div>
 

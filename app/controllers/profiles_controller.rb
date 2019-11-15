@@ -17,14 +17,6 @@ class ProfilesController < ApplicationController
     @feed = (@posts + @wants + @haves + @pics + @video).sort_by{|e| e[:created_at]}
   end
 
-  def chat
-    session[:conversations] ||= []
-
-    @users = User.all.where.not(id: current_user)
-    @conversations = Conversation.includes(:recipient, :messages)
-                         .find(session[:conversations])
-  end
-
   def profile_posts
     policy_scope(Profile) if current_user
 

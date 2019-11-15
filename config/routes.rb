@@ -23,17 +23,11 @@ Rails.application.routes.draw do
   get '/profile_haves' => 'profiles#profile_haves'
   get '/profile_wants' => 'profiles#profile_wants'
   get '/profile_tags' => 'profiles#profile_tag'
+  get '/chat' => 'profiles#chat'
 
   resources :haves
 
   resources :wants
-
-  resources :conversations, only: [:create] do
-    member do
-      post :close
-      resources :messages, only: [:create]
-    end
-  end
 
   resources :posts do 
     member do 

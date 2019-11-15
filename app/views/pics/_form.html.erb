@@ -1,26 +1,11 @@
-<%= form_for @pic, html: { multipart: true } do |f| %> <% if @pic.errors.any? %> <div id="error_explanation"> <h2><%= pluralize(@pic.errors.count, “error”) %> prohibited this pet from being saved:</h2>
+<%= bootstrap_form_for @pic, class: "form-horizonatl" do |f| %>
+  <div class="row form-cont">
+    <div class="col-md-10">
+      <%= f.text_field :name %>
+      <%= f.text_area :description %>
+      <%= f.file_field :image %>
 
-  <ul>
-    <% @pic.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-</div>   <% end %>
-  <div class="row">
-    <div class="col-md-8">
-      <div class="form-group">
-        <%= f.label :name, class: "title1 col-sm-2 control-label" %>
-        <%= f.text_field :name, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.label :description, class: "title1 col-sm-2 control-label" %>
-        <%= f.text_area :description, required: true %>
-      </div>
-      <div class="form-group">
-        <%= f.label :image, class: "title1 col-sm-2 control-label" %>
-        <%= f.file_field :image, required: true %>
-      </div>
-      <%= f.submit %>
+      <%= f.submit 'Submit', class: 'b4' %>
     </div>
   </div>
 <% end %>
