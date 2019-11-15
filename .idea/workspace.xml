@@ -2,7 +2,180 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="branch">
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/haves_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/haves_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pics_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pics_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/videos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/videos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/wants_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/wants_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/haves/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/haves/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pics/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pics/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/videos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/videos/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/wants/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/wants/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-d838caf9e8d5ea97787b642dec399abb.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-d838caf9e8d5ea97787b642dec399abb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/jquery.tinymce-405ca53cbd5b26a3e7269cdb447b57cf7db49d4477be642de688095f370f742c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/jquery.tinymce-405ca53cbd5b26a3e7269cdb447b57cf7db49d4477be642de688095f370f742c.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/langs/readme-5a8b6a04d57b5c88e3fb7f2a870b8e2d3a48ec03ce6474206c41df78c155b2de.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/license-47a9dcd2574891a5a465112fd9dfcebcc7e61844edec27fa936a64642008fe66.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/license-47a9dcd2574891a5a465112fd9dfcebcc7e61844edec27fa936a64642008fe66.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/advlist/plugin-a27c8f143d892a093a4155c441f29aba5aee06e171f7bb19c26546c524826659.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/advlist/plugin-a27c8f143d892a093a4155c441f29aba5aee06e171f7bb19c26546c524826659.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/anchor/plugin-8acacd41ed9ea7dd90690ab04a507ed33527747e3b5cd251e40f045b4bc0782b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/anchor/plugin-8acacd41ed9ea7dd90690ab04a507ed33527747e3b5cd251e40f045b4bc0782b.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autolink/plugin-a01a69a2c0e24f0bb49f992db1ec9c213ca05ecadfc7b049054e85805f79a25e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autolink/plugin-a01a69a2c0e24f0bb49f992db1ec9c213ca05ecadfc7b049054e85805f79a25e.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autoresize/plugin-dd871d0d5ff115cce9152bcc894f8b114fcf41153905a65bb4a976a404510658.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autoresize/plugin-dd871d0d5ff115cce9152bcc894f8b114fcf41153905a65bb4a976a404510658.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autosave/plugin-f200227358861fd3456f211974b88032124e287c2ecf7dbdfd653f5eadf3475e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autosave/plugin-f200227358861fd3456f211974b88032124e287c2ecf7dbdfd653f5eadf3475e.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/bbcode/plugin-048924854feb15cf12eb1a5f90417f369077d648138f3cb01ccafa6abef793ef.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/bbcode/plugin-048924854feb15cf12eb1a5f90417f369077d648138f3cb01ccafa6abef793ef.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/charmap/plugin-36c8d1187d55faa839c02e4b5c726a9ffbd062781949a7da9a94c29be2372eac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/charmap/plugin-36c8d1187d55faa839c02e4b5c726a9ffbd062781949a7da9a94c29be2372eac.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/code/plugin-e38ecf9b7d08d4ce9227ac5d91d076aa81354d34ee5c50d859a51b38aec0b389.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/code/plugin-e38ecf9b7d08d4ce9227ac5d91d076aa81354d34ee5c50d859a51b38aec0b389.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/codesample/plugin-27fd34a4d47255f3e59702ed9382ce425adb6009041f2970aafbf70c925829e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/codesample/plugin-27fd34a4d47255f3e59702ed9382ce425adb6009041f2970aafbf70c925829e5.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/colorpicker/plugin-89bc0fbb9ec58702900a9e386ff123a79e9ab394e3b2d54cd0b2d6876443c5b2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/colorpicker/plugin-89bc0fbb9ec58702900a9e386ff123a79e9ab394e3b2d54cd0b2d6876443c5b2.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/contextmenu/plugin-406822e9438277d87cad6dfeb5f92e40aa0d10333727561b170fca5ad62c43f2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/contextmenu/plugin-406822e9438277d87cad6dfeb5f92e40aa0d10333727561b170fca5ad62c43f2.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/directionality/plugin-af3a3674a0c0f5a1ae6bf7af705af849140acad34760258d8b989470b1c254e4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/directionality/plugin-af3a3674a0c0f5a1ae6bf7af705af849140acad34760258d8b989470b1c254e4.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/js/emojis-c617813820d61e9c41ebf47f1b97509e9c0b385153cda2ed07c33b13fb00feff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/js/emojis-c617813820d61e9c41ebf47f1b97509e9c0b385153cda2ed07c33b13fb00feff.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/plugin-b58659f44aff90bd5236dcc465b1c47d09c90e11e30d0c90b8d54617b439356a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/plugin-b58659f44aff90bd5236dcc465b1c47d09c90e11e30d0c90b8d54617b439356a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/fullpage/plugin-216532b59f1af57d0b205c8bb64edcbf93174024f6d8048e1076ff99d9a7e844.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/fullpage/plugin-216532b59f1af57d0b205c8bb64edcbf93174024f6d8048e1076ff99d9a7e844.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/fullscreen/plugin-42f68cf8cec2a28e27e6cef9b74ab261423f090bd52290ca8d8b42a54f2cbceb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/fullscreen/plugin-42f68cf8cec2a28e27e6cef9b74ab261423f090bd52290ca8d8b42a54f2cbceb.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/help/plugin-bb012706a70b9eaadd3162e453b2333cfefc828f129c048a6ecbb68c11583428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/help/plugin-bb012706a70b9eaadd3162e453b2333cfefc828f129c048a6ecbb68c11583428.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/hr/plugin-654bc3b10fab18e439dda7878a23aeee9d90508cebbb71fb6916ca8cbaf22ff6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/hr/plugin-654bc3b10fab18e439dda7878a23aeee9d90508cebbb71fb6916ca8cbaf22ff6.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/image/plugin-1cbc692341cbe3074e09e9f6f3f0317605d190dd5189be9bc5127859ca06cf7a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/image/plugin-1cbc692341cbe3074e09e9f6f3f0317605d190dd5189be9bc5127859ca06cf7a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/imagetools/plugin-364e6a13a222c7e3bf76ed1c2a2802ccc509c9e3b64d9824e641b08f97357b4c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/imagetools/plugin-364e6a13a222c7e3bf76ed1c2a2802ccc509c9e3b64d9824e641b08f97357b4c.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/importcss/plugin-f7f82be319432d84df06c954d9594687c49b9d0ed80fed71354d35e762cd8504.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/importcss/plugin-f7f82be319432d84df06c954d9594687c49b9d0ed80fed71354d35e762cd8504.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/insertdatetime/plugin-9979285a7cb59e56eb23fdbb945a355e58441471c71d4c99a6dbaceeae44c373.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/insertdatetime/plugin-9979285a7cb59e56eb23fdbb945a355e58441471c71d4c99a6dbaceeae44c373.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/legacyoutput/plugin-87326fdc433b8bde9b1574dea1c6389b10b772f50e0f00587ae7752b84acdbb0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/legacyoutput/plugin-87326fdc433b8bde9b1574dea1c6389b10b772f50e0f00587ae7752b84acdbb0.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/link/plugin-d010091710ff9a9ce933884578c42fbb2e4aab5169a4f9e1f9f15fa828d2822a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/link/plugin-d010091710ff9a9ce933884578c42fbb2e4aab5169a4f9e1f9f15fa828d2822a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/lists/plugin-95dfa008dad3b5ba89ede719951a397abd1b9b864ed70a7220a8329c2258dc7a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/lists/plugin-95dfa008dad3b5ba89ede719951a397abd1b9b864ed70a7220a8329c2258dc7a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/media/plugin-3015703649299e1cd8a1921fa8c16a88e58ecf4cd959c0b5b610152ba800c2df.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/media/plugin-3015703649299e1cd8a1921fa8c16a88e58ecf4cd959c0b5b610152ba800c2df.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/nonbreaking/plugin-aa4eb8e2c8f81e8b27f85190845c00e8472718fb1f852627f35affafdb2c8b77.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/nonbreaking/plugin-aa4eb8e2c8f81e8b27f85190845c00e8472718fb1f852627f35affafdb2c8b77.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/noneditable/plugin-76e182289a17dcf2002fd70d0146e36d0785026aef2a4a3a6b9664f4981e7dea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/noneditable/plugin-76e182289a17dcf2002fd70d0146e36d0785026aef2a4a3a6b9664f4981e7dea.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/pagebreak/plugin-29fbc5946c8e719409684b05d1d1be2771aac94929f0cfb9b1c9af0d8814d322.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/pagebreak/plugin-29fbc5946c8e719409684b05d1d1be2771aac94929f0cfb9b1c9af0d8814d322.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/paste/plugin-7fc74d34740b1504606e215bcf665974e77b9dcac8f48e563d9b47c016d5a7d2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/paste/plugin-7fc74d34740b1504606e215bcf665974e77b9dcac8f48e563d9b47c016d5a7d2.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/preview/plugin-5eea4edfa83eabc0e0b1d687e5872c932e08100f6172f803ba6d14bcc0e67aa4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/preview/plugin-5eea4edfa83eabc0e0b1d687e5872c932e08100f6172f803ba6d14bcc0e67aa4.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/print/plugin-95b03b33dc8dcaf549609e0269d8f72a12d19ad880718c28de81c916a9772266.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/print/plugin-95b03b33dc8dcaf549609e0269d8f72a12d19ad880718c28de81c916a9772266.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/quickbars/plugin-a5c6aa14a2c23c8bc4b104fbadc5dae4c09a75b9de8156323a28f32d0adc9f84.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/quickbars/plugin-a5c6aa14a2c23c8bc4b104fbadc5dae4c09a75b9de8156323a28f32d0adc9f84.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/save/plugin-f9b9cfe52c9421f6320155888e894e426de7aed7a7b69bf2f93f7dc6f476ed13.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/save/plugin-f9b9cfe52c9421f6320155888e894e426de7aed7a7b69bf2f93f7dc6f476ed13.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/searchreplace/plugin-e21fb8a86ca52b2e910127e64d7e7762cb56a7395b27baa612a786957ffbdf85.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/searchreplace/plugin-e21fb8a86ca52b2e910127e64d7e7762cb56a7395b27baa612a786957ffbdf85.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/spellchecker/plugin-783de102d0d8073ef2ebcee119ecee159f01e0de37d236cee188f33c32b72f27.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/spellchecker/plugin-783de102d0d8073ef2ebcee119ecee159f01e0de37d236cee188f33c32b72f27.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/tabfocus/plugin-781d0315eb54a53df98ba8373a4fe659629fa7857c7f0df056681cfde000c3f8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/tabfocus/plugin-781d0315eb54a53df98ba8373a4fe659629fa7857c7f0df056681cfde000c3f8.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/table/plugin-d634ac2cc8a7a45a986ab9fe81ae622720c20683e8243dd3e6ebfa3e5f4ba5ba.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/table/plugin-d634ac2cc8a7a45a986ab9fe81ae622720c20683e8243dd3e6ebfa3e5f4ba5ba.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/template/plugin-cbb2d950e8bb3af382d5d77093fe7b86bd062aba0767415a8dcca06f235855b3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/template/plugin-cbb2d950e8bb3af382d5d77093fe7b86bd062aba0767415a8dcca06f235855b3.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textcolor/plugin-079c938242e18552f3123c3ae1cdbab94a4091a9dbaf1a9d4272e81978ad28bd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textcolor/plugin-079c938242e18552f3123c3ae1cdbab94a4091a9dbaf1a9d4272e81978ad28bd.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textpattern/plugin-ee5167290c70a99ea5733b0e7156d76fee550f8697453b168ec2a4ae3e56701a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textpattern/plugin-ee5167290c70a99ea5733b0e7156d76fee550f8697453b168ec2a4ae3e56701a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/toc/plugin-cc990380392a8a4501a17406228766499d3fef84e259f94ae6c3a90078a8a7f9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/toc/plugin-cc990380392a8a4501a17406228766499d3fef84e259f94ae6c3a90078a8a7f9.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualblocks/plugin-20c6de5091edbe7590facffd966115a03973d962eb015e3d822dfddfc1910eab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualblocks/plugin-20c6de5091edbe7590facffd966115a03973d962eb015e3d822dfddfc1910eab.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualchars/plugin-f3c93b4d7b88d413d3ecd1b87d89b45e2ed9e94a1d3ddc6a020d03613de6e86b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualchars/plugin-f3c93b4d7b88d413d3ecd1b87d89b45e2ed9e94a1d3ddc6a020d03613de6e86b.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/wordcount/plugin-c9ee86dede0188f7c638d622af82ae4e34bb2d5de8ad03d5c302b361272b0617.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/wordcount/plugin-c9ee86dede0188f7c638d622af82ae4e34bb2d5de8ad03d5c302b361272b0617.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/preinit-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/preinit-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/rails-bf7fd5c952f25481010758dde6a2681498074f9509230f601b317356a6a54fca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/rails-bf7fd5c952f25481010758dde6a2681498074f9509230f601b317356a6a54fca.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/dark/content-087ef8fe0e65586f2fc2b11ca0e1122bcd58539234b2d82e08280dd2c531da67.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/dark/content-087ef8fe0e65586f2fc2b11ca0e1122bcd58539234b2d82e08280dd2c531da67.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/dark/content.min-087ef8fe0e65586f2fc2b11ca0e1122bcd58539234b2d82e08280dd2c531da67.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/dark/content.min-087ef8fe0e65586f2fc2b11ca0e1122bcd58539234b2d82e08280dd2c531da67.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/default/content-62626f0613419d125e2013cccb075e9e0125dda25cf1975de846f78dce7c5d5e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/default/content-62626f0613419d125e2013cccb075e9e0125dda25cf1975de846f78dce7c5d5e.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/default/content.min-62626f0613419d125e2013cccb075e9e0125dda25cf1975de846f78dce7c5d5e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/default/content.min-62626f0613419d125e2013cccb075e9e0125dda25cf1975de846f78dce7c5d5e.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/document/content-696dafed99a9735ff849c2e7634e9adb6168ddcef73f38028ef804d6458d2a3a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/document/content-696dafed99a9735ff849c2e7634e9adb6168ddcef73f38028ef804d6458d2a3a.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/document/content.min-696dafed99a9735ff849c2e7634e9adb6168ddcef73f38028ef804d6458d2a3a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/document/content.min-696dafed99a9735ff849c2e7634e9adb6168ddcef73f38028ef804d6458d2a3a.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/writer/content-f436aed1b285ccd804a6eedd953a7bc91e64982357141e9346466634b251c7e5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/writer/content-f436aed1b285ccd804a6eedd953a7bc91e64982357141e9346466634b251c7e5.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/writer/content.min-f436aed1b285ccd804a6eedd953a7bc91e64982357141e9346466634b251c7e5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/writer/content.min-f436aed1b285ccd804a6eedd953a7bc91e64982357141e9346466634b251c7e5.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content-f00e2e5fc0b07d33d84fcf36922b8a78d4a262941fe5e11f851b3e2e90f660b2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content-f00e2e5fc0b07d33d84fcf36922b8a78d4a262941fe5e11f851b3e2e90f660b2.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.inline-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.inline-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.inline.min-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.inline.min-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.min-f00e2e5fc0b07d33d84fcf36922b8a78d4a262941fe5e11f851b3e2e90f660b2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.min-f00e2e5fc0b07d33d84fcf36922b8a78d4a262941fe5e11f851b3e2e90f660b2.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.mobile-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.mobile-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.mobile.min-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.mobile.min-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile-e64bf156a432d63f5b34b4567b513dc0d351b49161c7f608fb82574bfdd9d213.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin-bbe2c7ee547d59c183bb01d9552fbd9609682c5b495be20f86ed389e191394e0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin-bbe2c7ee547d59c183bb01d9552fbd9609682c5b495be20f86ed389e191394e0.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.min-bbe2c7ee547d59c183bb01d9552fbd9609682c5b495be20f86ed389e191394e0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.min-bbe2c7ee547d59c183bb01d9552fbd9609682c5b495be20f86ed389e191394e0.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.mobile-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.mobile-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.mobile.min-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.mobile.min-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content-a47f448756482136195cb3e16389ae51f295d5e353d3d23a1b40b491014557a4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content-a47f448756482136195cb3e16389ae51f295d5e353d3d23a1b40b491014557a4.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.inline-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.inline-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.inline.min-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.inline.min-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.min-a47f448756482136195cb3e16389ae51f295d5e353d3d23a1b40b491014557a4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.min-a47f448756482136195cb3e16389ae51f295d5e353d3d23a1b40b491014557a4.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.mobile-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.mobile-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.mobile.min-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.mobile.min-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/fonts/tinymce-mobile-e64bf156a432d63f5b34b4567b513dc0d351b49161c7f608fb82574bfdd9d213.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin-0f8a101c49aaecb7329569cbb287145c6dac117d7005aa4a83c9379a5f34c6f1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin-0f8a101c49aaecb7329569cbb287145c6dac117d7005aa4a83c9379a5f34c6f1.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.min-0f8a101c49aaecb7329569cbb287145c6dac117d7005aa4a83c9379a5f34c6f1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.min-0f8a101c49aaecb7329569cbb287145c6dac117d7005aa4a83c9379a5f34c6f1.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.mobile-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.mobile-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.mobile.min-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.mobile.min-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/mobile/theme-7a68f1f542891bc530f0434d2cef69432fb4a7aad4602aca5fedc0b7f6800bc3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/mobile/theme-7a68f1f542891bc530f0434d2cef69432fb4a7aad4602aca5fedc0b7f6800bc3.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/silver/theme-23289dfb763dd0489d7a0b19a032b3126cf2f862567a170ba6c0781b57cf4f2d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/silver/theme-23289dfb763dd0489d7a0b19a032b3126cf2f862567a170ba6c0781b57cf4f2d.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/tinymce-9bd2222ca3f28764304030795bac69bba5620ce399499ef9e56dd7d929e43605.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/tinymce-9bd2222ca3f28764304030795bac69bba5620ce399499ef9e56dd7d929e43605.js.gz" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -89,71 +262,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            <state relative-caret-position="527">
+              <caret line="353" column="27" selection-start-line="353" selection-start-column="27" selection-end-line="353" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/haves/partials/_form.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/haves/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="28" selection-end-column="6" />
+            <state relative-caret-position="221">
+              <caret line="13" column="18" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="13" selection-end-column="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/wants/partials/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/videos/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="10" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/pics/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -170,6 +293,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/videos/new.html.erb">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="27" column="72" lean-forward="true" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/videos/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" selection-start-line="24" selection-end-line="26" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pics/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="31" selection-end-column="6" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -193,12 +343,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/models/wants_attachment.rb" />
-        <option value="$PROJECT_DIR$/app/policies/want_policy.rb" />
-        <option value="$PROJECT_DIR$/app/policies/wants_attachment_policy.rb" />
-        <option value="$PROJECT_DIR$/app/views/wants/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/wants/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
         <option value="$PROJECT_DIR$/app/policies/friendship_policy.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/controllers/friendships_controller.rb" />
@@ -210,7 +354,6 @@
         <option value="$PROJECT_DIR$/app/controllers/feeds_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/feeds/index.html.erb" />
         <option value="$PROJECT_DIR$/app/models/have.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/haves_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/wants/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/haves/new.html.erb" />
@@ -219,7 +362,6 @@
         <option value="$PROJECT_DIR$/app/views/shared/_nav.html.erb" />
         <option value="$PROJECT_DIR$/app/policies/video_policy.rb" />
         <option value="$PROJECT_DIR$/app/models/video.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/videos_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/videos/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pics/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/profiles/index.html.erb" />
@@ -236,7 +378,6 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/profiles_controller.rb" />
         <option value="$PROJECT_DIR$/app/policies/profile_policy.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global.scss" />
         <option value="$PROJECT_DIR$/app/views/haves/partials/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/wants/partials/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/new.html.erb" />
@@ -244,6 +385,15 @@
         <option value="$PROJECT_DIR$/app/views/videos/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pics/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/pics_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/videos_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/wants_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/haves_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/global.scss" />
+        <option value="$PROJECT_DIR$/app/views/haves/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/wants/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/pics/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/videos/show.html.erb" />
       </list>
     </option>
   </component>
@@ -292,19 +442,18 @@
               <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
               <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -312,7 +461,7 @@
               <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="haves" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
@@ -327,6 +476,13 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="videos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="wants" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -473,17 +629,18 @@
       <workItem from="1573570938905" duration="16324000" />
       <workItem from="1573666991523" duration="14601000" />
       <workItem from="1573754864729" duration="6892000" />
-      <workItem from="1573837135860" duration="11642000" />
+      <workItem from="1573837135860" duration="14098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92249000" />
+    <option name="totallyTimeSpent" value="94705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1936" height="1046" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17697228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -496,7 +653,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.26725084" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.26725084" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32936078" />
@@ -517,41 +674,6 @@
     <SUITE FILE_PATH="coverage/Needpedia_profile@Development__Needpedia_profile.rcov" NAME="Development: Needpedia-profile Coverage Results" MODIFIED="1573847417661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Needpedia-profile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/haves_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/wants_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/profiles/profile_posts.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/profiles/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="51" selection-start-line="57" selection-start-column="51" selection-end-line="57" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/shared/_nav.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -559,24 +681,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/wants/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="21" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/policies/video_policy.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pics_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="24" selection-start-line="24" selection-end-line="28" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -625,27 +733,10 @@
     <entry file="file://$PROJECT_DIR$/app/views/videos/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/profiles/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/videos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/videos/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="26" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -769,17 +860,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -804,13 +888,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/videos/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="24" column="29" lean-forward="true" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -837,13 +918,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/haves_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/videos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/wants_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/pics_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="31" selection-start-line="31" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="8" column="94" lean-forward="true" selection-start-line="8" selection-start-column="94" selection-end-line="8" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="353" column="27" selection-start-line="353" selection-start-column="27" selection-end-line="353" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/haves/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/wants/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/videos/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pics/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/videos/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="26" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="72" lean-forward="true" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
         </state>
       </provider>
     </entry>

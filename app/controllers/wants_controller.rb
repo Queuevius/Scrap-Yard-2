@@ -39,8 +39,8 @@ class WantsController < ApplicationController
   end
 
   def update
-    if @want.update(params.required(:have).permit(:user_if, :title, :description))
-      redirect_to wants_path
+    if @want.update(params.required(:have).permit(:user_if, :title, :description, :price, wants_attachments_attributes: [:id, :want_id, :image]))
+      redirect_to @want
     else
       render :edit
     end

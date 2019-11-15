@@ -7,7 +7,13 @@
     </div>
     <div class="row show-author">
       <div class="col-md-3 col-md-offset-1">
-        <p><b><%= @pic.user.first_name %> <%= @pic.user.last_name %></b></p>
+        <% if user_signed_in? %>
+          <% if current_user.id == @pic.user_id %>
+            <%= link_to "Edit", edit_pic_path(@pic), class: "b2" %>
+          <% end %>
+        <% else %>
+          <p><b><%= @pic.user.first_name %> <%= @pic.user.last_name %></b></p>
+          <% end %>
       </div>
       <div class="col-md-3 col-md-offset-4">
         <p class="text-right show-date"><b><%= @pic.created_at.strftime("%d/%m/%Y") %></b></p>

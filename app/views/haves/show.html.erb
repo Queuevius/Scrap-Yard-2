@@ -7,7 +7,13 @@
     </div>
     <div class="row show-author">
       <div class="col-md-3">
-        <p><b><%= @have.user.first_name %> <%= @have.user.last_name %></b></p>
+        <% if user_signed_in? %>
+          <% if current_user.id == @have.user_id %>
+            <%= link_to "Edit", edit_hafe_path(@have), class: "b2" %>
+          <% end %>
+        <% else %>
+          <p><b><%= @have.user.first_name %> <%= @have.user.last_name %></b></p>
+        <% end %>
       </div>
       <div class="col-md-3 col-md-offset-6">
         <p class="text-right show-date"><b><%= @have.price %></b></p>

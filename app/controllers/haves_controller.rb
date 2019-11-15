@@ -43,7 +43,7 @@ class HavesController < ApplicationController
 
   def update
     if @have.update(params.required(:have).permit(:user_if, :title, :description, :price, have_attachments_attributes: [:id, :have_id, :image]))
-      redirect_to @store
+      redirect_to @have
     else
       render :edit
     end

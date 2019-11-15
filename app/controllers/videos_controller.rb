@@ -30,11 +30,15 @@ class VideosController < ApplicationController
   end
 
   def edit
-    @video = Video.update
+    @video = Video.new
   end
 
   def update
-
+    if @video.update(params.required(:video).permit(:name, :video, :description, :user_id))
+      redirect_to @video
+    else
+      render :edit
+    end
   end
 
   private

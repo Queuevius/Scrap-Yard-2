@@ -29,12 +29,16 @@ class PicsController < ApplicationController
     end
   end
 
-  def update
-
+  def edit
+    @pic = Pic.new
   end
 
-  def edit
-
+  def update
+    if @pic.update(params.required(:pic).permit(:name, :image, :description, :user_id))
+      redirect_to @pic
+    else
+      render :edit
+    end
   end
 
   private
