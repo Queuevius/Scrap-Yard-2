@@ -175,6 +175,58 @@
   margin-top: 100px;
 }
 
+//posts/searchindex
+
+.search-index-box {
+  margin-top: 100px;
+}
+
+.search-b1 {
+  color: white;
+  background-color: black;
+  padding: 4px 6px 4px 6px;
+  border-radius: 4px;
+}
+
+.search-b1:hover {
+  color: slategrey;
+  background-color: black;
+  padding: 4px 6px 4px 6px;
+  text-decoration: none;
+}
+
+.search-b2 {
+  color: white;
+  background-color: black;
+  padding: 4px 6px 4px 6px;
+  text-decoration: none !important;
+  align: right;
+}
+
+.search-b2a {
+  text-decoration: none;
+}
+
+//post show
+
+.post-show-rate-box {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: solid 2px #BBBBBB;
+}
+
+.post-show-button-box {
+  padding-bottom: 10px;
+}
+
+.post-show-text-box {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: solid 2px #BBBBBB;
+  border-top: solid 2px #BBBBBB;
+}
+
 //main body
 
 .page-spacing {

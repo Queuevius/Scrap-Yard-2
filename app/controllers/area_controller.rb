@@ -67,8 +67,6 @@ class AreaController < ApplicationController
   	authorize Tag
   end
 
-
-
   def tag_params
   	params.require(:tag).permit(:name, :tag_body)
 	end

@@ -16,39 +16,45 @@
     <% end %> 
     
   </div>
-  <div class="panel-body">
-    <%= form_for(@post,
-                 url: posts_path,
-                 html: { method: :post }) do |f| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset 1">
+        <div class="panel-body">
+          <%= form_for(@post,
+                       url: posts_path,
+                       html: { method: :post }) do |f| %>
 
-      <div class="form-group required">
-        <%= f.label :title %>
-        <%= f.text_field :title, autofocus: true, class: "form-control" %>
+            <div class="form-group required">
+              <%= f.label :title %>
+              <%= f.text_field :title, autofocus: true, class: "form-control" %>
+            </div>
+            <%= f.hidden_field :post_type, value: @post.post_type %>
+            <%= f.hidden_field :parent_post_id, value: @post.parent_post_id %>
+            <%= f.hidden_field :area_layer, value: @area_layer %>
+
+
+
+            <div class="form-group">
+              <%= label_tag "Area" %>
+              <%= f.text_field :all_tags, placeholder: "Areas separated with comma", data: {role: "tagsinput"} %>
+            </div>
+
+            <div class="form-group">
+              <%= f.label :post_body %>
+              <%= f.text_area :post_body, class: "tinymce", rows: 20 , cols: 90  %>
+              <%= tinymce %>
+            </div>
+
+
+
+            <%= f.submit "Create Post", class: "btn btn-primary" %>
+          <% end %>
+        </div>
       </div>
-       <%= f.hidden_field :post_type, value: @post.post_type %>
-       <%= f.hidden_field :parent_post_id, value: @post.parent_post_id %>
-       <%= f.hidden_field :area_layer, value: @area_layer %>
-
-             
-      
-      <div class="form-group">
-        <%= label_tag "Area" %>
-        <%= f.text_field :all_tags, placeholder: "Areas separated with comma", data: {role: "tagsinput"} %>
-      </div>
-    
-      <div class="form-group">
-        <%= f.label :body %> 
-        <%= f.text_area :post_body  %>
-        <%= tinymce %>
-      </div>
-      
-
-
-      <%= f.submit "Create Post", class: "btn btn-primary" %>
-    <% end %>
-      
+    </div>
   </div>
-</div>
+  </div>
+
 
 
 <script type="text/javascript">

@@ -1,9 +1,7 @@
 FactoryGirl.define do
   factory :comment do
-    body "MyText"
-    commentable_id 1
-    commentable_type "MyString"
-    polarity "MyString"
-    creator_id 1
+    user_id 1
+    post_id 1
+    comment "MyString"
   end
 end

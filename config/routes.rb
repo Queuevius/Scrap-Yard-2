@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :videos
   resources :feeds
   resources :wants_attachments
