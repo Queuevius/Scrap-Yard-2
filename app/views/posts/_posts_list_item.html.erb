@@ -1,69 +1,38 @@
-<div class="well" style="background-color: <%= bg_color(post.post_type) %>">
-      
 
-<div class="card">
-      <div class="media">
-        <a class="pull-left" href="#">
-        <img class="media-object" src="https://placekitten.com/150/150">
-      </a>
-      <div class="media-body">
-        
-
-
-
-
-  <div class="card-header">
-
-        <h4 class="media-heading"><%= link_to post.title, post_path(id: post.slug), data: { 'turbolinks': false } %>
-          
-          <% if post.post_type == 'Problem'%>
-            <%= link_to posts_path(post_type: 'Idea', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
-            <span class="badge badge-success"><%= post.ideas.count %> Ideas</span>
-            <% end %>
-            <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
-            <span class="badge badge-info"><%= post.proposals.count %> Proposals</span>
-            <% end %>
-          <% end %>
-          <% if post.post_type == 'Idea'%>
-            <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
-            <span class="badge badge-info"><%= post.proposals.count %> Proposals</span>
-            <% end %>
-          <% end %>
-
-        </h4>
-          <p class="text-right">By <%= post.user.full_name %></p>
-          
-</div>
-<div class="card-body">
-          <div class="post-body">          
-           <%= post.post_body.truncate(200).html_safe %> 
-          </div>
-          
-</div>
- <div class="card-footer">
-        <ul class="list-inline list-unstyled">
-        <li><span><i class="glyphicon glyphicon-calendar"></i> <%= post.created_at %> </span></li>
-            <li>|</li>
-            <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-            <li>|</li>
-            <li class="rating">
+  <% @posts.each do |post| %>
+    <div class="col-md-10 col-md-offset-1">
+      <div class="row note-title">
+        <h3 class="col-md-6">
+          <%= link_to post.title, post_path(id: post.slug), data: { 'turbolinks': false } %>
+        </h3>
+        <p class="col-md-2 col-md-offset-4">
+          By <%= post.user.full_name %>
+        </p>
+      </div>
+      <div class="row note-body-2">
+        <div class="col-md-12">
+          <%= post.post_body.truncate(500).html_safe %>
+        </div>
+      </div>
+      <div class="row box-link-row text-center">
+        <div class="box-links-2 col-md-offset-5 col-md-2">
+          <b> <span><i class="glyphicon glyphicon-comment glyph-padding"></i> 2 comments</span></b>
+        </div>
+        <div class="box-links-2 col-md-2">
+          <b><div class="rating">
             <% 1.upto(5) do |star_index| %>
               <% if star_index <= post.avg_rating %>
                 <span class="glyphicon glyphicon-star"></span>
               <% else %>
-              <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
               <% end %>
             <% end %>
-            </li>
-            <li>|</li>
-            <li>
-            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-              <span><i class="fa fa-facebook-square"></i></span>
-              <span><i class="fa fa-twitter-square"></i></span>
-              <span><i class="fa fa-google-plus-square"></i></span>
-            </li>
-      </ul>
-      
+          </div></b>
+        </div>
+        <div class="box-links-2 col-md-2">
+          <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= post.created_at.strftime("%I:%M %p, %d/%m/%Y") %> </span></b>
+        </div>
+      </div>
       
       <!-- TODO:: move these post actions to a partial -->
       <ul class="list-inline list-unstyled">
@@ -104,12 +73,21 @@
         
       </ul>
 </div>
-       </div>
-    </div>
-  </div>
-  </div>
 
 
-
+<% if post.post_type == 'Problem'%>
+  <%= link_to posts_path(post_type: 'Idea', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
+    <span class="badge badge-success"><%= post.ideas.count %> Ideas</span>
+  <% end %>
+  <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
+    <span class="badge badge-info"><%= post.proposals.count %> Proposals</span>
+  <% end %>
+<% end %>
+<% if post.post_type == 'Idea'%>
+  <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
+    <span class="badge badge-info"><%= post.proposals.count %> Proposals</span>
+  <% end %>
+<% end %>
+<% end %>
 
    

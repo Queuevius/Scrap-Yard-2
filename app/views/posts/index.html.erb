@@ -117,10 +117,12 @@
       <% end %>
     </div>
 
-    <div class="container">
-    <% @posts.each do |post| %>
-      <%= render partial: 'posts_list_item', locals: { post: post} %>
-    <% end %>
-    </div>
+
+
+  </div>
+</div>
+<div class="container-flex">
+  <div class="col-md-12">
+    <%= render partial: 'posts_list_item' %>
   </div>
 </div>
