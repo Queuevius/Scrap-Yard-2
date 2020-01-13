@@ -72,12 +72,6 @@
   </div>
 
   <div class="row post-show-rate-box">
-    <div class="col-md-3">
-      <span><i class="glyphicon glyphicon-calendar"></i> <%= @post.created_at.strftime("%I:%M %p, %d/%m/%Y") %> </span>
-    </div>
-    <div class="col-md-2">
-      <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-    </div>
     <div class="col-md-4">
       <% 1.upto(5) do |star_index| %>
         <% if star_index <= @post.avg_rating %>
@@ -93,6 +87,9 @@
         <span id="rated" style="display: none;"><i>You Rated <strong class="rate_count"></strong> Stars.</i></span>
       <% end %>
     </div>
+    <div class="col-md-4 col-md-offset-4">
+    <span><i class="glyphicon glyphicon-calendar"></i> <%= @post.created_at.strftime("%I:%M %p, %d/%m/%Y") %> </span>
+  </div>
   </div>
 
   <div class="row">
@@ -147,7 +144,6 @@
       </ul>
     </div>
   </div>
-
 
   <!-- Add Token Modal -->
   <div class="modal" id="add-token">

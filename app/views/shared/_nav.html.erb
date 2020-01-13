@@ -16,11 +16,14 @@
         </div>
       <% end %>
     </ul>
-    <li class="nav-link">
-      <%= link_to "All Areas", posts_path %>
-    </li>
-    <ul class="nav navbar-nav pull-right nav-links">
+    <ul class="nav navbar-nav text-center">
+      <li class="nav-link">
+        <%= link_to "All Areas", posts_path %>
+      </li>
+    </ul>
 
+
+    <ul class="nav navbar-nav pull-right nav-links">
     <% if user_signed_in? %>
       <a href="/profiles"><span class="glyph-link glyphicon glyphicon-globe"></span></a>
       <div class="dropdown">
@@ -41,12 +44,12 @@
         </div>
       </div>
       <% else %>
-        <li class="nav-link">
-          <%= link_to 'Sign in', new_user_session_path %>
-        </li>
-        <li class="nav-link">
-          <%= link_to 'Sign up', new_user_registration_path %>
-        </li>
+      <li class="nav-link">
+        <%= link_to 'Sign in', new_user_session_path %>
+      </li>
+      <li class="nav-link">
+        <%= link_to 'Sign up', new_user_registration_path %>
+      </li>
 
       <% end %>
       </ul>
