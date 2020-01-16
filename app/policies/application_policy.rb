@@ -1,4 +1,3 @@
-# Base authorization policies for Pundit
 class ApplicationPolicy
   attr_reader :user, :record
 
@@ -7,12 +6,12 @@ class ApplicationPolicy
     @record = record
   end
 
-  def show?
+  def index?
     false
   end
 
-  def profile_posts?
-    update?
+  def show?
+    false
   end
 
   def create?
@@ -35,11 +34,6 @@ class ApplicationPolicy
     false
   end
 
-  def scope
-    Pundit.policy_scope!(user, record.class)
-  end
-
-  # Used by Pundit's #policy_scope
   class Scope
     attr_reader :user, :scope
 
@@ -49,7 +43,7 @@ class ApplicationPolicy
     end
 
     def resolve
-      scope
+      scope.all
     end
   end
 end

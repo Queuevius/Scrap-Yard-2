@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :taggings
   resources :comments
   resources :videos
   resources :feeds
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
   get 'posts/new_des' => 'posts#new_design'
 
   get 'posts/homepage' => 'posts#homepage'
+  get 'posts/messages' => 'posts#messages'
 
   post 'profiles/update_pic' => 'profiles#update_pic'
 
@@ -25,6 +27,13 @@ Rails.application.routes.draw do
   get '/profile_wants' => 'profiles#profile_wants'
   get '/profile_tags' => 'profiles#profile_tag'
   get '/chat' => 'profiles#chat'
+
+  resources :conversations, only: [:create] do
+    member do
+      post :close
+    end
+    resources :messages, only: [:create]
+  end
 
   resources :haves
 

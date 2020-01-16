@@ -23,6 +23,10 @@ class PostPolicy < ApplicationPolicy
     true
   end
 
+  def messages?
+    true
+  end
+
   def new_design?
     true 
   end

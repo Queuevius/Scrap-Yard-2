@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  after_action :authorize_message, only: [:create]
+  before_action :authorize_messages, only: [:create]
 
   def create
     @conversation = Conversation.includes(:recipient).find(params[:conversation_id])
@@ -12,11 +12,11 @@ class MessagesController < ApplicationController
 
   private
 
-  def message_params
-    params.require(:message).permit(:user_id, :body)
+  def authorize_messages
+    authorize Message
   end
 
-  def authorize_message
-    authorize Message
+  def message_params
+    params.require(:message).permit(:user_id, :body)
   end
 end

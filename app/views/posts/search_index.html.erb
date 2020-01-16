@@ -29,35 +29,35 @@
         </h3>
         <div class="col-md-12">
           <div class="row table col-md-12">
-            <table data-toggle="table">
-              <% @all_tags.each do |tag| %>
-                <tbody>
-                <tr class="text-center">
-                  <td class="table-body-box">
-                    <strong><%= tag[0] %></strong> has
-                    <%= link_to raw("#{tag[1]}</span> Problems</label>"), "/posts?post_type=Problem&tags_filter=#{tag[0]}", :class => "search-b1" %>
-                    <%= link_to raw("#{tag[2]}</span> Ideas</label>"), "/posts?post_type=Idea&tags_filter=#{tag[0]}", :class => "search-b1" %>
-                    and
-                    <%= link_to raw("#{tag[3]}</span> Proposals</label>"), "/posts?post_type=Proposal&tags_filter=#{tag[0]}", :class => "search-b1" %>
-                  </td>
-                  <td class="table-body-box">
-                    <%= link_to new_post_path(post_type: 'Problem', area: tag[0]) do %>
-                      <span class="glyphicon glyphicon-plus"></span>
-                      new Problem in "<%= tag[0] %>"
-                    <% end %>
-                  </td>
-                  <td class="table-body-box">
-                    <%= link_to new_post_path(post_type: 'Proposal', area: tag[0]) do %>
-                      <span class="glyphicon glyphicon-plus search-b2a"></span>
-                      new Proposal in "<%= tag[0] %>"
-                    <% end %>
-                  </td>
-                </tr>
-              </tbody><% end %>
-            </table>
+            <% @all_tags.each do |tag| %>
+              <div class="col-md-12 post-index-row">
+                <div class="col-md-4">
+                  <h4>
+                    <strong><%= tag[0] %></strong>
+                  </h4>
+                </div>
+                <div class="col-md-4">
+                  <%= link_to raw("#{tag[1]}</span> Problems</label>"), "/posts?post_type=Problem&tags_filter=#{tag[0]}", :class => "search-b1" %>
+
+                  <%= link_to raw("#{tag[3]}</span> Proposals</label>"), "/posts?post_type=Proposal&tags_filter=#{tag[0]}", :class => "search-b1" %>
+                </div>
+                <div class="col-md-2">
+                  <%= link_to new_post_path(post_type: 'Problem', area: tag[0]) do %>
+                    <span class="glyphicon glyphicon-plus"></span>
+                    New Problem
+                  <% end %>
+                </div>
+                <div class="col-md-2">
+                  <%= link_to new_post_path(post_type: 'Proposal', area: tag[0]) do %>
+                    <span class="glyphicon glyphicon-plus search-b2a"></span>
+                    New Proposal
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
           </div>
         </div>
-        </div>
+      </div>
     </div>
   </div>
 </div>

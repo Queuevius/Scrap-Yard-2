@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	
 	before_action :authenticate_user!
-	before_action :authorize_post, only: [:new_design, :new, :create, :edit, :update, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating, :homepage]
+	before_action :authorize_post, only: [:new_design, :new, :create, :edit, :update, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating, :homepage, :messages]
 	after_action :set_tag_creator, :set_area_layer_assoc, only: [:create]
 	skip_before_action :authenticate_user!, only: [:show, :index, :search_index, :show_token, :area_index, :area_layer, :homepage]
 
@@ -59,11 +59,17 @@ class PostsController < ApplicationController
 				@posts = Post.joins(:taggings).where(taggings: { layer_id: nil }).type(params[:post_type]).with_tags([params[:tags_filter]])
 			end
 			@all_tags = Tag.all.map { |_| [ _.name ] }
-					
 		end
+
 	end
 
+	def messages
+		session[:conversations] ||= []
 
+		@users = User.all.where.not(id: current_user)
+		@conversations = Conversation.includes(:recipient, :messages)
+												 .find(session[:conversations])
+	end
 
 	def search_index
 	end

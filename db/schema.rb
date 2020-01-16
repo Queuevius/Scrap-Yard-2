@@ -10,26 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191115172612) do
+ActiveRecord::Schema.define(version: 20200113180124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "comments", force: :cascade do |t|
-    t.text "com_body"
-    t.integer "token_id"
-    t.string "polarity"
-    t.integer "creator_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "cached_votes_total", default: 0
-    t.integer "cached_votes_score", default: 0
-    t.integer "cached_votes_up", default: 0
-    t.integer "cached_votes_down", default: 0
-    t.integer "cached_weighted_score", default: 0
-    t.integer "cached_weighted_total", default: 0
-    t.float "cached_weighted_average", default: 0.0
-  end
 
   create_table "conversations", force: :cascade do |t|
     t.integer "recipient_id"
@@ -38,14 +22,6 @@ ActiveRecord::Schema.define(version: 20191115172612) do
     t.datetime "updated_at", null: false
     t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
     t.index ["sender_id"], name: "index_conversations_on_sender_id"
-  end
-
-  create_table "feeds", force: :cascade do |t|
-    t.integer "post_id"
-    t.string "post_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "have_id"
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
@@ -223,6 +199,7 @@ ActiveRecord::Schema.define(version: 20191115172612) do
     t.integer "expires_at"
     t.boolean "expires"
     t.string "refresh_token"
+    t.text "bio"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
