@@ -5,52 +5,173 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="branch">
-      <change afterPath="$PROJECT_DIR$/app/views/conversations/_conversation.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/conversations/_conversation_content.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/conversations/close.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/conversations/create.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/messages/_message.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/messages/create.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/posts/messages.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94/storage_v2/_src_/database/d9v32q0599kl5l.7odKhg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94/storage_v2/_src_/database/d9v32q0599kl5l.7odKhg/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ec80eef9-7750-4549-ac2f-b9258f368a07.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ec80eef9-7750-4549-ac2f-b9258f368a07.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ec80eef9-7750-4549-ac2f-b9258f368a07/storage_v2/_src_/database/needp_development.Fm-WfA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ec80eef9-7750-4549-ac2f-b9258f368a07/storage_v2/_src_/database/needp_development.Fm-WfA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/conversations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/conversations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/messages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/messages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/conversation.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/conversation.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/message.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/message.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/tagging.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/application_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/application_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/conversation_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/conversation_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/messages_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/message_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/post_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/post_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/search_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/search_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-89762a92fc047751a664e923d99d70e05043e67b39a5a9bdc00157c88205d4f7.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/application-89762a92fc047751a664e923d99d70e05043e67b39a5a9bdc00157c88205d4f7.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-fef29453c058bfc6f93f83ab932a6d77f64f7636b7659698b43c5e5e8592d0ea.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/application-fef29453c058bfc6f93f83ab932a6d77f64f7636b7659698b43c5e5e8592d0ea.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/js/emojis-c617813820d61e9c41ebf47f1b97509e9c0b385153cda2ed07c33b13fb00feff.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/js/emojis-c617813820d61e9c41ebf47f1b97509e9c0b385153cda2ed07c33b13fb00feff.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/image/plugin-1cbc692341cbe3074e09e9f6f3f0317605d190dd5189be9bc5127859ca06cf7a.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/image/plugin-1cbc692341cbe3074e09e9f6f3f0317605d190dd5189be9bc5127859ca06cf7a.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/link/plugin-d010091710ff9a9ce933884578c42fbb2e4aab5169a4f9e1f9f15fa828d2822a.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/link/plugin-d010091710ff9a9ce933884578c42fbb2e4aab5169a4f9e1f9f15fa828d2822a.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/lists/plugin-95dfa008dad3b5ba89ede719951a397abd1b9b864ed70a7220a8329c2258dc7a.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/lists/plugin-95dfa008dad3b5ba89ede719951a397abd1b9b864ed70a7220a8329c2258dc7a.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/paste/plugin-7fc74d34740b1504606e215bcf665974e77b9dcac8f48e563d9b47c016d5a7d2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/paste/plugin-7fc74d34740b1504606e215bcf665974e77b9dcac8f48e563d9b47c016d5a7d2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/searchreplace/plugin-e21fb8a86ca52b2e910127e64d7e7762cb56a7395b27baa612a786957ffbdf85.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/searchreplace/plugin-e21fb8a86ca52b2e910127e64d7e7762cb56a7395b27baa612a786957ffbdf85.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/spellchecker/plugin-783de102d0d8073ef2ebcee119ecee159f01e0de37d236cee188f33c32b72f27.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/spellchecker/plugin-783de102d0d8073ef2ebcee119ecee159f01e0de37d236cee188f33c32b72f27.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/table/plugin-d634ac2cc8a7a45a986ab9fe81ae622720c20683e8243dd3e6ebfa3e5f4ba5ba.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/table/plugin-d634ac2cc8a7a45a986ab9fe81ae622720c20683e8243dd3e6ebfa3e5f4ba5ba.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/template/plugin-cbb2d950e8bb3af382d5d77093fe7b86bd062aba0767415a8dcca06f235855b3.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/template/plugin-cbb2d950e8bb3af382d5d77093fe7b86bd062aba0767415a8dcca06f235855b3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textpattern/plugin-ee5167290c70a99ea5733b0e7156d76fee550f8697453b168ec2a4ae3e56701a.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/textpattern/plugin-ee5167290c70a99ea5733b0e7156d76fee550f8697453b168ec2a4ae3e56701a.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualchars/plugin-f3c93b4d7b88d413d3ecd1b87d89b45e2ed9e94a1d3ddc6a020d03613de6e86b.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualchars/plugin-f3c93b4d7b88d413d3ecd1b87d89b45e2ed9e94a1d3ddc6a020d03613de6e86b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-d838caf9e8d5ea97787b642dec399abb.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/.sprockets-manifest-d838caf9e8d5ea97787b642dec399abb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/jquery.tinymce-405ca53cbd5b26a3e7269cdb447b57cf7db49d4477be642de688095f370f742c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/jquery.tinymce-405ca53cbd5b26a3e7269cdb447b57cf7db49d4477be642de688095f370f742c.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/langs/readme-5a8b6a04d57b5c88e3fb7f2a870b8e2d3a48ec03ce6474206c41df78c155b2de.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/license-47a9dcd2574891a5a465112fd9dfcebcc7e61844edec27fa936a64642008fe66.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/license-47a9dcd2574891a5a465112fd9dfcebcc7e61844edec27fa936a64642008fe66.txt.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/advlist/plugin-a27c8f143d892a093a4155c441f29aba5aee06e171f7bb19c26546c524826659.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/advlist/plugin-a27c8f143d892a093a4155c441f29aba5aee06e171f7bb19c26546c524826659.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/anchor/plugin-8acacd41ed9ea7dd90690ab04a507ed33527747e3b5cd251e40f045b4bc0782b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/anchor/plugin-8acacd41ed9ea7dd90690ab04a507ed33527747e3b5cd251e40f045b4bc0782b.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autolink/plugin-a01a69a2c0e24f0bb49f992db1ec9c213ca05ecadfc7b049054e85805f79a25e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autolink/plugin-a01a69a2c0e24f0bb49f992db1ec9c213ca05ecadfc7b049054e85805f79a25e.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autoresize/plugin-dd871d0d5ff115cce9152bcc894f8b114fcf41153905a65bb4a976a404510658.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autoresize/plugin-dd871d0d5ff115cce9152bcc894f8b114fcf41153905a65bb4a976a404510658.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autosave/plugin-f200227358861fd3456f211974b88032124e287c2ecf7dbdfd653f5eadf3475e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/autosave/plugin-f200227358861fd3456f211974b88032124e287c2ecf7dbdfd653f5eadf3475e.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/bbcode/plugin-048924854feb15cf12eb1a5f90417f369077d648138f3cb01ccafa6abef793ef.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/bbcode/plugin-048924854feb15cf12eb1a5f90417f369077d648138f3cb01ccafa6abef793ef.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/charmap/plugin-36c8d1187d55faa839c02e4b5c726a9ffbd062781949a7da9a94c29be2372eac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/charmap/plugin-36c8d1187d55faa839c02e4b5c726a9ffbd062781949a7da9a94c29be2372eac.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/code/plugin-e38ecf9b7d08d4ce9227ac5d91d076aa81354d34ee5c50d859a51b38aec0b389.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/code/plugin-e38ecf9b7d08d4ce9227ac5d91d076aa81354d34ee5c50d859a51b38aec0b389.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/codesample/plugin-27fd34a4d47255f3e59702ed9382ce425adb6009041f2970aafbf70c925829e5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/codesample/plugin-27fd34a4d47255f3e59702ed9382ce425adb6009041f2970aafbf70c925829e5.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/colorpicker/plugin-89bc0fbb9ec58702900a9e386ff123a79e9ab394e3b2d54cd0b2d6876443c5b2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/colorpicker/plugin-89bc0fbb9ec58702900a9e386ff123a79e9ab394e3b2d54cd0b2d6876443c5b2.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/contextmenu/plugin-406822e9438277d87cad6dfeb5f92e40aa0d10333727561b170fca5ad62c43f2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/contextmenu/plugin-406822e9438277d87cad6dfeb5f92e40aa0d10333727561b170fca5ad62c43f2.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/directionality/plugin-af3a3674a0c0f5a1ae6bf7af705af849140acad34760258d8b989470b1c254e4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/directionality/plugin-af3a3674a0c0f5a1ae6bf7af705af849140acad34760258d8b989470b1c254e4.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/js/emojis-c617813820d61e9c41ebf47f1b97509e9c0b385153cda2ed07c33b13fb00feff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/js/emojis-c617813820d61e9c41ebf47f1b97509e9c0b385153cda2ed07c33b13fb00feff.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/plugin-b58659f44aff90bd5236dcc465b1c47d09c90e11e30d0c90b8d54617b439356a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/emoticons/plugin-b58659f44aff90bd5236dcc465b1c47d09c90e11e30d0c90b8d54617b439356a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/fullpage/plugin-216532b59f1af57d0b205c8bb64edcbf93174024f6d8048e1076ff99d9a7e844.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/fullpage/plugin-216532b59f1af57d0b205c8bb64edcbf93174024f6d8048e1076ff99d9a7e844.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/fullscreen/plugin-42f68cf8cec2a28e27e6cef9b74ab261423f090bd52290ca8d8b42a54f2cbceb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/fullscreen/plugin-42f68cf8cec2a28e27e6cef9b74ab261423f090bd52290ca8d8b42a54f2cbceb.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/help/plugin-bb012706a70b9eaadd3162e453b2333cfefc828f129c048a6ecbb68c11583428.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/help/plugin-bb012706a70b9eaadd3162e453b2333cfefc828f129c048a6ecbb68c11583428.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/hr/plugin-654bc3b10fab18e439dda7878a23aeee9d90508cebbb71fb6916ca8cbaf22ff6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/hr/plugin-654bc3b10fab18e439dda7878a23aeee9d90508cebbb71fb6916ca8cbaf22ff6.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/image/plugin-1cbc692341cbe3074e09e9f6f3f0317605d190dd5189be9bc5127859ca06cf7a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/image/plugin-1cbc692341cbe3074e09e9f6f3f0317605d190dd5189be9bc5127859ca06cf7a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/imagetools/plugin-364e6a13a222c7e3bf76ed1c2a2802ccc509c9e3b64d9824e641b08f97357b4c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/imagetools/plugin-364e6a13a222c7e3bf76ed1c2a2802ccc509c9e3b64d9824e641b08f97357b4c.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/importcss/plugin-f7f82be319432d84df06c954d9594687c49b9d0ed80fed71354d35e762cd8504.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/importcss/plugin-f7f82be319432d84df06c954d9594687c49b9d0ed80fed71354d35e762cd8504.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/insertdatetime/plugin-9979285a7cb59e56eb23fdbb945a355e58441471c71d4c99a6dbaceeae44c373.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/insertdatetime/plugin-9979285a7cb59e56eb23fdbb945a355e58441471c71d4c99a6dbaceeae44c373.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/legacyoutput/plugin-87326fdc433b8bde9b1574dea1c6389b10b772f50e0f00587ae7752b84acdbb0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/legacyoutput/plugin-87326fdc433b8bde9b1574dea1c6389b10b772f50e0f00587ae7752b84acdbb0.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/link/plugin-d010091710ff9a9ce933884578c42fbb2e4aab5169a4f9e1f9f15fa828d2822a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/link/plugin-d010091710ff9a9ce933884578c42fbb2e4aab5169a4f9e1f9f15fa828d2822a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/lists/plugin-95dfa008dad3b5ba89ede719951a397abd1b9b864ed70a7220a8329c2258dc7a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/lists/plugin-95dfa008dad3b5ba89ede719951a397abd1b9b864ed70a7220a8329c2258dc7a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/media/plugin-3015703649299e1cd8a1921fa8c16a88e58ecf4cd959c0b5b610152ba800c2df.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/media/plugin-3015703649299e1cd8a1921fa8c16a88e58ecf4cd959c0b5b610152ba800c2df.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/nonbreaking/plugin-aa4eb8e2c8f81e8b27f85190845c00e8472718fb1f852627f35affafdb2c8b77.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/nonbreaking/plugin-aa4eb8e2c8f81e8b27f85190845c00e8472718fb1f852627f35affafdb2c8b77.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/noneditable/plugin-76e182289a17dcf2002fd70d0146e36d0785026aef2a4a3a6b9664f4981e7dea.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/noneditable/plugin-76e182289a17dcf2002fd70d0146e36d0785026aef2a4a3a6b9664f4981e7dea.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/pagebreak/plugin-29fbc5946c8e719409684b05d1d1be2771aac94929f0cfb9b1c9af0d8814d322.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/pagebreak/plugin-29fbc5946c8e719409684b05d1d1be2771aac94929f0cfb9b1c9af0d8814d322.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/paste/plugin-7fc74d34740b1504606e215bcf665974e77b9dcac8f48e563d9b47c016d5a7d2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/paste/plugin-7fc74d34740b1504606e215bcf665974e77b9dcac8f48e563d9b47c016d5a7d2.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/preview/plugin-5eea4edfa83eabc0e0b1d687e5872c932e08100f6172f803ba6d14bcc0e67aa4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/preview/plugin-5eea4edfa83eabc0e0b1d687e5872c932e08100f6172f803ba6d14bcc0e67aa4.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/print/plugin-95b03b33dc8dcaf549609e0269d8f72a12d19ad880718c28de81c916a9772266.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/print/plugin-95b03b33dc8dcaf549609e0269d8f72a12d19ad880718c28de81c916a9772266.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/quickbars/plugin-a5c6aa14a2c23c8bc4b104fbadc5dae4c09a75b9de8156323a28f32d0adc9f84.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/quickbars/plugin-a5c6aa14a2c23c8bc4b104fbadc5dae4c09a75b9de8156323a28f32d0adc9f84.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/save/plugin-f9b9cfe52c9421f6320155888e894e426de7aed7a7b69bf2f93f7dc6f476ed13.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/save/plugin-f9b9cfe52c9421f6320155888e894e426de7aed7a7b69bf2f93f7dc6f476ed13.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/searchreplace/plugin-e21fb8a86ca52b2e910127e64d7e7762cb56a7395b27baa612a786957ffbdf85.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/searchreplace/plugin-e21fb8a86ca52b2e910127e64d7e7762cb56a7395b27baa612a786957ffbdf85.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/spellchecker/plugin-783de102d0d8073ef2ebcee119ecee159f01e0de37d236cee188f33c32b72f27.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/spellchecker/plugin-783de102d0d8073ef2ebcee119ecee159f01e0de37d236cee188f33c32b72f27.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/tabfocus/plugin-781d0315eb54a53df98ba8373a4fe659629fa7857c7f0df056681cfde000c3f8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/tabfocus/plugin-781d0315eb54a53df98ba8373a4fe659629fa7857c7f0df056681cfde000c3f8.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/table/plugin-d634ac2cc8a7a45a986ab9fe81ae622720c20683e8243dd3e6ebfa3e5f4ba5ba.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/table/plugin-d634ac2cc8a7a45a986ab9fe81ae622720c20683e8243dd3e6ebfa3e5f4ba5ba.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/template/plugin-cbb2d950e8bb3af382d5d77093fe7b86bd062aba0767415a8dcca06f235855b3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/template/plugin-cbb2d950e8bb3af382d5d77093fe7b86bd062aba0767415a8dcca06f235855b3.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textcolor/plugin-079c938242e18552f3123c3ae1cdbab94a4091a9dbaf1a9d4272e81978ad28bd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textcolor/plugin-079c938242e18552f3123c3ae1cdbab94a4091a9dbaf1a9d4272e81978ad28bd.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textpattern/plugin-ee5167290c70a99ea5733b0e7156d76fee550f8697453b168ec2a4ae3e56701a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/textpattern/plugin-ee5167290c70a99ea5733b0e7156d76fee550f8697453b168ec2a4ae3e56701a.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/toc/plugin-cc990380392a8a4501a17406228766499d3fef84e259f94ae6c3a90078a8a7f9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/toc/plugin-cc990380392a8a4501a17406228766499d3fef84e259f94ae6c3a90078a8a7f9.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualblocks/plugin-20c6de5091edbe7590facffd966115a03973d962eb015e3d822dfddfc1910eab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualblocks/plugin-20c6de5091edbe7590facffd966115a03973d962eb015e3d822dfddfc1910eab.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualchars/plugin-f3c93b4d7b88d413d3ecd1b87d89b45e2ed9e94a1d3ddc6a020d03613de6e86b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/visualchars/plugin-f3c93b4d7b88d413d3ecd1b87d89b45e2ed9e94a1d3ddc6a020d03613de6e86b.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/wordcount/plugin-c9ee86dede0188f7c638d622af82ae4e34bb2d5de8ad03d5c302b361272b0617.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/plugins/wordcount/plugin-c9ee86dede0188f7c638d622af82ae4e34bb2d5de8ad03d5c302b361272b0617.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/preinit-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/preinit-84328a53e798df12f891eb49871773fd9f925439c8630e9e22423a82ef9e6f89.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/rails-bf7fd5c952f25481010758dde6a2681498074f9509230f601b317356a6a54fca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/rails-bf7fd5c952f25481010758dde6a2681498074f9509230f601b317356a6a54fca.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/dark/content-087ef8fe0e65586f2fc2b11ca0e1122bcd58539234b2d82e08280dd2c531da67.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/dark/content-087ef8fe0e65586f2fc2b11ca0e1122bcd58539234b2d82e08280dd2c531da67.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/dark/content.min-087ef8fe0e65586f2fc2b11ca0e1122bcd58539234b2d82e08280dd2c531da67.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/dark/content.min-087ef8fe0e65586f2fc2b11ca0e1122bcd58539234b2d82e08280dd2c531da67.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/default/content-62626f0613419d125e2013cccb075e9e0125dda25cf1975de846f78dce7c5d5e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/default/content-62626f0613419d125e2013cccb075e9e0125dda25cf1975de846f78dce7c5d5e.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/default/content.min-62626f0613419d125e2013cccb075e9e0125dda25cf1975de846f78dce7c5d5e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/default/content.min-62626f0613419d125e2013cccb075e9e0125dda25cf1975de846f78dce7c5d5e.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/document/content-696dafed99a9735ff849c2e7634e9adb6168ddcef73f38028ef804d6458d2a3a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/document/content-696dafed99a9735ff849c2e7634e9adb6168ddcef73f38028ef804d6458d2a3a.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/document/content.min-696dafed99a9735ff849c2e7634e9adb6168ddcef73f38028ef804d6458d2a3a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/document/content.min-696dafed99a9735ff849c2e7634e9adb6168ddcef73f38028ef804d6458d2a3a.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/writer/content-f436aed1b285ccd804a6eedd953a7bc91e64982357141e9346466634b251c7e5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/writer/content-f436aed1b285ccd804a6eedd953a7bc91e64982357141e9346466634b251c7e5.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/writer/content.min-f436aed1b285ccd804a6eedd953a7bc91e64982357141e9346466634b251c7e5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/content/writer/content.min-f436aed1b285ccd804a6eedd953a7bc91e64982357141e9346466634b251c7e5.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content-f00e2e5fc0b07d33d84fcf36922b8a78d4a262941fe5e11f851b3e2e90f660b2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content-f00e2e5fc0b07d33d84fcf36922b8a78d4a262941fe5e11f851b3e2e90f660b2.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.inline-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.inline-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.inline.min-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.inline.min-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.min-f00e2e5fc0b07d33d84fcf36922b8a78d4a262941fe5e11f851b3e2e90f660b2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.min-f00e2e5fc0b07d33d84fcf36922b8a78d4a262941fe5e11f851b3e2e90f660b2.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.mobile-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.mobile-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.mobile.min-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/content.mobile.min-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile-e64bf156a432d63f5b34b4567b513dc0d351b49161c7f608fb82574bfdd9d213.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin-bbe2c7ee547d59c183bb01d9552fbd9609682c5b495be20f86ed389e191394e0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin-bbe2c7ee547d59c183bb01d9552fbd9609682c5b495be20f86ed389e191394e0.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.min-bbe2c7ee547d59c183bb01d9552fbd9609682c5b495be20f86ed389e191394e0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.min-bbe2c7ee547d59c183bb01d9552fbd9609682c5b495be20f86ed389e191394e0.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.mobile-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.mobile-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.mobile.min-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide-dark/skin.mobile.min-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content-a47f448756482136195cb3e16389ae51f295d5e353d3d23a1b40b491014557a4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content-a47f448756482136195cb3e16389ae51f295d5e353d3d23a1b40b491014557a4.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.inline-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.inline-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.inline.min-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.inline.min-165f96d3469057ae93a085f7c06049cf25dda7558e785c9d290915c315e7b15c.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.min-a47f448756482136195cb3e16389ae51f295d5e353d3d23a1b40b491014557a4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.min-a47f448756482136195cb3e16389ae51f295d5e353d3d23a1b40b491014557a4.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.mobile-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.mobile-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.mobile.min-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/content.mobile.min-4ec25a97f8250f1efbdd576fc264da8e151cc014cac40f5a3531e9129d5930ef.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/fonts/tinymce-mobile-e64bf156a432d63f5b34b4567b513dc0d351b49161c7f608fb82574bfdd9d213.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin-0f8a101c49aaecb7329569cbb287145c6dac117d7005aa4a83c9379a5f34c6f1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin-0f8a101c49aaecb7329569cbb287145c6dac117d7005aa4a83c9379a5f34c6f1.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.min-0f8a101c49aaecb7329569cbb287145c6dac117d7005aa4a83c9379a5f34c6f1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.min-0f8a101c49aaecb7329569cbb287145c6dac117d7005aa4a83c9379a5f34c6f1.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.mobile-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.mobile-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.mobile.min-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/skins/ui/oxide/skin.mobile.min-c23770d1fafa33a445417fa0ec3438dd01479ecd25b8fe106d219144f254555f.css.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/mobile/theme-7a68f1f542891bc530f0434d2cef69432fb4a7aad4602aca5fedc0b7f6800bc3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/mobile/theme-7a68f1f542891bc530f0434d2cef69432fb4a7aad4602aca5fedc0b7f6800bc3.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/silver/theme-23289dfb763dd0489d7a0b19a032b3126cf2f862567a170ba6c0781b57cf4f2d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/themes/silver/theme-23289dfb763dd0489d7a0b19a032b3126cf2f862567a170ba6c0781b57cf4f2d.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/tinymce-9bd2222ca3f28764304030795bac69bba5620ce399499ef9e56dd7d929e43605.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/tinymce/tinymce-9bd2222ca3f28764304030795bac69bba5620ce399499ef9e56dd7d929e43605.js.gz" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -129,16 +250,6 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Rails Needpedia-profile: development" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="needp_development: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="messages: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="Rails Needpedia-profile: production" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
@@ -156,36 +267,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="205" column="1" selection-start-line="205" selection-start-column="1" selection-end-line="205" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/conversations_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="64" selection-start-line="1" selection-start-column="64" selection-end-line="1" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/conversations/_conversation.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#li#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/channels/application_cable/connection.rb">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -195,13 +276,45 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/channels/conversation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+            <state relative-caret-position="478">
+              <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/tinymce.yml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -231,15 +344,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/posts/messages.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="6" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -261,7 +365,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/pics/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/videos/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/videos/index.html.erb" />
@@ -300,7 +403,6 @@
         <option value="$PROJECT_DIR$/app/controllers/conversations_controller.rb" />
         <option value="$PROJECT_DIR$/app/policies/conversation_policy.rb" />
         <option value="$PROJECT_DIR$/app/views/conversations/close.js.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/messages/create.js.erb" />
@@ -312,6 +414,8 @@
         <option value="$PROJECT_DIR$/app/models/message.rb" />
         <option value="$PROJECT_DIR$/app/jobs/message_broadcast_job.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/channels/conversation.js" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -360,21 +464,6 @@
               <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
               <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-              <item name="channels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="channels" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -399,8 +488,25 @@
             <path>
               <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
               <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Needpedia-profile" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Needpedia-profile" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="tinymce" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -561,23 +667,22 @@
       <workItem from="1578936182098" duration="3687000" />
       <workItem from="1579111258276" duration="249000" />
       <workItem from="1579111967009" duration="1706000" />
-      <workItem from="1579183658398" duration="14326000" />
+      <workItem from="1579183658398" duration="16516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165832000" />
+    <option name="totallyTimeSpent" value="168022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19669509" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13219616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30227518" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30227518" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -585,7 +690,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3163597" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3163597" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32936078" />
@@ -603,23 +708,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="branch" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Needpedia_profile@Development__Needpedia_profile.rcov" NAME="Development: Needpedia-profile Coverage Results" MODIFIED="1579199981992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Needpedia-profile" />
+    <SUITE FILE_PATH="coverage/Needpedia_profile@Development__Needpedia_profile.rcov" NAME="Development: Needpedia-profile Coverage Results" MODIFIED="1579204521805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Needpedia-profile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://8c9b7c7e-3af0-40c9-ac1d-5ed08822dc94/database/dd5mdefm1m0pgi/schema/public/table/posts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ec80eef9-7750-4549-ac2f-b9258f368a07/database/needp_development/schema/public/table/tags">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20200113180124_change.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -793,23 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/policies/message_policy.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -922,10 +996,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/channels/conversation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="478">
+          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/tinymce.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

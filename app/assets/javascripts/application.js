@@ -21,6 +21,7 @@
 //= require bootstrap-sprockets
 //= require select2
 //= require tinymce
+//= require tinymce-jquery
 //= require jquery-fileupload/basic
 //= require lightbox
 //= require_tree .
