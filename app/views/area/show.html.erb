@@ -1,63 +1,71 @@
-<div class="container">
-  <div class="row">
-    <div class="well">
-      <div class="media">
-        <a class="pull-left" href="#">
-        <img class="media-object" >
-      </a>
-      <div class="media-body">
-        <h1 class="media-heading"><%= @area_stats[0] %></h1>
-        <br />
-        Layer: 
-                <select name="layer_sel" id="layer_sel">
-                  <% if @clayer.nil? %> 
-                    <option value="/area/<%= @area.name %>" selected="selected">Public</option>
-                    <% @layers.each do |l| %>
-                      <option value="/area/<%= @area.name %>?layer=<%= l.name %>">
-                        <%=  l.name %>
-                      </option>
-                    <% end %>
-                  <% else %>
-                    <option value="/area/<%= @area.name %>">Public</option>
-                    <% @layers.each do |l| %>
-                      <option value="/area/<%= @area.name %>?layer=<%= l.name %>" selected="<%= 'selected' if l.name == @clayer.name %>">
-                        <%=  l.name %>
-                      </option>
-                    <% end %>
-                  <% end %>
-                  <option value="/area/<%= @area.name %>/new_layer">Add a new Layer.</option>
-                </select>
-          <br />
-          <% if @clayer.nil? %> 
-            <%= @area.tag_body.try(:html_safe) %>
-          <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: User.find(@area_stats[4]).slug) %></p>    
-          <% else %>
-            <%= @clayer.layer_body.try(:html_safe) %>
-            <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: @clayer.creator.slug) %></p>
+<div class="container area-show-box">
+  <div class="row area-show-header">
+    <h1 class="media-heading"><%= @area_stats[0] %></h1>
+  </div>
+  <div class="row area-show-layer">
+    Layer:
+      <select name="layer_sel" id="layer_sel">
+        <% if @clayer.nil? %>
+          <option value="/area/<%= @area.name %>" selected="selected">Public</option>
+          <% @layers.each do |l| %>
+            <option value="/area/<%= @area.name %>?layer=<%= l.name %>">
+              <%=  l.name %>
+            </option>
           <% end %>
-          <ul class="list-group">
-          <li class="list-group-item">    
-            <div class="float-right">
-            <%= link_to new_post_path(post_type: 'Problem', area: @area_stats[0], area_layer: @clayer.try(:name)), class: "btn btn-primary" do %>
-              <span class="glyphicon glyphicon-plus"></span>
-                new Problem in "<%= @area_stats[0] %>"
-            <% end %>
-            <%= link_to new_post_path(post_type: 'Proposal', area: @area_stats[0] , area_layer: @clayer.try(:name)), class: "btn btn-primary" do %>
-              <span class="glyphicon glyphicon-plus"></span>
-                new Proposal in "<%= @area_stats[0] %>"
-            <% end %>
-            </div>
-            </li>
-        </ul> 
-       </div>
-        <div class="container">
-        <h1><%= @area_stats[1]%> Problems  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small></h1>
-          <% @posts.each do |post| %>
-            <%= render partial: "posts_list_item", locals: { post: post} %>
+        <% else %>
+          <option value="/area/<%= @area.name %>">Public</option>
+          <% @layers.each do |l| %>
+            <option value="/area/<%= @area.name %>?layer=<%= l.name %>" selected="<%= 'selected' if l.name == @clayer.name %>">
+              <%=  l.name %>
+            </option>
           <% end %>
-        </div>
+        <% end %>
+        <option value="/area/<%= @area.name %>/new_layer">Add a new Layer.</option>
+      </select>
+  </div>
+  <div class="row area-show-body">
+    <% if @clayer.nil? %>
+      <%= @area.tag_body.try(:html_safe) %>
+  </div>
+  <div class="row area-show-author">
+    <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: User.find(@area_stats[4]).slug) %></p>
+    <% else %>
+      <%= @clayer.layer_body.try(:html_safe) %>
+      <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: @clayer.creator.slug) %></p>
+    <% end %>
+  </div>
+  <div class="row area-show-btns">
+    <div class="float-right">
+      <%= link_to new_post_path(post_type: 'Problem', area: @area_stats[0], area_layer: @clayer.try(:name)), class: "btn2a btn-primary" do %>
+        <span class="glyphicon glyphicon-plus"></span>
+          new Problem in "<%= @area_stats[0] %>"
+      <% end %>
+      <%= link_to new_post_path(post_type: 'Proposal', area: @area_stats[0] , area_layer: @clayer.try(:name)), class: "btn2a btn-primary" do %>
+        <span class="glyphicon glyphicon-plus"></span>
+          new Proposal in "<%= @area_stats[0] %>"
+      <% end %>
     </div>
   </div>
+  <div class="row">
+    <div class="container-flex">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-5  area-show-header-b">
+            <h2>
+              <%= @area_stats[1]%> Problems  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small>
+            </h2>
+          </div>
+          <div class="col-md-5 col-md-offset-1 area-show-header">
+            <h2>
+              <%= @area_stats[1]%> Proposals  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <%= render partial: 'posts_list_item' %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

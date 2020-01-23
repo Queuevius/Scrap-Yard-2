@@ -25,9 +25,11 @@ class AreaController < ApplicationController
       @layers = @area.layers 
 			@clayer = @area.layers.find_by_name(params[:layer]) 
 			@posts = Post.joins(:taggings).where(taggings: { layer_id: @clayer.id }).type('Problem').with_tags(@area.name)
+			@prop = Post.joins(:taggings).where(taggings: { layer_id: @clayer.id }).type('Proposal').with_tags(@area.name)
 		else
       @layers = @area.layers - [@clayer]
 			@posts = Post.joins(:taggings).where(taggings: { layer_id: nil }).type('Problem').with_tags(@area.name)
+			@prop = Post.joins(:taggings).where(taggings: { layer_id: nil }).type('Proposal').with_tags(@area.name)
 			@clayer = nil
 		end
 		area_stats = @area.posts_count(@clayer.try(:id))

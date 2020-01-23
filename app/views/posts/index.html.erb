@@ -1,127 +1,100 @@
 
 <div class="container search-index-box">
-  <div class="col-md-10 col-md-offset-1">
-    <% if @show_search %>
-      <div class="col-md-6 col-md-offset-3">
-        <div class="row">
-          <div id="logo" class="text-center">
-            <h1>NeedPedia</h1><p>A Solutions Hub for all the Problems..</p>
-          </div>
-          <form role="form" id="form-buscar" action=<%= posts_path %> >
-            <div class="form-group">
-              <div class="input-group">
-                <input id="1" class="form-control" type="text" name="term" placeholder="Type in the name of any area or concept." required/>
-                <input id="1" class="form-control" type="hidden" name="tags_filter" value="search" />
-                <input id="1" class="form-control" type="hidden" name="post_type" value="Problem" />
-                <span class="input-group-btn">
-                  <button class="btn btn-success" type="submit">
-                    <i class="glyphicon glyphicon-search" aria-hidden="true"></i> Search
-                  </button>
-                </span>
-              </div>
-            </div>
-          </form>
-        </div>
+  <% if @area.nil? %>
+    <% if @ptype.blank? %>
+      <div class="row posts-header">
+        <h1>All <%= header_title(@ptype) %></h1>
+      </div>
+      <div class="row">
+        <%= link_to area_new_path , class: "btn2 btn-primary" do %>
+          <span class="glyphicon glyphicon-plus"></span>
+          Create a new Area
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <% else %>
+
+  <% unless @has_parent %>
+    <div class="row posts-header">
+      <div class="col-md-6">
+        <h1>All <%= @ptype.pluralize.capitalize %></h1>
+      </div>
+      <div class="col-md-3 col-md-offset-3">
+        <h3>Area: <strong><a href="/area/<%= @area.name %>"><%= @area.name %></a></strong></h3>
       </div>
     </div>
-    <% end %>
-
     <div class="row">
-      <% if @area.nil? %>
-        <div class="page-header">
-        <% if @ptype.blank? %>
-          <%= link_to area_new_path , class: "btn btn-primary" do %>
-            <span class="glyphicon glyphicon-plus"></span>
-              Create a new Area
-          <% end %>
-        <% else %>
-          <%= link_to new_post_path(post_type: @ptype), class: "btn btn-primary" do %>
-            <span class="glyphicon glyphicon-plus"></span>
-              Create a new <%= @ptype %>
-          <% end %>
+      <%= link_to new_post_path(post_type: @ptype, area: @area.name), class: "btn2 btn-primary" do %>
+        <span class="glyphicon glyphicon-plus"></span>
+        Create a new <%= @ptype %> in <%= @area.name %>
         <% end %>
-          <h1>All <%= header_title(@ptype) %></h1>
-        </div>
-      <% else %>
-
-
-      <% unless @has_parent %>
-        <div class="page-header">
-        <%= link_to new_post_path(post_type: @ptype, area: @area.name), class: "btn btn-primary" do %>
-          <span class="glyphicon glyphicon-plus"></span>
-            Create a new <%= @ptype %> in <%= @area.name %>
-        <% end %>
-        <h1>All <%= @ptype.pluralize.capitalize %></h1>
-        <h1>Area: <strong><a href="/area/<%= @area.name %>"><%= @area.name %></a></strong></h1>
-       </div>
-       <% end %>
       <% end %>
-
     </div>
+  <% end %>
 
+  <% content_for :area_dd do %>
+   <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Area: <%= @area.try(:name) %></b> <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <% @all_tags.each do |tag| %>
+      <li><%= link_to tag[0],"/posts?post_type=#{@ptype}&tags_filter=#{tag[0]}" %></li>
+      <li role="separator" class="divider"></li>
+      <% end %>
+    </ul>
+  </li>
+  <% end %>
 
-    <% content_for :area_dd do %>
-       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><b>Area: <%= @area.try(:name) %></b> <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <% @all_tags.each do |tag| %>
-          <li><%= link_to tag[0],"/posts?post_type=#{@ptype}&tags_filter=#{tag[0]}" %></li>
-          <li role="separator" class="divider"></li>
-          <% end %>
-        </ul>
-      </li>
-
+  <% if @area.nil? %>
+    <div class="row col-md-10 col-md-offset-1">
+      <% @all_tags.each do |tag| %>
+        <div class="col-md-12 post-index-row">
+          <div class="col-md-4">
+            <h4>
+              <strong><%= link_to tag[0], "/area/#{tag[0]}" %></strong>
+            </h4>
+          </div>
+          <div class="col-md-4">
+            <%= link_to raw("#{tag[1]}</span> Problems</label>"), "/posts?post_type=Problem&tags_filter=#{tag[0]}", :class => "search-b1" %>
+            <%= link_to raw("#{tag[3]}</span> Proposals</label>"), "/posts?post_type=Proposal&tags_filter=#{tag[0]}", :class => "search-b1" %>
+          </div>
+          <div class="col-md-2">
+            <%= link_to new_post_path(post_type: 'Problem', area: tag[0]) do %>
+              <span class="glyphicon glyphicon-plus"></span>
+              New Problem
+            <% end %>
+          </div>
+          <div class="col-md-2">
+            <%= link_to new_post_path(post_type: 'Proposal', area: tag[0]) do %>
+              <span class="glyphicon glyphicon-plus search-b2a"></span>
+              New Proposal
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+  <div class="col-md-10 col-md-offset-1">
+    <% if @has_parent%>
+      <div class="row posts-header">
+        <h1> <%= link_to @tags_count[0][0], post_path(@parent_post.id), data: { 'turbolinks': false } %> has <%= "#{@tags_count[0][1]} #{@ptype.pluralize.capitalize}" %></h1>
+      </div>
+    <% else %>
+      <% @tags_count.each do |t| %>
+      <div class="row posts-header">
+        <h1><%= link_to t[0], "/posts?post_type=#{@ptype}&tags_filter=#{t[0]}" %> has <%= "#{t[1]} #{@ptype.pluralize.capitalize}" %>  </h1>
+      </div>
+      <% end %>
+        </div>
     <% end %>
-
+  <% end %>
+  </div>
 
   <div class="row">
-    <% if @area.nil? %>
-      <div class="row">
-        <% @all_tags.each do |tag| %>
-          <div class="col-md-12 post-index-row">
-            <div class="col-md-4">
-              <h4>
-                <strong><%= tag[0] %></strong>
-              </h4>
-            </div>
-            <div class="col-md-4">
-              <%= link_to raw("#{tag[1]}</span> Problems</label>"), "/posts?post_type=Problem&tags_filter=#{tag[0]}", :class => "search-b1" %>
-              <%= link_to raw("#{tag[3]}</span> Proposals</label>"), "/posts?post_type=Proposal&tags_filter=#{tag[0]}", :class => "search-b1" %>
-            </div>
-            <div class="col-md-2">
-              <%= link_to new_post_path(post_type: 'Problem', area: tag[0]) do %>
-                <span class="glyphicon glyphicon-plus"></span>
-                New Problem
-              <% end %>
-            </div>
-            <div class="col-md-2">
-              <%= link_to new_post_path(post_type: 'Proposal', area: tag[0]) do %>
-                <span class="glyphicon glyphicon-plus search-b2a"></span>
-                New Proposal
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-      <% else %>
-      <h1>
-        <% if @has_parent  %>
-           <%= link_to @tags_count[0][0], post_path(@parent_post.id), data: { 'turbolinks': false } %> has <%= "#{@tags_count[0][1]} #{@ptype.pluralize.capitalize}" %>
-        <% else %>
-          <% @tags_count.each do |t| %>
-            <li> <%= link_to t[0], "/posts?post_type=#{@ptype}&tags_filter=#{t[0]}" %> has <%= "#{t[1]} #{@ptype.pluralize.capitalize}" %>  </li>
-          <% end %>
-
-        <% end %>
-      </h1>
-    <% end %>
+    <div class="col-md-12">
+      <%= render partial: 'posts_list_item' %>
+    </div>
   </div>
 
-
-
-  </div>
 </div>
-<div class="container-flex">
-  <div class="col-md-12">
-    <%= render partial: 'posts_list_item' %>
-  </div>
-</div>
+

@@ -8,14 +8,16 @@
     <ul class="nav navbar-nav nav-tag">
       <%= link_to image_tag("logo-icon.jpg", {:style => "width:50px;"}), root_path, class:"nav-link" %>
     </ul>
-    <ul class="nav navbar-nav text-center">
-      <%= form_tag posts_path, :method => 'get' do %>
-        <div class="text-center">
-          <%= text_field_tag :search, params[:search], class: "search" %>
-          <%= submit_tag "Search", :name => nil, height: "30px", class: "search-btn"%>
-        </div>
-      <% end %>
-    </ul>
+    <form role="form" action="/posts">
+      <ul class="nav navbar-nav text-center nav-search">
+        <input type="text" name="term" class="form-control" placeholder="Where do you want to go?">
+        <input id="1" class="form-control" type="hidden" name="tags_filter" value="search" />
+        <input id="1" class="form-control" type="hidden" name="post_type" value="Problem" />
+      </ul>
+      <ul class="nav navbar-nav text-center nav-search-btn">
+        <button class="dropbtn" type="submit">Go!</button>
+      </ul>
+    </form>
     <ul class="nav navbar-nav text-center">
       <li class="nav-link">
         <%= link_to "All Areas", posts_path %>
