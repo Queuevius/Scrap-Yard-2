@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.7'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 
+gem 'rails_12factor', group: :production
+
 gem 'bootstrap-sass'
 # List of countries and their respective states and cities
 gem 'city-state'
@@ -41,7 +43,7 @@ gem 'rolify'
 # in all environments as we might use it to seed the DB in test deploys.
 gem 'faker'
 # Use slugs instead of IDs in URLs. Makes prettier URLs, improves SEO and avoids
-# leaking DB IDs (for security reasons).
+# leaking DB IDs (for security reasons)
 gem 'friendly_id'
 # jQuery is no longer installed by default on Rails 5.1
 gem 'jquery-rails'
