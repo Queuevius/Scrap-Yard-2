@@ -1,5 +1,5 @@
 <div class="container area-show-box">
-  <div class="row area-show-header">
+  <div class="row note-title-c">
     <h1 class="media-heading"><%= @area_stats[0] %></h1>
   </div>
   <div class="row area-show-layer">
@@ -27,41 +27,41 @@
     <% if @clayer.nil? %>
       <%= @area.tag_body.try(:html_safe) %>
   </div>
-  <div class="row area-show-author">
-    <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: User.find(@area_stats[4]).slug) %></p>
-    <% else %>
-      <%= @clayer.layer_body.try(:html_safe) %>
-      <p class="text-right">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: @clayer.creator.slug) %></p>
-    <% end %>
-  </div>
-  <div class="row area-show-btns">
-    <div class="float-right">
+  <div class="row box-link-row">
+    <div class="col-md-6">
       <%= link_to new_post_path(post_type: 'Problem', area: @area_stats[0], area_layer: @clayer.try(:name)), class: "btn2a btn-primary" do %>
         <span class="glyphicon glyphicon-plus"></span>
-          new Problem in "<%= @area_stats[0] %>"
+        new Problem in "<%= @area_stats[0] %>"
       <% end %>
       <%= link_to new_post_path(post_type: 'Proposal', area: @area_stats[0] , area_layer: @clayer.try(:name)), class: "btn2a btn-primary" do %>
         <span class="glyphicon glyphicon-plus"></span>
-          new Proposal in "<%= @area_stats[0] %>"
+        new Proposal in "<%= @area_stats[0] %>"
       <% end %>
+    </div>
+    <div class="col-md-2 col-md-offset-4">
+      <p class="text-right author">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: User.find(@area_stats[4]).slug), class: "btn2" %></p>
+    <% else %>
+      <%= @clayer.layer_body.try(:html_safe) %>
+      <p class="text-right author">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: @clayer.creator.slug), class: "btn2" %></p>
+    <% end %>
     </div>
   </div>
   <div class="row">
     <div class="container-flex">
       <div class="col-md-12">
         <div class="row">
-          <div class="col-md-5  area-show-header-b">
+          <div class="col-md-6  note-title-b text-center">
             <h2>
               <%= @area_stats[1]%> Problems  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small>
             </h2>
           </div>
-          <div class="col-md-5 col-md-offset-1 area-show-header">
+          <div class="col-md-6 note-title-b text-center">
             <h2>
               <%= @area_stats[1]%> Proposals  <small><%= @clayer.nil? ? "Public" : @clayer.name %></small>
             </h2>
           </div>
         </div>
-        <div class="row">
+        <div class="row response-box">
           <%= render partial: 'posts_list_item' %>
         </div>
       </div>

@@ -262,8 +262,27 @@
 .post-show-text-box {
   padding-top: 5px;
   padding-bottom: 5px;
-  border-bottom: solid 2px #BBBBBB;
   border-top: solid 2px #BBBBBB;
+}
+
+.btn3 {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.btn3:hover {
+  background-color: slategrey;
+  text-decoration: none;
+}
+
+.edit-btn-2 {
+  text-size: 26px;
+  text-decoration: none !important;
+  padding: 8px 8px 8px 8px;
 }
 
 //post index list
@@ -307,6 +326,28 @@
 .area-show-box {
   margin-top: 100px;
   margin-bottom: 100px
+}
+
+.author {
+  color: white;
+  text-decoration: none;
+}
+
+.note-title-b {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: solid 2px black;
+}
+
+.note-title-c {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: solid 2px #BBBBBB;
+  margin-bottom: 20px;
+}
+
+.response-box {
+  margin-top: 40px;
 }
 
 .area-card {
@@ -558,7 +599,6 @@
 
 .post-header {
   border-bottom: 4px black solid;
-  margin-bottom: 20px;
 }
 
 //show

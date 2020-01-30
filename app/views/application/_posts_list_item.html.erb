@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-6">
     <% @posts.each do |post| %>
-      <div class="row note-box col-md-10 col-md-offset-1">
+      <div class="row col-md-10 col-md-offset-1">
         <div class="row note-title">
           <h3 class="col-md-6 area-title-link">
             <%= link_to post.title, post_path(id: post.slug), data: { 'turbolinks': false }, class: "area-title-link" %>
@@ -58,7 +58,7 @@
 
   <div class="col-md-6">
     <% @prop.each do |post| %>
-      <div class="row note-box col-md-10 col-md-offset-1">
+      <div class="row col-md-10 col-md-offset-1">
         <div class="row note-title">
           <h3 class="col-md-6 area-title-link">
             <%= link_to post.title, post_path(id: post.slug), data: { 'turbolinks': false }, class: "area-title-link" %>

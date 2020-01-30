@@ -14,7 +14,13 @@
       </div>
     </div>
     <div class="row box-link-row">
-      <div class="box-links-2 col-md-2">
+      <div class="box-links-2 col-md-6">
+        <% if post.post_type == 'Proposal' and  post.parent_post_id != nil %>
+          <%= link_to post_path(id: post.parent_slug), data: { 'turbolinks': false }, class: "btn2 btn-primary" do %>
+            <span class="glyphicon glyphicon-zoom-in"></span>
+            See the Idea
+          <% end %>
+        <% end %>
         <% if post.post_type == 'Problem'%>
           <%= link_to posts_path(post_type: 'Idea', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
             <span class="search-b1"><%= post.ideas.count %> Ideas</span>
@@ -22,35 +28,25 @@
           <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
             <span class="search-b1"><%= post.proposals.count %> Proposals</span>
           <% end %>
-        <% end %>
-        <% if post.post_type == 'Idea'%>
-          <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
-            <span class="search-b1"><%= post.proposals.count %> Proposals</span>
-          <% end %>
-        <% end %>
-      </div>
-      <div class="box-links-2 col-md-5">
-        <% if post.post_type == 'Problem'%>
           <%= link_to new_post_path(post_type: "Idea",area: post.area, parent_post_id: post.id), class: "btn2 btn-primary " do %>
             <span class="glyphicon glyphicon-bell"></span>
             Give an Idea
           <% end %>
         <% end %>
-        <% if post.post_type == 'Proposal' and  post.parent_post_id != nil %>
-          <%= link_to post_path(id: post.parent_slug), data: { 'turbolinks': false }, class: "btn2 btn-primary" do %>
-            <span class="glyphicon glyphicon-zoom-in"></span>
-            See the Idea
+        <% if post.post_type == 'Idea'%>
+          <%= link_to posts_path(post_type: 'Proposal', tags_filter: post.all_tags.split(", ")[0], parent_id: post.id) do %>
+            <span class="search-b1"><%= post.proposals.count %> Proposals</span>
           <% end %>
-        <% end %>
-        <% if post.post_type == 'Idea' and  post.parent_post_id != nil %>
-          <%= link_to post_path(id: post.parent_post_id), data: { 'turbolinks': false }, class: "btn2 btn-primary" do %>
-            <span class="glyphicon glyphicon-zoom-in"></span>
-            See the Problem
+          <% if post.post_type == 'Idea' and  post.parent_post_id != nil %>
+            <%= link_to post_path(id: post.parent_post_id), data: { 'turbolinks': false }, class: "btn2 btn-primary" do %>
+              <span class="glyphicon glyphicon-zoom-in"></span>
+              See the Problem
+            <% end %>
           <% end %>
-        <% end %>
-        <%= link_to new_post_path(post_type: "Proposal", area: post.area, parent_post_id: post.id), class: "btn2 btn-primary" do %>
-          <span class="glyphicon glyphicon-wrench"></span>
-          Give a Proposal
+          <%= link_to new_post_path(post_type: "Proposal", area: post.area, parent_post_id: post.id), class: "btn2 btn-primary" do %>
+            <span class="glyphicon glyphicon-wrench"></span>
+            Give a Proposal
+          <% end %>
         <% end %>
       </div>
       <div class="box-links-2 col-md-2">
