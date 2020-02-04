@@ -27,3 +27,6 @@
 
 # SimpleCov reports
 coverage/
+
+/.idea
+/vendor/ruby
