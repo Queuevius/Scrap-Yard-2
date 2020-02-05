@@ -1,0 +1,5 @@
+<%= bootstrap_form_for @room do |f| %>
+  <%= f.collection_select :reciever_id, User.all, :id, :first_name %>
+  <%= f.hidden_field :sender_id, :value => current_user.id %>
+  <%= f.submit "Save", class: 'btn btn-success' %>
+<% end %>

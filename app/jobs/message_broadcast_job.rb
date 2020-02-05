@@ -13,7 +13,7 @@ class MessageBroadcastJob < ApplicationJob
 
   def broadcast_to_sender(user, message)
     ActionCable.server.broadcast(
-        "conversations-#{user.id}",
+        "rooms-#{user.id}",
         message: render_message(message, user),
         conversation_id: message.conversation_id
     )
@@ -21,7 +21,7 @@ class MessageBroadcastJob < ApplicationJob
 
   def broadcast_to_recipient(user, message)
     ActionCable.server.broadcast(
-        "conversations-#{user.id}",
+        "rooms-#{user.id}",
         window: render_window(message.conversation, user),
         message: render_message(message, user),
         conversation_id: message.conversation_id
@@ -30,7 +30,7 @@ class MessageBroadcastJob < ApplicationJob
 
   def render_window(conversation, user)
     ApplicationController.render(
-        partial: 'conversations/conversation',
+        partial: 'rooms/conversation',
         locals: { conversation: conversation, user: user }
     )
   end

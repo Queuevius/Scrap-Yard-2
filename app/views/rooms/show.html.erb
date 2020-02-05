@@ -1,0 +1,54 @@
+<div class="container-flex search-index-box">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="post-header col-md-10 col-md-offset-2">
+        <h1>
+          <%= @room.name %>
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <%= render partial: 'rooms' %>
+      </div>
+      <div class="col-md-8 col-md-offset-1">
+        <div class="chat-message-container">
+          <% @messages.each do |r| %>
+            <div class="col-md-12 chat-message-container">
+              <div class="row message-user">
+                <b>
+                  <%= r.user_id %>
+                </b>
+              </div>
+              <div class="row message-body">
+                <%= r.message %>
+              </div>
+              <div class="row message-date text-right">
+                <small>
+                  <%= r.created_at %>
+                </small>
+                </div>
+            </div>
+          <% end %>
+          </div>
+            <%= simple_form_for @message, remote: true do |form| %>
+              <div class="input-group mb-3">
+                <%= form.input :message, as: :string,
+                               wrapper: false,
+                               label: false,
+                               input_html: {
+                                   class: 'chat-input'
+                               } %>
+                <div class="input-group-append">
+                  <%= form.submit "Send", class: 'btn btn-primary chat-input' %>
+                </div>
+              </div>
+
+              <%= form.input :room_id, as: :hidden %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

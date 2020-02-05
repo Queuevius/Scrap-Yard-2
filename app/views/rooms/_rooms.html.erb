@@ -1,0 +1,18 @@
+<div class="row message-sidebar">
+  <%= link_to "Create a room", new_room_path, class: 'message-buttons-b btn-primary' %>
+  <% if @rooms.present? %>
+    <% @rooms.each do |room| %>
+      <% if room.sender_id == current_user.id %>
+        <div class="row message-sidebar-rows">
+          <%= link_to room.reciever_id, room_path(room), class: 'message-buttons btn-primary' %>
+        </div>
+        <% end %>
+      <% if room.reciever_id == current_user.id %>
+        <div class="row message-sidebar-rows">
+          <%= link_to room.sender_id, room_path(room), class: 'message-buttons btn-primary' %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+

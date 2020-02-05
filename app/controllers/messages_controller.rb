@@ -1,22 +1,21 @@
 class MessagesController < ApplicationController
-  before_action :authorize_messages, only: [:create]
+  before_action :load_entities
+  before_action :authorize_messages
 
   def create
-    @conversation = Conversation.includes(:recipient).find(params[:conversation_id])
-    @message = @conversation.messages.create(message_params)
-
-    respond_to do |format|
-      format.js
-    end
+    @message = Message.create user: current_user,
+                                       room: @room,
+                                       message: params.dig(:message, :message)
   end
 
-  private
+  protected
+
+  def load_entities
+    @room = Room.find params.dig(:message, :room_id)
+  end
 
   def authorize_messages
     authorize Message
   end
 
-  def message_params
-    params.require(:message).permit(:user_id, :body)
-  end
 end

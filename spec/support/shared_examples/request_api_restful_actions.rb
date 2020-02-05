@@ -113,7 +113,7 @@ RSpec.shared_examples 'a RESTful JSON API',
       it "returns the requested #{resource_singular}" do
         # "user" is a singular resource in our API. It always points to the
         # currently logged in user. @current_user is set in
-        # spec/support/helpers/devise_request_spec_login.rb. All other resources
+        # spec/support/helpers/devise_request_spec_login.rb. All other Rooms
         # are plural and point to the record whose ID we provide in the request
         # path.
         expected_record = resource_singular == :user ? @current_user : record

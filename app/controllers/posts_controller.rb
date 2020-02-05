@@ -64,11 +64,11 @@ class PostsController < ApplicationController
 	end
 
 	def messages
-		session[:conversations] ||= []
+		session[:rooms] ||= []
 
 		@users = User.all.where.not(id: current_user)
-		@conversations = Conversation.includes(:recipient, :messages)
-												 .find(session[:conversations])
+		@conversations = Room.includes(:recipient, :messages)
+												 .find(session[:rooms])
 	end
 
 	def search_index

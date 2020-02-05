@@ -19,6 +19,6 @@ RSpec::Matchers.define :require_login_api do
   end
 
   description do
-    'require login to access API resources.'
+    'require login to access API Rooms.'
   end
 end

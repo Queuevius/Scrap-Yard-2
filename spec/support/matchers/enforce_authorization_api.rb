@@ -19,6 +19,6 @@ RSpec::Matchers.define :enforce_authorization_api do
   end
 
   description do
-    'enforce authorization policies when accessing API resources.'
+    'enforce authorization policies when accessing API Rooms.'
   end
 end

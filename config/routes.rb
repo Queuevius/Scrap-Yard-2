@@ -28,12 +28,10 @@ Rails.application.routes.draw do
   get '/profile_tags' => 'profiles#profile_tag'
   get '/chat' => 'profiles#chat'
 
-  resources :conversations, only: [:create] do
-    member do
-      post :close
-    end
-    resources :messages, only: [:create]
-  end
+  resources :rooms
+  resources :messages
+
+
 
   resources :haves
 

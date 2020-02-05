@@ -791,32 +791,49 @@ tr:hover {
 
 //messenger
 
-ul {
-  padding-left: 0px;
-  list-style: none;
+.message-sidebar-rows {
+  padding-left: 15px;
+  padding-bottom: 5px;
 }
 
-.messages-list {
-  max-height: 200px;
-  overflow-y: auto;
-  overflow-x: hidden;
+.message-sidebar {
+  margin-top: 20px;
 }
 
-
-.message-sent {
-  position: relative;
-  background-color: #D9EDF7;
-  border-color: #BCE8F1;
-  margin: 5px 20px;
-  padding: 10px;
-  float: right;
+.message-buttons {
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  background-color: #BBBBBB;
+  border-bottom: 2px solid black;
 }
 
+.message-buttons-b {
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  background-color: #BBBBBB;
+  border-bottom: 2px solid black;
+  margin-bottom: 5px;
+}
 
-.message-received {
-  background-color: #F1F0F0;
-  border-color: #EEEEEE;
-  margin: 5px 20px;
-  padding: 10px;
-  float: left;
+.chat-message-container {
+  margin-top: 30px;
+  background-color: #bbbbbb;
+  margin-bottom: 15px;
+}
+
+.message-user {
+  padding-left: 20px;
+  paddin-bottom: 5px;
+}
+
+.message-body {
+  padding-left: 20px;
+}
+
+.form-padding {
+  padding-top: 30px;
 }
