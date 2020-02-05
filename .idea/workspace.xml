@@ -4,50 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/views/posts/new.html.erb" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="branch">
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/room.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/rooms_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/room.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/policies/room_policy.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/rooms/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/rooms/_rooms.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/rooms/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/rooms/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/rooms/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/rooms/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ec80eef9-7750-4549-ac2f-b9258f368a07.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ec80eef9-7750-4549-ac2f-b9258f368a07.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ec80eef9-7750-4549-ac2f-b9258f368a07/storage_v2/_src_/database/needp_development.Fm-WfA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ec80eef9-7750-4549-ac2f-b9258f368a07/storage_v2/_src_/database/needp_development.Fm-WfA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/channels/conversation.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/channels/conversation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/channels/application_cable/connection.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/channels/conversation_channel.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/conversations_controller.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/messages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/messages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jobs/message_broadcast_job.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/jobs/message_broadcast_job.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/conversation.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/message.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/message.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/conversation_policy.rb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/conversations/_conversation.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/conversations/_conversation_content.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/conversations/close.js.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/conversations/create.js.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/messages/_message.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/messages/create.js.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/messages.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/messages.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/profiles/chat.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/profiles/chat.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-dee7c2989cfc40902e0535a6732936845418191f1b94367053a670ecb6ebefc2.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/application-dee7c2989cfc40902e0535a6732936845418191f1b94367053a670ecb6ebefc2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/factories/conversations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/conversations.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/models/conversation_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/models/room_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/support/matchers/enforce_authorization_api.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/support/matchers/enforce_authorization_api.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/support/matchers/require_login_api.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/support/matchers/require_login_api.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/support/shared_examples/request_api_restful_actions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/support/shared_examples/request_api_restful_actions.rb" afterDir="false" />
-    </list>
+    <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="branch" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/log/" />
@@ -552,23 +509,22 @@
       <workItem from="1580398475854" duration="6929000" />
       <workItem from="1580487979188" duration="938000" />
       <workItem from="1580741879364" duration="24461000" />
-      <workItem from="1580916803646" duration="11009000" />
+      <workItem from="1580916803646" duration="11302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251903000" />
+    <option name="totallyTimeSpent" value="252196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22547974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30010834" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30010834" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -576,14 +532,14 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.2524377" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.2524377" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.2524377" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.20362474" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20362474" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
