@@ -70,6 +70,7 @@ gem 'wice_grid'
 gem 'bootstrap_form'
 gem 'simple_form'
 gem 'redis'
+gem 'redis-rails'
 
 # Locale data for Rails. Rails already comes with i18n capabilities (e.g.,
 # translate model attributes, possibility to place all of the app's strings in

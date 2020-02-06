@@ -8,5 +8,5 @@ test:
 
 production:
   adapter: redis
-  url: ENV["REDISTOGO_URL"]
+
   channel_prefix: needp_production
