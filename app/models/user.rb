@@ -41,8 +41,8 @@ class User < ApplicationRecord
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
 
-  has_many :messages
-  has_many :rooms
+  has_many :messages, :class_name => "Message", :foreign_key => "user_id"
+  has_many :sender_id, :class_name => "Room", :foreign_key => "sender_id"
 
   
 
@@ -135,4 +135,5 @@ class User < ApplicationRecord
     #   errors.add :password, :weak_password
     # end
   end
+
 end

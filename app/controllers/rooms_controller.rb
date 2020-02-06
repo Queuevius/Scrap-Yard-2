@@ -47,6 +47,7 @@ class RoomsController < ApplicationController
   def load_entities
     @rooms = Room.all
     @room = Room.find(params[:id]) if params[:id]
+    @name = [current_user.first_name, current_user.last_name].compact.join(' ')
   end
 
   def permitted_parameters

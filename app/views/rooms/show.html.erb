@@ -12,13 +12,15 @@
         <%= render partial: 'rooms' %>
       </div>
       <div class="col-md-8 col-md-offset-1">
-        <div class="chat-message-container">
+        <div class="chat-message-container" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
           <% @messages.each do |r| %>
             <div class="col-md-12 chat-message-container">
               <div class="row message-user">
-                <b>
-                  <%= r.user_id %>
-                </b>
+                <p>
+                  <b>
+                    <%= r.user.first_name %> <%= r.user.last_name %>
+                  </b>
+                </p>
               </div>
               <div class="row message-body">
                 <%= r.message %>
@@ -48,6 +50,26 @@
             <% end %>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-none" data-role="message-template">
+  <div class="chat-message-container">
+    <div class="col-md-12 chat-message-container">
+      <div class="row message-user">
+        <p data-role="user-name"><b>
+
+        </b></p>
+      </div>
+      <div class="row message-body">
+        <p data-role="message-text"></p>
+      </div>
+      <div class="row message-date text-right">
+        <small data-role="message-date">
+
+        </small>
       </div>
     </div>
   </div>

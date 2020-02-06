@@ -6,6 +6,8 @@ class MessagesController < ApplicationController
     @message = Message.create user: current_user,
                                        room: @room,
                                        message: params.dig(:message, :message)
+
+    RoomChannel.broadcast_to @room, @message
   end
 
   protected
