@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  protect_from_forgery prepend: true, with: :exception
+  skip_before_action :verify_authenticity_token
   before_action :load_entities
   before_action :authorize_messages
 
