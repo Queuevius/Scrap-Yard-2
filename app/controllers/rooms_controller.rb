@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  protect_from_forgery prepend: true, with: :exception
   before_action :authorize_rooms, only: [:create, :new, :index, :edit, :update, :show]
   before_action :load_entities
 
