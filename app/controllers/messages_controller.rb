@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :load_entities
   before_action :authorize_messages
 

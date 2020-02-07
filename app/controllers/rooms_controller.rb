@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :authorize_rooms, only: [:create, :new, :index, :edit, :update, :show]
   before_action :load_entities
 
