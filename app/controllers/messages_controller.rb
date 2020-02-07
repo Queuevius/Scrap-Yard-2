@@ -1,5 +1,4 @@
 class MessagesController < ApplicationController
-  skip_before_action :verify_authenticity_token
   before_action :load_entities
   before_action :authorize_messages
 
@@ -8,7 +7,11 @@ class MessagesController < ApplicationController
                                        room: @room,
                                        message: params.dig(:message, :message)
 
-    RoomChannel.broadcast_to @room, @message
+    if @message.save!
+      redirect_back(fallback_location: rooms_path)
+    else
+      render rooms_path
+    end
   end
 
   protected

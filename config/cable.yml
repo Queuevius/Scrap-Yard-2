@@ -7,6 +7,6 @@ test:
   adapter: async
 
 production:
-  adapter: redis
+  adapter: async
 
   channel_prefix: needp_production
