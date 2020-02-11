@@ -19,13 +19,18 @@
           <% else %>
             <h4 class="profile-link">
               <%= link_to "Add friend", friendships_path(:friend_id => @user.id), :method => :post, :class => "b4" %>
+              <% if current_user.id /= @user.id %>
+                <%= bootstrap_form_for @room do |f| %>
+                  <%= f.hidden_field :reciever_id, :value => @user.id %>
+                  <%= f.hidden_field :sender_id, :value => current_user.id %>
+                  <%= f.submit "Message", class: 'b4 btn-success' %>
+                <% end %>
+              <% end %>
             </h4>
           <% end %>
         </div>
         <div class="row">
-          <% if current_user.id /= @user.id %>
 
-          <% end %>
         </div>
       </div>
       <div class="row profile">

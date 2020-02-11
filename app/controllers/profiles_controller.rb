@@ -33,6 +33,7 @@ class ProfilesController < ApplicationController
 
   def show
   	@user = User.friendly.find(params[:id])
+    @room = Room.new
   end
 
   def update_pic

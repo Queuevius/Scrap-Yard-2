@@ -1,0 +1,17 @@
+<%= form_for(@tag,
+             url: area_create_path,
+             html: { method: :post }) do |f| %>
+
+  <div class="form-group required">
+    <%= f.label "Area name" %>
+    <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Please specify a name to the Layer you are adding." %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Describe the area more" %>
+    <%= f.text_area :tag_body, class: "tinymce", rows: 20 , cols: 120  %>
+    <%= tinymce %>
+  </div>
+
+  <%= f.submit "Create Area", class: "btn btn-primary" %>
+<% end %>

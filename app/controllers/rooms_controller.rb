@@ -21,17 +21,17 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.new permitted_parameters
+    @room = Room.find_or_create_by permitted_parameters
 
     if @room.save
-      flash[:success] = "Room #{@room.name} was created successfully"
-      redirect_to rooms_path
+      redirect_to room_path(@room)
     else
-      render :new
+      redirect_to room_path(@room)
     end
   end
 
   def edit
+
   end
 
   def update
@@ -46,8 +46,9 @@ class RoomsController < ApplicationController
   private
 
   def load_entities
+    @room = Room.new
     @rooms = Room.all
-    @room = Room.find(params[:id]) if params[:id]
+    @room = Room.includes(:user).find(params[:id]) if params[:id]
     @name = [current_user.first_name, current_user.last_name].compact.join(' ')
   end
 

@@ -14,6 +14,13 @@ class TagPolicy < ApplicationPolicy
     end
   end
 
+  def edit?
+    true
+  end
+
+  def update?
+    true
+  end
 
   def new_layer?
     true 

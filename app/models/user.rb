@@ -42,7 +42,7 @@ class User < ApplicationRecord
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
 
   has_many :messages, :class_name => "Message", :foreign_key => "user_id"
-  has_many :sender_id, :class_name => "Room", :foreign_key => "sender_id"
+  has_many :rooms, :foreign_key => "sender_id"
 
   
 

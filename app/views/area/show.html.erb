@@ -38,6 +38,11 @@
         new Proposal in "<%= @area_stats[0] %>"
       <% end %>
     </div>
+    <div class="col-md-2 col-md-offset-2">
+      <% if @area.creator_id = current_user.id %>
+        <%= link_to "edit", edit_area_path(@area), class: "btn2" %>
+        <% end %>
+    </div>
     <div class="col-md-2 col-md-offset-4">
       <p class="text-right author">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: User.find(@area_stats[4]).slug), class: "btn2" %></p>
     <% else %>

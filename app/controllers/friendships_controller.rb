@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+  before_action :authorize_friendships, only: [:create, :destroy]
 
   def create
     @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
@@ -17,4 +18,11 @@ class FriendshipsController < ApplicationController
     flash[:notice] = "Removed friendship."
     redirect_to profile_path(@user)
   end
+
+  private
+
+  def authorize_friendships
+    authorize Friendship
+  end
+
 end

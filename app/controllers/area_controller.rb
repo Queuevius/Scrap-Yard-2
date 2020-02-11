@@ -5,7 +5,7 @@ class AreaController < ApplicationController
 
 	before_action :initialize_area, only: [:show , :new_layer, :create_layer ]
 
-	after_action :authorize_tag, only: [:new, :create, :show, :new_layer, :create_layer]
+	after_action :authorize_tag, only: [:new, :create, :edit, :update, :show, :new_layer, :create_layer]
 
   skip_before_action :authenticate_user!, only: [:show]
 
@@ -18,7 +18,34 @@ class AreaController < ApplicationController
   	@tag.creator_id = current_user.id 
   	@tag.save!
   	redirect_to posts_path 
-  end
+	end
+
+	def edit
+		@ep  = Tag.friendly.find(params[:id])
+		unless params[:layer_id].blank?
+			@ep.tag_body =  @ep.layers.find_by_id(params[:layer_id]).layer_body
+			@current_layer = @ep.layers.find_by_id(params[:layer_id])
+		else
+			@current_layer = nil
+		end
+	end
+
+	def update
+		@ep = Tag.friendly.find(params[:id])
+
+		if params[:layer_id].blank?
+			updated = @ep.update(tag_params)
+		else
+			updated = @ep.update(title: tag_params[:name])
+			updated = @ep.layers.find_by_id(params[:layer_id]).update(layer_body: tag_params[:tag_body])
+		end
+
+		if updated
+			redirect_to area_path
+		else
+			render :edit
+		end
+	end
 
   def show
   	unless params[:layer].blank?

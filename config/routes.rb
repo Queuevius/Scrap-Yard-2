@@ -8,8 +8,9 @@ Rails.application.routes.draw do
   resources :pics
   resources :friendships
   resources :trackings
-  get 'area/new'
+  resources :area
   post 'area/create'
+  post 'area/edit'
   get 'area/:id' => 'area#show'
 
   get 'area/:id/new_layer' => 'area#new_layer'

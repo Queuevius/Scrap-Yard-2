@@ -1,0 +1,33 @@
+
+
+<div class="panel panel-default devise-bs area-form-cont">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="show-header">
+      <h1>Create an Area</h1>
+    </div>
+    <div class="panel-body area-form-body">
+      <%= form_for(@ep,
+                   url: area_path(@ep) + "?layer_id=" + ( @current_layer.nil? ? '' : @current_layer.id).to_s ,
+                   html: { method: :put }) do |f| %>
+
+        <div class="form-group required">
+          <%= f.label "Area name" %>
+          <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Please specify a name to the Layer you are adding." %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "Describe the area more" %>
+          <%= f.text_area :tag_body, class: "tinymce", rows: 20 , cols: 120  %>
+          <%= tinymce %>
+        </div>
+
+        <%= f.submit "Save", class: "btn btn-success" %>
+        <a href="<%= area_path @ep %>" data-turbolinks='false' }><button class="btn btn-danger">Cancel</button></a>
+
+
+      <% end %>
+
+    </div>
+  </div>
+
+</div>
