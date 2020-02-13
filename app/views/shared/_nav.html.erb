@@ -49,7 +49,7 @@
         <button class="dropbtn"><%= current_user.first_name %> <%= current_user.last_name %></button>
         <div class="dropdown-content">
           <%= link_to "Profile", profile_path(current_user), :class => "b1" %>
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+          <%= link_to "Sign out", destroy_user_session_path, method: 'delete' %>
         </div>
       </div>
       <% else %>
