@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery3
+//= require jquery_ujs
 // As of Rails 5.1, jquery_ujs was replaced by rails-ujs, which does not
 // depend on jQuery but can be used with applications that use jQuery. This
 // application uses jQuery and we've chosen to use jquery_ujs instead of
