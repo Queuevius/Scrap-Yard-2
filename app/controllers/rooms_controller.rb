@@ -49,7 +49,9 @@ class RoomsController < ApplicationController
     @room = Room.new
     @rooms = Room.all
     @room = Room.includes(:user).find(params[:id]) if params[:id]
-    @name = [current_user.first_name, current_user.last_name].compact.join(' ')
+    for friendship in current_user.friendships
+
+      end
   end
 
   def permitted_parameters

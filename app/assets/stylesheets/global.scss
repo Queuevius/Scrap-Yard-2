@@ -69,13 +69,13 @@
 
 .nav-search {
   padding-top: 10px;
-  paddting-right: 5px;
+  padding-right: 5px;
   padding-left: 10px;
 }
 
 .nav-search-btn {
   padding-top: 7px;
-  paddting-right: 5px;
+  padding-right: 5px;
   padding-left: 10px;
 }
 
@@ -149,6 +149,7 @@
 .side-links {
   margin-left: 30px;
   border-bottom: 4px white solid;
+  display: block;
 }
 
 .side-links:hover {
@@ -160,11 +161,13 @@
   text-decoration: none;
   color: white;
   padding: 8px 8px 8px 8px;
+  display: block;
 }
 
 .b1:hover {
   text-decoration: none !important;
   color: black;
+  display: block;
 }
 
 //messanger
@@ -205,6 +208,29 @@
   margin-top: 100px;
 }
 
+//devise edit
+
+.edit-box {
+  margin-top: 75px;
+}
+
+.btn-padding {
+  margin-top: 20px;
+}
+
+//devise login
+
+.login-box {
+  margin-top: 30px;
+}
+
+.new-pass-box {
+  margin-top: 20px;
+}
+
+.signup-box {
+  margin-top: 20px;
+}
 //posts/searchindex
 
 .search-index-box {
@@ -512,6 +538,14 @@
   padding-right: 150px;
 }
 
+//want/have
+
+.want-box {
+  display: block;
+  text-decoration: none !important;
+  color: black;
+}
+
 //notes
 
 .notes-box {
@@ -791,6 +825,10 @@ tr:hover {
 
 //messenger
 
+.rooms-sidebar-box {
+  margin-left: 20px;
+}
+
 .message-sidebar-rows {
   padding-left: 15px;
   padding-bottom: 5px;
@@ -800,23 +838,15 @@ tr:hover {
   margin-top: 20px;
 }
 
+.room-users {
+  display: inline-block;
+}
+
 .message-buttons {
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
   display: block;
-  background-color: #BBBBBB;
-  border-bottom: 2px solid black;
-}
-
-.message-buttons-b {
-  padding-left: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: block;
-  background-color: #BBBBBB;
-  border-bottom: 2px solid black;
-  margin-bottom: 5px;
 }
 
 .chat-message-container-b {

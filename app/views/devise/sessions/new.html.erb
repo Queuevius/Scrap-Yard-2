@@ -1,122 +1,95 @@
-<!--div class="col-md-4 center-block">
-  <div class="panel panel-default devise-bs">
-    <div class="panel-heading">
-      <h4><%#= t('.sign_in', default: "Sign in") %></h4>
-    </div>
-    <div class="panel-body">
-      <%#= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
-        <div class="form-group required">
-          <%#= f.label :email %>
-          <%#= f.email_field :email, autofocus: true, class: "form-control" %>
-        </div>
 
-        <div class="form-group required">
-          <%#= f.label :password %>
-          <%#= f.password_field :password, autocomplete: "off", class: "form-control" %>
-        </div>
-
-        <%# if devise_mapping.rememberable? -%>
-          <div class="field">
-            <%#= f.check_box :remember_me %>
-            <%#= f.label :remember_me %>
+<div class="container edit-box">
+    <div class="content">
+      <div class="note-title-b">
+        <h1>Welcome.  Please Log In</h1>
+      </div>
+        <!-- BEGIN LOGIN FORM -->
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "login-form",role: "form" }) do |f| %>
+      <div class="alert alert-danger display-hide">
+          <button class="close" data-close="alert"></button>
+          <span> Enter any username and password. </span>
+      </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group login-box">
+              <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+              <label class="control-label visible-ie8 visible-ie9">Email</label>
+              <!--input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" / -->
+              <%= f.email_field :email,class: "form-control form-control-solid placeholder-no-fix", placeholder: "Email",  autofocus: true %>
+            </div>
+            <div class="form-group">
+              <label class="control-label visible-ie8 visible-ie9">Password</label>
+              <!--input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" /-->
+              <%= f.password_field :password, autocomplete: "off", class: "form-control form-control-solid placeholder-no-fix", placeholder: "Password" %>
+            </div>
+            <div class="form-actions">
+              <div class="row">
+                <div class="col-md-3">
+                  <button type="submit" class="btn2">Login</button>
+                </div>
+                <div class="col-md-3">
+                  <div class="pull-left">
+                    <label class="rememberme check">
+                      <input type="checkbox" name="remember" value="1" />Remember me </label>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="pull-right forget-password-block">
+                    <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        <%# end -%>
+          <div class="col-md-6">
+            <div class="login-options">
+              <h4 class="pull-left">Or login with</h4>
+              <ul class="social-icons pull-right">
+                <li>
+                  <a class="social-icon-color facebook" data-original-title="facebook" href="<%= user_facebook_omniauth_authorize_path %>"></a>
+                </li>
+                <li>
+                  <a class="social-icon-color twitter" data-original-title="Twitter" href="javascript:;"></a>
+                </li>
+                <li>
+                  <a class="social-icon-color googleplus" data-original-title="Goole Plus" href="javascript:;"></a>
+                </li>
+                <li>
+                  <a class="social-icon-color linkedin" data-original-title="Linkedin" href="javascript:;"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <!-- END LOGIN FORM -->
+      <!-- BEGIN FORGOT PASSWORD FORM -->
+      <div class="row new-pass-box">
+        <form class="forget-form" action="index.html" method="post">
+          <div class="row">
+            <div class="form-title">
+              <span class="form-title">Forget Password?</span>
+              <span class="form-subtitle">Enter your e-mail to reset it.</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary uppercase">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
 
-        <%#= f.submit  t('.sign_in', default: "Sign in"), class: "btn btn-primary" %>
-      <%# end %>
+      <%= link_to 'Sign up', new_user_registration_path, class: "btn2" %>
     </div>
-  </div>
-  <%#= render "devise/shared/links" %>
-</div -->
-
-<body class="login">
-<div class="container-flex login-cont">
-  <div class="col-md-10 col-md-offset-1">
-        <!-- BEGIN LOGO -->
-        <div class="logo">
-            <a href="" style="font-size: 25px;text-decoration: none;">
-                Needpedia.com </a>
-        </div>
-        <!-- END LOGO -->
-        <!-- BEGIN LOGIN -->
-        <div class="content">
-            <!-- BEGIN LOGIN FORM -->
-            <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "login-form",role: "form" }) do |f| %>
-                <div class="form-title">
-                    <span class="form-title">Welcome.</span>
-                    <span class="form-subtitle">Please login.</span>
-                </div>
-                <div class="alert alert-danger display-hide">
-                    <button class="close" data-close="alert"></button>
-                    <span> Enter any username and password. </span>
-                </div>
-                <div class="form-group">
-                    <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                    <label class="control-label visible-ie8 visible-ie9">Email</label>
-                    <!--input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" / --> 
-                     <%= f.email_field :email,class: "form-control form-control-solid placeholder-no-fix", placeholder: "Email",  autofocus: true %>
-                     </div>
-                <div class="form-group">
-                    <label class="control-label visible-ie8 visible-ie9">Password</label>
-                    <!--input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" /--> 
-                    <%= f.password_field :password, autocomplete: "off", class: "form-control form-control-solid placeholder-no-fix", placeholder: "Password" %>
-
-                    </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn red btn-block uppercase">Login</button>
-                </div>
-                
-                <div class="form-actions">
-                    <div class="pull-left">
-                        <label class="rememberme check">
-                            <input type="checkbox" name="remember" value="1" />Remember me </label>
-                    </div>
-                    <div class="pull-right forget-password-block">
-                        <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
-                    </div>
-                </div>
-                <div class="login-options">
-                    <h4 class="pull-left">Or login with</h4>
-                    <ul class="social-icons pull-right">
-                        <li>
-                            <a class="social-icon-color facebook" data-original-title="facebook" href="<%= user_facebook_omniauth_authorize_path %>"></a>
-                        </li>
-                        <li>
-                            <a class="social-icon-color twitter" data-original-title="Twitter" href="javascript:;"></a>
-                        </li>
-                        <li>
-                            <a class="social-icon-color googleplus" data-original-title="Goole Plus" href="javascript:;"></a>
-                        </li>
-                        <li>
-                            <a class="social-icon-color linkedin" data-original-title="Linkedin" href="javascript:;"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="create-account">
-                    <p>
-                        <a href="javascript:;" class="btn-primary btn" id="register-btn">Create an account</a>
-                    </p>
-                </div>
-            <% end %>
-            <!-- END LOGIN FORM -->
-            <!-- BEGIN FORGOT PASSWORD FORM -->
-            <form class="forget-form" action="index.html" method="post">
-                <div class="form-title">
-                    <span class="form-title">Forget Password ?</span>
-                    <span class="form-subtitle">Enter your e-mail to reset it.</span>
-                </div>
-                <div class="form-group">
-                    <input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
-                <div class="form-actions">
-                    <button type="button" id="back-btn" class="btn btn-default">Back</button>
-                    <button type="submit" class="btn btn-primary uppercase pull-right">Submit</button>
-                </div>
-            </form>
-            <!-- END FORGOT PASSWORD FORM -->
-            <!-- BEGIN REGISTRATION FORM -->
-            <!-- END REGISTRATION FORM -->
-        </div>
-        <div class="copyright hide"></div>
+    <div class="copyright hide"></div>
   </div>
 </div>
     

@@ -1,41 +1,29 @@
 <div class="row message-sidebar">
-  <div class="row note-box">
+  <div class="row rooms-sidebar-box">
     <h2 class="friend-header">Following</h2>
-    <ul>
       <% for friendship in current_user.friendships %>
-        <li>
-          <%=h friendship.friend.first_name %> <%= friendship.friend.last_name %>
-          <%= bootstrap_form_for @room do |f| %>
+        <% name = [friendship.friend.first_name, friendship.friend.last_name].compact.join(' ') %>
+        <%= bootstrap_form_for @room do |f| %>
+          <div class="row message-sidebar-rows">
             <%= f.hidden_field :reciever_id, :value => friendship.friend.id %>
             <%= f.hidden_field :sender_id, :value => current_user.id %>
-            <%= f.submit "Message", class: 'btn btn-success' %>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="row note-box">
-    <h2 class="friend-header">Followed By</h2>
-    <ul>
-      <% for user in current_user.inverse_friends %>
-        <li><%=h user.first_name %> <%= user.last_name %></li>
-      <% end %>
-    </ul>
-  </div>
-  <%= link_to "Create a room", new_room_path, class: 'message-buttons-b btn-primary' %>
-  <% if @rooms.present? %>
-    <% @rooms.each do |room| %>
-      <% if room.sender_id == current_user.id %>
-        <div class="row message-sidebar-rows">
-          <%= link_to room.reciever_id, room_path(room), class: 'message-buttons btn-primary' %>
-        </div>
+            <%= f.submit name, class: 'message-buttons' %>
+          </div>
         <% end %>
-      <% if room.reciever_id == current_user.id %>
+      <% end %>
+  </div>
+  <div class="row rooms-sidebar-box">
+    <h2 class="friend-header">Followed By</h2>
+    <% for user in current_user.inverse_friends %>
+      <% nameB = [user.first_name, user.last_name].compact.join(' ') %>
+      <%= bootstrap_form_for @room do |f| %>
         <div class="row message-sidebar-rows">
-          <%= link_to room.sender_id, room_path(room), class: 'message-buttons btn-primary' %>
+          <%= f.hidden_field :reciever_id, :value => user.id %>
+          <%= f.hidden_field :sender_id, :value => current_user.id %>
+          <%= f.submit nameB, class: 'message-buttons' %>
         </div>
       <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
 

@@ -18,9 +18,9 @@
         <% @want.each do |f| %>
           <tbody>
           <tr class="text-center">
-            <td class="table-body-box"><%= f.title %></td>
-            <td class="table-body-box"><%= truncate(f.description, length: 150) %></td>
-            <td class="table-body-box"><%= f.price %></td>
+            <td class="table-body-box"><%= link_to f.title, want_path(f), class: "want-box" %></td>
+            <td class="table-body-box"><%= link_to truncate(f.description, length: 150), want_path(f), class: "want-box" %></td>
+            <td class="table-body-box"><%= link_to f.price, want_path(f), class: "want-box" %></td>
             <td class="table-body-box"><%= link_to "Info", want_path(f), :class => "b3" %></td>
           </tr><% end %>
         </tbody>

@@ -39,7 +39,8 @@
         <div class="dropdown-content">
           <% for friendship in current_user.friendships %>
             <a role="menuitem" tabindex="-1" href="#">
-              <%= friendship.friend.first_name %> <%= friendship.friend.last_name %>
+              <% name = [friendship.friend.first_name, friendship.friend.last_name].compact.join(" ")%>
+              <%= link_to name, profile_path(friendship.friend.id) %>
             </a>
           <% end %>
         </div>

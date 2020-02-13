@@ -3,7 +3,8 @@
     <div class="row">
       <div class="post-header col-md-10 col-md-offset-2">
         <h1>
-          <%= @room.user.first_name %>
+          <% name = [@room.user.first_name, @room.user.last_name].compact.join(' ') %>
+          <%= link_to name, profile_path(@room.user.id) %>
         </h1>
       </div>
     </div>

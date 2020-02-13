@@ -7,7 +7,7 @@
     </div>
     <div class="panel-body area-form-body">
       <%= form_for(@ep,
-                   url: area_path(@ep) + "?layer_id=" + ( @current_layer.nil? ? '' : @current_layer.id).to_s ,
+                   url: area_path(@ep),
                    html: { method: :put }) do |f| %>
 
         <div class="form-group required">

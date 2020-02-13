@@ -1,9 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
-  before_action :configure_account_update_params, only: [:update]
-
-  def update
-  end
 
   def edit
   end
@@ -23,7 +19,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # The path used after sign up.
   def after_sign_up_path_for(_resource)
-    '/users/edit'
+    root_path
   end
 
   # The path used after sign up for inactive accounts (before the e-mail is

@@ -41,7 +41,7 @@ class AreaController < ApplicationController
 		end
 
 		if updated
-			redirect_to area_path
+			redirect_to posts_path
 		else
 			render :edit
 		end
