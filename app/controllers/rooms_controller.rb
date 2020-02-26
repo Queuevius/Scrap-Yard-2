@@ -14,6 +14,13 @@ class RoomsController < ApplicationController
   def show
     @message = Message.new room: @room
     @messages = @room.messages.includes(:user)
+
+    @room.messages.each do |p|
+     Notification.where(notifiable_id: p.id).where(read_at: nil).each do |t|
+      t.update!(read_at: Time.now)
+     end
+    end
+
   end
 
   def new
@@ -49,9 +56,7 @@ class RoomsController < ApplicationController
     @room = Room.new
     @rooms = Room.all
     @room = Room.includes(:user).find(params[:id]) if params[:id]
-    for friendship in current_user.friendships
 
-      end
   end
 
   def permitted_parameters

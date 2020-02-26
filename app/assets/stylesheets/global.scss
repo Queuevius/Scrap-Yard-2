@@ -129,6 +129,14 @@
   background-color: #BBBBBB;
 }
 
+//homepage
+
+.homepage-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: black;
+}
+
 //sidebar
 
 .sidebar-box {
@@ -157,10 +165,9 @@
 }
 
 .b1 {
-  text-size: 46px;
+  text-size: 26px;
   text-decoration: none;
   color: white;
-  padding: 8px 8px 8px 8px;
   display: block;
 }
 
@@ -635,11 +642,21 @@
   border-bottom: 4px black solid;
 }
 
+.post-header-b {
+  border-bottom: 4px black solid;
+  margin-bottom: 25px;
+}
+
 //show
 
 .show-header {
   border-bottom: solid 4px black;
   padding-left: 25px;
+}
+
+.show-header-b {
+  border-bottom: solid 4px black;
+
 }
 
 .show-author {
@@ -737,6 +754,13 @@
 
 .friend-header {
   border-bottom: 2px black solid;
+}
+
+.note-box-b {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-left: 15px;
 }
 
 //form

@@ -97,7 +97,7 @@ class AreaController < ApplicationController
   end
 
   def tag_params
-  	params.require(:tag).permit(:name, :tag_body)
+  	params.require(:tag).permit(:name, :tag_body, :creator_id)
 	end
 
 	def layer_params

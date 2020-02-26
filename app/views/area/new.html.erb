@@ -13,6 +13,7 @@
         <div class="form-group required">
           <%= f.label "Area name" %>
           <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Please specify a name to the Layer you are adding." %>
+          <%= f.hidden_field :creator_id, :value => current_user.id %>
         </div>
 
         <div class="form-group">

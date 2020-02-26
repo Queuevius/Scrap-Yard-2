@@ -19,6 +19,10 @@ class PostPolicy < ApplicationPolicy
     end
   end
 
+  def public_feed?
+    true
+  end
+
   def homepage?
     true
   end

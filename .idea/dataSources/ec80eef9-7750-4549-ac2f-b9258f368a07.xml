@@ -113,7 +113,7 @@
       <ObjectId>19667</ObjectId>
       <StateNumber>1881</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2229</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2329</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|19685|19687|1
@@ -137,6 +137,7 @@ sequence|table|19957|19959|1
 sequence|table|19968|19970|1
 sequence|table|19990|19992|1
 sequence|table|28182|28184|1
+sequence|table|28242|28244|1
 </Relations>
     </database>
     <database id="24" parent="1" name="needp_test">
@@ -323,7 +324,7 @@ sequence|table|28182|28184|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>2230</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2330</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -439,7 +440,15 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="73" parent="58" name="pics_id_seq">
+    <sequence id="73" parent="58" name="notifications_id_seq">
+      <ObjectId>28242</ObjectId>
+      <StateNumber>2301</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="74" parent="58" name="pics_id_seq">
       <ObjectId>19913</ObjectId>
       <StateNumber>1968</StateNumber>
       <Owner>postgres</Owner>
@@ -447,7 +456,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="74" parent="58" name="posts_id_seq">
+    <sequence id="75" parent="58" name="posts_id_seq">
       <ObjectId>19720</ObjectId>
       <StateNumber>1887</StateNumber>
       <Owner>postgres</Owner>
@@ -455,7 +464,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="75" parent="58" name="profiles_id_seq">
+    <sequence id="76" parent="58" name="profiles_id_seq">
       <ObjectId>19798</ObjectId>
       <StateNumber>1894</StateNumber>
       <Owner>postgres</Owner>
@@ -463,7 +472,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="76" parent="58" name="ratings_id_seq">
+    <sequence id="77" parent="58" name="ratings_id_seq">
       <ObjectId>19842</ObjectId>
       <StateNumber>1901</StateNumber>
       <Owner>postgres</Owner>
@@ -471,7 +480,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="77" parent="58" name="rooms_id_seq">
+    <sequence id="78" parent="58" name="rooms_id_seq">
       <ObjectId>19924</ObjectId>
       <StateNumber>2195</StateNumber>
       <Owner>postgres</Owner>
@@ -479,7 +488,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="78" parent="58" name="taggings_id_seq">
+    <sequence id="79" parent="58" name="taggings_id_seq">
       <ObjectId>28182</ObjectId>
       <StateNumber>2113</StateNumber>
       <Owner>postgres</Owner>
@@ -487,7 +496,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="79" parent="58" name="tags_id_seq">
+    <sequence id="80" parent="58" name="tags_id_seq">
       <ObjectId>19732</ObjectId>
       <StateNumber>1889</StateNumber>
       <Owner>postgres</Owner>
@@ -495,7 +504,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="80" parent="58" name="tokens_id_seq">
+    <sequence id="81" parent="58" name="tokens_id_seq">
       <ObjectId>19787</ObjectId>
       <StateNumber>1893</StateNumber>
       <Owner>postgres</Owner>
@@ -503,7 +512,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="81" parent="58" name="trackings_id_seq">
+    <sequence id="82" parent="58" name="trackings_id_seq">
       <ObjectId>19873</ObjectId>
       <StateNumber>1943</StateNumber>
       <Owner>postgres</Owner>
@@ -511,7 +520,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="82" parent="58" name="users_id_seq">
+    <sequence id="83" parent="58" name="users_id_seq">
       <ObjectId>19685</ObjectId>
       <StateNumber>1885</StateNumber>
       <Owner>postgres</Owner>
@@ -519,7 +528,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="83" parent="58" name="videos_id_seq">
+    <sequence id="84" parent="58" name="videos_id_seq">
       <ObjectId>19990</ObjectId>
       <StateNumber>2069</StateNumber>
       <Owner>postgres</Owner>
@@ -527,7 +536,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="84" parent="58" name="votes_id_seq">
+    <sequence id="85" parent="58" name="votes_id_seq">
       <ObjectId>19763</ObjectId>
       <StateNumber>1891</StateNumber>
       <Owner>postgres</Owner>
@@ -535,7 +544,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
-    <sequence id="85" parent="58" name="wants_attachments_id_seq">
+    <sequence id="86" parent="58" name="wants_attachments_id_seq">
       <ObjectId>19968</ObjectId>
       <StateNumber>2019</StateNumber>
       <Owner>postgres</Owner>
@@ -543,7 +552,7 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <sequence id="86" parent="58" name="wants_id_seq">
+    <sequence id="87" parent="58" name="wants_id_seq">
       <ObjectId>19820</ObjectId>
       <StateNumber>1896</StateNumber>
       <Owner>postgres</Owner>
@@ -551,163 +560,168 @@ sequence|table|28182|28184|1
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="87" parent="58" name="ar_internal_metadata">
+    <table id="88" parent="58" name="ar_internal_metadata">
       <ObjectId>19677</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1884</StateNumber>
     </table>
-    <table id="88" parent="58" name="friendly_id_slugs">
+    <table id="89" parent="58" name="friendly_id_slugs">
       <ObjectId>19707</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1886</StateNumber>
     </table>
-    <table id="89" parent="58" name="friendships">
+    <table id="90" parent="58" name="friendships">
       <ObjectId>19907</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1965</StateNumber>
     </table>
-    <table id="90" parent="58" name="have_attachments">
+    <table id="91" parent="58" name="have_attachments">
       <ObjectId>19959</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1988</StateNumber>
     </table>
-    <table id="91" parent="58" name="haves">
+    <table id="92" parent="58" name="haves">
       <ObjectId>19811</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1986</StateNumber>
     </table>
-    <table id="92" parent="58" name="items">
+    <table id="93" parent="58" name="items">
       <ObjectId>19863</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1906</StateNumber>
     </table>
-    <table id="93" parent="58" name="layers">
+    <table id="94" parent="58" name="layers">
       <ObjectId>19778</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1903</StateNumber>
     </table>
-    <table id="94" parent="58" name="messages">
+    <table id="95" parent="58" name="messages">
       <ObjectId>19936</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>2185</StateNumber>
     </table>
-    <table id="95" parent="58" name="pics">
+    <table id="96" parent="58" name="notifications">
+      <ObjectId>28244</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>2301</StateNumber>
+    </table>
+    <table id="97" parent="58" name="pics">
       <ObjectId>19915</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1968</StateNumber>
     </table>
-    <table id="96" parent="58" name="posts">
+    <table id="98" parent="58" name="posts">
       <ObjectId>19722</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1890</StateNumber>
     </table>
-    <table id="97" parent="58" name="profiles">
+    <table id="99" parent="58" name="profiles">
       <ObjectId>19800</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1907</StateNumber>
     </table>
-    <table id="98" parent="58" name="ratings">
+    <table id="100" parent="58" name="ratings">
       <ObjectId>19844</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1901</StateNumber>
     </table>
-    <table id="99" parent="58" name="rooms">
+    <table id="101" parent="58" name="rooms">
       <ObjectId>19926</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>2213</StateNumber>
     </table>
-    <table id="100" parent="58" name="schema_migrations">
+    <table id="102" parent="58" name="schema_migrations">
       <ObjectId>19669</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1883</StateNumber>
     </table>
-    <table id="101" parent="58" name="taggings">
+    <table id="103" parent="58" name="taggings">
       <ObjectId>28184</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>2116</StateNumber>
     </table>
-    <table id="102" parent="58" name="tags">
+    <table id="104" parent="58" name="tags">
       <ObjectId>19734</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1904</StateNumber>
     </table>
-    <table id="103" parent="58" name="tokens">
+    <table id="105" parent="58" name="tokens">
       <ObjectId>19789</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1898</StateNumber>
     </table>
-    <table id="104" parent="58" name="trackings">
+    <table id="106" parent="58" name="trackings">
       <ObjectId>19875</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1943</StateNumber>
     </table>
-    <table id="105" parent="58" name="users">
+    <table id="107" parent="58" name="users">
       <ObjectId>19687</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>2106</StateNumber>
     </table>
-    <table id="106" parent="58" name="videos">
+    <table id="108" parent="58" name="videos">
       <ObjectId>19992</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>2073</StateNumber>
     </table>
-    <table id="107" parent="58" name="votes">
+    <table id="109" parent="58" name="votes">
       <ObjectId>19765</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1891</StateNumber>
     </table>
-    <table id="108" parent="58" name="wants">
+    <table id="110" parent="58" name="wants">
       <ObjectId>19822</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>1987</StateNumber>
     </table>
-    <table id="109" parent="58" name="wants_attachments">
+    <table id="111" parent="58" name="wants_attachments">
       <ObjectId>19970</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>2019</StateNumber>
     </table>
-    <column id="110" parent="87" name="key">
+    <column id="112" parent="88" name="key">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1884</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="111" parent="87" name="value">
+    <column id="113" parent="88" name="value">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1884</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="112" parent="87" name="created_at">
+    <column id="114" parent="88" name="created_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1884</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="113" parent="87" name="updated_at">
+    <column id="115" parent="88" name="updated_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1884</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="114" parent="87" name="ar_internal_metadata_pkey">
+    <index id="116" parent="88" name="ar_internal_metadata_pkey">
       <ObjectId>19683</ObjectId>
       <StateNumber>1884</StateNumber>
       <ColNames>key</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="115" parent="87" name="ar_internal_metadata_pkey">
+    <key id="117" parent="88" name="ar_internal_metadata_pkey">
       <ObjectId>19684</ObjectId>
       <StateNumber>1884</StateNumber>
       <ColNames>key</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
     </key>
-    <column id="116" parent="88" name="id">
+    <column id="118" parent="89" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -715,46 +729,46 @@ sequence|table|28182|28184|1
       <DefaultExpression>nextval(&apos;friendly_id_slugs_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="117" parent="88" name="slug">
+    <column id="119" parent="89" name="slug">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1886</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="118" parent="88" name="sluggable_id">
+    <column id="120" parent="89" name="sluggable_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1886</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="119" parent="88" name="sluggable_type">
+    <column id="121" parent="89" name="sluggable_type">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <StateNumber>1886</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="120" parent="88" name="scope">
+    <column id="122" parent="89" name="scope">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1886</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="121" parent="88" name="created_at">
+    <column id="123" parent="89" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1886</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="122" parent="88" name="friendly_id_slugs_pkey">
+    <index id="124" parent="89" name="friendly_id_slugs_pkey">
       <ObjectId>19714</ObjectId>
       <StateNumber>1886</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="123" parent="88" name="index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope">
+    <index id="125" parent="89" name="index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope">
       <ObjectId>19718</ObjectId>
       <StateNumber>1886</StateNumber>
       <ColNames>slug
@@ -762,30 +776,30 @@ sluggable_type
 scope</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="124" parent="88" name="index_friendly_id_slugs_on_slug_and_sluggable_type">
+    <index id="126" parent="89" name="index_friendly_id_slugs_on_slug_and_sluggable_type">
       <ObjectId>19717</ObjectId>
       <StateNumber>1886</StateNumber>
       <ColNames>slug
 sluggable_type</ColNames>
     </index>
-    <index id="125" parent="88" name="index_friendly_id_slugs_on_sluggable_id">
+    <index id="127" parent="89" name="index_friendly_id_slugs_on_sluggable_id">
       <ObjectId>19716</ObjectId>
       <StateNumber>1886</StateNumber>
       <ColNames>sluggable_id</ColNames>
     </index>
-    <index id="126" parent="88" name="index_friendly_id_slugs_on_sluggable_type">
+    <index id="128" parent="89" name="index_friendly_id_slugs_on_sluggable_type">
       <ObjectId>19719</ObjectId>
       <StateNumber>1886</StateNumber>
       <ColNames>sluggable_type</ColNames>
     </index>
-    <key id="127" parent="88" name="friendly_id_slugs_pkey">
+    <key id="129" parent="89" name="friendly_id_slugs_pkey">
       <ObjectId>19715</ObjectId>
       <StateNumber>1886</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>friendly_id_slugs_pkey</UnderlyingIndexName>
     </key>
-    <column id="128" parent="89" name="id">
+    <column id="130" parent="90" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -793,47 +807,47 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;friendships_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="129" parent="89" name="user_id">
+    <column id="131" parent="90" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1965</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="130" parent="89" name="friend_id">
+    <column id="132" parent="90" name="friend_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1965</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="131" parent="89" name="created_at">
+    <column id="133" parent="90" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1965</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="132" parent="89" name="updated_at">
+    <column id="134" parent="90" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1965</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="133" parent="89" name="friendships_pkey">
+    <index id="135" parent="90" name="friendships_pkey">
       <ObjectId>19911</ObjectId>
       <StateNumber>1965</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="134" parent="89" name="friendships_pkey">
+    <key id="136" parent="90" name="friendships_pkey">
       <ObjectId>19912</ObjectId>
       <StateNumber>1965</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>friendships_pkey</UnderlyingIndexName>
     </key>
-    <column id="135" parent="90" name="id">
+    <column id="137" parent="91" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -841,47 +855,47 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;have_attachments_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="136" parent="90" name="have_id">
+    <column id="138" parent="91" name="have_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1992</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="137" parent="90" name="image">
+    <column id="139" parent="91" name="image">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1988</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="138" parent="90" name="created_at">
+    <column id="140" parent="91" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1988</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="139" parent="90" name="updated_at">
+    <column id="141" parent="91" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1988</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="140" parent="90" name="have_attachments_pkey">
+    <index id="142" parent="91" name="have_attachments_pkey">
       <ObjectId>19966</ObjectId>
       <StateNumber>1988</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="141" parent="90" name="have_attachments_pkey">
+    <key id="143" parent="91" name="have_attachments_pkey">
       <ObjectId>19967</ObjectId>
       <StateNumber>1988</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>have_attachments_pkey</UnderlyingIndexName>
     </key>
-    <column id="142" parent="91" name="id">
+    <column id="144" parent="92" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -889,65 +903,65 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;haves_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="143" parent="91" name="user_id">
+    <column id="145" parent="92" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1895</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="144" parent="91" name="title">
+    <column id="146" parent="92" name="title">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1895</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="145" parent="91" name="description">
+    <column id="147" parent="92" name="description">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1895</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="146" parent="91" name="created_at">
+    <column id="148" parent="92" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1895</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="147" parent="91" name="updated_at">
+    <column id="149" parent="92" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1895</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="148" parent="91" name="image">
+    <column id="150" parent="92" name="image">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1986</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="149" parent="91" name="price">
+    <column id="151" parent="92" name="price">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1986</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="150" parent="91" name="haves_pkey">
+    <index id="152" parent="92" name="haves_pkey">
       <ObjectId>19818</ObjectId>
       <StateNumber>1895</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="151" parent="91" name="haves_pkey">
+    <key id="153" parent="92" name="haves_pkey">
       <ObjectId>19819</ObjectId>
       <StateNumber>1895</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>haves_pkey</UnderlyingIndexName>
     </key>
-    <column id="152" parent="92" name="id">
+    <column id="154" parent="93" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -955,59 +969,59 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;items_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="153" parent="92" name="title">
+    <column id="155" parent="93" name="title">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1906</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="154" parent="92" name="details">
+    <column id="156" parent="93" name="details">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1906</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="155" parent="92" name="user_id">
+    <column id="157" parent="93" name="user_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1906</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="156" parent="92" name="item_type">
+    <column id="158" parent="93" name="item_type">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1906</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="157" parent="92" name="created_at">
+    <column id="159" parent="93" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1906</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="158" parent="92" name="updated_at">
+    <column id="160" parent="93" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1906</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="159" parent="92" name="items_pkey">
+    <index id="161" parent="93" name="items_pkey">
       <ObjectId>19870</ObjectId>
       <StateNumber>1906</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="160" parent="92" name="items_pkey">
+    <key id="162" parent="93" name="items_pkey">
       <ObjectId>19871</ObjectId>
       <StateNumber>1906</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>items_pkey</UnderlyingIndexName>
     </key>
-    <column id="161" parent="93" name="id">
+    <column id="163" parent="94" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1015,65 +1029,65 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;layers_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="162" parent="93" name="name">
+    <column id="164" parent="94" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1892</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="163" parent="93" name="layerable_id">
+    <column id="165" parent="94" name="layerable_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1903</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="164" parent="93" name="creator_id">
+    <column id="166" parent="94" name="creator_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1892</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="165" parent="93" name="layer_body">
+    <column id="167" parent="94" name="layer_body">
       <Position>5</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1899</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="166" parent="93" name="created_at">
+    <column id="168" parent="94" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1892</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="167" parent="93" name="updated_at">
+    <column id="169" parent="94" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1892</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="168" parent="93" name="layerable_type">
+    <column id="170" parent="94" name="layerable_type">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1903</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="169" parent="93" name="layers_pkey">
+    <index id="171" parent="94" name="layers_pkey">
       <ObjectId>19785</ObjectId>
       <StateNumber>1892</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="170" parent="93" name="layers_pkey">
+    <key id="172" parent="94" name="layers_pkey">
       <ObjectId>19786</ObjectId>
       <StateNumber>1892</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>layers_pkey</UnderlyingIndexName>
     </key>
-    <column id="171" parent="94" name="id">
+    <column id="173" parent="95" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1081,63 +1095,135 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;messages_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="172" parent="94" name="created_at">
+    <column id="174" parent="95" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1975</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="173" parent="94" name="updated_at">
+    <column id="175" parent="95" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1975</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="174" parent="94" name="room_id">
+    <column id="176" parent="95" name="room_id">
       <Position>7</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>2185</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="175" parent="94" name="user_id">
+    <column id="177" parent="95" name="user_id">
       <Position>8</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>2185</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="176" parent="94" name="message">
+    <column id="178" parent="95" name="message">
       <Position>9</Position>
       <DataType>text|0s</DataType>
       <StateNumber>2185</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="177" parent="94" name="messages_pkey">
+    <index id="179" parent="95" name="messages_pkey">
       <ObjectId>19943</ObjectId>
       <StateNumber>1975</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="178" parent="94" name="index_messages_on_room_id">
+    <index id="180" parent="95" name="index_messages_on_room_id">
       <ObjectId>28240</ObjectId>
       <StateNumber>2185</StateNumber>
       <ColNames>room_id</ColNames>
     </index>
-    <index id="179" parent="94" name="index_messages_on_user_id">
+    <index id="181" parent="95" name="index_messages_on_user_id">
       <ObjectId>28241</ObjectId>
       <StateNumber>2185</StateNumber>
       <ColNames>user_id</ColNames>
     </index>
-    <key id="180" parent="94" name="messages_pkey">
+    <key id="182" parent="95" name="messages_pkey">
       <ObjectId>19944</ObjectId>
       <StateNumber>1975</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>messages_pkey</UnderlyingIndexName>
     </key>
-    <column id="181" parent="95" name="id">
+    <column id="183" parent="96" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2301</StateNumber>
+      <DefaultExpression>nextval(&apos;notifications_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="184" parent="96" name="recipient_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2301</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="185" parent="96" name="actor_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2301</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="186" parent="96" name="read_at">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>2301</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="187" parent="96" name="action">
+      <Position>5</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>2301</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="188" parent="96" name="notifiable_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>2301</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="189" parent="96" name="notifiable_type">
+      <Position>7</Position>
+      <DataType>varchar|0s</DataType>
+      <StateNumber>2301</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="190" parent="96" name="created_at">
+      <Position>8</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2301</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="191" parent="96" name="updated_at">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>2301</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="192" parent="96" name="notifications_pkey">
+      <ObjectId>28251</ObjectId>
+      <StateNumber>2301</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="193" parent="96" name="notifications_pkey">
+      <ObjectId>28252</ObjectId>
+      <StateNumber>2301</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>notifications_pkey</UnderlyingIndexName>
+    </key>
+    <column id="194" parent="97" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1145,59 +1231,59 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;pics_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="182" parent="95" name="name">
+    <column id="195" parent="97" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1968</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="183" parent="95" name="description">
+    <column id="196" parent="97" name="description">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1968</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="184" parent="95" name="image">
+    <column id="197" parent="97" name="image">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1968</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="185" parent="95" name="user_id">
+    <column id="198" parent="97" name="user_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1968</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="186" parent="95" name="created_at">
+    <column id="199" parent="97" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1968</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="187" parent="95" name="updated_at">
+    <column id="200" parent="97" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1968</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="188" parent="95" name="pics_pkey">
+    <index id="201" parent="97" name="pics_pkey">
       <ObjectId>19922</ObjectId>
       <StateNumber>1968</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="189" parent="95" name="pics_pkey">
+    <key id="202" parent="97" name="pics_pkey">
       <ObjectId>19923</ObjectId>
       <StateNumber>1968</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>pics_pkey</UnderlyingIndexName>
     </key>
-    <column id="190" parent="96" name="id">
+    <column id="203" parent="98" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1205,83 +1291,83 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;posts_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="191" parent="96" name="title">
+    <column id="204" parent="98" name="title">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1887</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="192" parent="96" name="post_body">
+    <column id="205" parent="98" name="post_body">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1899</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="193" parent="96" name="creator_id">
+    <column id="206" parent="98" name="creator_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1887</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="194" parent="96" name="post_type">
+    <column id="207" parent="98" name="post_type">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1887</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="195" parent="96" name="approved">
+    <column id="208" parent="98" name="approved">
       <Position>6</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>1887</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="196" parent="96" name="created_at">
+    <column id="209" parent="98" name="created_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1887</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="197" parent="96" name="updated_at">
+    <column id="210" parent="98" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1887</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="198" parent="96" name="slug">
+    <column id="211" parent="98" name="slug">
       <Position>9</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1888</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="199" parent="96" name="parent_post_id">
+    <column id="212" parent="98" name="parent_post_id">
       <Position>10</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1890</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="200" parent="96" name="posts_pkey">
+    <index id="213" parent="98" name="posts_pkey">
       <ObjectId>19729</ObjectId>
       <StateNumber>1887</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="201" parent="96" name="index_posts_on_slug">
+    <index id="214" parent="98" name="index_posts_on_slug">
       <ObjectId>19731</ObjectId>
       <StateNumber>1888</StateNumber>
       <ColNames>slug</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="202" parent="96" name="posts_pkey">
+    <key id="215" parent="98" name="posts_pkey">
       <ObjectId>19730</ObjectId>
       <StateNumber>1887</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>posts_pkey</UnderlyingIndexName>
     </key>
-    <column id="203" parent="97" name="id">
+    <column id="216" parent="99" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1289,59 +1375,59 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;profiles_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="204" parent="97" name="user_id">
+    <column id="217" parent="99" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1894</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="205" parent="97" name="title">
+    <column id="218" parent="99" name="title">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1894</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="206" parent="97" name="description">
+    <column id="219" parent="99" name="description">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1894</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="207" parent="97" name="created_at">
+    <column id="220" parent="99" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1894</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="208" parent="97" name="updated_at">
+    <column id="221" parent="99" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1894</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="209" parent="97" name="avatar_url">
+    <column id="222" parent="99" name="avatar_url">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1907</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="210" parent="97" name="profiles_pkey">
+    <index id="223" parent="99" name="profiles_pkey">
       <ObjectId>19807</ObjectId>
       <StateNumber>1894</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="211" parent="97" name="profiles_pkey">
+    <key id="224" parent="99" name="profiles_pkey">
       <ObjectId>19808</ObjectId>
       <StateNumber>1894</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>profiles_pkey</UnderlyingIndexName>
     </key>
-    <column id="212" parent="98" name="id">
+    <column id="225" parent="100" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1349,59 +1435,59 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;ratings_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="213" parent="98" name="score">
+    <column id="226" parent="100" name="score">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1901</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="214" parent="98" name="rateable_id">
+    <column id="227" parent="100" name="rateable_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1901</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="215" parent="98" name="rateable_type">
+    <column id="228" parent="100" name="rateable_type">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1901</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="216" parent="98" name="creator_id">
+    <column id="229" parent="100" name="creator_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1901</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="217" parent="98" name="created_at">
+    <column id="230" parent="100" name="created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1901</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="218" parent="98" name="updated_at">
+    <column id="231" parent="100" name="updated_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1901</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="219" parent="98" name="ratings_pkey">
+    <index id="232" parent="100" name="ratings_pkey">
       <ObjectId>19851</ObjectId>
       <StateNumber>1901</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="220" parent="98" name="ratings_pkey">
+    <key id="233" parent="100" name="ratings_pkey">
       <ObjectId>19852</ObjectId>
       <StateNumber>1901</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>ratings_pkey</UnderlyingIndexName>
     </key>
-    <column id="221" parent="99" name="id">
+    <column id="234" parent="101" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1409,74 +1495,74 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;conversations_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="222" parent="99" name="created_at">
+    <column id="235" parent="101" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1972</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="223" parent="99" name="updated_at">
+    <column id="236" parent="101" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1972</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="224" parent="99" name="name">
+    <column id="237" parent="101" name="name">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>2181</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="225" parent="99" name="sender_id">
+    <column id="238" parent="101" name="sender_id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>2213</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="226" parent="99" name="reciever_id">
+    <column id="239" parent="101" name="reciever_id">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>2213</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="227" parent="99" name="rooms_pkey">
+    <index id="240" parent="101" name="rooms_pkey">
       <ObjectId>19930</ObjectId>
       <StateNumber>2195</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="228" parent="99" name="rooms_pkey">
+    <key id="241" parent="101" name="rooms_pkey">
       <ObjectId>19931</ObjectId>
       <StateNumber>2195</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>rooms_pkey</UnderlyingIndexName>
     </key>
-    <column id="229" parent="100" name="version">
+    <column id="242" parent="102" name="version">
       <Position>1</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1883</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="230" parent="100" name="schema_migrations_pkey">
+    <index id="243" parent="102" name="schema_migrations_pkey">
       <ObjectId>19675</ObjectId>
       <StateNumber>1883</StateNumber>
       <ColNames>version</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="231" parent="100" name="schema_migrations_pkey">
+    <key id="244" parent="102" name="schema_migrations_pkey">
       <ObjectId>19676</ObjectId>
       <StateNumber>1883</StateNumber>
       <ColNames>version</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
     </key>
-    <column id="232" parent="101" name="id">
+    <column id="245" parent="103" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1484,63 +1570,63 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;taggings_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="233" parent="101" name="post_id">
+    <column id="246" parent="103" name="post_id">
       <Position>2</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>2113</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="234" parent="101" name="tag_id">
+    <column id="247" parent="103" name="tag_id">
       <Position>3</Position>
       <DataType>bigint|0s</DataType>
       <StateNumber>2113</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="235" parent="101" name="created_at">
+    <column id="248" parent="103" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2113</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="236" parent="101" name="updated_at">
+    <column id="249" parent="103" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2113</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="237" parent="101" name="layer_id">
+    <column id="250" parent="103" name="layer_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>2123</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="238" parent="101" name="taggings_pkey">
+    <index id="251" parent="103" name="taggings_pkey">
       <ObjectId>28188</ObjectId>
       <StateNumber>2113</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="239" parent="101" name="index_taggings_on_post_id">
+    <index id="252" parent="103" name="index_taggings_on_post_id">
       <ObjectId>28200</ObjectId>
       <StateNumber>2113</StateNumber>
       <ColNames>post_id</ColNames>
     </index>
-    <index id="240" parent="101" name="index_taggings_on_tag_id">
+    <index id="253" parent="103" name="index_taggings_on_tag_id">
       <ObjectId>28201</ObjectId>
       <StateNumber>2113</StateNumber>
       <ColNames>tag_id</ColNames>
     </index>
-    <key id="241" parent="101" name="taggings_pkey">
+    <key id="254" parent="103" name="taggings_pkey">
       <ObjectId>28189</ObjectId>
       <StateNumber>2113</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>taggings_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="242" parent="101" name="fk_rails_2c662e858e">
+    <foreign-key id="255" parent="103" name="fk_rails_2c662e858e">
       <ObjectId>28190</ObjectId>
       <StateNumber>2113</StateNumber>
       <ColNames>post_id</ColNames>
@@ -1550,7 +1636,7 @@ sluggable_type</ColNames>
       <RefKeyName>posts_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="243" parent="101" name="fk_rails_9fcd2e236b">
+    <foreign-key id="256" parent="103" name="fk_rails_9fcd2e236b">
       <ObjectId>28195</ObjectId>
       <StateNumber>2113</StateNumber>
       <ColNames>tag_id</ColNames>
@@ -1560,7 +1646,7 @@ sluggable_type</ColNames>
       <RefKeyName>tags_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="244" parent="102" name="id">
+    <column id="257" parent="104" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1568,65 +1654,65 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;tags_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="245" parent="102" name="name">
+    <column id="258" parent="104" name="name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1889</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="246" parent="102" name="created_at">
+    <column id="259" parent="104" name="created_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1889</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="247" parent="102" name="updated_at">
+    <column id="260" parent="104" name="updated_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1889</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="248" parent="102" name="tag_body">
+    <column id="261" parent="104" name="tag_body">
       <Position>5</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1900</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="249" parent="102" name="creator_id">
+    <column id="262" parent="104" name="creator_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1902</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="250" parent="102" name="slug">
+    <column id="263" parent="104" name="slug">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1904</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="251" parent="102" name="tags_pkey">
+    <index id="264" parent="104" name="tags_pkey">
       <ObjectId>19741</ObjectId>
       <StateNumber>1889</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="252" parent="102" name="index_tags_on_slug">
+    <index id="265" parent="104" name="index_tags_on_slug">
       <ObjectId>19853</ObjectId>
       <StateNumber>1904</StateNumber>
       <ColNames>slug</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="253" parent="102" name="tags_pkey">
+    <key id="266" parent="104" name="tags_pkey">
       <ObjectId>19742</ObjectId>
       <StateNumber>1889</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tags_pkey</UnderlyingIndexName>
     </key>
-    <column id="254" parent="103" name="id">
+    <column id="267" parent="105" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1634,71 +1720,71 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;tokens_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="255" parent="103" name="token_type">
+    <column id="268" parent="105" name="token_type">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1893</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="256" parent="103" name="creator_id">
+    <column id="269" parent="105" name="creator_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1893</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="257" parent="103" name="token_body">
+    <column id="270" parent="105" name="token_body">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1899</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="258" parent="103" name="post_id">
+    <column id="271" parent="105" name="post_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1893</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="259" parent="103" name="layer_id">
+    <column id="272" parent="105" name="layer_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1893</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="260" parent="103" name="created_at">
+    <column id="273" parent="105" name="created_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1893</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="261" parent="103" name="updated_at">
+    <column id="274" parent="105" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1893</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="262" parent="103" name="span_id">
+    <column id="275" parent="105" name="span_id">
       <Position>9</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1898</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="263" parent="103" name="tokens_pkey">
+    <index id="276" parent="105" name="tokens_pkey">
       <ObjectId>19796</ObjectId>
       <StateNumber>1893</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="264" parent="103" name="tokens_pkey">
+    <key id="277" parent="105" name="tokens_pkey">
       <ObjectId>19797</ObjectId>
       <StateNumber>1893</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tokens_pkey</UnderlyingIndexName>
     </key>
-    <column id="265" parent="104" name="id">
+    <column id="278" parent="106" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1706,47 +1792,47 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;trackings_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="266" parent="104" name="user_id">
+    <column id="279" parent="106" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1943</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="267" parent="104" name="post_id">
+    <column id="280" parent="106" name="post_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1943</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="268" parent="104" name="created_at">
+    <column id="281" parent="106" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1943</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="269" parent="104" name="updated_at">
+    <column id="282" parent="106" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1943</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="270" parent="104" name="trackings_pkey">
+    <index id="283" parent="106" name="trackings_pkey">
       <ObjectId>19879</ObjectId>
       <StateNumber>1943</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="271" parent="104" name="trackings_pkey">
+    <key id="284" parent="106" name="trackings_pkey">
       <ObjectId>19880</ObjectId>
       <StateNumber>1943</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>trackings_pkey</UnderlyingIndexName>
     </key>
-    <column id="272" parent="105" name="id">
+    <column id="285" parent="107" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -1754,7 +1840,7 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="273" parent="105" name="email">
+    <column id="286" parent="107" name="email">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
@@ -1762,7 +1848,7 @@ sluggable_type</ColNames>
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
-    <column id="274" parent="105" name="encrypted_password">
+    <column id="287" parent="107" name="encrypted_password">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
@@ -1770,25 +1856,25 @@ sluggable_type</ColNames>
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <TypeId>1043</TypeId>
     </column>
-    <column id="275" parent="105" name="reset_password_token">
+    <column id="288" parent="107" name="reset_password_token">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="276" parent="105" name="reset_password_sent_at">
+    <column id="289" parent="107" name="reset_password_sent_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="277" parent="105" name="remember_created_at">
+    <column id="290" parent="107" name="remember_created_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="278" parent="105" name="sign_in_count">
+    <column id="291" parent="107" name="sign_in_count">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1796,55 +1882,55 @@ sluggable_type</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="279" parent="105" name="current_sign_in_at">
+    <column id="292" parent="107" name="current_sign_in_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="280" parent="105" name="last_sign_in_at">
+    <column id="293" parent="107" name="last_sign_in_at">
       <Position>9</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="281" parent="105" name="current_sign_in_ip">
+    <column id="294" parent="107" name="current_sign_in_ip">
       <Position>10</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="282" parent="105" name="last_sign_in_ip">
+    <column id="295" parent="107" name="last_sign_in_ip">
       <Position>11</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="283" parent="105" name="confirmation_token">
+    <column id="296" parent="107" name="confirmation_token">
       <Position>12</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="284" parent="105" name="confirmed_at">
+    <column id="297" parent="107" name="confirmed_at">
       <Position>13</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="285" parent="105" name="confirmation_sent_at">
+    <column id="298" parent="107" name="confirmation_sent_at">
       <Position>14</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="286" parent="105" name="unconfirmed_email">
+    <column id="299" parent="107" name="unconfirmed_email">
       <Position>15</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="287" parent="105" name="failed_attempts">
+    <column id="300" parent="107" name="failed_attempts">
       <Position>16</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -1852,155 +1938,155 @@ sluggable_type</ColNames>
       <DefaultExpression>0</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="288" parent="105" name="unlock_token">
+    <column id="301" parent="107" name="unlock_token">
       <Position>17</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="289" parent="105" name="locked_at">
+    <column id="302" parent="107" name="locked_at">
       <Position>18</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="290" parent="105" name="role">
+    <column id="303" parent="107" name="role">
       <Position>19</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="291" parent="105" name="first_name">
+    <column id="304" parent="107" name="first_name">
       <Position>20</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="292" parent="105" name="last_name">
+    <column id="305" parent="107" name="last_name">
       <Position>21</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="293" parent="105" name="slug">
+    <column id="306" parent="107" name="slug">
       <Position>22</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1885</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="294" parent="105" name="created_at">
+    <column id="307" parent="107" name="created_at">
       <Position>23</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="295" parent="105" name="updated_at">
+    <column id="308" parent="107" name="updated_at">
       <Position>24</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1885</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="296" parent="105" name="provider">
+    <column id="309" parent="107" name="provider">
       <Position>25</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1908</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="297" parent="105" name="uid">
+    <column id="310" parent="107" name="uid">
       <Position>26</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1908</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="298" parent="105" name="name">
+    <column id="311" parent="107" name="name">
       <Position>27</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1908</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="299" parent="105" name="image">
+    <column id="312" parent="107" name="image">
       <Position>28</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1908</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="300" parent="105" name="token">
+    <column id="313" parent="107" name="token">
       <Position>29</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1909</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="301" parent="105" name="expires_at">
+    <column id="314" parent="107" name="expires_at">
       <Position>30</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1909</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="302" parent="105" name="expires">
+    <column id="315" parent="107" name="expires">
       <Position>31</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>1909</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="303" parent="105" name="refresh_token">
+    <column id="316" parent="107" name="refresh_token">
       <Position>32</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1909</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="304" parent="105" name="bio">
+    <column id="317" parent="107" name="bio">
       <Position>33</Position>
       <DataType>text|0s</DataType>
       <StateNumber>2106</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="305" parent="105" name="users_pkey">
+    <index id="318" parent="107" name="users_pkey">
       <ObjectId>19698</ObjectId>
       <StateNumber>1885</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="306" parent="105" name="index_users_on_email">
+    <index id="319" parent="107" name="index_users_on_email">
       <ObjectId>19700</ObjectId>
       <StateNumber>1885</StateNumber>
       <ColNames>email</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="307" parent="105" name="index_users_on_reset_password_token">
+    <index id="320" parent="107" name="index_users_on_reset_password_token">
       <ObjectId>19701</ObjectId>
       <StateNumber>1885</StateNumber>
       <ColNames>reset_password_token</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="308" parent="105" name="index_users_on_confirmation_token">
+    <index id="321" parent="107" name="index_users_on_confirmation_token">
       <ObjectId>19702</ObjectId>
       <StateNumber>1885</StateNumber>
       <ColNames>confirmation_token</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="309" parent="105" name="index_users_on_unlock_token">
+    <index id="322" parent="107" name="index_users_on_unlock_token">
       <ObjectId>19703</ObjectId>
       <StateNumber>1885</StateNumber>
       <ColNames>unlock_token</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="310" parent="105" name="index_users_on_slug">
+    <index id="323" parent="107" name="index_users_on_slug">
       <ObjectId>19704</ObjectId>
       <StateNumber>1885</StateNumber>
       <ColNames>slug</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="311" parent="105" name="users_pkey">
+    <key id="324" parent="107" name="users_pkey">
       <ObjectId>19699</ObjectId>
       <StateNumber>1885</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
-    <column id="312" parent="106" name="id">
+    <column id="325" parent="108" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -2008,59 +2094,59 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;videos_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="313" parent="106" name="video">
+    <column id="326" parent="108" name="video">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>2069</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="314" parent="106" name="title">
+    <column id="327" parent="108" name="title">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>2069</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="315" parent="106" name="description">
+    <column id="328" parent="108" name="description">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>2069</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="316" parent="106" name="created_at">
+    <column id="329" parent="108" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2069</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="317" parent="106" name="updated_at">
+    <column id="330" parent="108" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2069</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="318" parent="106" name="user_id">
+    <column id="331" parent="108" name="user_id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>2073</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="319" parent="106" name="videos_pkey">
+    <index id="332" parent="108" name="videos_pkey">
       <ObjectId>19999</ObjectId>
       <StateNumber>2069</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="320" parent="106" name="videos_pkey">
+    <key id="333" parent="108" name="videos_pkey">
       <ObjectId>20000</ObjectId>
       <StateNumber>2069</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>videos_pkey</UnderlyingIndexName>
     </key>
-    <column id="321" parent="107" name="id">
+    <column id="334" parent="109" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2068,89 +2154,89 @@ sluggable_type</ColNames>
       <DefaultExpression>nextval(&apos;votes_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="322" parent="107" name="votable_type">
+    <column id="335" parent="109" name="votable_type">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="323" parent="107" name="votable_id">
+    <column id="336" parent="109" name="votable_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="324" parent="107" name="voter_type">
+    <column id="337" parent="109" name="voter_type">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="325" parent="107" name="voter_id">
+    <column id="338" parent="109" name="voter_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="326" parent="107" name="vote_flag">
+    <column id="339" parent="109" name="vote_flag">
       <Position>6</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="327" parent="107" name="vote_scope">
+    <column id="340" parent="109" name="vote_scope">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="328" parent="107" name="vote_weight">
+    <column id="341" parent="109" name="vote_weight">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="329" parent="107" name="created_at">
+    <column id="342" parent="109" name="created_at">
       <Position>9</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="330" parent="107" name="updated_at">
+    <column id="343" parent="109" name="updated_at">
       <Position>10</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>1891</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="331" parent="107" name="votes_pkey">
+    <index id="344" parent="109" name="votes_pkey">
       <ObjectId>19772</ObjectId>
       <StateNumber>1891</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <index id="332" parent="107" name="index_votes_on_votable_id_and_votable_type_and_vote_scope">
+    <index id="345" parent="109" name="index_votes_on_votable_id_and_votable_type_and_vote_scope">
       <ObjectId>19775</ObjectId>
       <StateNumber>1891</StateNumber>
       <ColNames>votable_id
 votable_type
 vote_scope</ColNames>
     </index>
-    <index id="333" parent="107" name="index_votes_on_voter_id_and_voter_type_and_vote_scope">
+    <index id="346" parent="109" name="index_votes_on_voter_id_and_voter_type_and_vote_scope">
       <ObjectId>19774</ObjectId>
       <StateNumber>1891</StateNumber>
       <ColNames>voter_id
 voter_type
 vote_scope</ColNames>
     </index>
-    <key id="334" parent="107" name="votes_pkey">
+    <key id="347" parent="109" name="votes_pkey">
       <ObjectId>19773</ObjectId>
       <StateNumber>1891</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>votes_pkey</UnderlyingIndexName>
     </key>
-    <column id="335" parent="108" name="id">
+    <column id="348" parent="110" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -2158,65 +2244,65 @@ vote_scope</ColNames>
       <DefaultExpression>nextval(&apos;wants_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="336" parent="108" name="user_id">
+    <column id="349" parent="110" name="user_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>1896</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="337" parent="108" name="title">
+    <column id="350" parent="110" name="title">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1896</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="338" parent="108" name="description">
+    <column id="351" parent="110" name="description">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <StateNumber>1896</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="339" parent="108" name="created_at">
+    <column id="352" parent="110" name="created_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1896</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="340" parent="108" name="updated_at">
+    <column id="353" parent="110" name="updated_at">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1896</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="341" parent="108" name="image">
+    <column id="354" parent="110" name="image">
       <Position>7</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1987</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="342" parent="108" name="price">
+    <column id="355" parent="110" name="price">
       <Position>8</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>1987</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="343" parent="108" name="wants_pkey">
+    <index id="356" parent="110" name="wants_pkey">
       <ObjectId>19829</ObjectId>
       <StateNumber>1896</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="344" parent="108" name="wants_pkey">
+    <key id="357" parent="110" name="wants_pkey">
       <ObjectId>19830</ObjectId>
       <StateNumber>1896</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>wants_pkey</UnderlyingIndexName>
     </key>
-    <column id="345" parent="109" name="id">
+    <column id="358" parent="111" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -2224,40 +2310,40 @@ vote_scope</ColNames>
       <DefaultExpression>nextval(&apos;wants_attachments_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
     </column>
-    <column id="346" parent="109" name="want_id">
+    <column id="359" parent="111" name="want_id">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>2019</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="347" parent="109" name="image">
+    <column id="360" parent="111" name="image">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>2019</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="348" parent="109" name="created_at">
+    <column id="361" parent="111" name="created_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2019</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="349" parent="109" name="updated_at">
+    <column id="362" parent="111" name="updated_at">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>2019</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="350" parent="109" name="wants_attachments_pkey">
+    <index id="363" parent="111" name="wants_attachments_pkey">
       <ObjectId>19977</ObjectId>
       <StateNumber>2019</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="351" parent="109" name="wants_attachments_pkey">
+    <key id="364" parent="111" name="wants_attachments_pkey">
       <ObjectId>19978</ObjectId>
       <StateNumber>2019</StateNumber>
       <ColNames>id</ColNames>

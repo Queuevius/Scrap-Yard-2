@@ -13,8 +13,9 @@ class ProfilesController < ApplicationController
     @haves = Have.all
     @pics = Pic.all
     @video = Video.all
+    @areas = Tag.all
 
-    @feed = (@posts + @wants + @haves + @pics + @video).sort_by{|e| e[:created_at]}
+    @feed = (@posts + @wants + @haves + @pics + @video + @areas).sort_by{|e| e["created_at DESC"]}
   end
 
   def profile_posts

@@ -28,7 +28,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  devise :omniauthable, omniauth_providers: [:facebook , :google_oauth2]
+  devise :omniauthable, omniauth_providers: [:facebook , :google_oauth2, :twitter]
 
   has_many :posts
   has_one :profile 
@@ -43,6 +43,11 @@ class User < ApplicationRecord
 
   has_many :messages, :class_name => "Message", :foreign_key => "user_id"
   has_many :rooms, :foreign_key => "sender_id"
+
+  has_many :notifications, foreign_key: :recipient_id
+
+  has_many :tags, :through => :taggings, :foreign_key => "creator_id"
+
 
   
 

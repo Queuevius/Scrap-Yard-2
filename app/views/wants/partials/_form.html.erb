@@ -1,4 +1,4 @@
-<div class="container-flex">
+<div class="container-fluid">
   <%= bootstrap_form_for(@want) do |f| %>
     <div class="row form-cont">
       <div class="col-md-5">
@@ -6,7 +6,7 @@
           <%= f.text_field :title %>
         </div>
         <div class="row">
-          <%= f.text_area :description %>
+          <%= f.text_area :description, class: "tinymce", rows: 10 , cols: 50  %>
         </div>
         <div class="row">
           <%= f.text_field :price %>

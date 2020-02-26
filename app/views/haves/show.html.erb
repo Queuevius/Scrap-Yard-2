@@ -1,23 +1,9 @@
-<div class="container-flex">
+<div class="container-fluid">
   <div class="col-md-12 notes-box">
-    <div class="row show-header text-center">
+    <div class="row show-header-b text-center">
       <h1>
         <%= @have.title %>
       </h1>
-    </div>
-    <div class="row show-author">
-      <div class="col-md-3">
-        <% if user_signed_in? %>
-          <% if current_user.id == @have.user_id %>
-            <%= link_to "Edit", edit_hafe_path(@have), class: "b2" %>
-          <% end %>
-        <% else %>
-          <p><b><%= @have.user.first_name %> <%= @have.user.last_name %></b></p>
-        <% end %>
-      </div>
-      <div class="col-md-3 col-md-offset-6">
-        <p class="text-right show-date"><b><%= @have.price %></b></p>
-      </div>
     </div>
     <div class="row show-box">
       <%= @have.description %>
@@ -27,8 +13,22 @@
         <%= image_tag(f.image, {:style => "max-width: 40%", :class => "profile-pic text-center"}) %>
       <% end %>
     </div>
-    <div class="row show-author">
-      <p class="text-right show-date"><b><%= @have.created_at.strftime("%d/%m/%Y") %></b></p>
+    <div class="row box-link-row">
+      <div class="box-links-2 col-md-3">
+        <%= @have.price %>
+      </div>
+      <div class="box-links-2 col-md-3 col-md-offset-1">
+        <% if user_signed_in? %>
+          <% if current_user.id == @have.user_id %>
+            <%= link_to "Edit", edit_hafe_path(@have), class: "b2" %>
+          <% end %>
+        <% else %>
+          <p><b><%= @have.user.first_name %> <%= @have.user.last_name %></b></p>
+        <% end %>
+      </div>
+      <div class="box-links-2 col-md-3 col-md-offset-2 text-right">
+        <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= @have.created_at.strftime("%I:%M %p, %m/%d/%Y") %> </span></b>
+      </div>
     </div>
   </div>
 </div>

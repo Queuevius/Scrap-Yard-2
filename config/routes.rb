@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :time_banks
   resources :taggings
   resources :comments
   resources :videos
@@ -27,12 +28,19 @@ Rails.application.routes.draw do
   get '/profile_haves' => 'profiles#profile_haves'
   get '/profile_wants' => 'profiles#profile_wants'
   get '/profile_tags' => 'profiles#profile_tag'
+
   get '/chat' => 'profiles#chat'
+
+  get '/public_feed' => 'posts#public_feed'
 
   resources :rooms
   resources :messages
 
-
+  resources :notifications do
+    collection do
+      post :mark_as_read
+    end
+  end
 
   resources :haves
 

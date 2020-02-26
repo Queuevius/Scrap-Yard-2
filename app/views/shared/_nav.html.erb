@@ -29,10 +29,41 @@
 
       </li>
     </ul>
+    <ul class="nav navbar-nav text-center">
+      <li class="nav-link">
+        <%= link_to "Public Feed", public_feed_path %>
+
+      </li>
+    </ul>
 
 
     <ul class="nav navbar-nav pull-right nav-links">
     <% if user_signed_in? %>
+      <div class="dropdown">
+        <button class="dropbtn">Notifications</button>
+        <div class="dropdown-content">
+          <% Notification.where(notifiable_type: "Post").where(recipient_id: current_user).where(read_at: nil).each do |t|%>
+            <a role="menuitem" tabindex="-1" href="#">
+              <%= link_to t.notifiable_type, post_path(t.notifiable_id) %>
+            </a>
+          <% end %>
+          <% Notification.where(notifiable_type: "Post").where(recipient_id: current_user).where(read_at: nil).nil? %>
+            no notifications
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Messages</button>
+        <div class="dropdown-content">
+          <% Notification.where(notifiable_type: "Message").where(recipient_id: current_user).where(read_at: nil).each do |t|%>
+            <a role="menuitem" tabindex="-1" href="#">
+              <%= link_to t.notifiable_type, rooms_path %>
+            </a>
+          <% end %>
+          <% Notification.where(notifiable_type: "Message").where(recipient_id: current_user).where(read_at: nil).nil? %>
+            No messages
+        </div>
+      </div>
+
       <a href="/profiles"><span class="glyph-link glyphicon glyphicon-globe"></span></a>
       <div class="dropdown">
         <button class="glyph-drop glyphicon glyphicon-user"></button>

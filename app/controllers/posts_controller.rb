@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	
 	before_action :authenticate_user!
-	before_action :authorize_post, only: [:new_design, :new, :create, :edit, :update, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating, :homepage, :messages]
+	before_action :authorize_post, only: [:public_feed, :new_design, :new, :create, :edit, :update, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating, :homepage, :messages]
 	after_action :set_tag_creator, :set_area_layer_assoc, only: [:create]
 	skip_before_action :authenticate_user!, only: [:show, :index, :search_index, :show_token, :area_index, :area_layer, :homepage]
 
@@ -13,6 +13,15 @@ class PostsController < ApplicationController
 
 	def new_design
 		_layout = nil
+	end
+
+	def public_feed
+		policy_scope(Profile) if current_user
+
+		@posts = Post.all
+    @areas = Tag.all
+
+    @feed = (@posts + @areas).sort_by{|e| e["created_at DESC"]}
 	end
 
 	def index
@@ -115,6 +124,7 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 		@post.creator_id = @current_user.id  
 		if @post.save
+			Notification.create!(recipient_id: @post.area.creator_id, actor_id: current_user.id, action: "post", notifiable: @post)
 			redirect_to post_path @post
 		else 
 			render :new
@@ -131,6 +141,9 @@ class PostsController < ApplicationController
 			@current_layer = @post.layers.find_by_name(params[:layer]) 
 		else
 			@current_layer = nil
+		end
+		Notification.where(notifiable_id: @post.id).where(recipient_id: current_user.id).where(read_at: nil).each do |t|
+			t.update!(read_at: Time.now)
 		end
 	end
 

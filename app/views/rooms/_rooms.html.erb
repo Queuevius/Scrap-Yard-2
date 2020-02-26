@@ -1,8 +1,34 @@
 <div class="row message-sidebar">
   <div class="row rooms-sidebar-box">
+    <% if @rooms.present? %>
+      <% @rooms.each do |room| %>
+        <% if room.sender_id == current_user.id %>
+          <% room.messages.each do |p| %>
+            <% Notification.where(notifiable_id: p.id).where(read_at: nil).each do |t|%>
+              <%= bootstrap_form_for(t) do |l| %>
+                <a role="menuitem" tabindex="-1" href="#">
+                  <%= l.hidden_field :read_at, :value => Time.now %>
+                  <%= l.submit %>
+                </a>
+              <% end %>
+            <% end %>
+            <% end %>
+          <div class="row message-sidebar-rows">
+
+            <%= link_to room.sender_id, room_path(room), class: 'message-buttons btn-primary' %>
+          </div>
+        <% end %>
+        <% if room.reciever_id == current_user.id %>
+          <div class="row message-sidebar-rows">
+            <%= link_to room.sender_id, room_path(room), class: 'message-buttons btn-primary' %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
     <h2 class="friend-header">Following</h2>
       <% for friendship in current_user.friendships %>
         <% name = [friendship.friend.first_name, friendship.friend.last_name].compact.join(' ') %>
+
         <%= bootstrap_form_for @room do |f| %>
           <div class="row message-sidebar-rows">
             <%= f.hidden_field :reciever_id, :value => friendship.friend.id %>
@@ -26,4 +52,3 @@
     <% end %>
   </div>
 </div>
-

@@ -3,8 +3,7 @@
     <div class="row">
       <div class="post-header col-md-10 col-md-offset-2">
         <h1>
-          <% name = [@room.user.first_name, @room.user.last_name].compact.join(' ') %>
-          <%= link_to name, profile_path(@room.user.id) %>
+          name placeholder
         </h1>
       </div>
     </div>
@@ -15,6 +14,14 @@
       <div class="col-md-8 col-md-offset-1">
         <div class="chat-message-container-b" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
           <% @messages.each do |r| %>
+            <% Notification.where(notifiable_id: r.id).where(read_at: nil).each do |t|%>
+              <%= bootstrap_form_for(t, local:true) do |l| %>
+                <a role="menuitem" tabindex="-1" href="#">
+                  <%= l.hidden_field :read_at, :value => Time.now %>
+                  <%= l.submit t.notifiable_type, class: 'btn btn-success' %>
+                </a>
+              <% end %>
+              <% end %>
             <div class="col-md-12 chat-message-container">
               <div class="row message-user">
                 <p>

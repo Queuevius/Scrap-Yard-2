@@ -45,39 +45,48 @@
       </div>
     </div>
   </div>
-  <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="col-md-12">
+    <div class="row">
       <h3 class="title-normal" style="margin-top: 50px; color: black; margin-bottom: 31px;">The Token System</h3>
-    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-      <%= image_tag "Tokenss.jpg" %>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2">
+        <%= image_tag("Tokenss.jpg", {:style => "width:500px;"}) %>
+      </div>
+      <div class="col-md-5 homepage-text text-center">
+        <p>"We’ve innovated upon the hypertext system used by Wikipedia and others to make it possible for everyone to drop debates and notes directly into pages, after any word; all while being neatly embedded into little icons called “tokens”. The token system lets citizens and experts publicly dismantle false information, myths, and fallacies. Debate tokens even let you rate people’s arguments individually, so that everyone can see which concerns actually matter most to people. Ultimately our goal is to create the world’s greatest problem solving engine.&quot; <br/>
+        </p>
+      </div>
+    </div>
+  </div>
 
+  <div class="col-md-12">
+    <div class="row">
+      <h3 class="title-normal" style="margin-top: 50px; color: black; margin-bottom: 40px;">The Layer System</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2">
+        <%= image_tag("Layerss.jpg", {:style => "width:500px;"}) %>
+      </div>
+      <div class="col-md-5 text-center homepage-text">
+
+        <p>&quot;The layer system lets users create new layers to any page.
+
+          Inspired by the idea of helping experts collaborate effortlessly with those outside their field, it was soon realized however that it could double as a powerful tool for promoting cultural and scientific literacy.
+
+          The Layer system enables everyone to learn subjects by reading the actual conversations specialists are having about solving problems in the real world.&quot; <br/>
+        </p>
+      </div>
     </div>
 
-    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-      <p style="text-align: center;font-size: 18px;font-weight: 400;color: black;margin-top: 13%;">"We’ve innovated upon the hypertext system used by Wikipedia and others to make it possible for everyone to drop debates and notes directly into pages, after any word; all while being neatly embedded into little icons called “tokens”. The token system lets citizens and experts publicly dismantle false information, myths, and fallacies. Debate tokens even let you rate people’s arguments individually, so that everyone can see which concerns actually matter most to people. Ultimately our goal is to create the world’s greatest problem solving engine.&quot; <br/>
-      </p>
-    </div>
+
+
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
   </div>
 
   <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12" style="
   margin-top: 45px;
   ">
-      <h3 class="title-normal" style="margin-top: 50px; color: black; margin-bottom: 40px;">The Layer System</h3>
-    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-      <%= image_tag "Layerss.jpg" %>
-    </div>
-
-    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-
-      <p style="font-size: 18px;font-weight: 400;color: black;margin-top: 22%;">&quot;The layer system lets users create new layers to any page.
-
-        Inspired by the idea of helping experts collaborate effortlessly with those outside their field, it was soon realized however that it could double as a powerful tool for promoting cultural and scientific literacy.
-
-        The Layer system enables everyone to learn subjects by reading the actual conversations specialists are having about solving problems in the real world.&quot; <br/>
-      </p>
-    </div>
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+    <%= link_to 'Time Bank', time_banks_path %>
   </div>
 </div>

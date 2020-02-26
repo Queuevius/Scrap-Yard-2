@@ -1,9 +1,9 @@
-<div class="container-flex">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
       <div class="show-header">
         <h1>
-          Profile
+          <%= @user.first_name %> <%= @user.last_name %>
         </h1>
       </div>
     </div>
@@ -34,34 +34,34 @@
         </div>
       </div>
       <div class="row profile">
-        <h4><b>Name: </b><%= @user.first_name %> <%= @user.last_name %></h4>
-        <h4><b>Email: </b><%= @user.email %></h4>
-      </div>
 
-      <div class="row profile">
-        <h4><b><%= link_to "Notes", profile_posts_path(@user) %></b></h4>
-        <h4><b><%= link_to "Skills Offered", haves_path(@user) %></b></h4>
-        <h4><b><%= link_to "Skills Wanted", wants_path(@user) %></b></h4>
+        <h4><b>Email: </b><%= @user.email %></h4>
+        <h4><b>Joined: </b><%= @user.created_at.strftime("%d/%m/%Y") %></h4>
+        <h4><b>Bio: </b><%= @user.bio %></h4>
       </div>
     </div>
     <div class="col-md-5 friend-box">
       <% if current_user.id == @user.id %>
-        <div class="row note-box">
+        <div class="row note-box-b">
           <h2 class="friend-header">Following</h2>
           <ul>
             <% for friendship in @user.friendships %>
               <li>
-                <%=h friendship.friend.first_name %> <%= friendship.friend.last_name %>
+                <% name = [friendship.friend.first_name, friendship.friend.last_name].compact.join(' ') %>
+                <%= link_to name, profile_user_path(friendship.friend.id) %>
                 (<%= link_to "remove", friendship, :method => :delete %>)
               </li>
             <% end %>
           </ul>
         </div>
-        <div class="row note-box">
+        <div class="row note-box-b">
           <h2 class="friend-header">Followed By</h2>
           <ul>
             <% for user in @user.inverse_friends %>
-              <li><%=h user.first_name %><%= user.last_name %></li>
+              <li>
+                <% name = [user.first_name, user.last_name].compact.join(' ') %>
+                <%= link_to name, profile_user_path(user.id) %>
+              </li>
             <% end %>
           </ul>
         </div>

@@ -1,0 +1,27 @@
+// Place all the styles related to the TimeBanks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+div.time-bank-index-content {
+  margin-top:100px;
+  margin-bottom:100px;
+  .time-bank-btn-list {
+    .time-bank-btn:nth-of-type(1) {
+      border-top: 2px solid black;
+    }
+    .time-bank-btn {
+      font-weight: 700;
+      width: 50%;
+      margin-left:auto;
+      margin-right:auto;
+      text-align: center;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      border-bottom: 2px solid black;
+
+      a {
+        color: black;
+      }
+    }
+  }
+
+}

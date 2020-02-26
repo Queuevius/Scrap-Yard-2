@@ -299,4 +299,18 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  config.omniauth :facebook, "330151050791429", "ce355290535fee9fb022497dbc1d7a83", callback_url: "http://localhost:3000/users/auth/facebook/callback", scope: 'email'
+
+  Devise.setup do |config|
+    # Add the credentials from your Google application to your secrets
+    client_id = "220062578732-lnnpuvq8bst7v74kb90p5d6cpfmeqopu.apps.googleusercontent.com"
+    client_secret = "RcsFFoI3xzWAThQJZdvqaUxz"
+    # Configure Google omniauth with proper scope
+    config.omniauth :google_oauth2, client_id, client_secret, {
+        scope: "contacts.readonly,userinfo.email"
+    }
+  end
+
+  config.omniauth :twitter, "App ID", "App Secret", callback_url: "http://localhost:3000/users/auth/twitter/callback"
 end

@@ -1,7 +1,7 @@
 class Room < ApplicationRecord
+  belongs_to :user
   has_many :messages, dependent: :destroy,
          inverse_of: :room
-
-  belongs_to :user, :class_name => 'User', :foreign_key => "reciever_id"
+  has_many :users, {:through=>:messages, :source=>"user"}
 
 end
