@@ -80,7 +80,10 @@
         <button class="dropbtn"><%= current_user.first_name %> <%= current_user.last_name %></button>
         <div class="dropdown-content">
           <%= link_to "Profile", profile_path(current_user), :class => "b1" %>
-          <%= link_to "Log out", destroy_user_session_path, :method => :delete  %>
+          <%= form_for(resource, as: resource_name,
+                       url: destroy_user_session_path, html: { method: :delete }) do |f| %>
+            <%= f.submit "Log out" %>
+          <% end %>
         </div>
       </div>
       <% else %>
