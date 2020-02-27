@@ -1,5 +1,6 @@
 <div class="row message-sidebar">
   <div class="row rooms-sidebar-box">
+    <%= link_to "Create a room", new_room_path, class: 'message-buttons-b btn-primary' %>
     <% if @rooms.present? %>
       <% @rooms.each do |room| %>
         <% if room.sender_id == current_user.id %>

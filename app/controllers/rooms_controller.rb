@@ -12,6 +12,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @room = Room.find(params[:id])
     @message = Message.new room: @room
     @messages = @room.messages.includes(:user)
 
@@ -30,10 +31,10 @@ class RoomsController < ApplicationController
   def create
     @room = Room.find_or_create_by permitted_parameters
 
-    if @room.save
+    if @room.save!
       redirect_to room_path(@room)
     else
-      redirect_to room_path(@room)
+      redirect_to rooms_path
     end
   end
 
