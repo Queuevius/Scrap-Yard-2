@@ -300,7 +300,7 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
-  config.omniauth :facebook, "330151050791429", "ce355290535fee9fb022497dbc1d7a83", callback_url: "http://localhost:3000/users/auth/facebook/callback", scope: 'email'
+  config.omniauth :facebook, "535713403826207", "b9d44aa60f4b705d2f13a3b8a69b995d", callback_url: "http://localhost:3000/users/auth/facebook/callback", scope: 'email'
 
   Devise.setup do |config|
     # Add the credentials from your Google application to your secrets
