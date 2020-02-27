@@ -1,0 +1,3 @@
+class TimeBank < ApplicationRecord
+
+end
