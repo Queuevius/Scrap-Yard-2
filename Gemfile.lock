@@ -138,6 +138,10 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffi (1.11.1)
     ffi (1.11.1-x64-mingw32)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
+    font-awesome-sass (5.12.0)
+      sassc (>= 1.11)
     friendly_id (5.3.0)
       activerecord (>= 4.0.0)
     globalid (0.4.2)
@@ -450,6 +454,8 @@ DEPENDENCIES
   exception_notification
   factory_girl_rails
   faker
+  font-awesome-rails
+  font-awesome-sass
   friendly_id
   jbuilder (~> 2.7)
   jquery-fileupload-rails

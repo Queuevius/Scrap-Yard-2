@@ -1,18 +1,17 @@
 <div class="container search-index-box">
   <div class="row post-header">
     <div class="col-md-6">
-      <h1>
-        <%=@post.title%><% if can_edit? @post %>
-          <a href="<%= edit_post_path @post %>?layer_id=<%= @current_layer.nil? ? '' : @current_layer.id %>"><button class="glyph-drop glyphicon glyphicon-pencil"></button>
-          </a>
-        <% end %>
-      </h1>
+      <h1><%=@post.title%></h1>
+      <% if can_edit? @post %>
+        <a><%= link_to 'Edit', edit_post_path %></a>
+        <a><%= link_to 'Delete', post_path(@post.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+      <% end %>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
       <p>
-        Area:  <%= @post.area.name %>
+        Area: <%= link_to @post.area.name, area_path(@post.area.id) %>
       </p>
     </div>
     <div class="col-md-3 col-md-offset-3">

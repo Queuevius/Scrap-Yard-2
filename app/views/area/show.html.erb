@@ -1,9 +1,14 @@
 <div class="container area-show-box">
   <div class="row note-title-c">
     <h1 class="media-heading"><%= @area_stats[0] %></h1>
+    <% if @area.creator_id = current_user.id %>
+      <a><%= link_to 'Edit', edit_post_path %></a> |
+      <a><%= link_to 'Delete', post_path(@area.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+    <% end %>
   </div>
   <div class="row area-show-layer">
-    Layer:
+    <div class="col-md-6 layer-box">
+      Layer:
       <select name="layer_sel" id="layer_sel">
         <% if @clayer.nil? %>
           <option value="/area/<%= @area.name %>" selected="selected">Public</option>
@@ -22,13 +27,22 @@
         <% end %>
         <option value="/area/<%= @area.name %>/new_layer">Add a new Layer.</option>
       </select>
+    </div>
+    <div class="col-md-3 col-md-offset-3">
+      <p class="text-right">
+        By <%= link_to @area.user.full_name, profile_user_path(id: @area.user.slug)  %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+
   </div>
   <div class="row area-show-body">
     <% if @clayer.nil? %>
       <%= @area.tag_body.try(:html_safe) %>
   </div>
   <div class="row box-link-row">
-    <div class="col-md-6">
+    <div class="box-links-2 col-md-6">
       <%= link_to new_post_path(post_type: 'Problem', area: @area_stats[0], area_layer: @clayer.try(:name)), class: "btn2a btn-primary" do %>
         <span class="glyphicon glyphicon-plus"></span>
         new Problem in "<%= @area_stats[0] %>"
@@ -38,17 +52,8 @@
         new Proposal in "<%= @area_stats[0] %>"
       <% end %>
     </div>
-    <div class="col-md-2 col-md-offset-2">
-      <% if @area.creator_id = current_user.id %>
-        <%= link_to "edit", edit_area_path(@area), class: "btn2" %>
-        <% end %>
-    </div>
-    <div class="col-md-2 col-md-offset-4">
-      <p class="text-right author">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: User.find(@area_stats[4]).slug), class: "btn2" %></p>
-    <% else %>
-      <%= @clayer.layer_body.try(:html_safe) %>
-      <p class="text-right author">By <%= link_to User.find(@area_stats[4]).full_name, profile_user_path(id: @clayer.creator.slug), class: "btn2" %></p>
-    <% end %>
+    <div class="box-links-2 col-md-2 col-md-offset-4">
+<% end %>
     </div>
   </div>
   <div class="row">

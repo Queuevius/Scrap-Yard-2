@@ -11,7 +11,7 @@
         <div class="row note-title">
           <h3 class="col-md-6 area-title-link">
             Area:
-            <%= link_to f.name, tagging_path(f) %>
+            <%= link_to f.name, area_path(f) %>
           </h3>
           <p class="col-md-2 col-md-offset-4">
             <% name = [f.user.first_name, f.user.last_name].compact.join(' ') %>

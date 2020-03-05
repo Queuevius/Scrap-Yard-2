@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 	
 	before_action :authenticate_user!
-	before_action :authorize_post, only: [:public_feed, :new_design, :new, :create, :edit, :update, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating, :homepage, :messages]
+	before_action :authorize_post, only: [:public_feed, :new_design, :new, :create, :edit, :update, :destroy, :show, :new_layer, :create_layer, :create_token, :all_tokens, :show_token, :add_rating, :homepage, :messages]
 	after_action :set_tag_creator, :set_area_layer_assoc, only: [:create]
 	skip_before_action :authenticate_user!, only: [:show, :index, :search_index, :show_token, :area_index, :area_layer, :homepage]
 
@@ -22,6 +22,8 @@ class PostsController < ApplicationController
     @areas = Tag.all
 
     @feed = (@posts + @areas).sort_by{|e| e["created_at DESC"]}
+
+		@area = Tag.find_by_name(params[:tags_filter])
 	end
 
 	def index
@@ -117,6 +119,13 @@ class PostsController < ApplicationController
 		else 
 			render :edit
 		end
+	end
+
+	def destroy
+		@post = Post.friendly.find(params[:id])
+		@post.destroy
+
+		redirect_to posts_path
 	end
 
 

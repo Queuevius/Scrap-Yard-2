@@ -29,13 +29,24 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.find_or_create_by permitted_parameters
+    find_room = Room.where('(sender_id = :sender_id AND reciever_id = :reciever_id) OR
+      (sender_id = :reciever_id AND reciever_id = :sender_id)',
+               room: permitted_parameters[:room],
+               sender_id: permitted_parameters[:sender_id],
+               reciever_id: permitted_parameters[:reciever_id]).first
 
-    if @room.save!
-      redirect_to room_path(@room)
+    if find_room.present?
+      redirect_to room_path(find_room)
     else
-      redirect_to rooms_path
+      @room = Room.new(params.required(permitted_parameters))
+
+      if @room.save!
+        redirect_to room_path(@room)
+      else
+        redirect_to rooms_path
+      end
     end
+
   end
 
   def edit

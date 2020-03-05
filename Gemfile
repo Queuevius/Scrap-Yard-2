@@ -73,6 +73,8 @@ gem 'bootstrap_form'
 gem 'simple_form'
 gem 'redis'
 gem 'redis-rails'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass'
 
 # Locale data for Rails. Rails already comes with i18n capabilities (e.g.,
 # translate model attributes, possibility to place all of the app's strings in

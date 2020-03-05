@@ -4,6 +4,4 @@ class Room < ApplicationRecord
          inverse_of: :room
   has_many :users, {:through=>:messages, :source=>"user"}
 
-
-
 end

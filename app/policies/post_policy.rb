@@ -47,6 +47,10 @@ class PostPolicy < ApplicationPolicy
     true 
   end
 
+  def destroy?
+    true
+  end
+
   def new_layer?
     true
   end

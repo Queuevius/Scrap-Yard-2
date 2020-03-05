@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <div class="row message-sidebar">
   <div class="row rooms-sidebar-box">
     <%= link_to "Create a room", new_room_path, class: 'message-buttons-b btn-primary' %>
@@ -13,9 +14,8 @@
                 </a>
               <% end %>
             <% end %>
-            <% end %>
+          <% end %>
           <div class="row message-sidebar-rows">
-
             <%= link_to room.sender_id, room_path(room), class: 'message-buttons btn-primary' %>
           </div>
         <% end %>
@@ -34,7 +34,7 @@
           <div class="row message-sidebar-rows">
             <%= f.hidden_field :reciever_id, :value => friendship.friend.id %>
             <%= f.hidden_field :sender_id, :value => current_user.id %>
-            <%= f.submit name, class: 'message-buttons' %>
+            <%= f.submit name, class: 'message-buttons-c text-left' %>
           </div>
         <% end %>
       <% end %>
@@ -47,9 +47,10 @@
         <div class="row message-sidebar-rows">
           <%= f.hidden_field :reciever_id, :value => user.id %>
           <%= f.hidden_field :sender_id, :value => current_user.id %>
-          <%= f.submit nameB, class: 'message-buttons' %>
+          <%= f.submit nameB, class: 'message-buttons-c text-left' %>
         </div>
       <% end %>
     <% end %>
   </div>
+</div>
 </div>

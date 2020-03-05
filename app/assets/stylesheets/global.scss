@@ -11,19 +11,21 @@
 }
 
 .nav-link {
-
   text-decoration: none;
   color: black;
   margin-left: 10px;
   font-size: 16px;
-
 }
 
 .nav-link:hover {
   text-decoration: none;
   font-size: 16px;
-  background-color: lightgrey;
   border-radius: 10px;
+}
+
+.nav-link-box {
+  padding-top: 20px;
+  padding-right: 5px;
 }
 
 
@@ -128,6 +130,11 @@
 .dropdown:hover .dropbtn {
   background-color: #BBBBBB;
 }
+
+.icon-box-nav {
+  padding: 23px 10px 0px 10px;
+}
+
 
 //homepage
 
@@ -244,6 +251,10 @@
 
 .login-cont {
   margin-top: 100px;
+}
+
+.icon-box {
+  padding: 0px 10px 0px 10px;
 }
 
 //devise edit
@@ -390,6 +401,10 @@
 .area-show-box {
   margin-top: 100px;
   margin-bottom: 100px
+}
+
+.layer-box {
+  padding-top: 15px;
 }
 
 .author {
@@ -897,11 +912,44 @@ tr:hover {
   display: inline-block;
 }
 
+.message-buttons-b {
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+  display: block;
+  background-color: #BBBBBB;
+}
+
+.message-buttons-b:hover {
+  background-color: grey;
+}
+
 .message-buttons {
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
   display: block;
+  background-color: #BBBBBB;
+}
+
+.message-buttons:hover {
+  background-color: grey;
+}
+
+.message-buttons-c {
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: block;
+  background-color: #BBBBBB;
+  border: none;
+  width: 100%;
+  color: white;
+}
+
+.message-buttons:hover {
+  background-color: grey;
 }
 
 .chat-message-container-b {
