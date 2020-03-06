@@ -56,7 +56,6 @@ gem 'mail_form'
 # HTTP caching
 gem 'rack-cache'
 # Add tinymce in posts forms
-gem 'tinymce-rails'
 
 # jquery-ui in assets pipeline
 gem 'jquery-ui-rails'
