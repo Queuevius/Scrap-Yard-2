@@ -48,7 +48,7 @@ class AreaController < ApplicationController
 	end
 
   def show
-		@area  = Tag.friendly.find(params[:id])
+		@area  = Tag.friendly.find_by(id: params[:id])
   	unless params[:layer].blank?
       @layers = @area.layers 
 			@clayer = @area.layers.find_by_name(params[:layer]) 
