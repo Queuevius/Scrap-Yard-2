@@ -140,8 +140,7 @@
             <p id="tkn-info">
               Give the details of the Note token.
             </p>
-            <%= text_area_tag "token_body","",name: 'token_body', class: "tinymce", rows: 40 , cols: 120 %>
-            <%= tinymce %>
+            <%= text_area_tag "token_body","",name: 'token_body' %>
             <%= hidden_field_tag(:span_id) %>
             <%= hidden_field_tag(:tkntype) %>
             <%= hidden_field_tag(:layer_id) %>

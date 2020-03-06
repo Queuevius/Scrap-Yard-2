@@ -21,7 +21,7 @@ class AreaController < ApplicationController
 	end
 
 	def edit
-		@ep  = Tag.friendly.find(params[:id])
+		@ep  = Tag.find(params[:id])
 		unless params[:layer_id].blank?
 			@ep.tag_body =  @ep.layers.find_by_id(params[:layer_id]).layer_body
 			@current_layer = @ep.layers.find_by_id(params[:layer_id])
@@ -31,7 +31,7 @@ class AreaController < ApplicationController
 	end
 
 	def update
-		@ep = Tag.friendly.find(params[:id])
+		@ep = Tag.find(params[:id])
 
 		if params[:layer_id].blank?
 			updated = @ep.update(tag_params)
@@ -48,7 +48,7 @@ class AreaController < ApplicationController
 	end
 
   def show
-		@area  = Tag.friendly.find_by(id: params[:id])
+		@area  = Tag.find(params[:id])
   	unless params[:layer].blank?
       @layers = @area.layers 
 			@clayer = @area.layers.find_by_name(params[:layer]) 
@@ -90,7 +90,7 @@ class AreaController < ApplicationController
 
 
   def initialize_area
-  	@area = Tag.friendly.find_by_name(params[:id])
+  	@area = Tag.find_by_name(params[:id])
   end
   
   def authorize_tag
