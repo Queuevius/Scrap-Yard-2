@@ -11,7 +11,7 @@ ruby '2.6.4'
 gem 'pg'
 # gem 'mysql2', '~> 0.4.9'
 
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 3'
 gem "jquery-fileupload-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
