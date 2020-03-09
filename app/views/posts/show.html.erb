@@ -108,10 +108,12 @@
             <span class="glyphicon glyphicon-star-empty"></span>
           <% end %>
         <% end %>
-        <% unless @rated.nil? %>
-          <span id="rated"><i>You Rated <strong class="rate_count"> <%= @rated.score %></strong> Stars.</i></span>
-        <% else %>
-          <span id="rated" style="display: none;"><i>You Rated <strong class="rate_count"></strong> Stars.</i></span>
+        <% if user_signed_in? %>
+          <% unless @rated.nil? %>
+            <span id="rated"><i>You Rated <strong class="rate_count"> <%= @rated.score %></strong> Stars.</i></span>
+          <% else %>
+            <span id="rated" style="display: none;"><i>You Rated <strong class="rate_count"></strong> Stars.</i></span>
+          <% end %>
         <% end %>
       </div></b>
     </div>
@@ -186,11 +188,12 @@
     </div>
   </div>
 
-
-<% content_for :token_purse do %>
-  <span class='tkn-n token' data-type='Note'>N</span><span id="n_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[0] %></span>
-  <span class='tkn-n token' data-type='Debate'>D</span><span id="d_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[1] %></span>
-  <span class='tkn-n token' data-type='Question'>Q</span><span id="q_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[2] %></span>
+<% if user_signed_in? %>
+  <% content_for :token_purse do %>
+    <span class='tkn-n token' data-type='Note'>N</span><span id="n_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[0] %></span>
+    <span class='tkn-n token' data-type='Debate'>D</span><span id="d_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[1] %></span>
+    <span class='tkn-n token' data-type='Question'>Q</span><span id="q_rem_count" class='label label-danger' style="border-radius: 50%"><%= @tokens_count[2] %></span>
+  <% end %>
 <% end %>
 </div>
 

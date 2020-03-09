@@ -143,17 +143,22 @@ class PostsController < ApplicationController
 	def show
 		@track = Tracking.new
 		@post  = Post.friendly.find(params[:id])
-		@rated = Rating.where({rateable_id: @post.id, rateable_type: @post.class.to_s, creator_id: current_user.id}).first
-		@tokens_count = current_user.remaining_token_limit
+		if user_signed_in?
+			@rated = Rating.where({rateable_id: @post.id, rateable_type: @post.class.to_s, creator_id: current_user.id}).first
+			@tokens_count = current_user.remaining_token_limit
+
+			Notification.where(notifiable_id: @post.id).where(recipient_id: current_user.id).where(read_at: nil).each do |t|
+				t.update!(read_at: Time.now)
+			end
+		end
 		@layers = @post.layers
 		if params[:layer]
 			@current_layer = @post.layers.find_by_name(params[:layer]) 
 		else
 			@current_layer = nil
 		end
-		Notification.where(notifiable_id: @post.id).where(recipient_id: current_user.id).where(read_at: nil).each do |t|
-			t.update!(read_at: Time.now)
-		end
+
+
 	end
 
 	def new_layer 

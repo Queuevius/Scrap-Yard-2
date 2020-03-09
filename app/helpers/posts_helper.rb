@@ -1,6 +1,8 @@
 module PostsHelper
 	def can_edit? post
-		current_user.id == post.creator_id || current_user.admin?
+		if user_signed_in?
+			current_user.id == post.creator_id || current_user.admin?
+		end
 	end
 
 	def area_label post , tag_name 

@@ -18,7 +18,9 @@ class ApplicationController < ActionController::Base
   # Require authentication for all requests. Add
   # skip_before_action :authenticate_user! to controllers that should not
   # require authentication.
-  before_action :authenticate_user!, unless: :devise_controller? 
+
+  before_action :configure_permitted_parameters, if: :devise_controller?
+
 
   # Display user-friendly errors for the following exceptions
   rescue_from Pundit::NotAuthorizedError,
@@ -29,6 +31,11 @@ class ApplicationController < ActionController::Base
   layout :set_layout
 
   private
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password, :first_name, :last_name, :bio)}
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:email, :password, :first_name, :last_name, :bio)}
+  end
 
   # Choose from 3 types of layouts: guest (not logged-in), user or admin
   def set_layout
