@@ -1,13 +1,11 @@
 class AreaController < ApplicationController
   
 	#before_action :authorize_tag, only: [:new, :create]
-	before_action :authenticate_user!
 
 	before_action :initialize_area, only: [:show , :new_layer, :create_layer ]
 
 	after_action :authorize_tag, only: [:new, :create, :edit, :update, :show, :new_layer, :create_layer]
 
-  skip_before_action :authenticate_user!, only: [:show]
 
   def new
   	@tag = Tag.new 

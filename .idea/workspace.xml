@@ -538,7 +538,7 @@
       <workItem from="1583424062266" duration="8411000" />
       <workItem from="1583454389606" duration="4106000" />
       <workItem from="1583506100572" duration="5773000" />
-      <workItem from="1583760927282" duration="8880000" />
+      <workItem from="1583760927282" duration="9187000" />
     </task>
     <task id="LOCAL-00001" summary="global update">
       <created>1580930180204</created>
@@ -565,7 +565,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417603000" />
+    <option name="totallyTimeSpent" value="417910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -615,9 +615,6 @@
     <SUITE FILE_PATH="coverage/Needpedia_profile@Development__Needpedia_profile.rcov" NAME="Development: Needpedia-profile Coverage Results" MODIFIED="1583765972288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Needpedia-profile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/notification.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/layer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -922,6 +919,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="65" column="14" lean-forward="true" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
