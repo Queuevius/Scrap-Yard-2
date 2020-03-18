@@ -14,7 +14,7 @@ class NotificationsController < ApplicationController
 
   def update
     if @notification.update(params.required(:notification).permit(:recipient_id, :actor_id,
-                                                                  :read_at, :action, :notifiable_id, :notifiable_type))
+                                                                  :read_at, :action, :notifiable_id, :room_id, :notifiable_type))
       redirect_to @notification
     else
       render root_path

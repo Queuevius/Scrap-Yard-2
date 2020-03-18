@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
                                        message: params.dig(:message, :message)
 
     if @message.save!
-      Notification.create!(recipient_id: @room.reciever_id, actor_id: current_user.id, action: "message", notifiable: @message)
+      Notification.create!(recipient_id: @room.reciever_id, actor_id: current_user.id, room_id: @room.id, action: "message", notifiable: @message)
       redirect_back(fallback_location: rooms_path)
     else
       render rooms_path

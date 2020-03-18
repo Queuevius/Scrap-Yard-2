@@ -48,6 +48,8 @@ class User < ApplicationRecord
 
   has_many :tags, :through => :taggings, :foreign_key => "creator_id"
 
+  has_many :friends_posts, through: :friends, source: :posts
+
 
   
 

@@ -18,10 +18,7 @@ class PostsController < ApplicationController
 	def public_feed
 		policy_scope(Profile) if current_user
 
-		@posts = Post.all
-    @areas = Tag.all
-
-    @feed = (@posts + @areas).sort_by{|e| e["created_at DESC"]}
+    @feed = Tag.all.sort_by{|e| e["created_at DESC"]}
 
 		@area = Tag.find_by_name(params[:tags_filter])
 	end

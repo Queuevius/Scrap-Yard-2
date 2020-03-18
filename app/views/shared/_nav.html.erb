@@ -18,38 +18,17 @@
         <button class="dropbtn" type="submit">Go!</button>
       </ul>
     </form>
-    <ul class="nav navbar-nav text-center nav-link-box">
-      <%= link_to public_feed_path do %>
-        <div class="nav-link">
-          <%= fa_icon "fab globe 2x" %> Recent Activity
-        </div>
-      <% end %>
-    </ul>
-    <ul class="nav navbar-nav text-center nav-link-box">
-      <%= link_to posts_path do %>
-        <div class="nav-link">
-          <%= fa_icon "fab tag 2x" %> All Areas
-        </div>
-      <% end %>
-    </ul>
-    <ul class="nav navbar-nav text-center nav-link-box">
-      <%= link_to profiles_path do %>
-        <div class="nav-link">
-          <%= fa_icon "fab bars 2x" %> Friend's Activity
-        </div>
-      <% end %>
-    </ul>
-    <ul class="nav navbar-nav text-center nav-link-box">
-      <%= link_to time_banks_path do %>
-        <div class="nav-link">
-          <%= fa_icon "fab bank 2x" %> Time Bank
-        </div>
-      <% end %>
-    </ul>
-
 
     <ul class="nav navbar-nav pull-right nav-links">
     <% if user_signed_in? %>
+      <ul class="nav navbar-nav text-center nav-link-box">
+        <%= link_to public_feed_path do %>
+          <div class="nav-link">
+            <%= fa_icon "fab globe 2x" %>
+          </div>
+        <% end %>
+      </ul>
+
       <div class="dropdown icon-box">
         <%= fa_icon "fab bell 2x" %>
         <div class="dropdown-content">
@@ -57,20 +36,20 @@
             <%= link_to t.notifiable_type, post_path(t.notifiable_id) %>
           <% end %>
           <% Notification.where(notifiable_type: "Post").where(recipient_id: current_user).where(read_at: nil).nil? %>
-            <%= link_to "No Notifications", posts_path %>
+            <%= link_to "Recent Activity", profiles_path %>
         </div>
       </div>
+
       <div class="dropdown icon-box">
         <%= fa_icon "fab envelope 2x" %>
         <div class="dropdown-content">
           <% Notification.where(notifiable_type: "Message").where(recipient_id: current_user).where(read_at: nil).each do |t|%>
-            <%= link_to t.notifiable_type, rooms_path %>
+            <%= link_to t.notifiable_type, room_path(t.room_id) %>
           <% end %>
           <% Notification.where(notifiable_type: "Message").where(recipient_id: current_user).where(read_at: nil).nil? %>
-            <%= link_to "No Messages", rooms_path %>
+            <%= link_to "All Messages", rooms_path %>
         </div>
       </div>
-
 
       <div class="dropdown icon-box-nav">
         <%= fa_icon "fab users 2x" %>
@@ -81,8 +60,13 @@
           <% end %>
         </div>
       </div>
+
+      <div class="icon-box">
+        <%= link_to image_tag("timebank.png"), time_banks_path %>
+      </div>
+
       <div class="dropdown icon-box">
-        <%= fa_icon "fab user 2x" %> <b> <%= current_user.first_name %> <%= current_user.last_name %></b>
+        <b> <%= current_user.first_name %> <%= current_user.last_name %></b>
         <div class="dropdown-content">
           <%= link_to "Profile", profile_path(current_user), :class => "b1" %>
           <%= form_for(resource, as: resource_name,
@@ -91,6 +75,7 @@
           <% end %>
         </div>
       </div>
+
       <% else %>
       <li class="nav-link">
         <%= link_to 'Sign in', new_user_session_path %>

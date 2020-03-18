@@ -1,6 +1,7 @@
 class Message < ApplicationRecord
   belongs_to :user, :class_name => 'User', :foreign_key => "user_id"
   belongs_to :room, inverse_of: :messages
+  has_many :notifications
 
 
   def as_json(options)

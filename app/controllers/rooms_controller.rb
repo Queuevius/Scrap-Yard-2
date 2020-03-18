@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
     @messages = @room.messages.includes(:user)
 
     @room.messages.each do |p|
-     Notification.where(notifiable_id: p.id).where(read_at: nil).each do |t|
+     Notification.where(notifiable_id: p.id).where(recipient_id: current_user.id).where(read_at: nil).each do |t|
       t.update!(read_at: Time.now)
      end
     end
@@ -29,28 +29,20 @@ class RoomsController < ApplicationController
   end
 
   def create
-    find_room = Room.where('(sender_id = :sender_id AND reciever_id = :reciever_id) OR
+    room = Room.where('(sender_id = :sender_id AND reciever_id = :reciever_id) OR
       (sender_id = :reciever_id AND reciever_id = :sender_id)',
                room: permitted_parameters[:room],
                sender_id: permitted_parameters[:sender_id],
-               reciever_id: permitted_parameters[:reciever_id]).first
+               reciever_id: permitted_parameters[:reciever_id]).first_or_create!(permitted_parameters)
 
-    if find_room.present?
-      redirect_to room_path(find_room)
-    else
-      @room = Room.new(params.required(permitted_parameters))
+    redirect_to room_path(room.id)
 
-      if @room.save!
-        redirect_to room_path(@room)
-      else
-        redirect_to rooms_path
-      end
-    end
 
   end
 
-  def edit
 
+  def edit
+    @room.find(params[:id])
   end
 
   def update

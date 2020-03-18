@@ -8,14 +8,19 @@ class ProfilesController < ApplicationController
   def index
     policy_scope(Profile) if current_user
 
-    @posts = Post.all
-    @wants = Want.all
-    @haves = Have.all
-    @pics = Pic.all
-    @video = Video.all
-    @areas = Tag.all
+    @ids = current_user.friendships.map{|f| f.id}
 
-    @feed = (@posts + @wants + @haves + @pics + @video + @areas).sort_by{|e| e["created_at DESC"]}
+    @posts = Post.where(creator_id: @ids)
+
+    @wants = Want.where(user_id: @ids)
+    @haves = Have.where(user_id: @ids)
+    @pics = Pic.where(user_id: @ids)
+    @video = Video.where(user_id: @ids)
+    @areas = Tag.where(creator_id: @ids)
+
+
+      @feed = (@posts + @wants + @haves + @pics + @video + @areas).sort_by{|e| e["created_at DESC"]}
+
   end
 
   def profile_posts
