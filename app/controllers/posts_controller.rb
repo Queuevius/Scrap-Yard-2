@@ -115,14 +115,26 @@ class PostsController < ApplicationController
 			redirect_to post_path @post
 		else 
 			render :edit
-		end
+    end
+
+    @delete  = Post.friendly.find(params[:id])
+
+    if params[:layer_id].blank?
+      updated = @delete.update(post_params)
+    else
+      updated = @delete.update(title: post_params[:title])
+      updated = @delete.layers.find_by_id(params[:layer_id]).update(layer_body: post_params[:post_body])
+    end
+
+    if updated
+      root_path
+    else
+      render :edit
+    end
 	end
 
 	def destroy
-		@post = Post.friendly.find(params[:id])
-		@post.destroy
 
-		redirect_to posts_path
 	end
 
 
@@ -153,7 +165,15 @@ class PostsController < ApplicationController
 			@current_layer = @post.layers.find_by_name(params[:layer]) 
 		else
 			@current_layer = nil
-		end
+    end
+
+    @delete  = Post.friendly.find(params[:id])
+    unless params[:layer_id].blank?
+      @delete.post_body =  @delete.layers.find_by_id(params[:layer_id]).layer_body
+      @current_layer = @delete.layers.find_by_id(params[:layer_id])
+    else
+      @current_layer = nil
+    end
 
 
 	end

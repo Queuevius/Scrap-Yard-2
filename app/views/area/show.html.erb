@@ -1,12 +1,7 @@
 <div class="container area-show-box">
   <div class="row note-title-c">
     <h1 class="media-heading"><%= @area_stats[0] %></h1>
-    <% if user_signed_in? %>
-      <% if @area.creator_id = current_user.id %>
-        <a><%= link_to 'Edit', edit_post_path %></a> |
-        <a><%= link_to 'Delete', post_path(@area.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
-      <% end %>
-    <% end %>
+
   </div>
   <div class="row area-show-layer">
     <div class="col-md-6 layer-box">
@@ -54,6 +49,25 @@
         new Proposal in "<%= @area_stats[0] %>"
       <% end %>
     </div>
+    <% if user_signed_in? %>
+      <% if @area.creator_id = current_user.id %>
+        <div class="col-md-1 col-md-offset-4">
+          <a><%= link_to 'Edit', edit_post_path, class: "btn btn-success btn-black" %></a>
+        </div>
+        <div class="col-md-1">
+            <%= bootstrap_form_for(@delete,
+                                   url: area_path(@delete),
+                                   html: { method: :put }) do |f| %>
+
+              <div class="form-group">
+                <%= f.hidden_field :tag_body, :value => "[deleted]" %>
+                <%= f.submit "Delete", data: { confirm: 'Are you sure?' }, class: "btn btn-success btn-black" %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
     <div class="box-links-2 col-md-2 col-md-offset-4">
 <% end %>
     </div>
@@ -73,6 +87,7 @@
             </h2>
           </div>
         </div>
+
         <div class="row response-box">
           <%= render partial: 'posts_list_item' %>
         </div>

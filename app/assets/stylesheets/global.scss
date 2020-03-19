@@ -363,6 +363,24 @@
   padding: 8px 8px 8px 8px;
 }
 
+.btn-black {
+  color: white;
+  background-color: black;
+}
+
+.btn-black-2 {
+  color: white;
+  background-color: black;
+  margin-top: 20px;
+}
+
+.btn-plain {
+  border: none;
+  display: inline-block;
+  background-color: black;
+  color: white;
+
+}
 //post index list
 
 .post-card-box {
@@ -503,6 +521,20 @@
 }
 
 .btn2a:hover {
+  background-color: slategrey;
+  text-decoration: none;
+}
+
+.btn2b {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.btn2b:hover {
   background-color: slategrey;
   text-decoration: none;
 }

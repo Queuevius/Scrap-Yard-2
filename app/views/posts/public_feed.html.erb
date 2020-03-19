@@ -1,8 +1,17 @@
 <div class="container search-index-box">
   <div class="row post-header">
-    <h1>
-      Public Feed
-    </h1>
+    <div class="col-md-6">
+      <h1>
+        Public Feed
+      </h1>
+    </div>
+    <div class="col-md-3 col-md-offset-3 align-right">
+      <%= link_to new_area_path , class: "btn2b btn-primary" do %>
+        <span class="glyphicon glyphicon-plus"></span>
+        Create a new Area
+      <% end %>
+    </div>
+
   </div>
 
   <% @feed.each do |f| %>

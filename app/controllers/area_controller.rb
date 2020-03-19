@@ -45,6 +45,21 @@ class AreaController < ApplicationController
 		else
 			render :edit
 		end
+
+		@delete = Tag.find(params[:id])
+
+		if params[:layer_id].blank?
+			updated = @delete.update(tag_params)
+		else
+			updated = @delete.update(title: tag_params[:name])
+			updated = @delete.layers.find_by_id(params[:layer_id]).update(layer_body: tag_params[:tag_body])
+		end
+
+		if updated
+			root_path
+		else
+			render :edit
+		end
 	end
 
   def show
@@ -66,7 +81,15 @@ class AreaController < ApplicationController
 					area_stats[1][1],
 					area_stats[2][1],
 					@area.creator_id
-				]				
+				]
+
+		@delete  = Tag.find(params[:id])
+		unless params[:layer_id].blank?
+			@delete.tag_body =  @delete.layers.find_by_id(params[:layer_id]).layer_body
+			@current_layer = @delete.layers.find_by_id(params[:layer_id])
+		else
+			@current_layer = nil
+		end
   end
 
   def new_layer

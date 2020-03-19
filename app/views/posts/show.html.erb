@@ -2,11 +2,23 @@
   <div class="row post-header">
     <div class="col-md-6">
       <h1><%=@post.title%></h1>
-      <% if can_edit? @post %>
-        <a><%= link_to 'Edit', edit_post_path %></a>
-        <a><%= link_to 'Delete', post_path(@post.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
-      <% end %>
     </div>
+    <div class="col-md-1 col-md-offset-4">
+      <% if can_edit? @post %>
+        <a><%= link_to 'Edit', edit_post_path, class: "btn btn-success btn-black-2" %></a>
+        </div>
+        <div class="col-md-1">
+          <%= bootstrap_form_for(@delete,
+                                 url: post_path(@delete) + "?layer_id=" + ( @current_layer.nil? ? '' : @current_layer.id).to_s ,
+                                 html: { method: :put }) do |f| %>
+
+            <div class="form-group">
+              <%= f.hidden_field :post_body, :value => "[deleted]" %>
+              <%= f.submit "Delete", data: { confirm: 'Are you sure?' }, class: "btn btn-success btn-black-2"  %>
+            </div>
+          <% end %>
+      <% end %>
+      </div>
   </div>
   <div class="row">
     <div class="col-md-6">
@@ -21,13 +33,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-1">
       <% if @post.post_type == 'Problem'%>
         <%= link_to posts_path(post_type: 'Idea', tags_filter: @post.all_tags.split(", ")[0], parent_id: @post.id) do %>
           <span class="btn3"><%= @post.ideas.count %> Ideas</span>
         <% end %>
       <% end %>
     </div>
+
     <div class="col-md-3 col-md-offset-6">
       Layer:
       <select name="layer_sel" id="layer_sel">
