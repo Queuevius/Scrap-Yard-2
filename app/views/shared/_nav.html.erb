@@ -20,7 +20,6 @@
     </form>
 
     <ul class="nav navbar-nav pull-right nav-links">
-    <% if user_signed_in? %>
       <ul class="nav navbar-nav text-center nav-link-box">
         <%= link_to public_feed_path do %>
           <div class="nav-link">
@@ -28,7 +27,7 @@
           </div>
         <% end %>
       </ul>
-
+    <% if user_signed_in? %>
       <div class="dropdown icon-box">
         <%= fa_icon "fab bell 2x" %>
         <div class="dropdown-content">
@@ -44,7 +43,7 @@
         <%= fa_icon "fab envelope 2x" %>
         <div class="dropdown-content">
           <% Notification.where(notifiable_type: "Message").where(recipient_id: current_user).where(read_at: nil).each do |t|%>
-            <%= link_to t.notifiable_type, room_path(t.room_id) %>
+            <%= link_to [t.actor_id, t.notifiable_type].join(" sent a "), room_path(t.room_id) %>
           <% end %>
           <% Notification.where(notifiable_type: "Message").where(recipient_id: current_user).where(read_at: nil).nil? %>
             <%= link_to "All Messages", rooms_path %>
@@ -66,7 +65,7 @@
       </div>
 
       <div class="dropdown icon-box">
-        <b> <%= current_user.first_name %> <%= current_user.last_name %></b>
+        <h4><b> <%= current_user.first_name %> <%= current_user.last_name %></b></h4>
         <div class="dropdown-content">
           <%= link_to "Profile", profile_path(current_user), :class => "b1" %>
           <%= form_for(resource, as: resource_name,
@@ -77,10 +76,10 @@
       </div>
 
       <% else %>
-      <li class="nav-link">
+      <li class="nav-link-devise">
         <%= link_to 'Sign in', new_user_session_path %>
       </li>
-      <li class="nav-link">
+      <li class="nav-link-devise">
         <%= link_to 'Sign up', new_user_registration_path %>
       </li>
 

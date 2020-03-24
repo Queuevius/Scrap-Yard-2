@@ -6,19 +6,17 @@
       <h1>Create an Area</h1>
     </div>
     <div class="panel-body area-form-body">
-      <%= form_for(@tag,
+      <%= bootstrap_form_for(@tag,
                    url: area_create_path,
                    html: { method: :post }) do |f| %>
 
         <div class="form-group required">
-          <%= f.label "Area name" %>
-          <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Please specify a name to the Layer you are adding." %>
+          <%= f.text_field :name, label: "Area Name", autofocus: true, class: "form-control", placeholder: "Please specify a name to the Layer you are adding." %>
           <%= f.hidden_field :creator_id, :value => current_user.id %>
         </div>
 
         <div class="form-group">
-          <%= f.label "Describe the area more" %>
-          <%= f.text_area :tag_body  %>
+          <%= f.text_area :tag_body, label: "Describe the area more"  %>
         </div>
 
         <%= f.submit "Create Area", class: "btn btn-primary" %>

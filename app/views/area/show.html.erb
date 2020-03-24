@@ -52,7 +52,7 @@
     <% if user_signed_in? %>
       <% if @area.creator_id = current_user.id %>
         <div class="col-md-1 col-md-offset-4">
-          <a><%= link_to 'Edit', edit_post_path, class: "btn btn-success btn-black" %></a>
+          <a><%= link_to 'Edit', edit_area_path, class: "btn btn-success btn-black" %></a>
         </div>
         <div class="col-md-1">
             <%= bootstrap_form_for(@delete,
