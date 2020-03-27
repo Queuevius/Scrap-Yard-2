@@ -140,7 +140,7 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
-		@post.creator_id = @current_user.id  
+		@post.creator_id = current_user.id
 		if @post.save
 			Notification.create!(recipient_id: @post.area.creator_id, actor_id: current_user.id, action: "post", notifiable: @post)
 			redirect_to post_path @post

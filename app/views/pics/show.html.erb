@@ -14,13 +14,21 @@
       </div>
     </div>
   <div class="row box-link-row">
-    <div class="box-links-2 col-md-3">
+    <div class="box-links-2 col-md-1">
       <% if user_signed_in? %>
         <% if current_user.id == @pic.user_id %>
           <%= link_to "Edit", edit_pic_path(@pic), class: "b2" %>
         <% end %>
       <% else %>
         <p><b><%= @pic.user.first_name %> <%= @pic.user.last_name %></b></p>
+      <% end %>
+    </div>
+    <div class="box-links-2 col-md-2">
+      <% if user_signed_in? %>
+        <% if current_user.id == @pic.user_id %>
+          <%= link_to 'Destroy', pic_path(@pic),
+                      method: :delete, data: { confirm: 'Are you sure?' }, class: "b2" %>
+        <% end %>
       <% end %>
     </div>
     <div class="box-links-2 col-md-3 col-md-offset-6 text-right">

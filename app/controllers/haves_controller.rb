@@ -1,6 +1,6 @@
 class HavesController < ApplicationController
   layout 'profiles'
-  after_action :authorize_have, only: [ :index, :show, :update, :edit, :new, :create]
+  after_action :authorize_have, only: [ :index, :show, :update, :edit, :new, :create, :destroy]
 
   def index
     policy_scope(Have) if current_user
@@ -47,6 +47,14 @@ class HavesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @have = Have.find(params[:id])
+    @have.destroy
+
+    @have.delete
+    redirect_to haves_path, notice: "Your post was deleted successfully"
   end
 
   private

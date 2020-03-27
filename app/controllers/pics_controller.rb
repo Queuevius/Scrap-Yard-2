@@ -5,7 +5,7 @@ class PicsController < ApplicationController
 
   def index
     policy_scope(Pic) if current_user
-    @pic = Pic.all
+    @pic = Pic.all.sort_by{|e| e["created_at DESC"]}
   end
 
   def show
@@ -39,6 +39,14 @@ class PicsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @pic = Pic.find(params[:id])
+    @pic.destroy
+
+    @pic.delete
+    redirect_to pics_path, notice: "Your picture was deleted successfully"
   end
 
   private

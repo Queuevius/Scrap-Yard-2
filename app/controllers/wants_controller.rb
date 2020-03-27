@@ -1,6 +1,6 @@
 class WantsController < ApplicationController
   layout 'profiles'
-  after_action :authorize_want, only: [ :index, :show, :update, :edit, :new, :create]
+  after_action :authorize_want, only: [ :index, :show, :update, :edit, :new, :create, :destroy]
 
   def index
     policy_scope(Have) if current_user
@@ -44,6 +44,14 @@ class WantsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @want = Want.find(params[:id])
+    @want.destroy
+
+    @want.delete
+    redirect_to wants_path, notice: "Your post was deleted successfully"
   end
 
   private

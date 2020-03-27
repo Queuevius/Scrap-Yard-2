@@ -836,12 +836,12 @@
   padding: 8px 8px 8px 8px;
 }
 
-.b4:hover {
+.b4a {
   text-size: 20px;
   text-decoration: none;
   background-color: #404040;
   color: white;
-  padding: 8px 8px 8px 8px;
+  padding: 12px 8px 12px 8px;
 }
 
 .profile-btn {
@@ -849,7 +849,7 @@
 }
 
 .friend-box {
-  margin-top: 50px;
+
 }
 
 .friend-header {
@@ -863,6 +863,15 @@
   padding-left: 15px;
 }
 
+.profile-button-box {
+  margin:0 auto;
+}
+
+.clean-btn {
+  border: none;
+  display: inline-block;
+
+}
 //form
 
 .form-box {

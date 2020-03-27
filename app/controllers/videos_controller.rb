@@ -1,12 +1,12 @@
 class VideosController < ApplicationController
   layout 'profiles'
 
-  after_action :authorize_video, only: [:index, :show, :create, :update, :edit, :new]
+  after_action :authorize_video, only: [:index, :show, :create, :update, :edit, :new, :destroy]
 
   def index
     policy_scope(Video) if current_user
 
-    @video = Video.all
+    @video = Video.all.sort_by{|e| e["created_at DESC"]}
   end
 
   def show
@@ -39,6 +39,14 @@ class VideosController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @video = Video.find(params[:id])
+    @video.destroy
+
+    @video.delete
+    redirect_to videos_path, notice: "Your video was deleted successfully"
   end
 
   private

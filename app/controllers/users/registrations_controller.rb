@@ -22,6 +22,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     root_path
   end
 
+  def after_update_path_for(_resource)
+    profiles_path
+  end
+
   # The path used after sign up for inactive accounts (before the e-mail is
   # confirmed). Do not redirect to a path that requires authentication or the
   # flash message asking the user to confirm his e-mail will be lost.

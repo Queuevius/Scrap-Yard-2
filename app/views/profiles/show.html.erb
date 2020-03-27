@@ -3,44 +3,44 @@
     <div class="col-md-12">
       <div class="show-header">
         <h1>
-          <%= @user.first_name %> <%= @user.last_name %> <%= fa_icon "camera-retro" %>
+          <%= @user.first_name %> <%= @user.last_name %>
         </h1>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-7">
-      <div class="col-md-12">
-        <div class="row profile profile-btn">
-          <% if current_user.id == @user.id %>
-            <h4 class="profile-link">
-              <%= link_to "Edit Profile", edit_user_registration_path(@user), :class => "b4" %>
-            </h4>
-          <% else %>
-            <h4 class="profile-link">
-              <%= link_to "Add friend", friendships_path(:friend_id => @user.id), :method => :post, :class => "b4" %>
-              <% if current_user.id /= @user.id %>
-                <%= bootstrap_form_for @room do |f| %>
-                  <%= f.hidden_field :reciever_id, :value => @user.id %>
-                  <%= f.hidden_field :sender_id, :value => current_user.id %>
-                  <%= f.submit "Message", class: 'b4 btn-success' %>
-                <% end %>
-              <% end %>
-            </h4>
+
+  <div class="row profile profile-btn">
+    <% if current_user.id == @user.id %>
+      <div class="col-md-3">
+        <h4 class="profile-link">
+          <%= link_to "Edit Profile", edit_user_registration_path(@user), :class => "b4" %>
+        </h4>
+      </div>
+    <% else %>
+      <div class="row profile-button-box">
+        <div class="col-md-2">
+          <%= link_to "Add friend", friendships_path(:friend_id => @user.id), :method => :post, :class => "b4a" %>
+        </div>
+        <div class="col-md-2">
+          <% if current_user.id /= @user.id %>
+            <%= bootstrap_form_for @room do |f| %>
+              <%= f.hidden_field :reciever_id, :value => @user.id %>
+              <%= f.hidden_field :sender_id, :value => current_user.id %>
+              <%= f.submit "Message", class: 'b4 clean-btn' %>
+            <% end %>
           <% end %>
         </div>
-        <div class="row">
-
-        </div>
       </div>
-      <div class="row profile">
+    <% end %>
+  </div>
 
-        <h4><b>Email: </b><%= @user.email %></h4>
-        <h4><b>Joined: </b><%= @user.created_at.strftime("%d/%m/%Y") %></h4>
-        <h4><b>Bio: </b><%= @user.bio %></h4>
-      </div>
+  <div class="row profile">
+    <div class="col-md-8">
+      <h4><b>Email: </b><%= @user.email %></h4>
+      <h4><b>Joined: </b><%= @user.created_at.strftime("%d/%m/%Y") %></h4>
+      <h4><b>Bio: </b><%= @user.bio %></h4>
     </div>
-    <div class="col-md-5 friend-box">
+    <div class="col-md-4 friend-box">
       <% if current_user.id == @user.id %>
         <div class="row note-box-b">
           <h2 class="friend-header">Following</h2>
@@ -65,7 +65,10 @@
             <% end %>
           </ul>
         </div>
-        <% end %>
+      <% end %>
     </div>
+
   </div>
+
+
 </div>

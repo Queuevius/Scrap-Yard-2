@@ -12,7 +12,6 @@
           <th class="col-md-3 text-center table-head-label">Skill</th>
           <th class="col-md-6 text-center table-head-label">Description</th>
           <th class="col-md-2 text-center table-head-label">Price</th>
-          <th class="col-md-2 text-center table-head-label">Full Info</th>
         </tr>
         </thead>
         <% @have.each do |f| %>
@@ -21,7 +20,6 @@
             <td class="table-body-box"><%= link_to f.title, hafe_path(f), class: "want-box" %></td>
             <td class="table-body-box"><%= link_to truncate(f.description, length: 150), hafe_path(f), class: "want-box" %></td>
             <td class="table-body-box"><%= link_to f.price, hafe_path(f), class: "want-box" %></td>
-            <td class="table-body-box"><%= link_to "Info", hafe_path(f), :class => "b3" %></td>
           </tr><% end %>
         </tbody>
       </table>
