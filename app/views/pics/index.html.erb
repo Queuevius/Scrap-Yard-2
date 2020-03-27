@@ -15,15 +15,17 @@
         <div class='row'>
           <% group.each do |p| %>
             <div class='col-md-3 note-box'>
-              <h3 class="text-center">
-                <%= link_to p.name, pic_path(p), class: "pic-link" %>
-              </h3>
-              <p class="text-center">
-                <%= truncate(p.description, length: 50) %>
-              </p>
-              <p class="text-center">
-                <%= image_tag(p.image, {:style => "width:175px;", :class => "profile-pic text-center"}) %>
-              </p>
+              <% if p.user_id == current_user.id %>
+                <h3 class="text-center">
+                  <%= link_to p.name, pic_path(p), class: "pic-link" %>
+                </h3>
+                <p class="text-center">
+                  <%= truncate(p.description, length: 50) %>
+                </p>
+                <p class="text-center">
+                  <%= image_tag(p.image, {:style => "width:175px;", :class => "profile-pic text-center"}) %>
+                </p>
+              <% end %>
             </div>
           <% end %>
         </div>

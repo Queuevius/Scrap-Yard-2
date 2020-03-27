@@ -7,26 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/haves_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/haves_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pics_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pics_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/posts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/posts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/videos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/videos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/wants_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/wants_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/have_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/have_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/pic_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/pic_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/video_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/video_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/want_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/want_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/haves/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/haves/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/haves/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/haves/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pics/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pics/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/profiles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/profiles/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/videos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/videos/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/wants/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/wants/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/wants/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/wants/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/pics/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pics/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -102,11 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="851" selection-start-line="851" selection-end-line="851" />
+            <state relative-caret-position="244">
+              <caret line="666" column="22" selection-start-line="666" selection-start-column="22" selection-end-line="666" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -120,11 +102,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="119">
+              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/pics/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -185,7 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/_custom_fields.html.erb" />
         <option value="$PROJECT_DIR$/app/policies/area_policy.rb" />
         <option value="$PROJECT_DIR$/app/policies/tag_policy.rb" />
@@ -233,9 +223,10 @@
         <option value="$PROJECT_DIR$/app/views/haves/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/haves_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/profiles/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global.scss" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users/registrations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/pics/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/global.scss" />
       </list>
     </option>
   </component>
@@ -252,7 +243,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -592,7 +583,7 @@
       <workItem from="1584548629039" duration="7046000" />
       <workItem from="1584635661647" duration="6319000" />
       <workItem from="1584982416376" duration="17730000" />
-      <workItem from="1585325928100" duration="6574000" />
+      <workItem from="1585325928100" duration="7297000" />
     </task>
     <task id="LOCAL-00001" summary="global update">
       <created>1580930180204</created>
@@ -619,18 +610,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="480680000" />
+    <option name="totallyTimeSpent" value="481403000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18869936" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18869936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2881907" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2881907" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -638,14 +629,14 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" weight="0.2881907" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.2881907" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.28494042" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.14872068" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.14872068" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,20 +661,6 @@
     <SUITE FILE_PATH="coverage/Needpedia_profile@Development__Needpedia_profile.rcov" NAME="Development: Needpedia-profile Coverage Results" MODIFIED="1585331116793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Needpedia-profile" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/notifications_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="111" selection-start-line="16" selection-start-column="111" selection-end-line="16" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ec80eef9-7750-4549-ac2f-b9258f368a07/database/needp_development/schema/public/table/posts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://ec80eef9-7750-4549-ac2f-b9258f368a07/database/needp_development/schema/public/table/friendships">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -973,13 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="851" selection-start-line="851" selection-end-line="851" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/profiles_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1008,10 +978,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://ec80eef9-7750-4549-ac2f-b9258f368a07/database/needp_development/schema/public/table/pics">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="119">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/pics/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="666" column="22" selection-start-line="666" selection-start-column="22" selection-end-line="666" selection-end-column="22" />
         </state>
       </provider>
     </entry>
