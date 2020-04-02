@@ -54,22 +54,22 @@ Rails.application.routes.draw do
 
   resources :wants
 
-  resources :posts do 
-    member do 
+  resources :posts do
+    member do
       get :new_layer
       post :create_layer
       post :create_token
       get :all_tokens
       get :show_token
       post :add_rating
-      resources :tokens do 
-        resources :comments do 
+      resources :tokens do
+        resources :comments do
           get 'add_vote', on: :collection
         end
       end
     end
-  end 
-  
+  end
+
   root to: 'posts#homepage'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
@@ -78,11 +78,11 @@ Rails.application.routes.draw do
     resources :users
   end
 
-  resources :users do 
-    member do 
+  resources :users do
+    member do
 
-      resources :items do 
-          get :items, on: :member
+      resources :items do
+        get :items, on: :member
       end
       post :profile_update, to: 'profiles#update'
       get :profile_edit, to: 'profiles#edit'
@@ -94,5 +94,5 @@ Rails.application.routes.draw do
   resources :profiles
   get 'contact' => 'contact_forms#new', as: 'contact'
   post '/users/edit' => 'users/registrations#update'
- # post '/update_user' => 'users/registrations#update'
+  # post '/update_user' => 'users/registrations#update'
 end
