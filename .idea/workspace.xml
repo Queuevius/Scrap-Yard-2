@@ -7,47 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b16e6acc-9b10-42fb-82a9-f2723f2fdc74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/blank-profile-picture-973460_640.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/haves/show_have.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/pics/solo_pic.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/videos/show_video.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/wants/show_want.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.backstretch.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.backstretch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.slimscroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.slimscroll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/lightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/lightbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/haves_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/haves_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pics_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pics_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/videos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/videos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/wants_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/wants_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/application_record.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/application_record.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/have_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/have_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/pic_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/pic_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/tag_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/tag_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/policies/user_policy.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/policies/user_policy.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/users/_actions.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/_actions.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/haves/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/haves/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pics/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pics/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/profiles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/profiles/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_nav.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_sidebar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/videos/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/videos/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/wants/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/wants/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/application-cce3f37a8a8c5343e4cbd23af6aa76adfe37341cfd61669aa3bd513bcccf7e42.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/application-cce3f37a8a8c5343e4cbd23af6aa76adfe37341cfd61669aa3bd513bcccf7e42.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/application_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/application_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/items_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/items_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/controllers/profiles_controller_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/controllers/profiles_controller_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/features/users_admin_crud_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/users_admin_crud_spec.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/support/shared_examples/request_api_restful_actions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/support/shared_examples/request_api_restful_actions.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -142,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_nav.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -151,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/shared/_sidebar.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="85">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -666,7 +626,7 @@
       <workItem from="1585325928100" duration="8749000" />
       <workItem from="1585586075917" duration="6860000" />
       <workItem from="1585673882165" duration="6297000" />
-      <workItem from="1585845704046" duration="604000" />
+      <workItem from="1585845704046" duration="1319000" />
     </task>
     <task id="LOCAL-00001" summary="global update">
       <created>1580930180204</created>
@@ -693,18 +653,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="496616000" />
+    <option name="totallyTimeSpent" value="497331000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19509594" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2881907" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2881907" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -712,7 +671,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" weight="0.2881907" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.2881907" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5010661" side_tool="true" weight="0.28494042" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32936078" />
@@ -1069,13 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/shared/_sidebar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pics/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1101,6 +1053,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/shared/_sidebar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
