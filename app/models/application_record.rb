@@ -50,7 +50,7 @@ class ApplicationRecord < ActiveRecord::Base
   #           archived: "Archived"
   #
   # 2. Call the method in views that require translated enum values (e.g.,
-  #    display a translated user role in the the index and show views):
+  #    display a translated user role in the the index and solo_pic views):
   #    MyModel.translate_enum_key(:enum_attr, :enum_key)
   def self.translate_enum_key(enum_name, enum_key)
     i18n_key = "activerecord.attributes.#{model_name.i18n_key}" \

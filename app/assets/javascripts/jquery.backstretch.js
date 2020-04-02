@@ -252,8 +252,8 @@
                             self.cycle();
                           }
 
-                          // Trigger the "after" and "show" events
-                          // "show" is being deprecated
+                          // Trigger the "after" and "solo_pic" events
+                          // "solo_pic" is being deprecated
                           $(['after', 'show']).each(function () {
                             self.$container.trigger($.Event('backstretch.' + this, evtOptions), [self, newIndex]);
                           });

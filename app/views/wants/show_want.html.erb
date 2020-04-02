@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="col-md-12 notes-box">
+    <div class="row show-header-b text-center">
+      <h1>
+        <%= @want.title %>
+      </h1>
+    </div>
+    <div class="row show-box">
+      <%= @want.description %>
+    </div>
+    <div class="row show-box">
+      <% @want.wants_attachments.each do |f| %>
+        <%= image_tag(f.image, {:style => "max-width: 40%", :class => "profile-pic text-center"}) %>
+      <% end %>
+    </div>
+    <div class="row box-link-row">
+      <div class="box-links-2 col-md-1">
+        <%= @want.price %>
+      </div>
+      <div class="box-links-2 col-md-1">
+        <% if user_signed_in? %>
+          <% if current_user.id == @want.user_id %>
+            <%= link_to "Edit", edit_want_path(@want), class: "b2" %>
+          <% end %>
+        <% else %>
+          <p><b><%= @want.user.first_name %> <%= @want.user.last_name %></b></p>
+        <% end %>
+      </div>
+      <div class="box-links-2 col-md-1">
+        <% if user_signed_in? %>
+          <% if current_user.id == @want.user_id %>
+            <%= link_to 'Destroy', want_path(@want),
+                        method: :delete, data: { confirm: 'Are you sure?' }, class: "b2" %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="box-links-2 col-md-4 col-md-offset-5 text-right">
+        <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= @want.created_at.strftime("%I:%M %p, %m/%d/%Y") %> </span></b>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,10 @@ class PicPolicy < ApplicationPolicy
     true
   end
 
+  def show_pic?
+    true
+  end
+
   def update?
     true
   end

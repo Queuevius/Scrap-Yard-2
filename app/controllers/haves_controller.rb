@@ -1,15 +1,25 @@
 class HavesController < ApplicationController
   layout 'profiles'
-  after_action :authorize_have, only: [ :index, :show, :update, :edit, :new, :create, :destroy]
+  after_action :authorize_have, only: [ :index, :show, :update, :edit, :new, :create, :destroy, :show_have]
 
   def index
     policy_scope(Have) if current_user
+
+    @user = User.friendly.find(params[:id])
 
     @have = Have.where(user_id: current_user.id)
 
   end
 
   def show
+    policy_scope(Have) if current_user
+
+    @user = User.friendly.find(params[:id])
+
+    @have = Have.where(:user_id => params[:id])
+  end
+
+  def show_have
     @have = Have.find(params[:id])
 
     @have_attachment = @have.have_attachments.all

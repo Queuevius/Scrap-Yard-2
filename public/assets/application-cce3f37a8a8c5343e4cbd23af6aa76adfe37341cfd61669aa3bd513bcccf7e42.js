@@ -6770,7 +6770,7 @@ jQuery.each( [ "height", "width" ], function( i, dimension ) {
 		get: function( elem, computed, extra ) {
 			if ( computed ) {
 
-				// Certain elements can have dimension info if we invisibly show them
+				// Certain elements can have dimension info if we invisibly solo_pic them
 				// but it must have a current display style that would benefit
 				return rdisplayswap.test( jQuery.css( elem, "display" ) ) &&
 
@@ -7115,7 +7115,7 @@ function defaultPrefilter( elem, props, opts ) {
 		} );
 	}
 
-	// Detect show/hide animations
+	// Detect solo_pic/hide animations
 	for ( prop in props ) {
 		value = props[ prop ];
 		if ( rfxtypes.test( value ) ) {
@@ -7123,12 +7123,12 @@ function defaultPrefilter( elem, props, opts ) {
 			toggle = toggle || value === "toggle";
 			if ( value === ( hidden ? "hide" : "show" ) ) {
 
-				// Pretend to be hidden if this is a "show" and
-				// there is still data from a stopped show/hide
+				// Pretend to be hidden if this is a "solo_pic" and
+				// there is still data from a stopped solo_pic/hide
 				if ( value === "show" && dataShow && dataShow[ prop ] !== undefined ) {
 					hidden = true;
 
-				// Ignore all other no-op show/hide data
+				// Ignore all other no-op solo_pic/hide data
 				} else {
 					continue;
 				}
@@ -7152,7 +7152,7 @@ function defaultPrefilter( elem, props, opts ) {
 		// the overflowX value there.
 		opts.overflow = [ style.overflow, style.overflowX, style.overflowY ];
 
-		// Identify a display type, preferring old show/hide data over the CSS cascade
+		// Identify a display type, preferring old solo_pic/hide data over the CSS cascade
 		restoreDisplay = dataShow && dataShow.display;
 		if ( restoreDisplay == null ) {
 			restoreDisplay = dataPriv.get( elem, "display" );
@@ -7175,7 +7175,7 @@ function defaultPrefilter( elem, props, opts ) {
 		if ( display === "inline" || display === "inline-block" && restoreDisplay != null ) {
 			if ( jQuery.css( elem, "float" ) === "none" ) {
 
-				// Restore the original display value at the end of pure show/hide animations
+				// Restore the original display value at the end of pure solo_pic/hide animations
 				if ( !propTween ) {
 					anim.done( function() {
 						style.display = restoreDisplay;
@@ -7199,11 +7199,11 @@ function defaultPrefilter( elem, props, opts ) {
 		} );
 	}
 
-	// Implement show/hide animations
+	// Implement solo_pic/hide animations
 	propTween = false;
 	for ( prop in orig ) {
 
-		// General show/hide setup for this element animation
+		// General solo_pic/hide setup for this element animation
 		if ( !propTween ) {
 			if ( dataShow ) {
 				if ( "hidden" in dataShow ) {
@@ -20029,7 +20029,7 @@ var widget = $.widget;
     // and script.
     // Please note that the Content-Type for JSON responses has to be text/plain
     // or text/html, if the browser doesn't include application/json in the
-    // Accept header, else IE will show a download dialog.
+    // Accept header, else IE will solo_pic a download dialog.
     // The Content-Type for XML responses on the other hand has to be always
     // application/xml or text/xml, so IE properly parses the XML response.
     // See also
@@ -21826,7 +21826,7 @@ var widget = $.widget;
     this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
     this.$outerContainer.addClass('animating');
 
-    // When image to show is preloaded, we send the width and height to sizeContainer()
+    // When image to solo_pic is preloaded, we send the width and height to sizeContainer()
     var preloader = new Image();
     preloader.onload = function() {
       var $preloader;
@@ -21973,7 +21973,7 @@ var widget = $.widget;
   // Display previous and next navigation if appropriate.
   Lightbox.prototype.updateNav = function() {
     // Check to see if the browser supports touch events. If so, we take the conservative approach
-    // and assume that mouse hover events are not supported and always show prev/next navigation
+    // and assume that mouse hover events are not supported and always solo_pic prev/next navigation
     // arrows in image sets.
     var alwaysShowNav = false;
     try {
@@ -24312,8 +24312,8 @@ $(document).on("turbolinks:load", function() {
                             self.cycle();
                           }
 
-                          // Trigger the "after" and "show" events
-                          // "show" is being deprecated
+                          // Trigger the "after" and "solo_pic" events
+                          // "solo_pic" is being deprecated
                           $(['after', 'show']).each(function () {
                             self.$container.trigger($.Event('backstretch.' + this, evtOptions), [self, newIndex]);
                           });
@@ -24798,7 +24798,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
                     isOverBar = false;
                 });
 
-                // show on parent mouseover
+                // solo_pic on parent mouseover
                 me.hover(function() {
                     isOverPanel = true;
                     showBar();
@@ -24984,7 +24984,7 @@ this._delay(function(){n===this.counter&&this.refreshPositions(!s)})},_clear:fun
                     }
                     lastScroll = percentScroll;
 
-                    // show only when required
+                    // solo_pic only when required
                     if (barHeight >= me.outerHeight()) {
                         //allow window scroll
                         releaseScroll = true;
@@ -26631,7 +26631,7 @@ var Login = function() {
 
 
 	        $('#country_list').change(function() {
-	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
+	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and solo_pic error or success message for the input
 	        });
     	}
 
@@ -26895,7 +26895,7 @@ var Login = function() {
 
 
 	        $('#country_list').change(function() {
-	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
+	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and solo_pic error or success message for the input
 	        });
     	}
 
@@ -28587,7 +28587,7 @@ $(document).on('turbolinks:load', function(){
 
 
 
-// js for the show page.
+// js for the solo_pic page.
 
 function tokenize_body(){
   $('.post-body > p').each( 

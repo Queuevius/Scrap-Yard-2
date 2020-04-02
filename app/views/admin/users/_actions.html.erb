@@ -1,4 +1,4 @@
-<%# Show the 'show' action icon in the index view but not on the show view %>
+<%# Show the 'solo_pic' action icon in the index view but not on the solo_pic view %>
 <% if action_name == 'index' %>
     <%= link_to admin_user_path(user), title: t('actions.show'),
                 'data-toggle' => 'tooltip' do %>

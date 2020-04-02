@@ -8,7 +8,7 @@ class TagPolicy < ApplicationPolicy
   end
 
   
-  %w[new? create? show?].each do |method_name|
+  %w[new? create? solo_pic?].each do |method_name|
     define_method(method_name) do
       user.present?
     end

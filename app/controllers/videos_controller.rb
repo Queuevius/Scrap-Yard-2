@@ -9,8 +9,16 @@ class VideosController < ApplicationController
     @video = Video.all.sort_by{|e| e["created_at DESC"]}
   end
 
-  def show
+  def show_video
     @video = Video.find(params[:id])
+  end
+
+  def show
+    policy_scope(Video) if current_user
+
+    @user = User.friendly.find(params[:id])
+
+    @video = Video.where(:user_id => params[:id])
   end
 
   def new

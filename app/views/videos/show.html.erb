@@ -1,42 +1,39 @@
 <div class="container-fluid">
   <div class="col-md-12 notes-box">
-    <div class="row show-header text-center">
-      <h1><b>
-        <%= @video.title %>
-      </b></h1>
-    </div>
-    <div class="row text-center">
-      <p><%= @video.description %></p>
-    </div>
-    <div class="row show-box">
-      <div class="col-md-12 text-center">
-        <iframe width="840" height="630"
-                src="https://www.youtube.com/embed/<%= @video.video %>">
-        </iframe>
+    <div class="row post-header-b">
+      <div class="col-md-10">
+        <h1>
+          My Videos
+        </h1>
       </div>
-    </div>
-    <div class="row box-link-row">
-      <div class="box-links-2 col-md-1">
-        <% if user_signed_in? %>
-          <% if current_user.id == @video.user_id %>
-            <%= link_to "Edit", edit_pic_path(@video), class: "b2" %>
-          <% end %>
-        <% else %>
-          <p><b><%= @video.user.first_name %> <%= @video.user.last_name %></b></p>
+      <div class="col-md-2">
+        <% if @user.id == current_user.id %>
+          <%= link_to "new video", new_video_path, class: "b7" %>
         <% end %>
       </div>
-      <div class="box-links-2 col-md-2">
-        <% if user_signed_in? %>
-          <% if current_user.id == @video.user_id %>
-            <%= link_to 'Destroy', video_path(@video),
-                        method: :delete, data: { confirm: 'Are you sure?' }, class: "b2" %>
+    </div>
+    <div>
+      <% @video.in_groups_of(2, false).each do |group| %>
+        <div class='row'>
+          <% group.each do |p| %>
+            <div class='col-md-5 note-box'>
+              <% if p.user_id == current_user.id %>
+                <h3 class="text-center">
+                  <%= link_to p.title, video_path(p), class: "pic-link" %>
+                </h3>
+                <p class="text-center">
+                  <%= truncate(p.description, length: 50) %>
+                </p>
+                <p class="text-center">
+                  <iframe width="420" height="315"
+                          src="https://www.youtube.com/embed/<%= p.video %>">
+                  </iframe>
+                </p>
+              <% end %>
+            </div>
           <% end %>
-        <% end %>
-      </div>
-      <div class="box-links-2 col-md-3 col-md-offset-6 text-right">
-        <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= @video.created_at.strftime("%I:%M %p, %m/%d/%Y") %> </span></b>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
-
 </div>

@@ -10,7 +10,7 @@ RSpec.describe ApplicationController, type: :controller do
     skip_before_action :authenticate_user!
 
     # RSpec's anonymous controllers only create routes for the standard
-    # RESTful actions (index, new, create, show, edit, update, destroy)
+    # RESTful actions (index, new, create, solo_pic, edit, update, destroy)
     def show
       raise Pundit::NotAuthorizedError
     end
@@ -21,7 +21,7 @@ RSpec.describe ApplicationController, type: :controller do
   end
 
   describe 'when a Pundit::NotAuthorizedError is raised' do
-    before(:each) { get :show, params: { id: 1 } }
+    before(:each) { get :solo_pic, params: {id: 1 } }
 
     it 'redirects back to root path (there is no referrer URL in the test)' do
       expect(response).to redirect_to(root_path)

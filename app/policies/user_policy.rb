@@ -10,7 +10,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   # Only admins may use this controller
-  %w[create? show? update? destroy?].each do |method_name|
+  %w[create? solo_pic? update? destroy?].each do |method_name|
     define_method(method_name) do
       user.present? && user.admin?
     end

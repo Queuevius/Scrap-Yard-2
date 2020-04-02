@@ -192,10 +192,10 @@ describe 'User management for admins', type: :feature, js: true do
       end
     end
 
-    it "contains links to 'show', 'edit' and 'delete' each item" do
+    it "contains links to 'solo_pic', 'edit' and 'delete' each item" do
       visit admin_users_path
       expect(page).to have_selector(
-        action_icon_selector('actions.show', admin_user_path(user))
+        action_icon_selector('actions.solo_pic', admin_user_path(user))
       )
       expect(page).to have_selector(
         action_icon_selector('actions.edit', edit_admin_user_path(user))

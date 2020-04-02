@@ -44,11 +44,13 @@
       <% if current_user.id == @user.id %>
         <div class="row note-box-b">
           <h2 class="friend-header">Following</h2>
+          <p> Follow users to send a message and to see when they post new content</p>
           <ul>
             <% for friendship in @user.friendships %>
+
               <li>
                 <% name = [friendship.friend.first_name, friendship.friend.last_name].compact.join(' ') %>
-                <%= link_to name, profile_user_path(friendship.friend.id) %>
+                <%= link_to name, profile_path(friendship.friend.id) %>
                 (<%= link_to "remove", friendship, :method => :delete %>)
               </li>
             <% end %>
@@ -56,11 +58,12 @@
         </div>
         <div class="row note-box-b">
           <h2 class="friend-header">Followed By</h2>
+          <p>Post new areas and comments to gain followers</p>
           <ul>
             <% for user in @user.inverse_friends %>
               <li>
                 <% name = [user.first_name, user.last_name].compact.join(' ') %>
-                <%= link_to name, profile_user_path(user.id) %>
+                <%= link_to name, profile_path(user.id) %>
               </li>
             <% end %>
           </ul>

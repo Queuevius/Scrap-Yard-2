@@ -1,11 +1,9 @@
 <div class="container-flex">
   <div class="row text-center">
-    <% if user_signed_in? %>
-      <h3 class="side-links">
-        <%= link_to image_tag("profile-placeholder.png", {:style => "width:125px;", :class => "profile-pic"}), profile_path(current_user) %>
-      </h3>
+    <% if @user.avatar.present? %>
+      <%= image_tag(@user.avatar, {:style => "width:175px;", :class => "profile-pic"}) %>
     <% else %>
-      <%= image_tag("profile-placeholder.png", {:style => "width:175px;", :class => "profile-pic"}) %>
+      <%= image_tag("blank-profile-picture-973460_640.png", {:style => "width:175px;", :class => "profile-pic"}) %>
     <% end %>
   </div>
   <div class="row side-link-box">
@@ -21,16 +19,16 @@
     </h3>
 
     <h3 class="side-links">
-      <%= link_to "Pictures", pics_path, :class => "b1" %>
+      <%= link_to "Pictures", pic_path(@user.id), :class => "b1" %>
     </h3>
     <h3 class="side-links">
-      <%= link_to "Videos", videos_path, :class => "b1" %>
+      <%= link_to "Videos", video_path(@user.id), :class => "b1" %>
     </h3>
     <h3 class="side-links">
-      <%= link_to "Have", haves_path, :class => "b1" %>
+      <%= link_to "Have", hafe_path(@user.id), :class => "b1" %>
     </h3>
     <h3 class="side-links">
-      <%= link_to "Want", wants_path, :class => "b1" %>
+      <%= link_to "Want", want_path(@user.id), :class => "b1" %>
     </h3>
     <h3 class="side-links">
       <%= link_to "Votes", root_path, :class => "b1" %>

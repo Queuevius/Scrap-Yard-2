@@ -58,7 +58,7 @@ $(document).on('turbolinks:load', function(){
 
 
 
-// js for the show page.
+// js for the solo_pic page.
 
 function tokenize_body(){
   $('.post-body > p').each( 

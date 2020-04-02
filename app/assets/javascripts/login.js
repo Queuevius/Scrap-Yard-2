@@ -148,7 +148,7 @@ var Login = function() {
 
 
 	        $('#country_list').change(function() {
-	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
+	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and solo_pic error or success message for the input
 	        });
     	}
 
@@ -412,7 +412,7 @@ var Login = function() {
 
 
 	        $('#country_list').change(function() {
-	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and show error or success message for the input
+	            $('.register-form').validate().element($(this)); //revalidate the chosen dropdown value and solo_pic error or success message for the input
 	        });
     	}
 

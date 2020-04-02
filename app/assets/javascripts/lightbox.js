@@ -285,7 +285,7 @@
     this.$lightbox.find('.lb-image, .lb-nav, .lb-prev, .lb-next, .lb-dataContainer, .lb-numbers, .lb-caption').hide();
     this.$outerContainer.addClass('animating');
 
-    // When image to show is preloaded, we send the width and height to sizeContainer()
+    // When image to solo_pic is preloaded, we send the width and height to sizeContainer()
     var preloader = new Image();
     preloader.onload = function() {
       var $preloader;
@@ -432,7 +432,7 @@
   // Display previous and next navigation if appropriate.
   Lightbox.prototype.updateNav = function() {
     // Check to see if the browser supports touch events. If so, we take the conservative approach
-    // and assume that mouse hover events are not supported and always show prev/next navigation
+    // and assume that mouse hover events are not supported and always solo_pic prev/next navigation
     // arrows in image sets.
     var alwaysShowNav = false;
     try {

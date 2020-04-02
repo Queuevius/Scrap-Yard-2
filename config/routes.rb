@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :area
   post 'area/create'
   post 'area/edit'
-  get 'area/:id' => 'area#show'
+  get 'area/:id' => 'area#solo_pic'
 
   get 'area/:id/new_layer' => 'area#new_layer'
   post 'area/:id/create_layer' => 'area#create_layer'
@@ -32,6 +32,14 @@ Rails.application.routes.draw do
   get '/chat' => 'profiles#chat'
 
   get '/public_feed' => 'posts#public_feed'
+
+  get '/solo_pic' => 'pics#solo_pic'
+
+  get '/show_video' => 'video#show_video'
+
+  get '/show_have' => 'hafe#show_have'
+
+  get '/show_want' => 'want#show_want'
 
   resources :rooms
   resources :messages
@@ -72,7 +80,7 @@ Rails.application.routes.draw do
 
   resources :users do 
     member do 
-      get :profile, to: 'profiles#show'
+
       resources :items do 
           get :items, on: :member
       end

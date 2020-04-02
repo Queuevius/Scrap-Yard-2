@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="col-md-12 notes-box">
+    <div class="row show-header text-center">
+      <h1><b>
+        <%= @pic.name %>
+      </b></h1>
+    </div>
+    <div class="row text-center">
+      <p><%= @pic.description %></p>
+    </div>
+    <div class="row show-box">
+      <div class="col-md-12 text-center">
+        <%= image_tag(@pic.image, {:style => "max-width:100%;", :class => "profile-pic text-center"}) %>
+      </div>
+    </div>
+  <div class="row box-link-row">
+    <div class="box-links-2 col-md-1">
+      <% if user_signed_in? %>
+        <% if current_user.id == @pic.user_id %>
+          <%= link_to "Edit", edit_pic_path(@pic), class: "b2" %>
+        <% end %>
+      <% else %>
+        <p><b><%= @pic.user.first_name %> <%= @pic.user.last_name %></b></p>
+      <% end %>
+    </div>
+    <div class="box-links-2 col-md-2">
+      <% if user_signed_in? %>
+        <% if current_user.id == @pic.user_id %>
+          <%= link_to 'Destroy', pic_path(@pic),
+                      method: :delete, data: { confirm: 'Are you sure?' }, class: "b2" %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="box-links-2 col-md-3 col-md-offset-6 text-right">
+      <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= @pic.created_at.strftime("%I:%M %p, %m/%d/%Y") %> </span></b>
+    </div>
+  </div>
+</div>
+</div>

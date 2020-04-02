@@ -29,7 +29,11 @@
       </ul>
     <% if user_signed_in? %>
       <div class="dropdown icon-box">
-        <%= fa_icon "fab bell 2x" %>
+        <%= link_to profiles_path do %>
+          <div class="nav-link">
+            <%= fa_icon "fab bell 2x" %>
+          </div>
+        <% end %>
         <div class="dropdown-content">
           <% Notification.where(notifiable_type: "Post").where(recipient_id: current_user).where(read_at: nil).each do |t|%>
             <%= link_to t.notifiable_type, post_path(t.notifiable_id) %>
@@ -40,7 +44,11 @@
       </div>
 
       <div class="dropdown icon-box">
-        <%= fa_icon "fab envelope 2x" %>
+        <%= link_to rooms_path do %>
+          <div class="nav-link">
+            <%= fa_icon "fab envelope 2x" %>
+          </div>
+        <% end %>
         <div class="dropdown-content">
           <% Notification.where(notifiable_type: "Message").where(recipient_id: current_user).where(read_at: nil).each do |t|%>
             <%= link_to [t.actor_id, t.notifiable_type].join(" sent a "), room_path(t.room_id) %>

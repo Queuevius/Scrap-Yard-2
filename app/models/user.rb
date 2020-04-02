@@ -2,6 +2,9 @@
 class User < ApplicationRecord
   # Use slugs instead of DB IDs in URLs
   include FriendlyId
+
+  mount_uploader :avatar, AvatarUploader
+
   friendly_id :full_name, use: :slugged
 
   acts_as_voter

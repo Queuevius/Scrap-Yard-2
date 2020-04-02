@@ -33,8 +33,8 @@ class ApplicationController < ActionController::Base
   private
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password, :first_name, :last_name, :bio)}
-    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:email, :password, :first_name, :last_name, :bio, :current_password)}
+    devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password, :first_name, :last_name, :bio, :avatar, :avatar_cache, :remove_avatar)}
+    devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:email, :password, :first_name, :last_name, :bio, :current_password, :avatar, :avatar_cache, :remove_avatar)}
   end
 
   # Choose from 3 types of layouts: guest (not logged-in), user or admin

@@ -86,8 +86,8 @@ RSpec.shared_examples 'a RESTful JSON API',
     end
   end
 
-  describe 'GET #show', if:
-    controller_has_action?(controller_class, :show) do
+  describe 'GET #solo_pic', if:
+    controller_has_action?(controller_class, :solo_pic) do
 
     it 'requires authentication' do
       logout_example

@@ -4,6 +4,10 @@ class HavePolicy < ApplicationPolicy
     true
   end
 
+  def show_have?
+    true
+  end
+
   def update?
     true
   end

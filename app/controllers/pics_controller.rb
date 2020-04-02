@@ -5,10 +5,23 @@ class PicsController < ApplicationController
 
   def index
     policy_scope(Pic) if current_user
-    @pic = Pic.all.sort_by{|e| e["created_at DESC"]}
+
+    @user = User.friendly.find(params[:id])
+
+    @pic = Pic.find(params[:id]).sort_by{|e| e["created_at DESC"]}
   end
 
   def show
+    policy_scope(Pic) if current_user
+
+    @user = User.friendly.find(params[:id])
+
+    @pic = Pic.where(:user_id => params[:id])
+  end
+
+  def solo_pic
+    @user = User.friendly.find(params[:id])
+
     @pic = Pic.find(params[:id])
   end
 

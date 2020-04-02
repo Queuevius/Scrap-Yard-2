@@ -15,6 +15,27 @@
         <%= f.email_field :email, autocomplete: "email" %>
 
         <div class="row">
+          <div class="col-md-6">
+            <p>Current Profile Picture</p>
+            <% if @user.avatar.present? %>
+              <%= image_tag(@user.avatar, {:style => "width:175px;", :class => "profile-pic"}) %>
+            <% else %>
+              <%= image_tag("blank-profile-picture-973460_640.png", {:style => "width:175px;", :class => "profile-pic"}) %>
+            <% end %>
+          </div>
+          <div class="col-md-6">
+            <p>Change Profile Picture</p>
+            <%= f.file_field :avatar, hide_label: true %>
+
+            <%= f.hidden_field :avatar_cache %>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="row">
 
           <div class="col-md-6">
             <%= f.label :password %> <i>(leave blank if you don't want to change it) 6 Characters Minimum</i><br />

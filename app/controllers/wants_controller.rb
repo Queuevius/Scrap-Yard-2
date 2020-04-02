@@ -1,6 +1,6 @@
 class WantsController < ApplicationController
   layout 'profiles'
-  after_action :authorize_want, only: [ :index, :show, :update, :edit, :new, :create, :destroy]
+  after_action :authorize_want, only: [ :index, :show, :update, :edit, :new, :create, :destroy, :show_want]
 
   def index
     policy_scope(Have) if current_user
@@ -9,7 +9,17 @@ class WantsController < ApplicationController
   end
 
   def show
+    policy_scope(Have) if current_user
+
+    @want = Want.where(:user_id => params[:id])
+
+    @user = User.friendly.find(params[:id])
+  end
+
+  def show_want
     @want = Want.find(params[:id])
+
+    @user = User.friendly.find(params[:id])
 
     @wants_attachment = @want.wants_attachments.all
   end

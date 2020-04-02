@@ -23,9 +23,9 @@ RSpec.describe ItemsController, type: :controller do
     end
   end
 
-  describe "GET #show" do
+  describe "GET #solo_pic" do
     it "returns http success" do
-      get :show
+      get :solo_pic
       expect(response).to have_http_status(:success)
     end
   end

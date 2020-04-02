@@ -274,7 +274,7 @@
                     isOverBar = false;
                 });
 
-                // show on parent mouseover
+                // solo_pic on parent mouseover
                 me.hover(function() {
                     isOverPanel = true;
                     showBar();
@@ -460,7 +460,7 @@
                     }
                     lastScroll = percentScroll;
 
-                    // show only when required
+                    // solo_pic only when required
                     if (barHeight >= me.outerHeight()) {
                         //allow window scroll
                         releaseScroll = true;
