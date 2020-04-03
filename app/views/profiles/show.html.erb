@@ -19,7 +19,7 @@
     <% else %>
       <div class="row profile-button-box">
         <div class="col-md-2">
-          <%= link_to "Add friend", friendships_path(:friend_id => @user.id), :method => :post, :class => "b4a" %>
+          <%= link_to "Add Friend", {:controller => :friendships, :action => :create, :friend_id => @user.id }, :method => :post, :class => "b4a" %>
         </div>
         <div class="col-md-2">
           <% if current_user.id /= @user.id %>
