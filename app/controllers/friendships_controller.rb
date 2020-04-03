@@ -1,5 +1,6 @@
 class FriendshipsController < ApplicationController
   before_action :authorize_friendships, only: [:create, :destroy]
+  skip_before_action :verify_authenticity_token
 
   def create
     @friendship = Friendship.new(params.required(:friendship).permit(:user_id, :friend_id))
