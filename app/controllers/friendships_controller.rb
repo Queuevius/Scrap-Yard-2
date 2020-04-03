@@ -1,5 +1,5 @@
 class FriendshipsController < ApplicationController
-  before_action :authorize_friendships, only: [:create, :destroy, :new]
+  before_action :authorize_friendships, only: [:create, :destroy]
 
   def create
     @friendship = Friendship.new(params.required(:friendship).permit(:user_id, :friend_id))
@@ -9,10 +9,6 @@ class FriendshipsController < ApplicationController
     else
       render profile_path(@user.id)
     end
-  end
-
-  def new
-    @friendship = Friendship.new
   end
 
   def destroy
