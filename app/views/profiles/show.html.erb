@@ -19,7 +19,13 @@
     <% else %>
       <div class="row profile-button-box">
         <div class="col-md-2">
-          <%= link_to "Add Friend", {:controller => :friendships, :action => :create, :friend_id => @user.id }, :method => :post, :class => "b4a" %>
+          <%= simple_form_for @friendship, remote: true do |form| %>
+            <div class="input-group mb-3">
+              <%= form.hidden_field :friend_id, :value => @user.id %>
+              <%= form.hidden_field :user_id, :value => current_user.id %>
+              <%= form.submit "Follow", class: 'b4 clean-btn' %>
+            </div>
+          <% end %>
         </div>
         <div class="col-md-2">
           <% if current_user.id /= @user.id %>

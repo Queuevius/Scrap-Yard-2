@@ -4,6 +4,10 @@ class FriendshipPolicy < ApplicationPolicy
     true
   end
 
+  def new?
+    true
+  end
+
   def destroy?
     true
   end

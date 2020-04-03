@@ -1,15 +1,18 @@
 class FriendshipsController < ApplicationController
-  before_action :authorize_friendships, only: [:create, :destroy]
+  before_action :authorize_friendships, only: [:create, :destroy, :new]
 
   def create
-    @friendship = current_user.friendships.build(:friend_id => params[:friend_id])
-    if @friendship.save
-      flash[:notice] = "Added friend."
-      redirect_to profile_path(current_user)
+    @friendship = Friendship.new(params.required(:friendship).permit(:user_id, :friend_id))
+
+    if @friendship.save!
+      redirect_back(fallback_location: profile_path(current_user))
     else
-      flash[:error] = "Unable to add friend."
-      redirect_to profile_path(current_user)
+      render profile_path(@user.id)
     end
+  end
+
+  def new
+    @friendship = Friendship.new
   end
 
   def destroy

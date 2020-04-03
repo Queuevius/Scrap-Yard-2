@@ -38,6 +38,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @friendship = Friendship.new
   	@user = User.friendly.find(params[:id])
     @room = Room.new
   end
