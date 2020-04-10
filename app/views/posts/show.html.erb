@@ -71,19 +71,7 @@
     </div>
   </div>
 
-  <div class="row post-show-text-box">
-    <div class="col-md-12">
-      <% if @current_layer.nil?%>
-        <div class="post-body">
-          <%= @post.post_body.html_safe %>
-        </div>
-      <% else %>
-        <div class="post-body">
-          <%= @current_layer.layer_body.html_safe %>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'body', object: @post %>
 
   <div class="row box-link-row">
     <div class="box-links-2 col-md-7">

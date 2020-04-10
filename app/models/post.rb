@@ -15,6 +15,9 @@ class Post < ApplicationRecord
 	has_many :ratings, as: :rateable
 	has_many :trackings
 	has_many :feeds
+	has_many :questions
+	has_many :notes
+	has_many :debates
 	accepts_nested_attributes_for :feeds
 
 
@@ -28,7 +31,7 @@ class Post < ApplicationRecord
 
 	def all_tags=(names)
 		self.tags = names.split(",").map do |name|
-		    Tag.where("name ILIKE ?",name.strip).first_or_create!(name: name.strip)
+		    Tag.where("name ILIKE ?",name.strip).first_or_create!(name: name.strip, user: create_user)
 		end
 	end
 

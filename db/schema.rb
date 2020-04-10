@@ -15,6 +15,41 @@ ActiveRecord::Schema.define(version: 20200331172826) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "answers", force: :cascade do |t|
+    t.text "text"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "arguments", force: :cascade do |t|
+    t.text "text"
+    t.string "argument_type"
+    t.bigint "debate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["debate_id"], name: "index_arguments_on_debate_id"
+  end
+
+  create_table "debates", force: :cascade do |t|
+    t.text "central_argument"
+    t.bigint "token_id"
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_debates_on_post_id"
+    t.index ["token_id"], name: "index_debates_on_token_id"
+  end
+
+  create_table "feeds", force: :cascade do |t|
+    t.integer "post_id"
+    t.string "post_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "have_id"
+  end
+
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -80,6 +115,17 @@ ActiveRecord::Schema.define(version: 20200331172826) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "notes", force: :cascade do |t|
+    t.string "hypertext"
+    t.text "note"
+    t.bigint "token_id"
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_notes_on_post_id"
+    t.index ["token_id"], name: "index_notes_on_token_id"
+  end
+
   create_table "notifications", force: :cascade do |t|
     t.integer "recipient_id"
     t.integer "actor_id"
@@ -123,6 +169,16 @@ ActiveRecord::Schema.define(version: 20200331172826) do
     t.string "avatar_url"
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.text "text"
+    t.bigint "token_id"
+    t.bigint "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_questions_on_post_id"
+    t.index ["token_id"], name: "index_questions_on_token_id"
+  end
+
   create_table "ratings", force: :cascade do |t|
     t.integer "score"
     t.integer "rateable_id"
@@ -162,13 +218,10 @@ ActiveRecord::Schema.define(version: 20200331172826) do
 
   create_table "tokens", force: :cascade do |t|
     t.string "token_type"
-    t.integer "creator_id"
-    t.text "token_body"
+    t.integer "user_id"
     t.integer "post_id"
-    t.integer "layer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "span_id"
   end
 
   create_table "trackings", force: :cascade do |t|
@@ -259,6 +312,14 @@ ActiveRecord::Schema.define(version: 20200331172826) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "arguments", "debates"
+  add_foreign_key "debates", "posts"
+  add_foreign_key "debates", "tokens"
+  add_foreign_key "notes", "posts"
+  add_foreign_key "notes", "tokens"
+  add_foreign_key "questions", "posts"
+  add_foreign_key "questions", "tokens"
   add_foreign_key "taggings", "posts"
   add_foreign_key "taggings", "tags"
 end

@@ -1,0 +1,2 @@
+$("#note_modal").html('<%= escape_javascript(render 'modal', object: @note, model: 'notes', form_id: 'note_form', post_or_tag_object: @object) %>');
+$('#note_modal').modal();

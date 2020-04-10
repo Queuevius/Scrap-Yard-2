@@ -1,7 +1,7 @@
 class Token < ApplicationRecord
-	
-	
-	validates :token_body, presence: true
+
+
+	# validates :token_body, presence: true
 
 	TYPES = {
 		note: "Note",
@@ -11,6 +11,10 @@ class Token < ApplicationRecord
 	belongs_to :post 
 	belongs_to :layer, optional: true
 	has_many :comments
+	has_one :question
+	has_one :note
+	has_one :debate
+	belongs_to :user
 
 
 	def user_name
