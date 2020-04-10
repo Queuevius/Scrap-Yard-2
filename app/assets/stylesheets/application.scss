@@ -4,6 +4,7 @@
  *= require select2
  *= require select2-bootstrap
  *= require jquery-ui
+ *= require jquery.modal.min
  *= require_tree .
  */
 
@@ -13,6 +14,7 @@
 @import "global";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "global";
 
 @import "bootstrap-sprockets";
 @import "bootstrap";

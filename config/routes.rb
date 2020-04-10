@@ -14,6 +14,13 @@ Rails.application.routes.draw do
   end
   resources :trackings
   resources :area
+  resources :notes, only: [:new, :create, :show]
+  resources :questions, only: [:new, :create, :show] do
+    resources :answers, only: [:create]
+  end
+  resources :debates, only: [:index, :new, :create, :show] do
+    resources :arguments
+  end
   post 'area/create'
   post 'area/edit'
   get 'area/:id' => 'area#solo_pic'

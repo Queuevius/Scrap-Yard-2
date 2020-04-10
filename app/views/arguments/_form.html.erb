@@ -1,0 +1,9 @@
+<%= form_with model: [debate, argument] do |form| %>
+  <ul class="nav navbar-nav text-center nav-search" style="width: 80%;">
+    <%= form.hidden_field :argument_type, value: argument_type %>
+    <%= form.text_field :text, class: 'form-control', placeholder: 'Add New Argument', required: true %>
+  </ul>
+  <ul class="nav navbar-nav text-center nav-search">
+    <%= form.submit 'Add' , class: 'btn btn-primary' %>
+  </ul>
+<% end %>

@@ -18,11 +18,12 @@
               By <%= f.user.full_name %>
             </p>
           </div>
-          <div class="row note-body-2">
-            <div class="col-md-12">
-              <%= f.post_body.truncate(500).html_safe %>
-            </div>
-          </div>
+          <%= render 'posts/body', object: f %>
+<!--          <div class="row note-body-2">-->
+<!--            <div class="col-md-12">-->
+              <%#= f.post_body.truncate(500).html_safe %>
+<!--            </div>-->
+<!--          </div>-->
           <div class="row box-link-row">
             <div class="box-links-2 col-md-6">
               <% if f.post_type == 'Proposal' and  f.parent_post_id != nil %>
@@ -76,11 +77,12 @@
                 By <%= name %>
               </p>
             </div>
-            <div class="row note-body-2">
-              <div class="col-md-12">
-                <%= f.tag_body.truncate(500).html_safe %>
-              </div>
-            </div>
+            <%= render 'posts/body', object: f %>
+<!--            <div class="row note-body-2">-->
+<!--              <div class="col-md-12">-->
+                <%#= f.tag_body.truncate(500).html_safe if f.tag_body %>
+<!--              </div>-->
+<!--            </div>-->
             <div class="row box-link-row">
               <div class="box-links-2 col-md-3 col-md-offset-9 text-right">
                 <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= f.created_at.strftime("%I:%M %p, %m/%d/%Y") %> </span></b>

@@ -38,6 +38,7 @@ class User < ApplicationRecord
   has_many :items
   has_many :pics
   has_many :videos
+  has_many :tokens
 
   has_many :friendships
   has_many :friends, :through => :friendships
@@ -86,11 +87,15 @@ class User < ApplicationRecord
   end
 
   def remaining_token_limit
-    note = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Note').count
-    debate = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Debate').count
-    question = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Question').count
+    note = 5 - self.tokens.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Note').count || 3
+    debate = 5 - self.tokens.where( created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Debate').count || 5
+    question = 5 - self.tokens.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Question').count || 6
     [ note > 0 ? note : 0 , debate > 0 ? debate : 0 ,  question > 0 ? question : 0]
-  end  
+  end
+
+  def current_tokens
+    self.tokens.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).count
+  end
 
 
   def self.new_with_session(params, session)

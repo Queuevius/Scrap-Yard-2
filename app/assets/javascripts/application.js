@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
+//= require jquery
 //= require rails-ujs
 // As of Rails 5.1, jquery_ujs was replaced by rails-ujs, which does not
 // depend on jQuery but can be used with applications that use jQuery. This

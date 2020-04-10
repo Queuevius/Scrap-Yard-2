@@ -36,7 +36,8 @@
   </div>
   <div class="row area-show-body">
     <% if @clayer.nil? %>
-      <%= @area.tag_body.try(:html_safe) %>
+      <%#= @area.tag_body.try(:html_safe) %>
+      <%= render 'posts/body', object: @area %>
   </div>
   <div class="row box-link-row">
     <div class="box-links-2 col-md-6">
