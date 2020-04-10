@@ -1,7 +1,10 @@
 class VideosController < ApplicationController
   layout 'profiles'
 
-  after_action :authorize_video, only: [:index, :show, :create, :update, :edit, :new, :destroy]
+  before_action :set_video, only: [:edit, :update, :index]
+  before_action :set_user, only: [:show, :index]
+
+  after_action :authorize_video, only: [:index, :show, :create, :update, :edit, :new, :destroy, :show_video]
 
   def index
     policy_scope(Video) if current_user
@@ -10,18 +13,20 @@ class VideosController < ApplicationController
   end
 
   def show_video
+    @disable_sidebar = true
+
     @video = Video.find(params[:id])
   end
 
   def show
     policy_scope(Video) if current_user
 
-    @user = User.friendly.find(params[:id])
-
     @video = Video.where(:user_id => params[:id])
   end
 
   def new
+    @disable_sidebar = true
+
     @video = Video.new
   end
 
@@ -31,19 +36,19 @@ class VideosController < ApplicationController
     @video.user_id = current_user.id
 
     if @video.save!
-      redirect_to videos_path
+      redirect_to video_path(current_user.id)
     else
       render :new
     end
   end
 
   def edit
-    @video = Video.new
+    @disable_sidebar = true
   end
 
   def update
     if @video.update(params.required(:video).permit(:name, :video, :description, :user_id))
-      redirect_to @video
+      redirect_to show_video_path(@video)
     else
       render :edit
     end
@@ -54,12 +59,20 @@ class VideosController < ApplicationController
     @video.destroy
 
     @video.delete
-    redirect_to videos_path, notice: "Your video was deleted successfully"
+    redirect_to video_path(@video.user_id), notice: "Your video was deleted successfully"
   end
 
   private
 
   def authorize_video
     authorize Video
+  end
+
+  def set_video
+    @video = Video.find(params[:id])
+  end
+
+  def set_user
+    @user = User.friendly.find(params[:id])
   end
 end

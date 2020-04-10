@@ -29,21 +29,21 @@ Rails.application.routes.draw do
   post 'profiles/update_pic' => 'profiles#update_pic'
 
   get '/profile_posts' => 'profiles#profile_posts'
-  get '/profile_haves' => 'profiles#profile_haves'
-  get '/profile_wants' => 'profiles#profile_wants'
+  get 'have/:id' => 'haves#profile_have', as: :profile_have
+  get 'want/:id' => 'wants#profile_want', as: :profile_want
   get '/profile_tags' => 'profiles#profile_tag'
 
   get '/chat' => 'profiles#chat'
 
   get '/public_feed' => 'posts#public_feed'
 
-  get '/solo_pic' => 'pics#solo_pic'
+  get 'pic/:id' => 'pics#solo_pic', as: :solo_pic
 
-  get '/show_video' => 'video#show_video'
+  get 'video/:id' => 'videos#show_video', as: :show_video
 
-  get '/show_have' => 'hafe#show_have'
+  get '/show_have' => 'haves#show_have'
 
-  get '/show_want' => 'want#show_want'
+  get '/show_want' => 'wants#show_want'
 
   resources :rooms
   resources :messages

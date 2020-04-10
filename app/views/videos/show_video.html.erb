@@ -17,9 +17,12 @@
     </div>
     <div class="row box-link-row">
       <div class="box-links-2 col-md-1">
+        <%= link_to "Back", video_path(@video.user_id), class: "b2" %>
+      </div>
+      <div class="box-links-2 col-md-1">
         <% if user_signed_in? %>
           <% if current_user.id == @video.user_id %>
-            <%= link_to "Edit", edit_pic_path(@video), class: "b2" %>
+            <%= link_to "Edit", edit_video_path(@video), class: "b2" %>
           <% end %>
         <% else %>
           <p><b><%= @video.user.first_name %> <%= @video.user.last_name %></b></p>
@@ -33,7 +36,7 @@
           <% end %>
         <% end %>
       </div>
-      <div class="box-links-2 col-md-3 col-md-offset-6 text-right">
+      <div class="box-links-2 col-md-3 col-md-offset-5 text-right">
         <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= @video.created_at.strftime("%I:%M %p, %m/%d/%Y") %> </span></b>
       </div>
     </div>

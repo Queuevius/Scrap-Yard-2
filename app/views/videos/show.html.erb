@@ -3,7 +3,7 @@
     <div class="row post-header-b">
       <div class="col-md-10">
         <h1>
-          My Videos
+          <%= @user.first_name %>'s Videos
         </h1>
       </div>
       <div class="col-md-2">
@@ -19,7 +19,7 @@
             <div class='col-md-5 note-box'>
               <% if p.user_id == current_user.id %>
                 <h3 class="text-center">
-                  <%= link_to p.title, video_path(p), class: "pic-link" %>
+                  <%= link_to p.title, show_video_path(p), class: "pic-link" %>
                 </h3>
                 <p class="text-center">
                   <%= truncate(p.description, length: 50) %>

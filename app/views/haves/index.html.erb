@@ -17,9 +17,9 @@
         <% @have.each do |f| %>
           <tbody>
           <tr class="text-center">
-            <td class="table-body-box"><%= link_to f.title, hafe_path(f), class: "want-box" %></td>
-            <td class="table-body-box"><%= link_to truncate(f.description, length: 150), hafe_path(f), class: "want-box" %></td>
-            <td class="table-body-box"><%= link_to f.price, hafe_path(f), class: "want-box" %></td>
+            <td class="table-body-box"><%= link_to f.title, profile_have_path(f), class: "want-box" %></td>
+            <td class="table-body-box"><%= link_to truncate(f.description, length: 150), show_have_path(f), class: "want-box" %></td>
+            <td class="table-body-box"><%= link_to f.price, show_have_path(f), class: "want-box" %></td>
           </tr><% end %>
         </tbody>
       </table>

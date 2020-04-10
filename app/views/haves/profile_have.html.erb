@@ -5,6 +5,14 @@
         <%= @have.title %>
       </h1>
     </div>
+    <div class="row show-box-b">
+      <div class="col-md-4">
+        <p><b>Price: <%= @have.price %></b></p>
+      </div>
+      <div class="col-md-2 col-md-offset-6">
+        <p><b><%= @have.user.first_name %> <%= @have.user.last_name %></b></p>
+      </div>
+    </div>
     <div class="row show-box">
       <%= @have.description %>
     </div>
@@ -15,26 +23,20 @@
     </div>
     <div class="row box-link-row">
       <div class="box-links-2 col-md-1">
-        <%= @have.price %>
+        <%= link_to "Back", hafe_path(@have.user_id), class: "b2" %>
       </div>
       <div class="box-links-2 col-md-1">
-        <% if user_signed_in? %>
-          <% if current_user.id == @have.user_id %>
-            <%= link_to "Edit", edit_hafe_path(@have), class: "b2" %>
-          <% end %>
-        <% else %>
-          <p><b><%= @have.user.first_name %> <%= @have.user.last_name %></b></p>
+        <% if current_user.id == @have.user_id %>
+          <%= link_to "Edit", edit_hafe_path(@have), class: "b2" %>
         <% end %>
       </div>
-      <div class="box-links-2 col-md-2">
-        <% if user_signed_in? %>
-          <% if current_user.id == @have.user_id %>
-            <%= link_to 'Destroy', hafe_path(@have),
-                        method: :delete, data: { confirm: 'Are you sure?' }, class: "b2" %>
-          <% end %>
+      <div class="box-links-2 col-md-1">
+        <% if current_user.id == @have.user_id %>
+          <%= link_to 'Destroy', hafe_path(@have),
+                      method: :delete, data: { confirm: 'Are you sure?' }, class: "b2" %>
         <% end %>
       </div>
-      <div class="box-links-2 col-md-3 col-md-offset-5 text-right">
+      <div class="box-links-2 col-md-3 col-md-offset-6 text-right">
         <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= @have.created_at.strftime("%I:%M %p, %m/%d/%Y") %> </span></b>
       </div>
     </div>

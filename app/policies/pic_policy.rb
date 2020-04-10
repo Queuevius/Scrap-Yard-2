@@ -8,6 +8,10 @@ class PicPolicy < ApplicationPolicy
     true
   end
 
+  def solo_pic?
+    true
+  end
+
   def update?
     true
   end

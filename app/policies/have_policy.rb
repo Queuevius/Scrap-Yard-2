@@ -4,7 +4,7 @@ class HavePolicy < ApplicationPolicy
     true
   end
 
-  def show_have?
+  def profile_have?
     true
   end
 

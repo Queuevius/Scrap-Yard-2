@@ -1,6 +1,9 @@
 class PicsController < ApplicationController
   layout 'profiles'
 
+  before_action :set_picture, only: [:edit, :update, :index]
+  before_action :set_user, only: [:show, :index]
+
   after_action :authorize_pic
 
   def index
@@ -20,14 +23,17 @@ class PicsController < ApplicationController
   end
 
   def solo_pic
-    @user = User.friendly.find(params[:id])
+    @disable_sidebar = true
 
     @pic = Pic.find(params[:id])
+
+    @user = User.friendly.find(params[:id])
   end
 
   def new
-    @pic = Pic.new
+    @disable_sidebar = true
 
+    @pic = Pic.new
   end
 
   def create
@@ -36,19 +42,19 @@ class PicsController < ApplicationController
     @pic.user_id = current_user.id
 
     if @pic.save!
-      redirect_to pics_path
+      redirect_to pic_path(current_user.id)
     else
       render :new
     end
   end
 
   def edit
-    @pic = Pic.new
+    @disable_sidebar = true
   end
 
   def update
     if @pic.update(params.required(:pic).permit(:name, :image, :description, :user_id))
-      redirect_to @pic
+      redirect_to solo_pic_path(@pic)
     else
       render :edit
     end
@@ -59,12 +65,20 @@ class PicsController < ApplicationController
     @pic.destroy
 
     @pic.delete
-    redirect_to pics_path, notice: "Your picture was deleted successfully"
+    redirect_to pic_path(@pic.user_id), notice: "Your picture was deleted successfully"
   end
 
   private
 
   def authorize_pic
     authorize Pic
+  end
+
+  def set_picture
+    @pic = Pic.find(params[:id])
+  end
+
+  def set_user
+    @user = User.friendly.find(params[:id])
   end
 end

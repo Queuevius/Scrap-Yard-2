@@ -4,6 +4,10 @@ class VideoPolicy < ApplicationPolicy
     true
   end
 
+  def show_video?
+    true
+  end
+
   def update?
     true
   end

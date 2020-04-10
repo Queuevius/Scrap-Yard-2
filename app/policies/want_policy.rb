@@ -8,6 +8,10 @@ class WantPolicy < ApplicationPolicy
     true
   end
 
+  def profile_want?
+    true
+  end
+
   def new?
     true
   end

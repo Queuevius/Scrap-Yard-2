@@ -5,6 +5,14 @@
         <%= @want.title %>
       </h1>
     </div>
+    <div class="row show-box-b">
+      <div class="col-md-4">
+        <p><b>Price: <%= @want.price %></b></p>
+      </div>
+      <div class="col-md-2 col-md-offset-6">
+        <p><b><%= @want.user.first_name %> <%= @want.user.last_name %></b></p>
+      </div>
+    </div>
     <div class="row show-box">
       <%= @want.description %>
     </div>
@@ -15,23 +23,17 @@
     </div>
     <div class="row box-link-row">
       <div class="box-links-2 col-md-1">
-        <%= @want.price %>
+        <%= link_to "Back", want_path(@want.user_id), class: "b2" %>
       </div>
       <div class="box-links-2 col-md-1">
-        <% if user_signed_in? %>
-          <% if current_user.id == @want.user_id %>
-            <%= link_to "Edit", edit_want_path(@want), class: "b2" %>
-          <% end %>
-        <% else %>
-          <p><b><%= @want.user.first_name %> <%= @want.user.last_name %></b></p>
+        <% if current_user.id == @want.user_id %>
+          <%= link_to "Edit", edit_want_path(@want), class: "b2" %>
         <% end %>
       </div>
       <div class="box-links-2 col-md-1">
-        <% if user_signed_in? %>
-          <% if current_user.id == @want.user_id %>
-            <%= link_to 'Destroy', want_path(@want),
-                        method: :delete, data: { confirm: 'Are you sure?' }, class: "b2" %>
-          <% end %>
+        <% if current_user.id == @want.user_id %>
+          <%= link_to 'Destroy', want_path(@want),
+                      method: :delete, data: { confirm: 'Are you sure?' }, class: "b2" %>
         <% end %>
       </div>
       <div class="box-links-2 col-md-4 col-md-offset-5 text-right">

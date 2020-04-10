@@ -6,14 +6,12 @@
     <div class="note-title-b">
       <h1>Edit Your Profile</h1>
     </div>
+
     <div class="panel-body">
       <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-
         <%= f.text_field :first_name %>
         <%= f.text_field :last_name %>
-
         <%= f.email_field :email, autocomplete: "email" %>
-
         <div class="row">
           <div class="col-md-6">
             <p>Current Profile Picture</p>
@@ -26,31 +24,21 @@
           <div class="col-md-6">
             <p>Change Profile Picture</p>
             <%= f.file_field :avatar, hide_label: true %>
-
             <%= f.hidden_field :avatar_cache %>
           </div>
         </div>
 
-
-
-
-
         <div class="row">
-
           <div class="col-md-6">
             <%= f.label :password %> <i>(leave blank if you don't want to change it) 6 Characters Minimum</i><br />
-
             <%= f.password_field :password, hide_label: true %>
-
           </div>
           <div class="col-md-6">
-
             <%= f.password_field :password_confirmation %>
           </div>
         </div>
 
           <%= f.text_area :bio %>
-
 
         <div class="row">
           <div class="col-md-6">
@@ -61,6 +49,7 @@
           </div>
         </div>
         <% end %>
+
       <div class="row">
         <div class="col-md-4">
           <p><%= t('.unhappy', default: 'Unhappy') %>? <%= link_to t('.cancel_my_account', default: "Cancel my account"), registration_path(resource_name), data: { confirm: t('.are_you_sure', default: "Are you sure?") }, method: :delete %>.</p>
@@ -70,7 +59,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
