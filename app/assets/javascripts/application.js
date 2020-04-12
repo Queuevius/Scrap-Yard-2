@@ -10,8 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require rails-ujs
 //= require jquery
-//= require jquery_ujs
+//= require jquery-3.2.1
 // As of Rails 5.1, jquery_ujs was replaced by rails-ujs, which does not
 // depend on jQuery but can be used with applications that use jQuery. This
 // application uses jQuery and we've chosen to use jquery_ujs instead of
@@ -22,6 +23,7 @@
 //= require select2
 //= require jquery-fileupload/basic
 //= require lightbox
+//= require_tree .
 
 (function() {
     $(document).on('click', '.toggle-window', function(e) {
