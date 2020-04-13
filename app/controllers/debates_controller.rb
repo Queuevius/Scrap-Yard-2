@@ -1,5 +1,6 @@
 class DebatesController < ApplicationController
   skip_before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token
   # after_action :authorize_debates
   after_action :authorize_debates, only: [:index, :new, :create, :show]
 
@@ -34,7 +35,7 @@ class DebatesController < ApplicationController
       model_name = params[:debate][:object_type]
       post_id = params[:debate][:object_id]
       @object = model_name.constantize.find(post_id)
-      token = create_token(post_id)
+      token = create_token(@object.id)
 
       @debate = Debate.new(debate_params)
       @debate.token = token

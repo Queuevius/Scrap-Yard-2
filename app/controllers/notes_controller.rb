@@ -20,7 +20,7 @@ class NotesController < ApplicationController
       model_name = params[:note][:object_type]
       post_id = params[:note][:object_id]
       @object = model_name.constantize.find(post_id)
-      token = create_token(post_id)
+      token = create_token(@object.id)
 
       @note = Note.new(note_params)
       @note.token = token

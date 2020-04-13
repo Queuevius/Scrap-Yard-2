@@ -9,7 +9,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1:5432/needp_test</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="Rails Needpedia-profile: development" uuid="ec80eef9-7750-4549-ac2f-b9258f368a07">
+    <data-source source="LOCAL" name="Rails Needpedia-profile: development" single-connection="true" uuid="ec80eef9-7750-4549-ac2f-b9258f368a07">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>

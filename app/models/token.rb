@@ -8,7 +8,7 @@ class Token < ApplicationRecord
 		debate: "Debate",
 		question: "Question"
 	}
-	belongs_to :post 
+	belongs_to :post, optional: true
 	belongs_to :layer, optional: true
 	has_many :comments
 

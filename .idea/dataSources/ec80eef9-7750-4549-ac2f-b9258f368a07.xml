@@ -116,16 +116,7 @@
       <IntrospectionStateNumber>2329</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|19809|19811|1
-sequence|table|19820|19822|1
-sequence|table|19842|19844|1
-sequence|table|19861|19863|1
-sequence|table|19763|19765|1
-sequence|table|19776|19778|1
-sequence|table|19787|19789|1
-sequence|table|19798|19800|1
-sequence|table|28242|28244|1
-sequence|table|19685|19687|1
+      <Relations>sequence|table|19685|19687|1
 sequence|table|19705|19707|1
 sequence|table|19720|19722|1
 sequence|table|19732|19734|1
@@ -138,6 +129,15 @@ sequence|table|19905|19907|1
 sequence|table|19913|19915|1
 sequence|table|19924|19926|1
 sequence|table|19934|19936|1
+sequence|table|19809|19811|1
+sequence|table|19820|19822|1
+sequence|table|19842|19844|1
+sequence|table|19861|19863|1
+sequence|table|19763|19765|1
+sequence|table|19776|19778|1
+sequence|table|19787|19789|1
+sequence|table|19798|19800|1
+sequence|table|28242|28244|1
 </Relations>
     </database>
     <database id="24" parent="1" name="needp_test">

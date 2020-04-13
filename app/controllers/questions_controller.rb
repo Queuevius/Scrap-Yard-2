@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   skip_before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token
   before_action :authorize_questions
   def new
     # word = the word that is going to be before the token
@@ -21,7 +22,7 @@ class QuestionsController < ApplicationController
       model_name = params[:question][:object_type]
       post_id = params[:question][:object_id]
       @object = model_name.constantize.find(post_id)
-      token = create_token(post_id)
+      token = create_token(@object.id)
 
       @question = Question.new(question_params)
       @question.token = token
