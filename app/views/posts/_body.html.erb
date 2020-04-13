@@ -1,0 +1,168 @@
+<%
+  id = object.class.name + object.id.to_s
+  body_text = object.is_a?(Post) ? object.post_body : object.tag_body
+%>
+<div class="container">
+  <div class="row my-3">
+    <div class="col">
+      <div class="text-body" id="text-body-<%= id %>">
+        <p class="body-p-text-<%= id %>"><%= simple_format(body_text)  %></p>
+        <div class="dropdown-menu dropdown-menu-sm h4" id="context-menu-<%= id %>">
+          <h3 class="dropdown-item">Add a Token</h3>
+          <% if current_user && current_user.current_tokens > 50 %>
+            <p class="alert alert-warning"> You have exceeded the amount of available tokens</p>
+          <% else %>
+            <%= link_to new_note_path(form_id: 'note_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "note-btn-link-#{id}", remote: true do %>
+              <h3><i style="padding-right: 10px;" class="fa fa-sticky-note pr-5 mr-5" aria-hidden="true"></i><span class="pl-5 ml-5">Note</span></h3>
+            <% end %>
+            <%= link_to new_question_path(form_id: 'question_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "question-btn-link-#{id}", remote: true do %>
+              <h3><i style="padding-right: 10px;" class="fa fa-question-circle-o pr-5 mr-5" aria-hidden="true"></i><span class="pl-5 ml-5">Question</span></h3>
+            <% end %>
+            <%= link_to new_debate_path(form_id: 'debate_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "debate-btn-link-#{id}", remote: true do %>
+              <h3><i style="padding-right: 10px;" class="fa fa-comments pr-5 mr-5"></i></i><span class="pl-5 ml-5">Debate</span></h3>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+  }
+</style>
+<script>
+    var global_word;
+    var sub_string;
+    $("#text-body-<%= id %>").on('contextmenu', function(e) {
+
+        var text = $(".body-p-text-<%= id %>").siblings('p').text();
+        var first = text.slice(0, text.indexOf(" "));
+
+        var s = window.getSelection();
+        var p = window.getSelection();
+        s.modify('move','backward','word');
+        s.modify('extend','forward','word');
+        global_word = s.toString();
+        p.modify('move','backward','word');
+        s.modify('extend','backward','word');
+        sub_string = p.toString();
+
+        if (global_word === first) {
+            sub_string = '';
+            s.modify('extend','forward','word');
+        }
+
+        var top = e.pageY;
+        var left = e.pageX;
+        <% if params[:controller] == "profiles" %>
+          top = top - 100;
+          left = left - 300;
+        <% end %>
+        $("#context-menu-<%= id %>").css({
+            display: "block",
+            top: top,
+            left: left
+        }).addClass("show");
+        return false; //blocks default Webbrowser right click menu
+    }).on("click", function() {
+        $("#context-menu-<%= id %>").removeClass("show").hide();
+    });
+
+    $("#context-menu-<%= id %> a").on("click", function() {
+        $(this).parent().removeClass("show").hide();
+    });
+    $(document.body).on("contextmenu:focus", ".context-menu-item",
+        function(e){
+            console.log("focus:", this);
+        }
+    );
+
+    $('#note_form').click( function() {
+        $form = $('#new_note');
+        formData = $form.serialize();
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: '/notes',
+            data: formData,
+            success: function (data) {
+                console.log('response', data);
+                var id = $("body-p-text-<%= id %> span");
+                debugger;
+                $("body-p-text-<%= id %> span").text("i am checnged hahah ahha ahaha ha ah ah ah ah");
+            }
+        });
+    });
+
+    $('#note-btn-link-<%= id %>').click( function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        var form_id = 'note_form';
+        var object_id = '<%= object.id %>';
+        var object_type = '<%= object.class.name %>';
+        $.ajax({
+            type: "GET",
+            url: '/notes/new',
+            data: {
+                form_id: form_id,
+                object_id: object_id,
+                object_type: object_type,
+                global_word: global_word,
+                sub_string: sub_string
+            }
+        });
+        return false;
+    });
+
+    $('#question-btn-link-<%= id %>').click( function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        var form_id = 'question_form';
+        var object_id = '<%= object.id %>';
+        var object_type = '<%= object.class.name %>';
+        $.ajax({
+            type: "GET",
+            url: '/questions/new',
+            data: {
+                form_id: form_id,
+                object_id: object_id,
+                object_type: object_type,
+                global_word: global_word,
+                sub_string: sub_string
+            }
+        });
+        return false;
+    });
+
+    $('#debate-btn-link-<%= id %>').click( function(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        var form_id = 'debate_form';
+        var object_id = '<%= object.id %>';
+        var object_type = '<%= object.class.name %>';
+        $.ajax({
+            type: "GET",
+            url: '/debates/new',
+            data: {
+                form_id: form_id,
+                object_id: object_id,
+                object_type: object_type,
+                global_word: global_word,
+                sub_string: sub_string
+            }
+        });
+        return false;
+    });
+</script>

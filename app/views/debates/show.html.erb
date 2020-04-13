@@ -1,0 +1,147 @@
+<div class="container search-index-box pt-5 mt-5" style="padding-top: 25px;">
+  <div class="col-md-12 notes-box">
+    <div class="row post-header">
+      <h1>
+        Debate
+      </h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" style="padding-top: 10px; padding-bottom: 10px;">
+          <% if @debate.present? %>
+            <%= @debate.central_argument %>
+          <% end %>
+          <div class="devider-line"></div>
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default mt-3 margin-top-10 padding-tb-10" style="margin-top: 7px;margin-left: -30px; border-right: black solid 4px;">
+            <!-- Default panel contents -->
+            <div class="panel-heading text-center">
+              <i class="fa fa-thumbs-up" title="Argument For" style="font-size: 28px" aria-hidden="true"></i>
+            </div>
+            <div class="panel-body">
+              <% if @for_arguments.present? %>
+                <% @for_arguments.each.with_index(1) do |arg, index| %>
+                  <p class="pb-5">
+                    <%= index %> : <%= arg.text %>
+                  </p>
+                  <div class="">
+                    <div class="box-links-2 text-center pb-5">
+                      <b><div class="rating">
+                        <% 1.upto(5) do |star_index| %>
+                          <% if star_index <= arg.avg_rating %>
+                            <span class="glyphicon glyphicon-star"></span>
+                          <% else %>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                          <% end %>
+                        <% end %>
+                        <% if user_signed_in? %>
+                          <% unless arg.ratings.nil? %>
+                            <span id="rated"><i>You Rated <strong class="rate_count"> <%= arg.ratings.map(&:score).sum %></strong> Stars.</i></span>
+                          <% else %>
+                            <span id="rated" style="display: none;"><i>You Rated <strong class="rate_count"></strong> Stars.</i></span>
+                          <% end %>
+                        <% end %>
+                      </div></b>
+                    </div>
+                    <div class="devider-line"></div>
+                  </div>
+                <% end %>
+              <% end %>
+              <%= render 'arguments/form', debate: @debate, argument: Argument.new, argument_type: 'For' %>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default mt-3 margin-top-10 padding-tb-10" style="margin-top: 7px;margin-left: -30px; border-right: black solid 4px;">
+            <!-- Default panel contents -->
+            <div class="panel-heading text-center">
+              <i class="fa fa-hand-scissors-o" title="Otherwise" style="font-size: 28px" aria-hidden="true"></i>
+            </div>
+            <div class="panel-body">
+              <% if @neutral_arguments.present? %>
+                <% @neutral_arguments.each.with_index(1) do |arg, index| %>
+                  <p class="pb-5">
+                    <%= index %> : <%= arg.text %>
+                  </p>
+                  <div class="">
+                    <div class="box-links-2 text-center pb-5">
+                      <b><div class="rating">
+                        <% 1.upto(5) do |star_index| %>
+                          <% if star_index <= arg.avg_rating %>
+                            <span class="glyphicon glyphicon-star"></span>
+                          <% else %>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                          <% end %>
+                        <% end %>
+                        <% if user_signed_in? %>
+                          <% unless arg.ratings.nil? %>
+                            <span id="rated"><i>You Rated <strong class="rate_count"> <%= arg.ratings.map(&:score).sum %></strong> Stars.</i></span>
+                          <% else %>
+                            <span id="rated" style="display: none;"><i>You Rated <strong class="rate_count"></strong> Stars.</i></span>
+                          <% end %>
+                        <% end %>
+                      </div></b>
+                    </div>
+                    <div class="devider-line"></div>
+                  </div>
+                <% end %>
+              <% end %>
+              <%= render 'arguments/form', debate: @debate, argument: Argument.new, argument_type: 'Neutral' %>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-sm-4">
+          <div class="panel panel-default mt-3 margin-top-10 padding-tb-10" style="margin-top: 7px;margin-left: -30px; border-right: black solid 4px;">
+            <div class="panel-heading text-center">
+              <i class="fa fa-thumbs-down" title="Argument Against" style="font-size: 28px" aria-hidden="true"></i>
+            </div>
+            <div class="panel-body">
+              <% if @against_arguments.present? %>
+                <% @against_arguments.each.with_index(1) do |arg, index| %>
+                  <p class="pb-5">
+                    <%= index %> : <%= arg.text %>
+                  </p>
+                  <div class="">
+                    <div class="box-links-2 text-center pb-5">
+                      <b><div class="rating">
+                        <% 1.upto(5) do |star_index| %>
+                          <% if star_index <= arg.avg_rating %>
+                            <span class="glyphicon glyphicon-star"></span>
+                          <% else %>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                          <% end %>
+                        <% end %>
+                        <% if user_signed_in? %>
+                          <% unless arg.ratings.nil? %>
+                            <span id="rated"><i>You Rated <strong class="rate_count"> <%= arg.ratings.map(&:score).sum %></strong> Stars.</i></span>
+                          <% else %>
+                            <span id="rated" style="display: none;"><i>You Rated <strong class="rate_count"></strong> Stars.</i></span>
+                          <% end %>
+                        <% end %>
+                      </div></b>
+                    </div>
+                    <div class="devider-line"></div>
+                  </div>
+                <% end %>
+              <% end %>
+              <%= render 'arguments/form', debate: @debate, argument: Argument.new, argument_type: 'Against' %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .devider-line {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+</style>
