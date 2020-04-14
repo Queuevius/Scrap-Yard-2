@@ -1,3 +1,7 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
 <div class="container search-index-box">
   <div class="row post-header">
     <div class="col-md-6">
@@ -13,6 +17,14 @@
     </div>
 
   </div>
+  <div id="note_modal" class="modal fade custome-modal" role="dialog" aria-labelledby="userModalLabel">
+  </div>
+
+  <div id="question_modal" class="modal fade custome-modal" role="dialog" aria-labelledby="userModalLabel">
+  </div>
+
+  <div id="debate_modal" class="modal fade custome-modal" role="dialog" aria-labelledby="userModalLabel">
+  </div>
 
   <% @feed.each do |f| %>
     <% if f.is_a? Tag %>
@@ -23,15 +35,11 @@
             <%= link_to f.name, area_path(f) %>
           </h3>
           <p class="col-md-2 col-md-offset-4">
-            <% name = [f.user.first_name, f.user.last_name].compact.join(' ') %>
+            <% name = [f.user.first_name, f.user.last_name].compact.join(' ') if f.user %>
             By <%= name %>
           </p>
         </div>
-        <div class="row note-body-2">
-          <div class="col-md-12">
-            <%= f.tag_body.truncate(500) %>
-          </div>
-        </div>
+        <%= render 'body', object: f %>
         <div class="row box-link-row">
           <div class="box-links-2 col-md-3 col-md-offset-9 text-right">
             <b><span><i class="glyphicon glyphicon-calendar glyph-padding"></i> <%= f.created_at.strftime("%I:%M %p, %m/%d/%Y") %> </span></b>
@@ -49,15 +57,11 @@
             By <%= f.user.full_name %>
           </p>
         </div>
-        <div class="row note-body-2">
-          <div class="col-md-12">
-            <%= f.post_body.truncate(500).html_safe %>
-          </div>
-        </div>
+        <%= render 'body', object: f %>
         <div class="row box-link-row">
           <div class="box-links-2 col-md-6">
-            <% if f.post_type == 'Proposal' and  f.parent_post_id != nil %>
-              <%= link_to post_path(id: f.parent_slug), data: { 'turbolinks': false }, class: "btn2 btn-primary" do %>
+            <% if f.post_type == 'Proposal' &&  f.parent_post_id != nil %>
+              <%= link_to post_path(id: f.parent_slug), data: { 'turbolinks': false }, class: "btn2 btn-default" do %>
                 <span class="glyphicon glyphicon-zoom-in"></span>
                 See the Idea
               <% end %>
@@ -98,3 +102,12 @@
     <% end %>
   <% end %>
 </div>
+<style>
+  .custome-modal{
+    background: transparent;
+    display: block;
+    box-shadow: none;
+    width: 100%;
+    max-width: initial;
+  }
+</style>

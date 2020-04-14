@@ -8,11 +8,11 @@ class User < ApplicationRecord
   friendly_id :full_name, use: :slugged
 
   acts_as_voter
-  
+
   # Roles used by the authorization setup
   enum role: { user: 0, admin: 1 }
   attr_accessor :summary, :description
-  
+
 
 
   # **We should NOT validate e-mail uniqueness, e-mail regex or password
@@ -30,14 +30,15 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-         
+
   devise :omniauthable, omniauth_providers: [:facebook , :google_oauth2, :twitter]
 
   has_many :posts
-  has_one :profile 
+  has_one :profile
   has_many :items
   has_many :pics
   has_many :videos
+  has_many :tokens
 
   has_many :friendships
   has_many :friends, :through => :friendships
@@ -54,11 +55,11 @@ class User < ApplicationRecord
   has_many :friends_posts, through: :friends, source: :posts
 
 
-  
 
-  after_create do 
-    p = Profile.new 
-    p.user_id = self.id 
+
+  after_create do
+    p = Profile.new
+    p.user_id = self.id
     p.title = self.full_name
     p.description = self.full_name + " Profile description."
     p.save
@@ -86,11 +87,15 @@ class User < ApplicationRecord
   end
 
   def remaining_token_limit
-    note = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Note').count
-    debate = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Debate').count
-    question = 5 - Token.where(creator_id: self.id , created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Question').count
+    note = 5 - self.tokens.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Note').count || 3
+    debate = 5 - self.tokens.where( created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Debate').count || 5
+    question = 5 - self.tokens.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day, token_type: 'Question').count || 6
     [ note > 0 ? note : 0 , debate > 0 ? debate : 0 ,  question > 0 ? question : 0]
-  end  
+  end
+
+  def current_tokens
+    self.tokens.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).count
+  end
 
 
   def self.new_with_session(params, session)
@@ -103,13 +108,13 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      
+
       if auth.provider == :facebook
         user.email = auth.info.email
         user.password = Devise.friendly_token[0,20]
-        user.name = auth.info.name 
-        user.first_name = auth.info.name.split(' ').first 
-        user.last_name = auth.info.name.split(' ').last 
+        user.name = auth.info.name
+        user.first_name = auth.info.name.split(' ').first
+        user.last_name = auth.info.name.split(' ').last
         user.image = auth.info.image # assuming the user model has an image
       elsif auth.provider == :google_oauth2
         user.token = auth.credentials.token

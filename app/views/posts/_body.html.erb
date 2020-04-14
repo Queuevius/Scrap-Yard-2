@@ -9,18 +9,22 @@
         <p class="body-p-text-<%= id %>"><%= simple_format(body_text)  %></p>
         <div class="dropdown-menu dropdown-menu-sm h4" id="context-menu-<%= id %>">
           <h3 class="dropdown-item">Add a Token</h3>
-          <% if current_user && current_user.current_tokens > 50 %>
-            <p class="alert alert-warning"> You have exceeded the amount of available tokens</p>
+          <% if current_user %>
+            <% if current_user.current_tokens > 50 %>
+              <p class="alert alert-warning"> You have exceeded the amount of available tokens</p>
+            <% else %>
+              <%= link_to new_note_path(form_id: 'note_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "note-btn-link-#{id}", remote: true do %>
+                <h3><i style="padding-right: 10px;" class="fa fa-sticky-note pr-5 mr-5" aria-hidden="true"></i><span class="pl-5 ml-5">Note</span></h3>
+              <% end %>
+              <%= link_to new_question_path(form_id: 'question_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "question-btn-link-#{id}", remote: true do %>
+                <h3><i style="padding-right: 10px;" class="fa fa-question-circle-o pr-5 mr-5" aria-hidden="true"></i><span class="pl-5 ml-5">Question</span></h3>
+              <% end %>
+              <%= link_to new_debate_path(form_id: 'debate_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "debate-btn-link-#{id}", remote: true do %>
+                <h3><i style="padding-right: 10px;" class="fa fa-comments pr-5 mr-5"></i></i><span class="pl-5 ml-5">Debate</span></h3>
+              <% end %>
+            <% end %>
           <% else %>
-            <%= link_to new_note_path(form_id: 'note_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "note-btn-link-#{id}", remote: true do %>
-              <h3><i style="padding-right: 10px;" class="fa fa-sticky-note pr-5 mr-5" aria-hidden="true"></i><span class="pl-5 ml-5">Note</span></h3>
-            <% end %>
-            <%= link_to new_question_path(form_id: 'question_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "question-btn-link-#{id}", remote: true do %>
-              <h3><i style="padding-right: 10px;" class="fa fa-question-circle-o pr-5 mr-5" aria-hidden="true"></i><span class="pl-5 ml-5">Question</span></h3>
-            <% end %>
-            <%= link_to new_debate_path(form_id: 'debate_form', object_id: object.id, object_type: object.class.name), class: 'dropdown-item', id: "debate-btn-link-#{id}", remote: true do %>
-              <h3><i style="padding-right: 10px;" class="fa fa-comments pr-5 mr-5"></i></i><span class="pl-5 ml-5">Debate</span></h3>
-            <% end %>
+            <p class="alert alert-warning"> Please Login to add add tokens</p>
           <% end %>
         </div>
       </div>

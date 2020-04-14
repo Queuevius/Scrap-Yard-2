@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
 	# Use slugs instead of DB IDs in URLs
-  include FriendlyId
-  friendly_id :title, use: :slugged
+	include FriendlyId
+	friendly_id :title, use: :slugged
 
 	# Associations
 	belongs_to :user, foreign_key: "creator_id", class_name: "User"
@@ -11,44 +11,47 @@ class Post < ApplicationRecord
 	has_many :proposals, -> { where(post_type: 'Proposal')}, class_name: "Post", foreign_key: "parent_post_id"
 	has_many :problems, -> { where(post_type: 'Problem')} , class_name: "Post", foreign_key: "parent_post_id"
 	has_many :layers, as: :layerable
-	has_many :tokens	
+	has_many :tokens
 	has_many :ratings, as: :rateable
 	has_many :trackings
 	has_many :feeds
+	has_many :questions
+	has_many :notes
+	has_many :debates
 	accepts_nested_attributes_for :feeds
 
 
-	# Scopes	
+	# Scopes
 	scope :type, ->(post_type){ where(post_type: post_type )}
 	scope :with_tags, -> (tags) { joins(:tags).where("tags.name IN (?)",tags) }
-	# Validations 
+	# Validations
 	validates :title, :post_body, presence: true
 
 
 
 	def all_tags=(names)
 		self.tags = names.split(",").map do |name|
-		    Tag.where("name ILIKE ?",name.strip).first_or_create!(name: name.strip)
+			Tag.where("name ILIKE ?",name.strip).first_or_create!(name: name.strip, user: create_user)
 		end
 	end
 
 	def all_tags
-	  self.tags.map(&:name).join(", ")
+		self.tags.map(&:name).join(", ")
 	end
-	
+
 	def selftagged_with(name)
 		Tag.find_by_name!(name).posts
 	end
 
 	def parent_slug
-		Post.find(self.parent_post_id).slug 
-	end 
+		Post.find(self.parent_post_id).slug
+	end
 
 	def area
 		self.tags.first
 	end
 
-	def avg_rating 
+	def avg_rating
 		( self.ratings.map(&:score).sum / ( self.ratings.empty? ? 1 : self.ratings.count  ) )
 	end
 
